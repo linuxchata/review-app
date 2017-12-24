@@ -111,7 +111,7 @@ namespace ReviewSystem.DataAccess.Tests
 
             // Assert
             var subjects = sut.GetAllAsync().Result.ToList();
-            Assert.False(subjects.Any(a => string.Equals(a.Id, this.testSubject.Id)));
+            Assert.DoesNotContain(subjects, a => string.Equals(a.Id, this.testSubject.Id));
         }
 
         [Fact]
