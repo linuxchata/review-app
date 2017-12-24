@@ -6,6 +6,7 @@ using Xunit;
 
 namespace ReviewSystem.DataAccess.Tests
 {
+    [Trait("Category", "IntegrationTests")]
     public class SubjectRepositoryTests
     {
         private readonly Subject testSubject;

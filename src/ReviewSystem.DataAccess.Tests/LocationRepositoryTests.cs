@@ -4,6 +4,7 @@ using Xunit;
 
 namespace ReviewSystem.DataAccess.Tests
 {
+    [Trait("Category", "IntegrationTests")]
     public class LocationRepositoryTests
     {
         private IDatabaseConnection databaseConnection;
