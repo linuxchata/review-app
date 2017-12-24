@@ -16,3 +16,7 @@ install:
 branches:  
   only:
   - master
+test:
+  categories:
+    except:
+    - IntegrationTests
