@@ -38,7 +38,7 @@ namespace ReviewSystem.Services.Tests
             var result = await this.sut.GetAllAsync();
 
             // Assert
-            Assert.NotNull(result.Any());
+            Assert.True(result.Any());
             this.locationRepositoryMock.Verify(a => a.GetAllAsync(), Times.Once);
         }
 
@@ -70,7 +70,7 @@ namespace ReviewSystem.Services.Tests
             var result = await this.sut.GetBySearchCriteriaAsync("Kiev");
 
             // Assert
-            Assert.NotNull(result.Any());
+            Assert.True(result.Any());
             this.locationRepositoryMock.Verify(a => a.GetBySearchCriteriaAsync(It.IsAny<string>()), Times.Once);
         }
     }

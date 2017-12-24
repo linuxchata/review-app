@@ -38,7 +38,7 @@ namespace ReviewSystem.Services.Tests
             var result = await this.sut.GetAllAsync();
 
             // Assert
-            Assert.NotNull(result.Any());
+            Assert.True(result.Any());
             this.subjectRepositoryMock.Verify(a => a.GetAllAsync(), Times.Once);
         }
 
@@ -61,7 +61,7 @@ namespace ReviewSystem.Services.Tests
             var subject = new Subject();
             this.subjectRepositoryMock
                 .Setup(a => a.GetByIdAsync(It.IsAny<string>()))
-                .Returns(Task.FromResult<Subject>(subject));
+                .Returns(Task.FromResult(subject));
 
             // Act
             var result = await this.sut.GetByIdAsync("5a3c1c53cc849c169c9d6d81");
