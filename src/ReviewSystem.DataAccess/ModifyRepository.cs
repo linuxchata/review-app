@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using ReviewSystem.Core;
@@ -14,18 +15,21 @@ namespace ReviewSystem.DataAccess
         {
         }
 
-        public Task InsertAsync(T entity)
+        public Task InsertAsync(T entity, string user)
         {
-            if (string.IsNullOrEmpty(entity.Id))
-            {
-                entity.Id = ObjectId.GenerateNewId().ToString();
-            }
+            entity.Created = DateTime.Now;
+            entity.Updated = DateTime.Now;
+            entity.CreatedBy = user;
+            entity.UpdatedBy = user;
 
             return this.Collection.InsertOneAsync(entity);
         }
 
-        public Task UpdateAsync(T entity)
+        public Task UpdateAsync(T entity, string user)
         {
+            entity.Updated = DateTime.Now;
+            entity.UpdatedBy = user;
+
             return this.Collection.ReplaceOneAsync(a => a.Id == entity.Id, entity);
         }
 

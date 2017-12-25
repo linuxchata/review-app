@@ -38,7 +38,7 @@ namespace ReviewSystem.Services
                 throw new ArgumentNullException(nameof(doctor), "Doctor cannot be null");
             }
 
-            return this.modifyRepository.InsertAsync(doctor);
+            return this.modifyRepository.InsertAsync(doctor, string.Empty);
         }
 
         public Task EditAsync(Doctor doctor)
@@ -48,7 +48,7 @@ namespace ReviewSystem.Services
                 throw new ArgumentNullException(nameof(doctor), "Doctor cannot be null");
             }
 
-            return this.modifyRepository.UpdateAsync(doctor);
+            return this.modifyRepository.UpdateAsync(doctor, string.Empty);
         }
 
         public Task DeleteAsync(string subjectId)

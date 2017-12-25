@@ -29,7 +29,12 @@ namespace ReviewSystem.DataAccess.Tests
                 Languages = new List<string> { "English" },
                 Facility = new Facility
                 {
-                    Name = "Clinic in New York"
+                    Name = "Clinic in New York",
+                    Address = new Address
+                    {
+                        City = "New York",
+                        Region = "MA"
+                    }
                 },
                 GeneralRaiting = 5.0m
             };
@@ -42,7 +47,7 @@ namespace ReviewSystem.DataAccess.Tests
             var sut = new ModifyRepository<Doctor>(this.GetDatabaseConnection());
 
             // Act
-            await sut.InsertAsync(this.testEntity);
+            await sut.InsertAsync(this.testEntity, string.Empty);
 
             // Assert
             Assert.NotNull(this.testEntity.Id);
@@ -53,12 +58,12 @@ namespace ReviewSystem.DataAccess.Tests
         {
             // Arrange
             var sut = new ModifyRepository<Doctor>(this.GetDatabaseConnection());
-            await sut.InsertAsync(this.testEntity);
+            await sut.InsertAsync(this.testEntity, string.Empty);
             this.testEntity.FirstName = "Valentino";
             this.testEntity.LastName = "Rossi";
 
             // Act
-            await sut.UpdateAsync(this.testEntity);
+            await sut.UpdateAsync(this.testEntity, string.Empty);
 
             // Assert
             var enteties = sut.GetAllAsync().Result.ToList();
@@ -74,7 +79,7 @@ namespace ReviewSystem.DataAccess.Tests
             var sut = new ModifyRepository<Doctor>(this.GetDatabaseConnection());
 
             // Act
-            await sut.UpdateAsync(this.testEntity);
+            await sut.UpdateAsync(this.testEntity, string.Empty);
 
             // Assert
             var enteties = sut.GetAllAsync().Result.ToList();
@@ -87,7 +92,7 @@ namespace ReviewSystem.DataAccess.Tests
         {
             // Arrange
             var sut = new ModifyRepository<Doctor>(this.GetDatabaseConnection());
-            await sut.InsertAsync(this.testEntity);
+            await sut.InsertAsync(this.testEntity, string.Empty);
 
             // Act
             await sut.DeleteAsync(this.testEntity.Id);

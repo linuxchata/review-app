@@ -5,6 +5,11 @@ namespace ReviewSystem.Core
 {
     public sealed class Address
     {
+        public Address()
+        {
+            this.Id = ObjectId.GenerateNewId().ToString();
+        }
+
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }

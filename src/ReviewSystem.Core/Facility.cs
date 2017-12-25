@@ -7,6 +7,11 @@ namespace ReviewSystem.Core
     [DebuggerDisplay(nameof(Name))]
     public sealed class Facility
     {
+        public Facility()
+        {
+            this.Id = ObjectId.GenerateNewId().ToString();
+        }
+
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
