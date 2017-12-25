@@ -3,7 +3,7 @@
 namespace ReviewSystem.Core
 {
     [DebuggerDisplay(nameof(Name))]
-    public sealed class Location : CompleteModelBase
+    public sealed class Location : RootModelBase
     {
         public string Name { get; set; }
 

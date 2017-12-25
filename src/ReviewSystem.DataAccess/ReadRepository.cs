@@ -7,7 +7,7 @@ using ReviewSystem.DataAccess.Contracts;
 namespace ReviewSystem.DataAccess
 {
     public class ReadRepository<T> : BaseRepository<T>, IReadRepository<T>
-        where T : CompleteModelBase
+        where T : RootModelBase
     {
         public ReadRepository(IDatabaseConnection databaseConnection) :
             base(databaseConnection)

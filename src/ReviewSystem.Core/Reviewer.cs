@@ -1,6 +1,6 @@
 ﻿namespace ReviewSystem.Core
 {
-    public sealed class Reviewer : CompleteModelBase
+    public sealed class Reviewer : RootModelBase
     {
         public string FirstName { get; set; }
 

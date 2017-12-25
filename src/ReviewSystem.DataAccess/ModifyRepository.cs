@@ -8,7 +8,7 @@ using ReviewSystem.DataAccess.Contracts;
 namespace ReviewSystem.DataAccess
 {
     public sealed class ModifyRepository<T> : ReadRepository<T>, IModifyRepository<T>
-        where T : CompleteModelBase
+        where T : RootModelBase
     {
         public ModifyRepository(IDatabaseConnection databaseConnection) :
             base(databaseConnection)

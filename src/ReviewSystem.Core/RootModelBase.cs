@@ -4,7 +4,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace ReviewSystem.Core
 {
-    public abstract class CompleteModelBase
+    public abstract class RootModelBase
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]

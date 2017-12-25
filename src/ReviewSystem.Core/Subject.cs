@@ -3,7 +3,7 @@
 namespace ReviewSystem.Core
 {
     [DebuggerDisplay("Subject: {FirstName} {LastName}")]
-    public abstract class Subject : CompleteModelBase
+    public abstract class Subject : RootModelBase
     {
         public string FirstName { get; set; }
 
