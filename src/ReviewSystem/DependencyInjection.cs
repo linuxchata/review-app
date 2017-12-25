@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ReviewSystem.Core;
 using ReviewSystem.DataAccess;
 using ReviewSystem.DataAccess.Contracts;
 using ReviewSystem.Services;
@@ -16,10 +17,10 @@ namespace ReviewSystem
             services.AddTransient<IDatabaseConnection>(_ => new DatabaseConnection(connectionString));
 
             services.AddTransient<ILocationRepository, LocationRepository>();
-            services.AddTransient<ISubjectRepository, SubjectRepository>();
+            services.AddTransient<IModifyRepository<Doctor>, ModifyRepository<Doctor>>();
 
             services.AddTransient<ILocationService, LocationService>();
-            services.AddTransient<ISubjectService, SubjectService>();
+            services.AddTransient<IDoctorService, DoctorService>();
         }
     }
 }

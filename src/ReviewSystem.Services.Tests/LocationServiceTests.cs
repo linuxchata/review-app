@@ -23,7 +23,7 @@ namespace ReviewSystem.Services.Tests
         }
 
         [Fact]
-        public async void GetAll_WhenSubjectsExist_ShouldReturnNotEmptyResult_Test()
+        public async void GetAll_WhenLocationsExist_ShouldReturnNotEmptyResult_Test()
         {
             // Arrange
             var locations = new List<Location>
@@ -55,7 +55,7 @@ namespace ReviewSystem.Services.Tests
         }
 
         [Fact]
-        public async void GetBySearchCriteriaAsync_WhenMatchedSubjectsExist_ShouldReturnNotEmptyResult_Test()
+        public async void GetBySearchCriteriaAsync_WhenMatchedLocationsExist_ShouldReturnNotEmptyResult_Test()
         {
             // Arrange
             var locations = new List<Location>

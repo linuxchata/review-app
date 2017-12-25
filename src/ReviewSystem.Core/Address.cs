@@ -1,7 +1,14 @@
-﻿namespace ReviewSystem.Core
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+
+namespace ReviewSystem.Core
 {
-    public class Address
+    public sealed class Address
     {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
+
         public string State { get; set; }
 
         public string Region { get; set; }

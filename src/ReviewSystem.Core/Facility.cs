@@ -1,10 +1,16 @@
 ﻿using System.Diagnostics;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace ReviewSystem.Core
 {
     [DebuggerDisplay(nameof(Name))]
-    public class Facility
+    public sealed class Facility
     {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
+
         public string Name { get; set; }
 
         public string GpsLocation { get; set; }

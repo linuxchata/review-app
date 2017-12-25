@@ -4,10 +4,8 @@ using ReviewSystem.Core;
 
 namespace ReviewSystem.DataAccess.Contracts
 {
-    public interface ILocationRepository
+    public interface ILocationRepository : IReadRepository<Location>
     {
-        Task<IEnumerable<Location>> GetAllAsync();
-
         Task<IEnumerable<Location>> GetBySearchCriteriaAsync(string searchCriteria);
     }
 }
