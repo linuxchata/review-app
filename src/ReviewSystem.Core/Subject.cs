@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
@@ -13,12 +14,28 @@ namespace ReviewSystem.Core
 
         public string FirstName { get; set; }
 
+        public string MiddleName { get; set; }
+
         public string LastName { get; set; }
 
-        public string Address { get; set; }
+        public string CertificateNumber { get; set; }
 
-        public string Degree { get; set; }
+        public List<string> Universities { get; set; }
 
-        public string Specialization { get; set; }
+        public List<string> Internships { get; set; }
+
+        public List<string> Degrees { get; set; }
+        
+        public List<string> Specializations { get; set; }
+
+        public List<string> Publications { get; set; }
+
+        public List<string> Diseases { get; set; }
+
+        public List<string> Languages { get; set; }
+
+        public Facility Facility { get; set; }
+
+        public decimal GeneralRaiting { get; set; }
     }
 }

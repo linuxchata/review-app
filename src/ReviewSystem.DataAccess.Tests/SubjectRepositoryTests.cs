@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using MongoDB.Bson;
 using ReviewSystem.Core;
@@ -18,10 +19,19 @@ namespace ReviewSystem.DataAccess.Tests
             this.testSubject = new Subject
             {
                 FirstName = "John",
+                MiddleName = "Richard",
                 LastName = "Oliver",
-                Address = "New York",
-                Degree = "Master",
-                Specialization = "Surgeon"
+                CertificateNumber = "OR-056-RT",
+                Universities = new List<string> { "Wroclaw" },
+                Degrees = new List<string> { "Master" },
+                Specializations = new List<string> { "Surgeon" },
+                Diseases = new List<string> { "Cold" },
+                Languages = new List<string> { "English" },
+                Facility = new Facility
+                {
+                    Name = "Clinic in New York"
+                },
+                GeneralRaiting = 5.0m
             };
         }
 
@@ -46,7 +56,7 @@ namespace ReviewSystem.DataAccess.Tests
             var sut = new SubjectRepository(this.GetDatabaseConnection());
 
             // Act
-            var result = sut.GetByIdAsync("5a3c1c53cc849c169c9d6d81").Result;
+            var result = sut.GetByIdAsync("5a4133d1974daf1c64a51bee").Result;
 
             // Assert
             Assert.NotNull(result);
