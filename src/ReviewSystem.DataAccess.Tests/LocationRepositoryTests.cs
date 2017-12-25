@@ -10,20 +10,6 @@ namespace ReviewSystem.DataAccess.Tests
         private IDatabaseConnection databaseConnection;
 
         [Fact]
-        public async void GetAllAsync_ShouldReturnNotNullResult_Test()
-        {
-            // Arrange
-            var sut = new LocationRepository(this.GetDatabaseConnection());
-
-            // Act
-            var result = await sut.GetAllAsync();
-
-            // Assert
-            var locations = result.ToList();
-            Assert.NotNull(locations);
-        }
-
-        [Fact]
         public async void GetBySearchCriteriaAsync_ShouldReturnNotNullResult_Test()
         {
             // Arrange

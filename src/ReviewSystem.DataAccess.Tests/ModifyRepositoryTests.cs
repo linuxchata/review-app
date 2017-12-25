@@ -36,33 +36,6 @@ namespace ReviewSystem.DataAccess.Tests
         }
 
         [Fact]
-        public void GetAllAsync_ShouldReturnNotNullResult_Test()
-        {
-            // Arrange
-            var sut = new ModifyRepository<Doctor>(this.GetDatabaseConnection());
-
-            // Act
-            var result = sut.GetAllAsync().Result;
-
-            // Assert
-            var enteties = result.ToList();
-            Assert.NotNull(enteties);
-        }
-
-        [Fact]
-        public void GetByIdAsync_WhenIdIsValid_ShouldReturnNotNullResult_Test()
-        {
-            // Arrange
-            var sut = new ModifyRepository<Doctor>(this.GetDatabaseConnection());
-
-            // Act
-            var result = sut.GetByIdAsync("5a4143315725fe20903659cb").Result;
-
-            // Assert
-            Assert.NotNull(result);
-        }
-
-        [Fact]
         public async void InsertAsync_WhenEntityIsValid_ShouldInsertEntity_Test()
         {
             // Arrange
