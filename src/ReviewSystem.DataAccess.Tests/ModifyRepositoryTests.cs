@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using MongoDB.Bson;
@@ -51,6 +52,12 @@ namespace ReviewSystem.DataAccess.Tests
 
             // Assert
             Assert.NotNull(this.testEntity.Id);
+
+            Assert.NotEqual(DateTime.MinValue, this.testEntity.Created);
+            Assert.NotEqual(DateTime.MinValue, this.testEntity.Updated);
+            Assert.True(this.testEntity.Updated == this.testEntity.Created);
+            Assert.Equal("TestUser", this.testEntity.CreatedBy);
+            Assert.Equal("TestUser", this.testEntity.UpdatedBy);
         }
 
         [Fact]
@@ -70,6 +77,12 @@ namespace ReviewSystem.DataAccess.Tests
             var updatedResult = enteties.First(a => a.Id == this.testEntity.Id);
             Assert.Equal("Valentino", updatedResult.FirstName);
             Assert.Equal("Rossi", updatedResult.LastName);
+
+            Assert.NotEqual(DateTime.MinValue, this.testEntity.Created);
+            Assert.NotEqual(DateTime.MinValue, this.testEntity.Updated);
+            Assert.True(this.testEntity.Updated > this.testEntity.Created);
+            Assert.Equal("TestUser", this.testEntity.CreatedBy);
+            Assert.Equal("TestUserForUpdate", this.testEntity.UpdatedBy);
         }
 
         [Fact]

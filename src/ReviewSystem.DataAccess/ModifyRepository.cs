@@ -17,8 +17,9 @@ namespace ReviewSystem.DataAccess
 
         public Task InsertAsync(T entity, string user)
         {
-            entity.Created = DateTime.Now;
-            entity.Updated = DateTime.Now;
+            var dateTimeNow = DateTime.Now;
+            entity.Created = dateTimeNow;
+            entity.Updated = dateTimeNow;
             entity.CreatedBy = user;
             entity.UpdatedBy = user;
 
