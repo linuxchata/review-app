@@ -3,7 +3,7 @@ using ReviewSystem.DataAccess.Contracts;
 
 namespace ReviewSystem.DataAccess
 {
-    public class DatabaseConnection : IDatabaseConnection
+    public sealed class DatabaseConnection : IDatabaseConnection
     {
         private readonly string connectionString;
 

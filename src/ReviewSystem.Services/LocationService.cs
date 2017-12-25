@@ -7,7 +7,7 @@ using ReviewSystem.Services.Contracts;
 
 namespace ReviewSystem.Services
 {
-    public class LocationService : ILocationService
+    public sealed class LocationService : ILocationService
     {
         private readonly ILocationRepository locationRepository;
 

@@ -7,7 +7,7 @@ using ReviewSystem.Services.Contracts;
 
 namespace ReviewSystem.Services
 {
-    public class DoctorService : IDoctorService
+    public sealed class DoctorService : IDoctorService
     {
         private readonly IModifyRepository<Doctor> modifyRepository;
 
