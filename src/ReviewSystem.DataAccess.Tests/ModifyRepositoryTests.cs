@@ -47,7 +47,7 @@ namespace ReviewSystem.DataAccess.Tests
             var sut = new ModifyRepository<Doctor>(this.GetDatabaseConnection());
 
             // Act
-            await sut.InsertAsync(this.testEntity, string.Empty);
+            await sut.InsertAsync(this.testEntity, "TestUser");
 
             // Assert
             Assert.NotNull(this.testEntity.Id);
@@ -58,12 +58,12 @@ namespace ReviewSystem.DataAccess.Tests
         {
             // Arrange
             var sut = new ModifyRepository<Doctor>(this.GetDatabaseConnection());
-            await sut.InsertAsync(this.testEntity, string.Empty);
+            await sut.InsertAsync(this.testEntity, "TestUser");
             this.testEntity.FirstName = "Valentino";
             this.testEntity.LastName = "Rossi";
 
             // Act
-            await sut.UpdateAsync(this.testEntity, string.Empty);
+            await sut.UpdateAsync(this.testEntity, "TestUserForUpdate");
 
             // Assert
             var enteties = sut.GetAllAsync().Result.ToList();
@@ -79,7 +79,7 @@ namespace ReviewSystem.DataAccess.Tests
             var sut = new ModifyRepository<Doctor>(this.GetDatabaseConnection());
 
             // Act
-            await sut.UpdateAsync(this.testEntity, string.Empty);
+            await sut.UpdateAsync(this.testEntity, "TestUserForUpdate");
 
             // Assert
             var enteties = sut.GetAllAsync().Result.ToList();

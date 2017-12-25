@@ -1,19 +1,7 @@
-﻿using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
-
-namespace ReviewSystem.Core
+﻿namespace ReviewSystem.Core
 {
-    public sealed class Address
+    public sealed class Address : EmbededModelBase
     {
-        public Address()
-        {
-            this.Id = ObjectId.GenerateNewId().ToString();
-        }
-
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
-
         public string State { get; set; }
 
         public string Region { get; set; }
