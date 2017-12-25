@@ -9,16 +9,16 @@ using Xunit;
 
 namespace ReviewSystem.Tests
 {
-    public class SubjectControllerTests
+    public class DoctorControllerTests
     {
-        private readonly SubjectController sut;
+        private readonly DoctorController sut;
 
-        private readonly Mock<ISubjectService> subjectServiceMock;
+        private readonly Mock<IDoctorService> doctorServiceMock;
 
-        public SubjectControllerTests()
+        public DoctorControllerTests()
         {
-            this.subjectServiceMock = new Mock<ISubjectService>();
-            this.sut = new SubjectController(this.subjectServiceMock.Object);
+            this.doctorServiceMock = new Mock<IDoctorService>();
+            this.sut = new DoctorController(this.doctorServiceMock.Object);
         }
 
         [Fact]
@@ -36,13 +36,13 @@ namespace ReviewSystem.Tests
         public async void GetAll_WhenResultIsAvailable_ShouldReturnOk_Test()
         {
             // Arrange
-            var subjects = new List<Subject>
+            var doctors = new List<Doctor>
             {
-                new Subject()
+                new Doctor()
             };
-            this.subjectServiceMock
+            this.doctorServiceMock
                 .Setup(a => a.GetAllAsync())
-                .Returns(Task.FromResult<IEnumerable<Subject>>(subjects))
+                .Returns(Task.FromResult<IEnumerable<Doctor>>(doctors))
                 .Verifiable();
 
             // Act
@@ -50,8 +50,8 @@ namespace ReviewSystem.Tests
 
             // Assert
             var result = Assert.IsType<OkObjectResult>(response);
-            Assert.Equal(subjects, result.Value);
-            this.subjectServiceMock.Verify();
+            Assert.Equal(doctors, result.Value);
+            this.doctorServiceMock.Verify();
         }
 
         [Theory]
@@ -76,17 +76,17 @@ namespace ReviewSystem.Tests
 
             // Assert
             Assert.IsType<NotFoundResult>(response);
-            this.subjectServiceMock.Verify();
+            this.doctorServiceMock.Verify();
         }
 
         [Fact]
         public async void Get_WhenIdIsValidAndResultIsAvailable_ShouldReturnOk_Test()
         {
             // Arrange
-            var subject = new Subject();
-            this.subjectServiceMock
+            var doctor = new Doctor();
+            this.doctorServiceMock
                 .Setup(a => a.GetByIdAsync(It.IsAny<string>()))
-                .Returns(Task.FromResult(subject))
+                .Returns(Task.FromResult(doctor))
                 .Verifiable();
 
             // Act
@@ -94,12 +94,12 @@ namespace ReviewSystem.Tests
 
             // Assert
             var result = Assert.IsType<OkObjectResult>(response);
-            Assert.Equal(subject, result.Value);
-            this.subjectServiceMock.Verify();
+            Assert.Equal(doctor, result.Value);
+            this.doctorServiceMock.Verify();
         }
 
         [Fact]
-        public async void Add_WhenSubjectIsNull_ShouldReturnBadRequest_Test()
+        public async void Add_WhenDoctorIsNull_ShouldReturnBadRequest_Test()
         {
             // Arrange
             // Act
@@ -110,26 +110,26 @@ namespace ReviewSystem.Tests
         }
 
         [Fact]
-        public async void Add_WhenSubjectIsValid_ShouldReturnCreated_Test()
+        public async void Add_WhenDoctorIsValid_ShouldReturnCreated_Test()
         {
             // Arrange
-            var subject = new Subject();
-            this.subjectServiceMock
-                .Setup(a => a.AddAsync(It.IsAny<Subject>()))
+            var doctor = new Doctor();
+            this.doctorServiceMock
+                .Setup(a => a.AddAsync(It.IsAny<Doctor>()))
                 .Returns(Task.CompletedTask)
                 .Verifiable();
 
             // Act
-            var response = await this.sut.Add(subject);
+            var response = await this.sut.Add(doctor);
 
             // Assert
             Assert.IsType<CreatedResult>(response);
-            Assert.Equal("GetSubject", ((CreatedResult)response).Location);
-            this.subjectServiceMock.Verify();
+            Assert.Equal("GetDoctor", ((CreatedResult)response).Location);
+            this.doctorServiceMock.Verify();
         }
 
         [Fact]
-        public async void Edit_WhenSubjectIsNull_ShouldReturnBadRequest_Test()
+        public async void Edit_WhenDoctorIsNull_ShouldReturnBadRequest_Test()
         {
             // Arrange
             // Act
@@ -140,16 +140,16 @@ namespace ReviewSystem.Tests
         }
 
         [Fact]
-        public async void Edit_WhenIdAndSubjectIdAreNotMatch_ShouldReturnBadRequest_Test()
+        public async void Edit_WhenIdAndDoctorIdAreNotMatch_ShouldReturnBadRequest_Test()
         {
             // Arrange
-            var subject = new Subject
+            var doctor = new Doctor
             {
                 Id = "5a3c19155fbfbc1518f3759f"
             };
 
             // Act
-            var response = await this.sut.Edit("some_other_id", subject);
+            var response = await this.sut.Edit("some_other_id", doctor);
 
             // Assert
             Assert.IsType<BadRequestResult>(response);
@@ -159,22 +159,22 @@ namespace ReviewSystem.Tests
         public async void Delete_WhenParametersAreValid_ShouldReturnNoContent_Test()
         {
             // Arrange
-            var subject = new Subject
+            var doctor = new Doctor
             {
                 Id = "5a3c19155fbfbc1518f3759f"
             };
 
-            this.subjectServiceMock
-                .Setup(a => a.EditAsync(It.IsAny<Subject>()))
+            this.doctorServiceMock
+                .Setup(a => a.EditAsync(It.IsAny<Doctor>()))
                 .Returns(Task.CompletedTask)
                 .Verifiable();
 
             // Act
-            var response = await this.sut.Edit("5a3c19155fbfbc1518f3759f", subject);
+            var response = await this.sut.Edit("5a3c19155fbfbc1518f3759f", doctor);
 
             // Assert
             Assert.IsType<NoContentResult>(response);
-            this.subjectServiceMock.Verify();
+            this.doctorServiceMock.Verify();
         }
 
         [Theory]
@@ -194,7 +194,7 @@ namespace ReviewSystem.Tests
         public async void Delete_WhenIdIsNotEmpty_ShouldReturnNoContent_Test()
         {
             // Arrange
-            this.subjectServiceMock
+            this.doctorServiceMock
                 .Setup(a => a.DeleteAsync(It.IsAny<string>()))
                 .Returns(Task.CompletedTask)
                 .Verifiable();
@@ -204,7 +204,7 @@ namespace ReviewSystem.Tests
 
             // Assert
             Assert.IsType<NoContentResult>(response);
-            this.subjectServiceMock.Verify();
+            this.doctorServiceMock.Verify();
         }
     }
 }

@@ -10,36 +10,36 @@ using Xunit;
 
 namespace ReviewSystem.Services.Tests
 {
-    public class SubjectServiceTests
+    public class DoctorServiceTests
     {
-        private readonly ISubjectService sut;
+        private readonly IDoctorService sut;
 
-        private readonly Mock<ISubjectRepository> subjectRepositoryMock;
+        private readonly Mock<IModifyRepository<Doctor>> modifyRepositoryMock;
 
-        public SubjectServiceTests()
+        public DoctorServiceTests()
         {
-            this.subjectRepositoryMock = new Mock<ISubjectRepository>();
-            this.sut = new SubjectService(this.subjectRepositoryMock.Object);
+            this.modifyRepositoryMock = new Mock<IModifyRepository<Doctor>>();
+            this.sut = new DoctorService(this.modifyRepositoryMock.Object);
         }
 
         [Fact]
-        public async void GetAllAsync_WhenSubjectsExist_ShouldReturnNotEmptyResult_Test()
+        public async void GetAllAsync_WhenDoctorsExist_ShouldReturnNotEmptyResult_Test()
         {
             // Arrange
-            var subjects = new List<Subject>
+            var doctors = new List<Doctor>
             {
-                new Subject()
+                new Doctor()
             };
-            this.subjectRepositoryMock
+            this.modifyRepositoryMock
                 .Setup(a => a.GetAllAsync())
-                .Returns(Task.FromResult<IEnumerable<Subject>>(subjects));
+                .Returns(Task.FromResult<IEnumerable<Doctor>>(doctors));
 
             // Act
             var result = await this.sut.GetAllAsync();
 
             // Assert
             Assert.True(result.Any());
-            this.subjectRepositoryMock.Verify(a => a.GetAllAsync(), Times.Once);
+            this.modifyRepositoryMock.Verify(a => a.GetAllAsync(), Times.Once);
         }
 
         [Theory]
@@ -51,64 +51,64 @@ namespace ReviewSystem.Services.Tests
             // Act
             // Assert
             await Assert.ThrowsAsync<ArgumentNullException>(() => this.sut.GetByIdAsync(id));
-            this.subjectRepositoryMock.Verify(a => a.GetByIdAsync(It.IsAny<string>()), Times.Never);
+            this.modifyRepositoryMock.Verify(a => a.GetByIdAsync(It.IsAny<string>()), Times.Never);
         }
 
         [Fact]
-        public async void GetByIdAsync_WhenSubjectExist_ShouldReturnNotEmptyResult_Test()
+        public async void GetByIdAsync_WhenDoctorExist_ShouldReturnNotEmptyResult_Test()
         {
             // Arrange
-            var subject = new Subject();
-            this.subjectRepositoryMock
+            var doctor = new Doctor();
+            this.modifyRepositoryMock
                 .Setup(a => a.GetByIdAsync(It.IsAny<string>()))
-                .Returns(Task.FromResult(subject));
+                .Returns(Task.FromResult(doctor));
 
             // Act
             var result = await this.sut.GetByIdAsync("5a3c1c53cc849c169c9d6d81");
 
             // Assert
             Assert.NotNull(result);
-            this.subjectRepositoryMock.Verify(a => a.GetByIdAsync(It.IsAny<string>()), Times.Once);
+            this.modifyRepositoryMock.Verify(a => a.GetByIdAsync(It.IsAny<string>()), Times.Once);
         }
 
         [Fact]
-        public async void AddAsync_WhenSubjectIsNull_ShouldThrowException_Test()
+        public async void AddAsync_WhenDoctorIsNull_ShouldThrowException_Test()
         {
             // Arrange
             // Act
             // Assert
             await Assert.ThrowsAsync<ArgumentNullException>(() => this.sut.AddAsync(null));
-            this.subjectRepositoryMock.Verify(a => a.InsertAsync(It.IsAny<Subject>()), Times.Never);
+            this.modifyRepositoryMock.Verify(a => a.InsertAsync(It.IsAny<Doctor>()), Times.Never);
         }
 
         [Fact]
-        public async void AddAsync_WhenSubjectIsValid_ShouldNotThrowException_Test()
+        public async void AddAsync_WhenDoctorIsValid_ShouldNotThrowException_Test()
         {
             // Arrange
             // Act
             // Assert
-            await this.sut.AddAsync(new Subject());
-            this.subjectRepositoryMock.Verify(a => a.InsertAsync(It.IsAny<Subject>()), Times.Once);
+            await this.sut.AddAsync(new Doctor());
+            this.modifyRepositoryMock.Verify(a => a.InsertAsync(It.IsAny<Doctor>()), Times.Once);
         }
 
         [Fact]
-        public async void EditAsync_WhenSubjectIsNull_ShouldThrowException_Test()
+        public async void EditAsync_WhenDoctorIsNull_ShouldThrowException_Test()
         {
             // Arrange
             // Act
             // Assert
             await Assert.ThrowsAsync<ArgumentNullException>(() => this.sut.EditAsync(null));
-            this.subjectRepositoryMock.Verify(a => a.UpdateAsync(It.IsAny<Subject>()), Times.Never);
+            this.modifyRepositoryMock.Verify(a => a.UpdateAsync(It.IsAny<Doctor>()), Times.Never);
         }
 
         [Fact]
-        public async void EditAsync_WhenSubjectIsValid_ShouldNotThrowException_Test()
+        public async void EditAsync_WhenDoctorIsValid_ShouldNotThrowException_Test()
         {
             // Arrange
             // Act
             // Assert
-            await this.sut.EditAsync(new Subject());
-            this.subjectRepositoryMock.Verify(a => a.UpdateAsync(It.IsAny<Subject>()), Times.Once);
+            await this.sut.EditAsync(new Doctor());
+            this.modifyRepositoryMock.Verify(a => a.UpdateAsync(It.IsAny<Doctor>()), Times.Once);
         }
 
         [Theory]
@@ -120,17 +120,17 @@ namespace ReviewSystem.Services.Tests
             // Act
             // Assert
             await Assert.ThrowsAsync<ArgumentNullException>(() => this.sut.DeleteAsync(subjectId));
-            this.subjectRepositoryMock.Verify(a => a.DeleteAsync(It.IsAny<string>()), Times.Never);
+            this.modifyRepositoryMock.Verify(a => a.DeleteAsync(It.IsAny<string>()), Times.Never);
         }
 
         [Fact]
-        public async void RemoveAsync_WhenSubjectIsValid_ShouldNotThrowException_Test()
+        public async void RemoveAsync_WhenDoctorIsValid_ShouldNotThrowException_Test()
         {
             // Arrange
             // Act
             // Assert
             await this.sut.DeleteAsync("5a3c19155fbfbc1518f3759f");
-            this.subjectRepositoryMock.Verify(a => a.DeleteAsync(It.IsAny<string>()), Times.Once);
+            this.modifyRepositoryMock.Verify(a => a.DeleteAsync(It.IsAny<string>()), Times.Once);
         }
     }
 }

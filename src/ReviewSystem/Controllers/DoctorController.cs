@@ -7,28 +7,28 @@ using ReviewSystem.Services.Contracts;
 namespace ReviewSystem.Controllers
 {
     [Route("api/[controller]")]
-    public class SubjectController : Controller
+    public class DoctorController : Controller
     {
-        private readonly ISubjectService subjectService;
+        private readonly IDoctorService doctorService;
 
-        public SubjectController(ISubjectService subjectService)
+        public DoctorController(IDoctorService doctorService)
         {
-            this.subjectService = subjectService;
+            this.doctorService = doctorService;
         }
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var subjects = await this.subjectService.GetAllAsync();
-            if (!subjects.Any())
+            var doctors = await this.doctorService.GetAllAsync();
+            if (!doctors.Any())
             {
                 return this.NoContent();
             }
 
-            return this.Ok(subjects);
+            return this.Ok(doctors);
         }
 
-        [HttpGet("{id}", Name = "GetSubject")]
+        [HttpGet("{id}", Name = "GetDoctor")]
         public async Task<IActionResult> Get(string id)
         {
             if (string.IsNullOrEmpty(id))
@@ -36,37 +36,37 @@ namespace ReviewSystem.Controllers
                 return this.BadRequest();
             }
 
-            var subject = await this.subjectService.GetByIdAsync(id);
-            if (subject == null)
+            var doctor = await this.doctorService.GetByIdAsync(id);
+            if (doctor == null)
             {
                 return this.NotFound();
             }
 
-            return this.Ok(subject);
+            return this.Ok(doctor);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add([FromBody]Subject subject)
+        public async Task<IActionResult> Add([FromBody]Doctor doctor)
         {
-            if (subject == null)
+            if (doctor == null)
             {
                 return this.BadRequest();
             }
 
-            await this.subjectService.AddAsync(subject);
+            await this.doctorService.AddAsync(doctor);
 
-            return this.Created("GetSubject", subject);
+            return this.Created("GetDoctor", doctor);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Edit(string id, [FromBody]Subject subject)
+        public async Task<IActionResult> Edit(string id, [FromBody]Doctor doctor)
         {
-            if (subject == null || subject.Id != id)
+            if (doctor == null || doctor.Id != id)
             {
                 return this.BadRequest();
             }
 
-            await this.subjectService.EditAsync(subject);
+            await this.doctorService.EditAsync(doctor);
 
             return this.NoContent();
         }
@@ -79,7 +79,7 @@ namespace ReviewSystem.Controllers
                 return this.BadRequest();
             }
 
-            await this.subjectService.DeleteAsync(id);
+            await this.doctorService.DeleteAsync(id);
 
             return this.NoContent();
         }

@@ -8,21 +8,21 @@ using Xunit;
 namespace ReviewSystem.DataAccess.Tests
 {
     [Trait("Category", "IntegrationTests")]
-    public class SubjectRepositoryTests
+    public class ModifyRepositoryTests
     {
-        private readonly Subject testSubject;
+        private readonly Doctor testEntity;
 
         private IDatabaseConnection databaseConnection;
 
-        public SubjectRepositoryTests()
+        public ModifyRepositoryTests()
         {
-            this.testSubject = new Subject
+            this.testEntity = new Doctor
             {
                 FirstName = "John",
                 MiddleName = "Richard",
                 LastName = "Oliver",
                 CertificateNumber = "OR-056-RT",
-                Universities = new List<string> { "Wroclaw" },
+                Schools = new List<string> { "Wroclaw" },
                 Degrees = new List<string> { "Master" },
                 Specializations = new List<string> { "Surgeon" },
                 Diseases = new List<string> { "Cold" },
@@ -39,96 +39,96 @@ namespace ReviewSystem.DataAccess.Tests
         public void GetAllAsync_ShouldReturnNotNullResult_Test()
         {
             // Arrange
-            var sut = new SubjectRepository(this.GetDatabaseConnection());
+            var sut = new ModifyRepository<Doctor>(this.GetDatabaseConnection());
 
             // Act
             var result = sut.GetAllAsync().Result;
 
             // Assert
-            var subjects = result.ToList();
-            Assert.NotNull(subjects);
+            var enteties = result.ToList();
+            Assert.NotNull(enteties);
         }
 
         [Fact]
         public void GetByIdAsync_WhenIdIsValid_ShouldReturnNotNullResult_Test()
         {
             // Arrange
-            var sut = new SubjectRepository(this.GetDatabaseConnection());
+            var sut = new ModifyRepository<Doctor>(this.GetDatabaseConnection());
 
             // Act
-            var result = sut.GetByIdAsync("5a4133d1974daf1c64a51bee").Result;
+            var result = sut.GetByIdAsync("5a4143315725fe20903659cb").Result;
 
             // Assert
             Assert.NotNull(result);
         }
 
         [Fact]
-        public async void InsertAsync_WhenSubjectIsValid_ShouldInsertSubject_Test()
+        public async void InsertAsync_WhenEntityIsValid_ShouldInsertEntity_Test()
         {
             // Arrange
-            var sut = new SubjectRepository(this.GetDatabaseConnection());
+            var sut = new ModifyRepository<Doctor>(this.GetDatabaseConnection());
 
             // Act
-            await sut.InsertAsync(this.testSubject);
+            await sut.InsertAsync(this.testEntity);
 
             // Assert
-            Assert.NotNull(this.testSubject.Id);
+            Assert.NotNull(this.testEntity.Id);
         }
 
         [Fact]
-        public async void UpdateAsync_WhenSubjectExists_ShouldUpdateSubject_Test()
+        public async void UpdateAsync_WhenEntityExists_ShouldUpdateEntity_Test()
         {
             // Arrange
-            var sut = new SubjectRepository(this.GetDatabaseConnection());
-            await sut.InsertAsync(this.testSubject);
-            this.testSubject.FirstName = "Valentino";
-            this.testSubject.LastName = "Rossi";
+            var sut = new ModifyRepository<Doctor>(this.GetDatabaseConnection());
+            await sut.InsertAsync(this.testEntity);
+            this.testEntity.FirstName = "Valentino";
+            this.testEntity.LastName = "Rossi";
 
             // Act
-            await sut.UpdateAsync(this.testSubject);
+            await sut.UpdateAsync(this.testEntity);
 
             // Assert
-            var subjects = sut.GetAllAsync().Result.ToList();
-            var updatedResult = subjects.First(a => a.Id == this.testSubject.Id);
+            var enteties = sut.GetAllAsync().Result.ToList();
+            var updatedResult = enteties.First(a => a.Id == this.testEntity.Id);
             Assert.Equal("Valentino", updatedResult.FirstName);
             Assert.Equal("Rossi", updatedResult.LastName);
         }
 
         [Fact]
-        public async void UpdateAsync_WhenSubjectDoesNotExist_ShouldNotUpdateSubject_Test()
+        public async void UpdateAsync_WhenEntityDoesNotExist_ShouldNotUpdateEntity_Test()
         {
             // Arrange
-            var sut = new SubjectRepository(this.GetDatabaseConnection());
+            var sut = new ModifyRepository<Doctor>(this.GetDatabaseConnection());
 
             // Act
-            await sut.UpdateAsync(this.testSubject);
+            await sut.UpdateAsync(this.testEntity);
 
             // Assert
-            var subjects = sut.GetAllAsync().Result.ToList();
-            var updatedResult = subjects.FirstOrDefault(a => a.Id == this.testSubject.Id);
+            var enteties = sut.GetAllAsync().Result.ToList();
+            var updatedResult = enteties.FirstOrDefault(a => a.Id == this.testEntity.Id);
             Assert.Null(updatedResult);
         }
 
         [Fact]
-        public async void DeleteAsync_WhenSubjectExists_ShouldDeleteSubject_Test()
+        public async void DeleteAsync_WhenEntityExists_ShouldDeleteEntity_Test()
         {
             // Arrange
-            var sut = new SubjectRepository(this.GetDatabaseConnection());
-            await sut.InsertAsync(this.testSubject);
+            var sut = new ModifyRepository<Doctor>(this.GetDatabaseConnection());
+            await sut.InsertAsync(this.testEntity);
 
             // Act
-            await sut.DeleteAsync(this.testSubject.Id);
+            await sut.DeleteAsync(this.testEntity.Id);
 
             // Assert
-            var subjects = sut.GetAllAsync().Result.ToList();
-            Assert.DoesNotContain(subjects, a => string.Equals(a.Id, this.testSubject.Id));
+            var enteties = sut.GetAllAsync().Result.ToList();
+            Assert.DoesNotContain(enteties, a => string.Equals(a.Id, this.testEntity.Id));
         }
 
         [Fact]
-        public async void DeleteAsync_WhenSubjectDoesNotExist_ShouldNotDeleteSubject_Test()
+        public async void DeleteAsync_WhenEntityDoesNotExist_ShouldNotDeleteEntity_Test()
         {
             // Arrange
-            var sut = new SubjectRepository(this.GetDatabaseConnection());
+            var sut = new ModifyRepository<Doctor>(this.GetDatabaseConnection());
             var id = ObjectId.GenerateNewId().ToString();
             var beforeCount = sut.GetAllAsync().Result.Count();
 
