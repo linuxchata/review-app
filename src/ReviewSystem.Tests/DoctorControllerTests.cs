@@ -26,7 +26,7 @@ namespace ReviewSystem.Tests
         {
             // Arrange
             // Act
-            var response = await this.sut.Get();
+            var response = await this.sut.GetAll();
 
             // Assert
             Assert.IsType<NoContentResult>(response);
@@ -46,7 +46,7 @@ namespace ReviewSystem.Tests
                 .Verifiable();
 
             // Act
-            var response = await this.sut.Get();
+            var response = await this.sut.GetAll();
 
             // Assert
             var result = Assert.IsType<OkObjectResult>(response);
