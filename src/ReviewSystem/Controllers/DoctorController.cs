@@ -19,7 +19,8 @@ namespace ReviewSystem.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var doctors = await this.doctorService.GetAllAsync();
+            var result = await this.doctorService.GetAllAsync();
+            var doctors = result.ToList();
             if (!doctors.Any())
             {
                 return this.NoContent();
