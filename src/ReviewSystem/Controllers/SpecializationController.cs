@@ -29,7 +29,7 @@ namespace ReviewSystem.Controllers
             return this.Ok(specializations);
         }
 
-        [HttpGet("{searchCriteria}", Name = "GetSpecializationBySearchCriteria")]
+        [HttpGet("{searchCriteria}")]
         public async Task<IActionResult> GetBySearchCriteria(string searchCriteria)
         {
             if (string.IsNullOrEmpty(searchCriteria))
