@@ -17,7 +17,6 @@ namespace ReviewSystem.Controllers
         }
 
         [HttpGet]
-        [Route("GetAll")]
         public async Task<IActionResult> GetAll()
         {
             var result = await this.specializationService.GetAllAsync();
@@ -30,7 +29,7 @@ namespace ReviewSystem.Controllers
             return this.Ok(specializations);
         }
 
-        [HttpGet(Name = "GetSpecializationBySearchCriteria")]
+        [HttpGet("{searchCriteria}", Name = "GetSpecializationBySearchCriteria")]
         [Route("GetSpecializationBySearchCriteria")]
         public async Task<IActionResult> GetBySearchCriteria(string searchCriteria)
         {

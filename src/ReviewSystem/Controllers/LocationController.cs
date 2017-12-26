@@ -17,7 +17,6 @@ namespace ReviewSystem.Controllers
         }
 
         [HttpGet]
-        [Route("GetAll")]
         public async Task<IActionResult> GetAll()
         {
             var result = await this.locationService.GetAllAsync();
@@ -30,7 +29,7 @@ namespace ReviewSystem.Controllers
             return this.Ok(locations);
         }
 
-        [HttpGet(Name = "GetLocationBySearchCriteria")]
+        [HttpGet("{searchCriteria}", Name = "GetLocationBySearchCriteria")]
         [Route("GetLocationBySearchCriteria")]
         public async Task<IActionResult> GetBySearchCriteria(string searchCriteria)
         {
