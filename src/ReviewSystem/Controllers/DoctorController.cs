@@ -20,13 +20,13 @@ namespace ReviewSystem.Controllers
         public async Task<IActionResult> GetAll()
         {
             var result = await this.doctorService.GetAllAsync();
-            var doctors = result.ToList();
-            if (!doctors.Any())
+            var entities = result.ToList();
+            if (!entities.Any())
             {
                 return this.NoContent();
             }
 
-            return this.Ok(doctors);
+            return this.Ok(entities);
         }
 
         [HttpGet("{id}", Name = "GetDoctor")]
@@ -37,37 +37,43 @@ namespace ReviewSystem.Controllers
                 return this.BadRequest();
             }
 
-            var doctor = await this.doctorService.GetByIdAsync(id);
-            if (doctor == null)
+            var entity = await this.doctorService.GetByIdAsync(id);
+            if (entity == null)
             {
                 return this.NotFound();
             }
 
-            return this.Ok(doctor);
+            return this.Ok(entity);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add([FromBody]Doctor doctor)
+        public async Task<IActionResult> Create([FromBody]Doctor entity)
         {
-            if (doctor == null)
+            if (entity == null || !ModelState.IsValid)
             {
                 return this.BadRequest();
             }
 
-            await this.doctorService.AddAsync(doctor);
+            await this.doctorService.CreateAsync(entity);
 
-            return this.Created("GetDoctor", doctor);
+            return this.CreatedAtRoute("GetDoctor", new { id = entity.Id }, entity);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Edit(string id, [FromBody]Doctor doctor)
+        public async Task<IActionResult> Update(string id, [FromBody]Doctor entity)
         {
-            if (doctor == null || doctor.Id != id)
+            if (entity == null || entity.Id != id || !ModelState.IsValid)
             {
                 return this.BadRequest();
             }
 
-            await this.doctorService.EditAsync(doctor);
+            var existingEntity = await this.doctorService.GetByIdAsync(entity.Id);
+            if (existingEntity == null)
+            {
+                return this.NotFound();
+            }
+
+            await this.doctorService.UpdateAsync(entity);
 
             return this.NoContent();
         }
@@ -78,6 +84,12 @@ namespace ReviewSystem.Controllers
             if (string.IsNullOrEmpty(id))
             {
                 return this.BadRequest();
+            }
+
+            var existingEntity = await this.doctorService.GetByIdAsync(id);
+            if (existingEntity == null)
+            {
+                return this.NotFound();
             }
 
             await this.doctorService.DeleteAsync(id);

@@ -20,13 +20,13 @@ namespace ReviewSystem.Controllers
         public async Task<IActionResult> GetAll()
         {
             var result = await this.specializationService.GetAllAsync();
-            var specializations = result.ToList();
-            if (!specializations.Any())
+            var entities = result.ToList();
+            if (!entities.Any())
             {
                 return this.NoContent();
             }
 
-            return this.Ok(specializations);
+            return this.Ok(entities);
         }
 
         [HttpGet("{searchCriteria}")]
@@ -38,13 +38,13 @@ namespace ReviewSystem.Controllers
             }
 
             var result = await this.specializationService.GetBySearchCriteriaAsync(searchCriteria);
-            var specializations = result.ToList();
-            if (!specializations.Any())
+            var entities = result.ToList();
+            if (!entities.Any())
             {
                 return this.NotFound();
             }
 
-            return this.Ok(specializations);
+            return this.Ok(entities);
         }
     }
 }

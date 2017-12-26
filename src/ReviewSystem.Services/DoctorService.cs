@@ -31,7 +31,7 @@ namespace ReviewSystem.Services
             return this.modifyRepository.GetByIdAsync(id);
         }
 
-        public Task AddAsync(Doctor doctor)
+        public Task CreateAsync(Doctor doctor)
         {
             if (doctor == null)
             {
@@ -41,7 +41,7 @@ namespace ReviewSystem.Services
             return this.modifyRepository.InsertAsync(doctor, string.Empty);
         }
 
-        public Task EditAsync(Doctor doctor)
+        public Task UpdateAsync(Doctor doctor)
         {
             if (doctor == null)
             {

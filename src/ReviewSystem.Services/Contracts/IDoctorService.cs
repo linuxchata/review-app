@@ -10,9 +10,9 @@ namespace ReviewSystem.Services.Contracts
 
         Task<Doctor> GetByIdAsync(string id);
 
-        Task AddAsync(Doctor doctor);
+        Task CreateAsync(Doctor doctor);
 
-        Task EditAsync(Doctor doctor);
+        Task UpdateAsync(Doctor doctor);
 
         Task DeleteAsync(string subjectId);
     }

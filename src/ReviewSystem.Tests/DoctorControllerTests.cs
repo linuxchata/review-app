@@ -40,6 +40,7 @@ namespace ReviewSystem.Tests
             {
                 new Doctor()
             };
+
             this.doctorServiceMock
                 .Setup(a => a.GetAllAsync())
                 .Returns(Task.FromResult<IEnumerable<Doctor>>(doctors))
@@ -99,48 +100,53 @@ namespace ReviewSystem.Tests
         }
 
         [Fact]
-        public async void Add_WhenDoctorIsNull_ShouldReturnBadRequest_Test()
+        public async void Create_WhenDoctorIsNull_ShouldReturnBadRequest_Test()
         {
             // Arrange
             // Act
-            var response = await this.sut.Add(null);
+            var response = await this.sut.Create(null);
 
             // Assert
             Assert.IsType<BadRequestResult>(response);
         }
 
         [Fact]
-        public async void Add_WhenDoctorIsValid_ShouldReturnCreated_Test()
+        public async void Create_WhenDoctorIsValid_ShouldReturnCreated_Test()
         {
             // Arrange
-            var doctor = new Doctor();
+            var doctor = new Doctor
+            {
+                Id = "5a3c19155fbfbc1518f3759f"
+            };
+
             this.doctorServiceMock
-                .Setup(a => a.AddAsync(It.IsAny<Doctor>()))
+                .Setup(a => a.CreateAsync(It.IsAny<Doctor>()))
                 .Returns(Task.CompletedTask)
                 .Verifiable();
 
             // Act
-            var response = await this.sut.Add(doctor);
+            var response = await this.sut.Create(doctor);
 
             // Assert
-            Assert.IsType<CreatedResult>(response);
-            Assert.Equal("GetDoctor", ((CreatedResult)response).Location);
+            Assert.IsType<CreatedAtRouteResult>(response);
+            Assert.Equal("GetDoctor", ((CreatedAtRouteResult)response).RouteName);
+            Assert.Equal("5a3c19155fbfbc1518f3759f", ((CreatedAtRouteResult)response).RouteValues["id"]);
             this.doctorServiceMock.Verify();
         }
 
         [Fact]
-        public async void Edit_WhenDoctorIsNull_ShouldReturnBadRequest_Test()
+        public async void Update_WhenDoctorIsNull_ShouldReturnBadRequest_Test()
         {
             // Arrange
             // Act
-            var response = await this.sut.Edit(string.Empty, null);
+            var response = await this.sut.Update(string.Empty, null);
 
             // Assert
             Assert.IsType<BadRequestResult>(response);
         }
 
         [Fact]
-        public async void Edit_WhenIdAndDoctorIdAreNotMatch_ShouldReturnBadRequest_Test()
+        public async void Update_WhenIdAndDoctorIdAreNotMatch_ShouldReturnBadRequest_Test()
         {
             // Arrange
             var doctor = new Doctor
@@ -149,14 +155,30 @@ namespace ReviewSystem.Tests
             };
 
             // Act
-            var response = await this.sut.Edit("some_other_id", doctor);
+            var response = await this.sut.Update("some_other_id", doctor);
 
             // Assert
             Assert.IsType<BadRequestResult>(response);
         }
 
         [Fact]
-        public async void Delete_WhenParametersAreValid_ShouldReturnNoContent_Test()
+        public async void Update_WhenParametersAreValidAndDoctorDoesNotExist_ShouldReturnNotFound_Test()
+        {
+            // Arrange
+            var doctor = new Doctor
+            {
+                Id = "5a3c19155fbfbc1518f3759f"
+            };
+
+            // Act
+            var response = await this.sut.Update(doctor.Id, doctor);
+
+            // Assert
+            Assert.IsType<NotFoundResult>(response);
+        }
+
+        [Fact]
+        public async void Update_WhenParametersAreValidAndDoctorExists_ShouldReturnCreated_Test()
         {
             // Arrange
             var doctor = new Doctor
@@ -165,12 +187,17 @@ namespace ReviewSystem.Tests
             };
 
             this.doctorServiceMock
-                .Setup(a => a.EditAsync(It.IsAny<Doctor>()))
+                .Setup(a => a.GetByIdAsync(It.IsAny<string>()))
+                .Returns(Task.FromResult(doctor))
+                .Verifiable();
+
+            this.doctorServiceMock
+                .Setup(a => a.UpdateAsync(It.IsAny<Doctor>()))
                 .Returns(Task.CompletedTask)
                 .Verifiable();
 
             // Act
-            var response = await this.sut.Edit("5a3c19155fbfbc1518f3759f", doctor);
+            var response = await this.sut.Update(doctor.Id, doctor);
 
             // Assert
             Assert.IsType<NoContentResult>(response);
@@ -191,9 +218,30 @@ namespace ReviewSystem.Tests
         }
 
         [Fact]
-        public async void Delete_WhenIdIsNotEmpty_ShouldReturnNoContent_Test()
+        public async void Delete_WhenIdIsNotEmptyAndDoctorDoesNotExist_ShouldReturnNotFound_Test()
         {
             // Arrange
+            // Act
+            var response = await this.sut.Delete("5a3c19155fbfbc1518f3759f");
+
+            // Assert
+            Assert.IsType<NotFoundResult>(response);
+        }
+
+        [Fact]
+        public async void Delete_WhenIdIsNotEmptyAndDoctorExists_ShouldReturnNoContent_Test()
+        {
+            // Arrange
+            var doctor = new Doctor
+            {
+                Id = "5a3c19155fbfbc1518f3759f"
+            };
+
+            this.doctorServiceMock
+                .Setup(a => a.GetByIdAsync(It.IsAny<string>()))
+                .Returns(Task.FromResult(doctor))
+                .Verifiable();
+
             this.doctorServiceMock
                 .Setup(a => a.DeleteAsync(It.IsAny<string>()))
                 .Returns(Task.CompletedTask)

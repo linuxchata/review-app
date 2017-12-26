@@ -72,42 +72,42 @@ namespace ReviewSystem.Services.Tests
         }
 
         [Fact]
-        public async void AddAsync_WhenDoctorIsNull_ShouldThrowException_Test()
+        public async void CreateAsync_WhenDoctorIsNull_ShouldThrowException_Test()
         {
             // Arrange
             // Act
             // Assert
-            await Assert.ThrowsAsync<ArgumentNullException>(() => this.sut.AddAsync(null));
+            await Assert.ThrowsAsync<ArgumentNullException>(() => this.sut.CreateAsync(null));
             this.modifyRepositoryMock.Verify(a => a.InsertAsync(It.IsAny<Doctor>(), string.Empty), Times.Never);
         }
 
         [Fact]
-        public async void AddAsync_WhenDoctorIsValid_ShouldNotThrowException_Test()
+        public async void CreateAsync_WhenDoctorIsValid_ShouldNotThrowException_Test()
         {
             // Arrange
             // Act
             // Assert
-            await this.sut.AddAsync(new Doctor());
+            await this.sut.CreateAsync(new Doctor());
             this.modifyRepositoryMock.Verify(a => a.InsertAsync(It.IsAny<Doctor>(), string.Empty), Times.Once);
         }
 
         [Fact]
-        public async void EditAsync_WhenDoctorIsNull_ShouldThrowException_Test()
+        public async void UpdateAsync_WhenDoctorIsNull_ShouldThrowException_Test()
         {
             // Arrange
             // Act
             // Assert
-            await Assert.ThrowsAsync<ArgumentNullException>(() => this.sut.EditAsync(null));
+            await Assert.ThrowsAsync<ArgumentNullException>(() => this.sut.UpdateAsync(null));
             this.modifyRepositoryMock.Verify(a => a.UpdateAsync(It.IsAny<Doctor>(), string.Empty), Times.Never);
         }
 
         [Fact]
-        public async void EditAsync_WhenDoctorIsValid_ShouldNotThrowException_Test()
+        public async void UpdateAsync_WhenDoctorIsValid_ShouldNotThrowException_Test()
         {
             // Arrange
             // Act
             // Assert
-            await this.sut.EditAsync(new Doctor());
+            await this.sut.UpdateAsync(new Doctor());
             this.modifyRepositoryMock.Verify(a => a.UpdateAsync(It.IsAny<Doctor>(), string.Empty), Times.Once);
         }
 
