@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore;
+﻿using System;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using NLog.Web;
 
 namespace ReviewSystem
 {
@@ -7,12 +9,23 @@ namespace ReviewSystem
     {
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+            var logger = NLogBuilder.ConfigureNLog("NLog.config").GetCurrentClassLogger();
+            try
+            {
+                logger.Debug("Initialize main");
+                BuildWebHost(args).Run();
+            }
+            catch (Exception e)
+            {
+                logger.Error(e, "Initialization exception");
+                throw;
+            }
         }
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+                .UseNLog()
                 .Build();
     }
 }

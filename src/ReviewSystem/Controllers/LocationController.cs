@@ -17,9 +17,11 @@ namespace ReviewSystem.Controllers
         }
 
         [HttpGet]
+        [Route("GetAll")]
         public async Task<IActionResult> GetAll()
         {
-            var locations = await this.locationService.GetAllAsync();
+            var result = await this.locationService.GetAllAsync();
+            var locations = result.ToList();
             if (!locations.Any())
             {
                 return this.NoContent();
@@ -28,7 +30,8 @@ namespace ReviewSystem.Controllers
             return this.Ok(locations);
         }
 
-        [HttpGet(Name = "GetBySearchCriteria")]
+        [HttpGet(Name = "GetLocationBySearchCriteria")]
+        [Route("GetLocationBySearchCriteria")]
         public async Task<IActionResult> GetBySearchCriteria(string searchCriteria)
         {
             if (string.IsNullOrEmpty(searchCriteria))
@@ -36,7 +39,8 @@ namespace ReviewSystem.Controllers
                 return this.BadRequest();
             }
 
-            var locations = await this.locationService.GetBySearchCriteriaAsync(searchCriteria);
+            var result = await this.locationService.GetBySearchCriteriaAsync(searchCriteria);
+            var locations = result.ToList();
             if (!locations.Any())
             {
                 return this.NotFound();

@@ -17,9 +17,11 @@ namespace ReviewSystem.Controllers
         }
 
         [HttpGet]
+        [Route("GetAll")]
         public async Task<IActionResult> GetAll()
         {
-            var specializations = await this.specializationService.GetAllAsync();
+            var result = await this.specializationService.GetAllAsync();
+            var specializations = result.ToList();
             if (!specializations.Any())
             {
                 return this.NoContent();
@@ -28,7 +30,8 @@ namespace ReviewSystem.Controllers
             return this.Ok(specializations);
         }
 
-        [HttpGet(Name = "GetBySearchCriteria")]
+        [HttpGet(Name = "GetSpecializationBySearchCriteria")]
+        [Route("GetSpecializationBySearchCriteria")]
         public async Task<IActionResult> GetBySearchCriteria(string searchCriteria)
         {
             if (string.IsNullOrEmpty(searchCriteria))
@@ -36,7 +39,8 @@ namespace ReviewSystem.Controllers
                 return this.BadRequest();
             }
 
-            var specializations = await this.specializationService.GetBySearchCriteriaAsync(searchCriteria);
+            var result = await this.specializationService.GetBySearchCriteriaAsync(searchCriteria);
+            var specializations = result.ToList();
             if (!specializations.Any())
             {
                 return this.NotFound();
