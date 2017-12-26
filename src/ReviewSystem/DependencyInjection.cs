@@ -17,9 +17,11 @@ namespace ReviewSystem
             services.AddTransient<IDatabaseConnection>(_ => new DatabaseConnection(connectionString));
 
             services.AddTransient<ILocationRepository, LocationRepository>();
+            services.AddTransient<ISpecializationRepository, SpecializationRepository>();
             services.AddTransient<IModifyRepository<Doctor>, ModifyRepository<Doctor>>();
 
             services.AddTransient<ILocationService, LocationService>();
+            services.AddTransient<ISpecializationService, SpecializationService>();
             services.AddTransient<IDoctorService, DoctorService>();
         }
     }
