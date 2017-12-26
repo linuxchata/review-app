@@ -30,7 +30,6 @@ namespace ReviewSystem.Controllers
         }
 
         [HttpGet("{searchCriteria}", Name = "GetSpecializationBySearchCriteria")]
-        [Route("GetSpecializationBySearchCriteria")]
         public async Task<IActionResult> GetBySearchCriteria(string searchCriteria)
         {
             if (string.IsNullOrEmpty(searchCriteria))
