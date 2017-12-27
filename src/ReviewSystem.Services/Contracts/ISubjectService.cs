@@ -10,6 +10,8 @@ namespace ReviewSystem.Services.Contracts
 
         Task<Doctor> GetByIdAsync(string id);
 
+        Task<bool> DoesExist(Doctor subject);
+
         Task CreateAsync(Doctor subject);
 
         Task UpdateAsync(Doctor subject);

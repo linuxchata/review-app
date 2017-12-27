@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using ReviewSystem.Core;
 using ReviewSystem.DataAccess.Contracts;
@@ -9,16 +10,16 @@ namespace ReviewSystem.Services
 {
     public sealed class SubjectService : ISubjectService
     {
-        private readonly IModifyRepository<Doctor> modifyRepository;
+        private readonly IDoctorRepository doctorRepository;
 
-        public SubjectService(IModifyRepository<Doctor> modifyRepository)
+        public SubjectService(IDoctorRepository doctorRepository)
         {
-            this.modifyRepository = modifyRepository;
+            this.doctorRepository = doctorRepository;
         }
 
         public Task<IEnumerable<Doctor>> GetAllAsync()
         {
-            return this.modifyRepository.GetAllAsync();
+            return this.doctorRepository.GetAllAsync();
         }
 
         public Task<Doctor> GetByIdAsync(string id)
@@ -28,7 +29,19 @@ namespace ReviewSystem.Services
                 throw new ArgumentNullException(nameof(id), "Subject id cannot be null or empty");
             }
 
-            return this.modifyRepository.GetByIdAsync(id);
+            return this.doctorRepository.GetByIdAsync(id);
+        }
+
+        public Task<bool> DoesExist(Doctor subject)
+        {
+            if (subject == null)
+            {
+                throw new ArgumentNullException(nameof(subject), "Subject cannot be null");
+            }
+
+            var task = this.doctorRepository.GetByNamesAsync(subject);
+
+            return task.ContinueWith(t => t.Result.Any());
         }
 
         public Task CreateAsync(Doctor subject)
@@ -38,7 +51,7 @@ namespace ReviewSystem.Services
                 throw new ArgumentNullException(nameof(subject), "Subject cannot be null");
             }
 
-            return this.modifyRepository.InsertAsync(subject, string.Empty);
+            return this.doctorRepository.InsertAsync(subject, string.Empty);
         }
 
         public Task UpdateAsync(Doctor subject)
@@ -48,7 +61,7 @@ namespace ReviewSystem.Services
                 throw new ArgumentNullException(nameof(subject), "Subject cannot be null");
             }
 
-            return this.modifyRepository.UpdateAsync(subject, string.Empty);
+            return this.doctorRepository.UpdateAsync(subject, string.Empty);
         }
 
         public Task DeleteAsync(string subjectId)
@@ -58,7 +71,7 @@ namespace ReviewSystem.Services
                 throw new ArgumentNullException(nameof(subjectId), "Subject id cannot be null or empty");
             }
 
-            return this.modifyRepository.DeleteAsync(subjectId);
+            return this.doctorRepository.DeleteAsync(subjectId);
         }
     }
 }

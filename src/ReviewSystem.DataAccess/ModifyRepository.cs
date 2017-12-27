@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Threading.Tasks;
-using MongoDB.Bson;
 using MongoDB.Driver;
 using ReviewSystem.Core;
 using ReviewSystem.DataAccess.Contracts;
 
 namespace ReviewSystem.DataAccess
 {
-    public sealed class ModifyRepository<T> : ReadRepository<T>, IModifyRepository<T>
+    public class ModifyRepository<T> : ReadRepository<T>, IModifyRepository<T>
         where T : RootModelBase
     {
         public ModifyRepository(IDatabaseConnection databaseConnection) :

@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ReviewSystem.Core;
 using ReviewSystem.Services.Contracts;
@@ -52,6 +53,12 @@ namespace ReviewSystem.Controllers
             if (subject == null || !ModelState.IsValid)
             {
                 return this.BadRequest();
+            }
+
+            var doesSubjectExist = await this.subjectService.DoesExist(subject);
+            if (doesSubjectExist)
+            {
+                return this.StatusCode(StatusCodes.Status409Conflict, "Subject with the same name has already been created.");
             }
 
             await this.subjectService.CreateAsync(subject);

@@ -18,7 +18,7 @@ namespace ReviewSystem
 
             services.AddTransient<ILocationRepository, LocationRepository>();
             services.AddTransient<ISpecializationRepository, SpecializationRepository>();
-            services.AddTransient<IModifyRepository<Doctor>, ModifyRepository<Doctor>>();
+            services.AddTransient<IDoctorRepository, DoctorRepository>();
 
             services.AddTransient<ILocationService, LocationService>();
             services.AddTransient<ISpecializationService, SpecializationService>();

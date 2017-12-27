@@ -14,12 +14,12 @@ namespace ReviewSystem.Services.Tests
     {
         private readonly ISubjectService sut;
 
-        private readonly Mock<IModifyRepository<Doctor>> modifyRepositoryMock;
+        private readonly Mock<IDoctorRepository> doctorRepositoryMock;
 
         public SubjectServiceTests()
         {
-            this.modifyRepositoryMock = new Mock<IModifyRepository<Doctor>>();
-            this.sut = new SubjectService(this.modifyRepositoryMock.Object);
+            this.doctorRepositoryMock = new Mock<IDoctorRepository>();
+            this.sut = new SubjectService(this.doctorRepositoryMock.Object);
         }
 
         [Fact]
@@ -30,7 +30,7 @@ namespace ReviewSystem.Services.Tests
             {
                 new Doctor()
             };
-            this.modifyRepositoryMock
+            this.doctorRepositoryMock
                 .Setup(a => a.GetAllAsync())
                 .Returns(Task.FromResult<IEnumerable<Doctor>>(subjects));
 
@@ -39,7 +39,7 @@ namespace ReviewSystem.Services.Tests
 
             // Assert
             Assert.True(result.Any());
-            this.modifyRepositoryMock.Verify(a => a.GetAllAsync(), Times.Once);
+            this.doctorRepositoryMock.Verify(a => a.GetAllAsync(), Times.Once);
         }
 
         [Theory]
@@ -51,7 +51,7 @@ namespace ReviewSystem.Services.Tests
             // Act
             // Assert
             await Assert.ThrowsAsync<ArgumentNullException>(() => this.sut.GetByIdAsync(id));
-            this.modifyRepositoryMock.Verify(a => a.GetByIdAsync(It.IsAny<string>()), Times.Never);
+            this.doctorRepositoryMock.Verify(a => a.GetByIdAsync(It.IsAny<string>()), Times.Never);
         }
 
         [Fact]
@@ -59,7 +59,7 @@ namespace ReviewSystem.Services.Tests
         {
             // Arrange
             var subject = new Doctor();
-            this.modifyRepositoryMock
+            this.doctorRepositoryMock
                 .Setup(a => a.GetByIdAsync(It.IsAny<string>()))
                 .Returns(Task.FromResult(subject));
 
@@ -68,7 +68,7 @@ namespace ReviewSystem.Services.Tests
 
             // Assert
             Assert.NotNull(result);
-            this.modifyRepositoryMock.Verify(a => a.GetByIdAsync(It.IsAny<string>()), Times.Once);
+            this.doctorRepositoryMock.Verify(a => a.GetByIdAsync(It.IsAny<string>()), Times.Once);
         }
 
         [Fact]
@@ -78,7 +78,7 @@ namespace ReviewSystem.Services.Tests
             // Act
             // Assert
             await Assert.ThrowsAsync<ArgumentNullException>(() => this.sut.CreateAsync(null));
-            this.modifyRepositoryMock.Verify(a => a.InsertAsync(It.IsAny<Doctor>(), string.Empty), Times.Never);
+            this.doctorRepositoryMock.Verify(a => a.InsertAsync(It.IsAny<Doctor>(), string.Empty), Times.Never);
         }
 
         [Fact]
@@ -88,7 +88,7 @@ namespace ReviewSystem.Services.Tests
             // Act
             // Assert
             await this.sut.CreateAsync(new Doctor());
-            this.modifyRepositoryMock.Verify(a => a.InsertAsync(It.IsAny<Doctor>(), string.Empty), Times.Once);
+            this.doctorRepositoryMock.Verify(a => a.InsertAsync(It.IsAny<Doctor>(), string.Empty), Times.Once);
         }
 
         [Fact]
@@ -98,7 +98,7 @@ namespace ReviewSystem.Services.Tests
             // Act
             // Assert
             await Assert.ThrowsAsync<ArgumentNullException>(() => this.sut.UpdateAsync(null));
-            this.modifyRepositoryMock.Verify(a => a.UpdateAsync(It.IsAny<Doctor>(), string.Empty), Times.Never);
+            this.doctorRepositoryMock.Verify(a => a.UpdateAsync(It.IsAny<Doctor>(), string.Empty), Times.Never);
         }
 
         [Fact]
@@ -108,7 +108,7 @@ namespace ReviewSystem.Services.Tests
             // Act
             // Assert
             await this.sut.UpdateAsync(new Doctor());
-            this.modifyRepositoryMock.Verify(a => a.UpdateAsync(It.IsAny<Doctor>(), string.Empty), Times.Once);
+            this.doctorRepositoryMock.Verify(a => a.UpdateAsync(It.IsAny<Doctor>(), string.Empty), Times.Once);
         }
 
         [Theory]
@@ -120,7 +120,7 @@ namespace ReviewSystem.Services.Tests
             // Act
             // Assert
             await Assert.ThrowsAsync<ArgumentNullException>(() => this.sut.DeleteAsync(subjectId));
-            this.modifyRepositoryMock.Verify(a => a.DeleteAsync(It.IsAny<string>()), Times.Never);
+            this.doctorRepositoryMock.Verify(a => a.DeleteAsync(It.IsAny<string>()), Times.Never);
         }
 
         [Fact]
@@ -130,7 +130,7 @@ namespace ReviewSystem.Services.Tests
             // Act
             // Assert
             await this.sut.DeleteAsync("5a3c19155fbfbc1518f3759f");
-            this.modifyRepositoryMock.Verify(a => a.DeleteAsync(It.IsAny<string>()), Times.Once);
+            this.doctorRepositoryMock.Verify(a => a.DeleteAsync(It.IsAny<string>()), Times.Once);
         }
     }
 }
