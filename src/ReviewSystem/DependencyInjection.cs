@@ -22,7 +22,7 @@ namespace ReviewSystem
 
             services.AddTransient<ILocationService, LocationService>();
             services.AddTransient<ISpecializationService, SpecializationService>();
-            services.AddTransient<IDoctorService, DoctorService>();
+            services.AddTransient<ISubjectService, SubjectService>();
         }
     }
 }
