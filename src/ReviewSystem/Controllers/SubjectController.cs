@@ -55,10 +55,10 @@ namespace ReviewSystem.Controllers
                 return this.BadRequest();
             }
 
-            var doesSubjectExist = await this.subjectService.DoesExist(subject);
+            var doesSubjectExist = await this.subjectService.ExistsAsync(subject);
             if (doesSubjectExist)
             {
-                return this.StatusCode(StatusCodes.Status409Conflict, "Subject with the same name has already been created.");
+                return this.StatusCode(StatusCodes.Status409Conflict, "Subject with the same name has already been created");
             }
 
             await this.subjectService.CreateAsync(subject);

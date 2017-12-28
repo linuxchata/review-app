@@ -72,6 +72,53 @@ namespace ReviewSystem.Services.Tests
         }
 
         [Fact]
+        public async void ExistsAsync_WhenSubjectIsNull_ShouldThrowException_Test()
+        {
+            // Arrange
+            // Act
+            // Assert
+            await Assert.ThrowsAsync<ArgumentNullException>(() => this.sut.ExistsAsync(null));
+            this.doctorRepositoryMock.Verify(a => a.GetByNamesAsync(It.IsAny<Doctor>()), Times.Never);
+        }
+
+        [Fact]
+        public async void ExistsAsync_WhenSubjectExists_ShouldReturnFalse_Test()
+        {
+            // Arrange
+            var subjects = new List<Doctor>();
+            this.doctorRepositoryMock
+                .Setup(a => a.GetByNamesAsync(It.IsAny<Doctor>()))
+                .Returns(Task.FromResult(subjects.AsEnumerable()));
+
+            // Act
+            var result = await this.sut.ExistsAsync(new Doctor());
+
+            // Assert
+            Assert.False(result);
+            this.doctorRepositoryMock.Verify(a => a.GetByNamesAsync(It.IsAny<Doctor>()), Times.Once);
+        }
+
+        [Fact]
+        public async void ExistsAsync_WhenSubjectExists_ShouldReturnTrue_Test()
+        {
+            // Arrange
+            var subjects = new List<Doctor>
+            {
+                new Doctor()
+            };
+            this.doctorRepositoryMock
+                .Setup(a => a.GetByNamesAsync(It.IsAny<Doctor>()))
+                .Returns(Task.FromResult(subjects.AsEnumerable()));
+
+            // Act
+            var result = await this.sut.ExistsAsync(new Doctor());
+
+            // Assert
+            Assert.True(result);
+            this.doctorRepositoryMock.Verify(a => a.GetByNamesAsync(It.IsAny<Doctor>()), Times.Once);
+        }
+
+        [Fact]
         public async void CreateAsync_WhenSubjectIsNull_ShouldThrowException_Test()
         {
             // Arrange

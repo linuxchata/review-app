@@ -15,20 +15,22 @@ namespace ReviewSystem.DataAccess
 
         public async Task<IEnumerable<Doctor>> GetByNamesAsync(Doctor doctor)
         {
-            var filter = Builders<Doctor>.Filter.And(new[]
+            var fiter = new
             {
-                GetFilterDefinition(nameof(doctor.FirstName), doctor.FirstName.ToLower()),
-                GetFilterDefinition(nameof(doctor.LastName), doctor.LastName.ToLower()),
-                GetFilterDefinition(nameof(doctor.MiddleName), doctor.MiddleName.ToLower())
-            });
+                FirstName = this.GetLowerCaseString(doctor.FirstName),
+                LastName = this.GetLowerCaseString(doctor.LastName),
+                MiddleName = this.GetLowerCaseString(doctor.MiddleName)
+            };
 
-            var cursor = await this.Collection.FindAsync(filter);
+            var cursor = await this.Collection.FindAsync(a => a.FirstName.ToLower().Contains(fiter.FirstName) &&
+                                                              a.LastName.ToLower().Contains(fiter.LastName) &&
+                                                              a.MiddleName.ToLower().Contains(fiter.MiddleName));
             return cursor.ToEnumerable();
         }
 
-        private FilterDefinition<Doctor> GetFilterDefinition(string field, string value)
+        private string GetLowerCaseString(string value)
         {
-            return Builders<Doctor>.Filter.Eq(field, value);
+            return !string.IsNullOrWhiteSpace(value) ? value.ToLower() : string.Empty;
         }
     }
 }

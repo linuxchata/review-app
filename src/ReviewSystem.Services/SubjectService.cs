@@ -32,7 +32,7 @@ namespace ReviewSystem.Services
             return this.doctorRepository.GetByIdAsync(id);
         }
 
-        public Task<bool> DoesExist(Doctor subject)
+        public Task<bool> ExistsAsync(Doctor subject)
         {
             if (subject == null)
             {

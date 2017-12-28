@@ -111,6 +111,30 @@ namespace ReviewSystem.Tests
         }
 
         [Fact]
+        public async void Create_WhenSubjectAlreadtExists_ShouldReturnConflict_Test()
+        {
+            // Arrange
+            var subject = new Doctor
+            {
+                Id = "5a3c19155fbfbc1518f3759f"
+            };
+
+            this.subjectServiceMock
+                .Setup(a => a.ExistsAsync(It.IsAny<Doctor>()))
+                .Returns(Task.FromResult(true))
+                .Verifiable();
+
+            // Act
+            var response = await this.sut.Create(subject);
+
+            // Assert
+            Assert.IsType<ObjectResult>(response);
+            Assert.Equal("409", ((ObjectResult)response).StatusCode.ToString());
+            Assert.Equal("Subject with the same name has already been created", ((ObjectResult)response).Value);
+            this.subjectServiceMock.Verify();
+        }
+
+        [Fact]
         public async void Create_WhenSubjectIsValid_ShouldReturnCreated_Test()
         {
             // Arrange
