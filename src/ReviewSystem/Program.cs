@@ -1,4 +1,5 @@
 ﻿using System;
+using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using NLog.Web;
@@ -24,8 +25,9 @@ namespace ReviewSystem
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
+                .ConfigureServices(s => s.AddAutofac())
                 .UseNLog()
+                .UseStartup<Startup>()
                 .Build();
     }
 }

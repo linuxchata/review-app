@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Autofac;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,10 +17,13 @@ namespace ReviewSystem
 
         public void ConfigureServices(IServiceCollection services)
         {
-            DependencyInjection.Intiailize(services, this.configuration);
-
             services.AddMvc();
             services.Configure<ApplicationSettings>(this.configuration.GetSection("Settings"));
+        }
+
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+            builder.RegisterModule(new AutofacModule(this.configuration));
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
