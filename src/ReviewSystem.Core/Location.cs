@@ -2,12 +2,10 @@
 
 namespace ReviewSystem.Core
 {
-    [DebuggerDisplay(nameof(Name))]
+    [DebuggerDisplay("{Name} {Region}")]
     public sealed class Location : RootModelBase
     {
         public string Name { get; set; }
-
-        public string State { get; set; }
 
         public string Region { get; set; }
 

@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ReviewSystem.Core\ReviewSystem.Core.csproj" />
     <ProjectReference Include="..\ReviewSystem.DataAccess\ReviewSystem.DataAccess.csproj" />
   </ItemGroup>
