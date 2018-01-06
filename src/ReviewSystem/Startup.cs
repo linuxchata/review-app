@@ -33,16 +33,8 @@ namespace ReviewSystem
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseStaticFiles(new StaticFileOptions
-            {
-                OnPrepareResponse = (context) =>
-                {
-                    // Disable caching for all static files.
-                    context.Context.Response.Headers["Cache-Control"] = configuration["StaticFiles:Headers:Cache-Control"];
-                    context.Context.Response.Headers["Pragma"] = configuration["StaticFiles:Headers:Pragma"];
-                    context.Context.Response.Headers["Expires"] = configuration["StaticFiles:Headers:Expires"];
-                }
-            });
+            app.UseStaticFiles();
+
             app.UseStatusCodePages();
 
             app.UseMvc();
