@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using ReviewSystem.Core;
 using ReviewSystem.Core.Application.Wikipedia;
 using ReviewSystem.DataAccess.Contracts;
@@ -27,12 +26,10 @@ namespace ReviewSystem.Services.Synchronization
 
         public async void Synchronize()
         {
-            var response = await this.wikipediaService.GetPageContent();
+            var pageContent = await this.wikipediaService.GetPageContent();
 
-            var pageContent = response.Query.Pages[0].Revisions[0].Content;
             var parsedPageContent = this.wikipediaParsingService.ParsePage(pageContent);
-            var tableContent = parsedPageContent.FirstOrDefault(a => a.ContentType == WikiPageContentType.Table);
-            var parsedTable = this.wikipediaParsingService.ParseTable(tableContent.Content);
+            var parsedTable = this.wikipediaParsingService.ParseTable(parsedPageContent);
 
             var locations = new List<Location>();
             foreach (var row in parsedTable)

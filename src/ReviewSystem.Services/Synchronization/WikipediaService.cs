@@ -9,7 +9,7 @@ namespace ReviewSystem.Services.Synchronization
 {
     public sealed class WikipediaService : IWikipediaService
     {
-        public async Task<WikipediaResponse> GetPageContent()
+        public async Task<string> GetPageContent()
         {
             var client = new HttpClient
             {
@@ -22,10 +22,12 @@ namespace ReviewSystem.Services.Synchronization
             if (response.IsSuccessStatusCode)
             {
                 var stringContent = await response.Content.ReadAsStringAsync();
-                return this.HandleResponse(stringContent);
+                var result = this.HandleResponse(stringContent);
+
+                return result.Query.Pages[0].Revisions[0].Content;
             }
 
-            return new WikipediaResponse();
+            return string.Empty;
         }
 
         private WikipediaResponse HandleResponse(string stringContent)

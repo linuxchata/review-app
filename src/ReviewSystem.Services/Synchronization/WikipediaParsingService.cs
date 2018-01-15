@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using ReviewSystem.Core.Application.Wikipedia;
 using ReviewSystem.Services.Contracts;
 using ReviewSystem.Services.Synchronization.WikiPageHandlers;
@@ -28,8 +29,10 @@ namespace ReviewSystem.Services.Synchronization
             return pageElements;
         }
 
-        public List<WikiTableRowBase> ParseTable(string content)
+        public List<WikiTableRowBase> ParseTable(SortedSet<WikiPageElement> page)
         {
+            var tableContent = page.FirstOrDefault(a => a.ContentType == WikiPageContentType.Table);
+
             // Prepare a table for parsing
             var preHandler = new TablePreHandler();
 
@@ -42,6 +45,7 @@ namespace ReviewSystem.Services.Synchronization
             preHandler.SetNextHandler(headersHandler);
             headersHandler.SetNextHandler(rowsHandler);
 
+            var content = tableContent.Content;
             var tableElements = new List<WikiTableRowBase>();
             preHandler.HandlerRequest(ref content, tableElements);
 

@@ -7,6 +7,6 @@ namespace ReviewSystem.Services.Contracts
     {
         SortedSet<WikiPageElement> ParsePage(string content);
 
-        List<WikiTableRowBase> ParseTable(string content);
+        List<WikiTableRowBase> ParseTable(SortedSet<WikiPageElement> page);
     }
 }
