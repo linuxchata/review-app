@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using ReviewSystem.Core;
+using ReviewSystem.Core.Domain;
 using ReviewSystem.DataAccess.Contracts;
 using ReviewSystem.Services.Contracts;
 

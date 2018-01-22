@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using ReviewSystem.Core.Domain;
 
-namespace ReviewSystem.Core
+namespace ReviewSystem.Core.TransferObjects
 {
-    public sealed class Doctor : Subject
+    public sealed class DoctorDto : SubjectDto
     {
         public string CertificateNumber { get; set; }
 

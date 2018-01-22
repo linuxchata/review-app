@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using ReviewSystem.Core;
+using System.Threading.Tasks;
 using ReviewSystem.Core.Application.Wikipedia;
-using ReviewSystem.DataAccess.Contracts;
+using ReviewSystem.Core.Domain;
 using ReviewSystem.Services.Contracts;
 
 namespace ReviewSystem.Services.Synchronization
@@ -12,38 +12,55 @@ namespace ReviewSystem.Services.Synchronization
 
         private readonly IWikipediaParsingService wikipediaParsingService;
 
-        private readonly ILocationRepository locationRepository;
+        private readonly ILocationService locationService;
 
         public LocationSynchronizationService(
             IWikipediaService wikipediaService,
             IWikipediaParsingService wikipediaParsingService,
-            ILocationRepository locationRepository)
+            ILocationService locationService)
         {
-            this.locationRepository = locationRepository;
-            this.wikipediaParsingService = wikipediaParsingService;
             this.wikipediaService = wikipediaService;
+            this.wikipediaParsingService = wikipediaParsingService;
+            this.locationService = locationService;
         }
 
         public async void Synchronize()
+        {
+            var source = await this.GetSourceLocations();
+            var existed = await this.GetExistedLocations();
+
+            foreach (var location in source)
+            {
+                if (!existed.Contains(location))
+                {
+                    await this.locationService.CreateAsync(location, "Sync Administrator");
+                }
+            }
+        }
+
+        private async Task<IEnumerable<Location>> GetSourceLocations()
         {
             var pageContent = await this.wikipediaService.GetPageContent();
 
             var parsedPageContent = this.wikipediaParsingService.ParsePage(pageContent);
             var parsedTable = this.wikipediaParsingService.ParseTable(parsedPageContent);
 
-            var locations = new List<Location>();
+            var source = new List<Location>();
             foreach (var row in parsedTable)
             {
                 if (row is WikiTableRow)
                 {
-                    var location = new Location
-                    {
-                        Name = this.GetName(row),
-                        Region = this.GetRegion(row)
-                    };
-                    locations.Add(location);
+                    var location = new Location(this.GetName(row), this.GetRegion(row));
+                    source.Add(location);
                 }
             }
+
+            return source;
+        }
+
+        private async Task<HashSet<Location>> GetExistedLocations()
+        {
+            return new HashSet<Location>(await this.locationService.GetAllAsync());
         }
 
         private string GetName(WikiTableRowBase row)

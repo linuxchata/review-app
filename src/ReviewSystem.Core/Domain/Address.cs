@@ -1,4 +1,4 @@
-﻿namespace ReviewSystem.Core
+﻿namespace ReviewSystem.Core.Domain
 {
     public sealed class Address : EmbededModelBase
     {

@@ -1,9 +1,6 @@
-﻿using System.Diagnostics;
-
-namespace ReviewSystem.Core
+﻿namespace ReviewSystem.Core.TransferObjects
 {
-    [DebuggerDisplay("Subject: {FirstName} {LastName}")]
-    public abstract class Subject : RootModelBase
+    public abstract class SubjectDto : RootModelBaseDto
     {
         public string FirstName { get; set; }
 

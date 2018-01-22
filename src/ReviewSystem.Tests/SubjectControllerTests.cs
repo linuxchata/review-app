@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using ReviewSystem.Controllers;
-using ReviewSystem.Core;
+using ReviewSystem.Core.Domain;
 using ReviewSystem.Services.Contracts;
 using Xunit;
 

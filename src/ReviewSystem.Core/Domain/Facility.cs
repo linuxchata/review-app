@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace ReviewSystem.Core
+namespace ReviewSystem.Core.Domain
 {
     [DebuggerDisplay(nameof(Name))]
     public sealed class Facility : EmbededModelBase

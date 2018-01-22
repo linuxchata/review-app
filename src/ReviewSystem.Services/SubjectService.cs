@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ReviewSystem.Core;
+using ReviewSystem.Core.Domain;
 using ReviewSystem.DataAccess.Contracts;
 using ReviewSystem.Services.Contracts;
 

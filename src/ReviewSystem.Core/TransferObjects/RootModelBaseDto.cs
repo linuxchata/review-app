@@ -2,9 +2,9 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace ReviewSystem.Core
+namespace ReviewSystem.Core.TransferObjects
 {
-    public abstract class RootModelBase
+    public class RootModelBaseDto
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]

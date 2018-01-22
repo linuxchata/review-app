@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using ReviewSystem.Controllers;
-using ReviewSystem.Core;
+using ReviewSystem.Core.Domain;
 using ReviewSystem.Services.Contracts;
 using Xunit;
 
@@ -38,10 +38,9 @@ namespace ReviewSystem.Tests
             // Arrange
             var locations = new List<Location>
             {
-                new Location
+                new Location("New York", null)
                 {
-                    Id = "5a3eddd75ac5641b4ca8e652",
-                    Name = "New York"
+                    Id = "5a3eddd75ac5641b4ca8e652"
                 }
             };
             this.locationServiceMock
@@ -88,10 +87,9 @@ namespace ReviewSystem.Tests
             // Arrange
             var locations = new List<Location>
             {
-                new Location
+                new Location("New York", null)
                 {
-                    Id = "5a3eddd75ac5641b4ca8e652",
-                    Name = "New York"
+                    Id = "5a3eddd75ac5641b4ca8e652"
                 }
             };
             this.locationServiceMock

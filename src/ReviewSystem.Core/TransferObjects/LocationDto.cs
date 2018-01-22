@@ -1,9 +1,6 @@
-﻿using System.Diagnostics;
-
-namespace ReviewSystem.Core
+﻿namespace ReviewSystem.Core.TransferObjects
 {
-    [DebuggerDisplay("{Name} {Region}")]
-    public sealed class Location : RootModelBase
+    public sealed class LocationDto : RootModelBaseDto
     {
         public string Name { get; set; }
 

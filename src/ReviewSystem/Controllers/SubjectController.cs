@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ReviewSystem.Core;
+using ReviewSystem.Core.Domain;
 using ReviewSystem.Services.Contracts;
 
 namespace ReviewSystem.Controllers

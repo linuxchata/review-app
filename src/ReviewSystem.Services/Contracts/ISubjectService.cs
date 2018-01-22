@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using ReviewSystem.Core;
+using ReviewSystem.Core.Domain;
 
 namespace ReviewSystem.Services.Contracts
 {
