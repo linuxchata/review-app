@@ -73,5 +73,25 @@ namespace ReviewSystem.Services.Tests
             Assert.True(result.Any());
             this.locationRepositoryMock.Verify(a => a.GetBySearchCriteriaAsync(It.IsAny<string>()), Times.Once);
         }
+
+        [Fact]
+        public async void CreateAsync_WhenSubjectIsNull_ShouldThrowException_Test()
+        {
+            // Arrange
+            // Act
+            // Assert
+            await Assert.ThrowsAsync<ArgumentNullException>(() => this.sut.CreateAsync(null));
+            this.locationRepositoryMock.Verify(a => a.InsertAsync(It.IsAny<Location>(), string.Empty), Times.Never);
+        }
+
+        [Fact]
+        public async void CreateAsync_WhenSubjectIsValid_ShouldNotThrowException_Test()
+        {
+            // Arrange
+            // Act
+            // Assert
+            await this.sut.CreateAsync(new Location());
+            this.locationRepositoryMock.Verify(a => a.InsertAsync(It.IsAny<Location>(), null), Times.Once);
+        }
     }
 }
