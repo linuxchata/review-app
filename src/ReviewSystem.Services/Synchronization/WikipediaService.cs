@@ -2,6 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using ReviewSystem.Core.Application;
 using ReviewSystem.Core.Application.Wikipedia;
 using ReviewSystem.Services.Contracts;
 
@@ -9,15 +10,21 @@ namespace ReviewSystem.Services.Synchronization
 {
     public sealed class WikipediaService : IWikipediaService
     {
+        private readonly IApplicationSettings settings;
+
+        public WikipediaService(IApplicationSettings settings)
+        {
+            this.settings = settings;
+        }
+
         public async Task<string> GetPageContent()
         {
             var client = new HttpClient
             {
-                BaseAddress = new Uri(@"https://uk.wikipedia.org/")
+                BaseAddress = new Uri(this.settings.WikipediaBaseUrl)
             };
 
-            var url = @"w/api.php?action=query&titles=%D0%9C%D1%96%D1%81%D1%82%D0%B0_%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B8_(%D0%B7%D0%B0_%D0%BD%D0%B0%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F%D0%BC)&prop=revisions&rvprop=content&format=json&formatversion=2";
-            var response = await client.GetAsync(url);
+            var response = await client.GetAsync(this.settings.WikipediaLocationsPageUrl);
 
             if (response.IsSuccessStatusCode)
             {

@@ -33,7 +33,7 @@ namespace ReviewSystem.Services.Synchronization
             {
                 if (!existed.Contains(location))
                 {
-                    await this.locationService.CreateAsync(location, "Sync Administrator");
+                    await this.locationService.CreateAsync(location, "Synchronization User");
                 }
             }
         }

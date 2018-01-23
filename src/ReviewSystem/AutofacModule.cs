@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using Microsoft.Extensions.Configuration;
+using ReviewSystem.Core.Application;
 using ReviewSystem.DataAccess;
 using ReviewSystem.DataAccess.Converters;
 using ReviewSystem.Services;
@@ -24,6 +25,11 @@ namespace ReviewSystem
                 .WithParameter("connectionString", connectionString)
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
+
+            var applicationSettings = new ApplicationSettings();
+            this.configuration.GetSection("Settings").Bind(applicationSettings);
+            builder.RegisterInstance(applicationSettings)
+                .AsImplementedInterfaces();
 
             this.RegisterConverters(builder);
 
@@ -67,6 +73,12 @@ namespace ReviewSystem
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
             builder.RegisterType<SubjectService>()
+                .AsImplementedInterfaces()
+                .InstancePerLifetimeScope();
+            builder.RegisterType<WikipediaService>()
+                .AsImplementedInterfaces()
+                .InstancePerLifetimeScope();
+            builder.RegisterType<WikipediaParsingService>()
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
             builder.RegisterType<LocationSynchronizationService>()
