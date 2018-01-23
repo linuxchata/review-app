@@ -11,6 +11,11 @@ namespace ReviewSystem.Services.Synchronization
     {
         public SortedSet<WikiPageElement> ParsePage(string content)
         {
+            if (string.IsNullOrEmpty(content))
+            {
+                return new SortedSet<WikiPageElement>();
+            }
+
             // Parse tables
             var tablesHandler = new PageTablesHandler();
 
@@ -31,7 +36,16 @@ namespace ReviewSystem.Services.Synchronization
 
         public List<WikiTableRowBase> ParseTable(SortedSet<WikiPageElement> page)
         {
+            if (page == null)
+            {
+                return new List<WikiTableRowBase>();
+            }
+
             var tableContent = page.FirstOrDefault(a => a.ContentType == WikiPageContentType.Table);
+            if (tableContent == null)
+            {
+                return new List<WikiTableRowBase>();
+            }
 
             // Prepare a table for parsing
             var preHandler = new TablePreHandler();
