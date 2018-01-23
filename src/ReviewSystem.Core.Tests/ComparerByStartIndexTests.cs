@@ -1,4 +1,3 @@
-using System;
 using ReviewSystem.Core.Application.Wikipedia;
 using Xunit;
 
