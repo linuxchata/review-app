@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewSystem", "ReviewSystem\ReviewSystem.csproj", "{AAD294B9-8A07-46AA-9650-19BB29301864}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewSystem.Tests", "ReviewSystem.Tests\ReviewSystem.Tests.csproj", "{48A94751-8CAD-447E-A4CA-7D5F6A0A532A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewSystem.DataAccess.Tests", "ReviewSystem.DataAccess.Tests\ReviewSystem.DataAccess.Tests.csproj", "{EA446D6A-BE3A-4AAF-8E94-CFAB45F1B5F5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewSystem.Core.Tests", "ReviewSystem.Core.Tests\ReviewSystem.Core.Tests.csproj", "{B194DE7F-DD36-418B-AC55-593BE0893905}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{EA446D6A-BE3A-4AAF-8E94-CFAB45F1B5F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA446D6A-BE3A-4AAF-8E94-CFAB45F1B5F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA446D6A-BE3A-4AAF-8E94-CFAB45F1B5F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B194DE7F-DD36-418B-AC55-593BE0893905}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B194DE7F-DD36-418B-AC55-593BE0893905}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B194DE7F-DD36-418B-AC55-593BE0893905}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B194DE7F-DD36-418B-AC55-593BE0893905}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
