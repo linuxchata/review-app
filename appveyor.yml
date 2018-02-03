@@ -2,12 +2,11 @@ image: Visual Studio 2017
 environment:
   DOTNET_CLI_TELEMETRY_OPTOUT: true
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+build:
+  project: ReviewSystem.sln
 before_build:
   - dotnet restore src/
-build:
-  parallel: true
-  project: src\WebApplication\ReviewSystem.sln
-install:  
+install:
   # Download .NET Core 2.0 2 SDK and add to PATH
   - ps: $urlCurrent = "https://download.microsoft.com/download/5/D/F/5DF4B836-7DFD-4CCF-AC96-101E2A4C7421/dotnet-sdk-2.1.2-win-x64.zip"
   - ps: $env:DOTNET_INSTALL_DIR = "$pwd\.dotnetsdk"
