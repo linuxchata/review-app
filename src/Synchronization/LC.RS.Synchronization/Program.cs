@@ -4,7 +4,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using NLog.Web;
 
-namespace ReviewSystem
+namespace LC.RS.Synchronization
 {
     public class Program
     {
