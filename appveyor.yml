@@ -3,7 +3,7 @@ environment:
   DOTNET_CLI_TELEMETRY_OPTOUT: true
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
 build:
-  project: ReviewSystem.sln
+  project: src/ReviewSystem.sln
 before_build:
   - dotnet restore src/
 install:
