@@ -1,4 +1,6 @@
 ﻿using System.Linq;
+using Microsoft.Extensions.Logging;
+using Moq;
 using ReviewSystem.DataAccess.Contracts;
 using ReviewSystem.DataAccess.Converters;
 using Xunit;
@@ -8,12 +10,15 @@ namespace ReviewSystem.DataAccess.Tests
     [Trait("Category", "IntegrationTests")]
     public class SpecializationRepositoryTests
     {
+        private readonly Mock<ILogger<SpecializationRepository>> logger;
+
         private readonly ISpecializationConverter converter;
 
         private IDatabaseConnection databaseConnection;
 
         public SpecializationRepositoryTests()
         {
+            this.logger = new Mock<ILogger<SpecializationRepository>>();
             this.converter = new SpecializationConverter();
         }
 
@@ -21,7 +26,7 @@ namespace ReviewSystem.DataAccess.Tests
         public async void GetAllAsync_ShouldReturnNotNullResult_Test()
         {
             // Arrange
-            var sut = new SpecializationRepository(this.GetDatabaseConnection(), this.converter);
+            var sut = new SpecializationRepository(this.GetDatabaseConnection(), this.converter, this.logger.Object);
 
             // Act
             var result = await sut.GetAllAsync();
@@ -35,7 +40,7 @@ namespace ReviewSystem.DataAccess.Tests
         public void GetByIdAsync_WhenIdIsValid_ShouldReturnNotNullResult_Test()
         {
             // Arrange
-            var sut = new SpecializationRepository(this.GetDatabaseConnection(), this.converter);
+            var sut = new SpecializationRepository(this.GetDatabaseConnection(), this.converter, this.logger.Object);
 
             // Act
             var result = sut.GetByIdAsync("5a416e6579fa23151c32c990").Result;
@@ -48,7 +53,7 @@ namespace ReviewSystem.DataAccess.Tests
         public async void GetBySearchCriteriaAsync_ShouldReturnNotNullResult_Test()
         {
             // Arrange
-            var sut = new SpecializationRepository(this.GetDatabaseConnection(), this.converter);
+            var sut = new SpecializationRepository(this.GetDatabaseConnection(), this.converter, this.logger.Object);
 
             // Act
             var result = await sut.GetBySearchCriteriaAsync("Oculist");

@@ -13,12 +13,11 @@ namespace ReviewSystem
             var logger = NLogBuilder.ConfigureNLog("NLog.config").GetCurrentClassLogger();
             try
             {
-                logger.Debug("Initialize main");
                 BuildWebHost(args).Run();
             }
             catch (Exception e)
             {
-                logger.Error(e, "Initialization exception");
+                logger.Error(e, "Application initialization exception");
                 throw;
             }
         }

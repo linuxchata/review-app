@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 using MongoDB.Driver;
 using ReviewSystem.Core.Domain;
 using ReviewSystem.Core.TransferObjects;
@@ -10,31 +11,56 @@ namespace ReviewSystem.DataAccess
 {
     public sealed class SpecializationRepository : BaseRepository<Specialization, SpecializationDto>, ISpecializationRepository
     {
+        private readonly ILogger<SpecializationRepository> logger;
+
         private readonly ISpecializationConverter converter;
 
-        public SpecializationRepository(IDatabaseConnection databaseConnection, ISpecializationConverter converter) :
+        public SpecializationRepository(
+            IDatabaseConnection databaseConnection,
+            ISpecializationConverter converter,
+            ILogger<SpecializationRepository> logger) :
             base(databaseConnection)
         {
+            this.logger = logger;
             this.converter = converter;
         }
 
         public async Task<IEnumerable<Specialization>> GetAllAsync()
         {
+            this.logger.LogDebug("Receiving all specializations");
+
             var cursor = await this.Collection.FindAsync(FilterDefinition<SpecializationDto>.Empty);
-            return cursor.ToEnumerable().Select(a => this.converter.Convert(a));
+            var result = cursor.ToEnumerable().Select(a => this.converter.Convert(a));
+
+            this.logger.LogDebug("All specializations have been received");
+
+            return result;
         }
 
         public async Task<Specialization> GetByIdAsync(string id)
         {
+            this.logger.LogDebug("Receiving specialization with {id}", id);
+
             var cursor = await this.Collection.FindAsync(a => a.Id == id);
-            return this.converter.Convert(cursor.FirstOrDefault());
+            var result = this.converter.Convert(cursor.FirstOrDefault());
+
+            this.logger.LogDebug("Specialization with {id} has been received");
+
+            return result;
         }
 
         public async Task<IEnumerable<Specialization>> GetBySearchCriteriaAsync(string searchCriteria)
         {
-            var criteria = searchCriteria.ToLower();
-            var cursor = await this.Collection.FindAsync(a => a.Name.ToLower().Contains(criteria));
-            return cursor.ToEnumerable().Select(a => this.converter.Convert(a));
+            var filter = searchCriteria.ToLower();
+
+            this.logger.LogDebug("Receiving specializations by {searchCriteria}", filter);
+
+            var cursor = await this.Collection.FindAsync(a => a.Name.ToLower().Contains(filter));
+            var result = cursor.ToEnumerable().Select(a => this.converter.Convert(a));
+
+            this.logger.LogDebug("Specializations by {searchCriteria} have been received", filter);
+
+            return result;
         }
     }
 }

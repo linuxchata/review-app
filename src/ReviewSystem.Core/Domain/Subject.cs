@@ -11,6 +11,14 @@ namespace ReviewSystem.Core.Domain
 
         public string LastName { get; set; }
 
+        public string Name
+        {
+            get
+            {
+                return $"{this.FirstName} {this.LastName}";
+            }
+        }
+
         public decimal GeneralRaiting { get; set; }
     }
 }
