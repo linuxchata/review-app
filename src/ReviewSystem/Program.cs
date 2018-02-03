@@ -2,6 +2,7 @@
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using NLog;
 using NLog.Web;
 
 namespace ReviewSystem
@@ -11,9 +12,14 @@ namespace ReviewSystem
         public static void Main(string[] args)
         {
             var logger = NLogBuilder.ConfigureNLog("NLog.config").GetCurrentClassLogger();
+
             try
             {
+                logger.Info("Building Web host");
+
                 BuildWebHost(args).Run();
+
+                logger.Info("Web host has been built");
             }
             catch (Exception e)
             {
