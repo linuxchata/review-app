@@ -1,4 +1,5 @@
-﻿using MongoDB.Driver;
+﻿using System.Security.Authentication;
+using MongoDB.Driver;
 using ReviewSystem.DataAccess.Contracts;
 
 namespace ReviewSystem.DataAccess
@@ -14,7 +15,13 @@ namespace ReviewSystem.DataAccess
 
         public IMongoCollection<T> GetCollection<T>(string collectionName)
         {
-            var client = new MongoClient(this.connectionString);
+            var settings = MongoClientSettings.FromUrl(new MongoUrl(this.connectionString));
+            settings.SslSettings = new SslSettings
+            {
+                EnabledSslProtocols = SslProtocols.Tls12
+            };
+
+            var client = new MongoClient(settings);
             var database = client.GetDatabase("reviewdb");
             var collection = database.GetCollection<T>(collectionName);
             return collection;
