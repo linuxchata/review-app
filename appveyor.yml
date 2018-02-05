@@ -4,7 +4,7 @@ environment:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
 build:
   parallel: true
-  project: src/ReviewSystem.sln
+  project: src/LS.RS.Fabric.sln
 before_build:
   - dotnet restore src/
 install:
