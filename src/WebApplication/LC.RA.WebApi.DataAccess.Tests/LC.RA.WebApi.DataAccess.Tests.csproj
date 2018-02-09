@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ReviewSystem.DataAccess\LC.RA.WebApi.DataAccess.csproj" />
+    <ProjectReference Include="..\LC.RA.WebApi.DataAccess\LC.RA.WebApi.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>
