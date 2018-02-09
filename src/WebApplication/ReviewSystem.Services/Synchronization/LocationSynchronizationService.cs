@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using ReviewSystem.Core.Application.Wikipedia;
-using ReviewSystem.Core.Domain;
-using ReviewSystem.Services.Contracts;
+using LC.RA.WebApi.Core.Application.Wikipedia;
+using LC.RA.WebApi.Core.Domain;
+using LC.RA.WebApi.Services.Contracts;
 
-namespace ReviewSystem.Services.Synchronization
+namespace LC.RA.WebApi.Services.Synchronization
 {
     public sealed class LocationSynchronizationService : ILocationSynchronizationService
     {

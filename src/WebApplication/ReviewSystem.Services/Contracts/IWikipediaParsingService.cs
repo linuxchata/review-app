@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using ReviewSystem.Core.Application.Wikipedia;
+using LC.RA.WebApi.Core.Application.Wikipedia;
 
-namespace ReviewSystem.Services.Contracts
+namespace LC.RA.WebApi.Services.Contracts
 {
     public interface IWikipediaParsingService
     {

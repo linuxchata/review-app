@@ -1,4 +1,4 @@
-﻿namespace ReviewSystem.Services.Synchronization
+﻿namespace LC.RA.WebApi.Services.Synchronization
 {
     public static class RegexPattern
     {

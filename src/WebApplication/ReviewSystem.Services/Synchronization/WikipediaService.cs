@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using LC.RA.WebApi.Core.Application;
+using LC.RA.WebApi.Core.Application.Wikipedia;
+using LC.RA.WebApi.Services.Contracts;
 using Newtonsoft.Json;
-using ReviewSystem.Core.Application;
-using ReviewSystem.Core.Application.Wikipedia;
-using ReviewSystem.Services.Contracts;
 
-namespace ReviewSystem.Services.Synchronization
+namespace LC.RA.WebApi.Services.Synchronization
 {
     public sealed class WikipediaService : IWikipediaService
     {

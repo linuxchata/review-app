@@ -1,9 +1,9 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
+using LC.RA.WebApi.Services.Contracts;
 using Microsoft.AspNetCore.Mvc;
-using ReviewSystem.Services.Contracts;
 
-namespace ReviewSystem.Controllers
+namespace LC.RA.WebApi.Controllers
 {
     [Produces("application/json")]
     [Route("api/[controller]")]

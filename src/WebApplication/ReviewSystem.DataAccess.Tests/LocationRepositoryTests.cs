@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Linq;
+using LC.RA.WebApi.Core.Domain;
+using LC.RA.WebApi.DataAccess.Contracts;
+using LC.RA.WebApi.DataAccess.Converters;
 using Microsoft.Extensions.Logging;
 using Moq;
-using ReviewSystem.Core.Domain;
-using ReviewSystem.DataAccess.Contracts;
-using ReviewSystem.DataAccess.Converters;
 using Xunit;
 
-namespace ReviewSystem.DataAccess.Tests
+namespace LC.RA.WebApi.DataAccess.Tests
 {
     [Trait("Category", "IntegrationTests")]
     public class LocationRepositoryTests

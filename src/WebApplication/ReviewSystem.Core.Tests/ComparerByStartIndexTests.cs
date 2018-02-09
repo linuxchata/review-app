@@ -1,7 +1,7 @@
-using ReviewSystem.Core.Application.Wikipedia;
+using LC.RA.WebApi.Core.Application.Wikipedia;
 using Xunit;
 
-namespace ReviewSystem.Core.Tests
+namespace LC.RA.WebApi.Core.Tests
 {
     public class ComparerByStartIndexTests
     {

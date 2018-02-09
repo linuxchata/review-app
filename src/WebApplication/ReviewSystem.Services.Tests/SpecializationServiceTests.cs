@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LC.RA.WebApi.Core.Domain;
+using LC.RA.WebApi.DataAccess.Contracts;
+using LC.RA.WebApi.Services.Contracts;
 using Moq;
-using ReviewSystem.Core.Domain;
-using ReviewSystem.DataAccess.Contracts;
-using ReviewSystem.Services.Contracts;
 using Xunit;
 
-namespace ReviewSystem.Services.Tests
+namespace LC.RA.WebApi.Services.Tests
 {
     public class SpecializationServiceTests
     {

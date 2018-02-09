@@ -1,6 +1,6 @@
 ﻿using MongoDB.Driver;
 
-namespace ReviewSystem.DataAccess.Contracts
+namespace LC.RA.WebApi.DataAccess.Contracts
 {
     public interface IDatabaseConnection
     {

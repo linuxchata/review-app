@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ReviewSystem.Core.Domain
+namespace LC.RA.WebApi.Core.Domain
 {
     public sealed class Doctor : Subject
     {

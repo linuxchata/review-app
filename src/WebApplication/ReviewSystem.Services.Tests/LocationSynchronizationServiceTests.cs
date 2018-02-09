@@ -1,11 +1,11 @@
 ﻿using System.Threading.Tasks;
+using LC.RA.WebApi.Core.Domain;
+using LC.RA.WebApi.Services.Contracts;
+using LC.RA.WebApi.Services.Synchronization;
 using Moq;
-using ReviewSystem.Core.Domain;
-using ReviewSystem.Services.Contracts;
-using ReviewSystem.Services.Synchronization;
 using Xunit;
 
-namespace ReviewSystem.Services.Tests
+namespace LC.RA.WebApi.Services.Tests
 {
     public sealed class LocationSynchronizationServiceTests
     {

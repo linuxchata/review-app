@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using ReviewSystem.Core.Domain;
-using ReviewSystem.DataAccess.Contracts;
-using ReviewSystem.Services.Contracts;
+using LC.RA.WebApi.Core.Domain;
+using LC.RA.WebApi.DataAccess.Contracts;
+using LC.RA.WebApi.Services.Contracts;
 
-namespace ReviewSystem.Services
+namespace LC.RA.WebApi.Services
 {
     public sealed class LocationService : ILocationService
     {

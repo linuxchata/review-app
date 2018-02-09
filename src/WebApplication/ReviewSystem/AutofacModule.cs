@@ -1,12 +1,12 @@
 ﻿using Autofac;
+using LC.RA.WebApi.Core.Application;
+using LC.RA.WebApi.DataAccess;
+using LC.RA.WebApi.DataAccess.Converters;
+using LC.RA.WebApi.Services;
+using LC.RA.WebApi.Services.Synchronization;
 using Microsoft.Extensions.Configuration;
-using ReviewSystem.Core.Application;
-using ReviewSystem.DataAccess;
-using ReviewSystem.DataAccess.Converters;
-using ReviewSystem.Services;
-using ReviewSystem.Services.Synchronization;
 
-namespace ReviewSystem
+namespace LC.RA.WebApi
 {
     public class AutofacModule : Module
     {

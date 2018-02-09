@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LC.RA.WebApi.Core.Domain;
+using LC.RA.WebApi.Core.TransferObjects;
+using LC.RA.WebApi.DataAccess.Contracts;
 using Microsoft.Extensions.Logging;
 using MongoDB.Driver;
-using ReviewSystem.Core.Domain;
-using ReviewSystem.Core.TransferObjects;
-using ReviewSystem.DataAccess.Contracts;
 
-namespace ReviewSystem.DataAccess
+namespace LC.RA.WebApi.DataAccess
 {
     public sealed class DoctorRepository : BaseRepository<Doctor, DoctorDto>, IDoctorRepository
     {

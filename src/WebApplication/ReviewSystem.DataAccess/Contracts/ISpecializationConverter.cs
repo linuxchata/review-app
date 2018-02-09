@@ -1,7 +1,7 @@
-﻿using ReviewSystem.Core.Domain;
-using ReviewSystem.Core.TransferObjects;
+﻿using LC.RA.WebApi.Core.Domain;
+using LC.RA.WebApi.Core.TransferObjects;
 
-namespace ReviewSystem.DataAccess.Contracts
+namespace LC.RA.WebApi.DataAccess.Contracts
 {
     public interface ISpecializationConverter
     {

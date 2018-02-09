@@ -1,10 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using LC.RA.WebApi.Controllers;
+using LC.RA.WebApi.Services.Contracts;
+using Microsoft.AspNetCore.Mvc;
 using Moq;
-using ReviewSystem.Controllers;
-using ReviewSystem.Services.Contracts;
 using Xunit;
 
-namespace ReviewSystem.Tests
+namespace LC.RA.WebApi.Tests
 {
     public class SynchronizationControllerTests
     {

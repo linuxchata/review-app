@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace ReviewSystem.Core.Domain
+namespace LC.RA.WebApi.Core.Domain
 {
     [DebuggerDisplay("Subject: {FirstName} {LastName}")]
     public abstract class Subject : RootModelBase

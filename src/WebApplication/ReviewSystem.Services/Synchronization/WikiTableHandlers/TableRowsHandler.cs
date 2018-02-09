@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using ReviewSystem.Core.Application.Wikipedia;
+using LC.RA.WebApi.Core.Application.Wikipedia;
 
-namespace ReviewSystem.Services.Synchronization.WikiTableHandlers
+namespace LC.RA.WebApi.Services.Synchronization.WikiTableHandlers
 {
     public sealed class TableRowsHandler : TableBaseHandler
     {

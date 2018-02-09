@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using LC.RA.WebApi.Controllers;
+using LC.RA.WebApi.Core.Domain;
+using LC.RA.WebApi.Services.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
-using ReviewSystem.Controllers;
-using ReviewSystem.Core.Domain;
-using ReviewSystem.Services.Contracts;
 using Xunit;
 
-namespace ReviewSystem.Tests
+namespace LC.RA.WebApi.Tests
 {
     public class SubjectControllerTests
     {

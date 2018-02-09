@@ -1,7 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace ReviewSystem.Core.Domain
+namespace LC.RA.WebApi.Core.Domain
 {
     public abstract class EmbededModelBase
     {

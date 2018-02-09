@@ -1,4 +1,4 @@
-﻿namespace ReviewSystem.Core.Domain
+﻿namespace LC.RA.WebApi.Core.Domain
 {
     public sealed class Address : EmbededModelBase
     {

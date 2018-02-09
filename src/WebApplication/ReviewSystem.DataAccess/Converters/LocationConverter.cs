@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using ReviewSystem.Core.Domain;
-using ReviewSystem.Core.TransferObjects;
-using ReviewSystem.DataAccess.Contracts;
+using LC.RA.WebApi.Core.Domain;
+using LC.RA.WebApi.Core.TransferObjects;
+using LC.RA.WebApi.DataAccess.Contracts;
 
-namespace ReviewSystem.DataAccess.Converters
+namespace LC.RA.WebApi.DataAccess.Converters
 {
     public sealed class LocationConverter : ILocationConverter
     {

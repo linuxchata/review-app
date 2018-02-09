@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using ReviewSystem.Core.Application.Wikipedia;
-using ReviewSystem.Services.Synchronization;
+using LC.RA.WebApi.Core.Application.Wikipedia;
+using LC.RA.WebApi.Services.Synchronization;
 using Xunit;
 
-namespace ReviewSystem.Services.Tests
+namespace LC.RA.WebApi.Services.Tests
 {
     public class WikipediaParsingServiceTests
     {

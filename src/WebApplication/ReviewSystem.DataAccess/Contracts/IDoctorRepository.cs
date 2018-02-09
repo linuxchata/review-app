@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using ReviewSystem.Core.Domain;
+using LC.RA.WebApi.Core.Domain;
 
-namespace ReviewSystem.DataAccess.Contracts
+namespace LC.RA.WebApi.DataAccess.Contracts
 {
     public interface IDoctorRepository
     {

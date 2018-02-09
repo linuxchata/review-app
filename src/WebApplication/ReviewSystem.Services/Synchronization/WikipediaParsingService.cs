@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using ReviewSystem.Core.Application.Wikipedia;
-using ReviewSystem.Services.Contracts;
-using ReviewSystem.Services.Synchronization.WikiPageHandlers;
-using ReviewSystem.Services.Synchronization.WikiTableHandlers;
+using LC.RA.WebApi.Core.Application.Wikipedia;
+using LC.RA.WebApi.Services.Contracts;
+using LC.RA.WebApi.Services.Synchronization.WikiPageHandlers;
+using LC.RA.WebApi.Services.Synchronization.WikiTableHandlers;
 
-namespace ReviewSystem.Services.Synchronization
+namespace LC.RA.WebApi.Services.Synchronization
 {
     public sealed class WikipediaParsingService : IWikipediaParsingService
     {

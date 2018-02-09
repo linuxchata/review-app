@@ -1,4 +1,4 @@
-﻿namespace ReviewSystem.Core.Application
+﻿namespace LC.RA.WebApi.Core.Application
 {
     public sealed class ApplicationSettings : IApplicationSettings
     {

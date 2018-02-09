@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using ReviewSystem.Core.Domain;
+using LC.RA.WebApi.Core.Domain;
 
-namespace ReviewSystem.Core.TransferObjects
+namespace LC.RA.WebApi.Core.TransferObjects
 {
     public sealed class DoctorDto : SubjectDto
     {

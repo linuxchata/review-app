@@ -1,11 +1,11 @@
 ﻿using Autofac;
+using LC.RA.WebApi.Core.Application;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ReviewSystem.Core.Application;
 
-namespace ReviewSystem
+namespace LC.RA.WebApi
 {
     public class Startup
     {

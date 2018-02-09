@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ReviewSystem.DataAccess.Contracts
+namespace LC.RA.WebApi.DataAccess.Contracts
 {
     public interface IReadRepository<T>
     {

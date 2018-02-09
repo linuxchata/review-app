@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace ReviewSystem.Core.Application.Wikipedia
+namespace LC.RA.WebApi.Core.Application.Wikipedia
 {
     [DebuggerDisplay("{Content}")]
     public abstract class WikiTableRowBase

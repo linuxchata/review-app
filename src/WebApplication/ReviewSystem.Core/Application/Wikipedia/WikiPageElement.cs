@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace ReviewSystem.Core.Application.Wikipedia
+namespace LC.RA.WebApi.Core.Application.Wikipedia
 {
     [DebuggerDisplay("{ContentType}: {StartIndex} - {EndIndex}")]
     public sealed class WikiPageElement

@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using ReviewSystem.Services.Contracts;
+﻿using LC.RA.WebApi.Services.Contracts;
+using Microsoft.AspNetCore.Mvc;
 
-namespace ReviewSystem.Controllers
+namespace LC.RA.WebApi.Controllers
 {
     [Produces("application/json")]
     [Route("api/[controller]")]

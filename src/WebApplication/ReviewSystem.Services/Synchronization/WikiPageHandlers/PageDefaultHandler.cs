@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using ReviewSystem.Core.Application.Wikipedia;
+using LC.RA.WebApi.Core.Application.Wikipedia;
 
-namespace ReviewSystem.Services.Synchronization.WikiPageHandlers
+namespace LC.RA.WebApi.Services.Synchronization.WikiPageHandlers
 {
     public sealed class PageDefaultHandler : PageBaseHandler
     {

@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace ReviewSystem.Services.Contracts
+namespace LC.RA.WebApi.Services.Contracts
 {
     public interface IWikipediaService
     {
