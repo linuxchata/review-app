@@ -45,7 +45,7 @@ namespace LC.RA.WebApi.DataAccess
             var cursor = await this.Collection.FindAsync(a => a.Id == id);
             var result = this.converter.Convert(cursor.FirstOrDefault());
 
-            this.logger.LogDebug("Doctor with {id} has been received");
+            this.logger.LogDebug("Doctor with {id} has been received", id);
 
             return result;
         }

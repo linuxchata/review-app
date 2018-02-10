@@ -31,7 +31,8 @@ namespace LC.RA.WebApi.Services.Tests
             var sut = new LocationSynchronizationService(
                 this.wikipediaServiceMock.Object,
                 parsingService,
-                this.locationService.Object);
+                this.locationService.Object,
+                null);
 
             // Act
             sut.Synchronize();

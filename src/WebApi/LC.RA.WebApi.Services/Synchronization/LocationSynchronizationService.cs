@@ -14,14 +14,18 @@ namespace LC.RA.WebApi.Services.Synchronization
 
         private readonly ILocationService locationService;
 
+        private readonly IServiceBusService serviceBusService;
+
         public LocationSynchronizationService(
             IWikipediaService wikipediaService,
             IWikipediaParsingService wikipediaParsingService,
-            ILocationService locationService)
+            ILocationService locationService,
+            IServiceBusService serviceBusService)
         {
             this.wikipediaService = wikipediaService;
             this.wikipediaParsingService = wikipediaParsingService;
             this.locationService = locationService;
+            this.serviceBusService = serviceBusService;
         }
 
         public async void Synchronize()
@@ -36,6 +40,8 @@ namespace LC.RA.WebApi.Services.Synchronization
                     await this.locationService.CreateAsync(location, "Synchronization User");
                 }
             }
+
+            await this.serviceBusService.SendMessage();
         }
 
         private async Task<IEnumerable<Location>> GetSourceLocations()

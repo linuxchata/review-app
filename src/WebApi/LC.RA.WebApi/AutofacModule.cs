@@ -84,6 +84,9 @@ namespace LC.RA.WebApi
             builder.RegisterType<LocationSynchronizationService>()
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
+            builder.RegisterType<ServiceBusService>()
+                .AsImplementedInterfaces()
+                .InstancePerLifetimeScope();
         }
     }
 }
