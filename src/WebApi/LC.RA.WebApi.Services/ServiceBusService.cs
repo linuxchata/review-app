@@ -9,7 +9,7 @@ namespace LC.RA.WebApi.Services
 {
     public sealed class ServiceBusService : IServiceBusService
     {
-        private const string ServiceBusConnectionString = @"https://ReviewApp.servicebus.windows.net";
+        private const string ServiceBusConnectionString = @"Endpoint=sb://reviewapp.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=Dyx+o9pLtfIlCMuoM4ZeH4g9bDlehbOOHbvVAo9x4J8=";
 
         private const string QueueName = "reviewapp";
 
