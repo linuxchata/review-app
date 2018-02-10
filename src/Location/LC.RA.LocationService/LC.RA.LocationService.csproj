@@ -23,8 +23,6 @@
   <ItemGroup>
     <ProjectReference Include="..\LC.RA.LocationService.Core\LC.RA.LocationService.Core.csproj" />
     <ProjectReference Include="..\LC.RA.LocationService.Services\LC.RA.LocationService.Services.csproj" />
-    <ProjectReference Include="..\LC.RA.Synchronization.Core\LC.RA.LocationService.Core.csproj" />
-    <ProjectReference Include="..\LC.RA.Synchronization.Services\LC.RA.LocationService.Services.csproj" />
   </ItemGroup>
 
 </Project>

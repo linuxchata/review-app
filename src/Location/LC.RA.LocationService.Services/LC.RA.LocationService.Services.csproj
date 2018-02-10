@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LC.RA.LocationService.Core\LC.RA.LocationService.Core.csproj" />
-    <ProjectReference Include="..\LC.RA.Synchronization.DataAccess\LC.RA.LocationService.DataAccess.csproj" />
+    <ProjectReference Include="..\LC.RA.LocationService.DataAccess\LC.RA.LocationService.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>
