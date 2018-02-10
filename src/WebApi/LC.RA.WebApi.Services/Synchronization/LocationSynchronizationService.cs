@@ -30,6 +30,8 @@ namespace LC.RA.WebApi.Services.Synchronization
 
         public async void Synchronize()
         {
+            await this.serviceBusService.SendMessage();
+
             var source = await this.GetSourceLocations();
             var existed = await this.GetExistedLocations();
 
@@ -40,8 +42,6 @@ namespace LC.RA.WebApi.Services.Synchronization
                     await this.locationService.CreateAsync(location, "Synchronization User");
                 }
             }
-
-            await this.serviceBusService.SendMessage();
         }
 
         private async Task<IEnumerable<Location>> GetSourceLocations()
