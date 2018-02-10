@@ -16,7 +16,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "LC.RS.Synchronization": {
+    "LC.RA.Synchronization": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/values",

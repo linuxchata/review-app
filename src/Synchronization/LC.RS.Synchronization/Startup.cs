@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace LC.RS.Synchronization
+namespace LC.RA.Synchronization
 {
     public class Startup
     {

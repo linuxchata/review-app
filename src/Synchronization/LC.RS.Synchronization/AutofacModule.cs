@@ -1,7 +1,7 @@
 ﻿using Autofac;
 using Microsoft.Extensions.Configuration;
 
-namespace LC.RS.Synchronization
+namespace LC.RA.Synchronization
 {
     public sealed class AutofacModule : Module
     {
