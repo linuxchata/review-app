@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{9664E5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{5F9DFE41-9B05-4AD9-8D34-AC648CE17D97}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Location", "Location", "{E83DB7CB-7FE1-4FA1-8A4D-3BAC2FED1066}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LocationService", "LocationService", "{E83DB7CB-7FE1-4FA1-8A4D-3BAC2FED1066}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.WebApi", "WebApi\LC.RA.WebApi\LC.RA.WebApi.csproj", "{76545FCD-7BC8-4E84-8F98-533793133AD1}"
 EndProject
@@ -25,13 +25,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.WebApi.Services.Tests
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.WebApi.Tests", "WebApi\LC.RA.WebApi.Tests\LC.RA.WebApi.Tests.csproj", "{1E6FC6B5-A695-43D3-9F62-11715D246A6F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.LocationService", "Location\LC.RA.LocationService\LC.RA.LocationService.csproj", "{D541514B-3303-4444-A11D-19214231756B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.LocationService", "LocationService\LC.RA.LocationService\LC.RA.LocationService.csproj", "{D541514B-3303-4444-A11D-19214231756B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.LocationService.Core", "Location\LC.RA.LocationService.Core\LC.RA.LocationService.Core.csproj", "{0F245925-6F5B-471B-9FA0-C7CD029020A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.LocationService.Core", "LocationService\LC.RA.LocationService.Core\LC.RA.LocationService.Core.csproj", "{0F245925-6F5B-471B-9FA0-C7CD029020A5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.LocationService.DataAccess", "Location\LC.RA.LocationService.DataAccess\LC.RA.LocationService.DataAccess.csproj", "{D2A65384-2732-4D59-974F-AC833A6E07A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.LocationService.DataAccess", "LocationService\LC.RA.LocationService.DataAccess\LC.RA.LocationService.DataAccess.csproj", "{D2A65384-2732-4D59-974F-AC833A6E07A6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.LocationService.Services", "Location\LC.RA.LocationService.Services\LC.RA.LocationService.Services.csproj", "{5169F6A7-E191-4462-ABD0-9238620CA5CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.LocationService.Services", "LocationService\LC.RA.LocationService.Services\LC.RA.LocationService.Services.csproj", "{5169F6A7-E191-4462-ABD0-9238620CA5CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
