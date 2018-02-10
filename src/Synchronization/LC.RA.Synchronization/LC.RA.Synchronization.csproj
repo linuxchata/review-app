@@ -20,4 +20,9 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LC.RA.Synchronization.Core\LC.RA.Synchronization.Core.csproj" />
+    <ProjectReference Include="..\LC.RA.Synchronization.Services\LC.RA.Synchronization.Services.csproj" />
+  </ItemGroup>
+
 </Project>
