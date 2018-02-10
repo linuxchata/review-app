@@ -21,8 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LC.RA.Synchronization.Core\LC.RA.Synchronization.Core.csproj" />
-    <ProjectReference Include="..\LC.RA.Synchronization.Services\LC.RA.Synchronization.Services.csproj" />
+    <ProjectReference Include="..\LC.RA.Synchronization.Core\LC.RA.LocationService.Core.csproj" />
+    <ProjectReference Include="..\LC.RA.Synchronization.Services\LC.RA.LocationService.Services.csproj" />
   </ItemGroup>
 
 </Project>

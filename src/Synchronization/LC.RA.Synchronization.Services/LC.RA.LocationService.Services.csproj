@@ -5,15 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LC.RA.Synchronization.DataAccess\LC.RA.Synchronization.DataAccess.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Contracts\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LC.RA.Synchronization.DataAccess\LC.RA.LocationService.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>
