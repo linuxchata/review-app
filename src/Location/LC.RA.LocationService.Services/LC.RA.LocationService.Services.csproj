@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Contracts\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LC.RA.LocationService.Core\LC.RA.LocationService.Core.csproj" />
+    <ProjectReference Include="..\LC.RA.Synchronization.DataAccess\LC.RA.LocationService.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>
