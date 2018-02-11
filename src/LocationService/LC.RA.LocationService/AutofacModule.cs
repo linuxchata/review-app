@@ -34,7 +34,7 @@ namespace LC.RA.LocationService
             builder.RegisterType<WikipediaParsingService>()
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
-            builder.RegisterType<LocationService>()
+            builder.RegisterType<Services.LocationService>()
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
             builder.RegisterType<LocationServiceQueueMessageHandler>()

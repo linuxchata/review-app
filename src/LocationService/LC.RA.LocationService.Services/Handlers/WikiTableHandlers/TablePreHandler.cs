@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using LC.RA.LocationService.Core.Application.Wikipedia;
-using LC.RA.LocationService.Services.Extension;
+using LC.RA.LocationService.Services.Extensions;
 
 namespace LC.RA.LocationService.Services.Handlers.WikiTableHandlers
 {

@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using LC.RA.LocationService.Core.Application.Wikipedia;
 using LC.RA.LocationService.Core.Domain;
 using LC.RA.LocationService.Services.Contracts;
-using LC.RA.LocationService.Services.Extension;
+using LC.RA.LocationService.Services.Extensions;
 
 namespace LC.RA.LocationService.Services
 {
