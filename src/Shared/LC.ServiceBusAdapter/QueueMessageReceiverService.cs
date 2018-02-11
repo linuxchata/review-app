@@ -35,14 +35,14 @@ namespace LC.ServiceBusAdapter
         {
             try
             {
-                queueClient = new QueueClient(this.connectionString, this.queueName);
+                this.queueClient = new QueueClient(this.connectionString, this.queueName);
                 this.logger.LogInformation("Queue client for {QueueName} queue has been created", this.queueName);
 
-                RegisterOnMessageHandlerAndReceiveMessages();
+                this.RegisterOnMessageHandlerAndReceiveMessages();
 
                 await Task.Delay(-1, cancellationToken);
 
-                await queueClient.CloseAsync();
+                await this.queueClient.CloseAsync();
             }
             catch (Exception exception)
             {
@@ -54,7 +54,7 @@ namespace LC.ServiceBusAdapter
         private void RegisterOnMessageHandlerAndReceiveMessages()
         {
             // Configure the message handler options in terms of exception handling, number of concurrent messages to deliver, etc.
-            var messageHandlerOptions = new MessageHandlerOptions(ExceptionReceivedHandler)
+            var messageHandlerOptions = new MessageHandlerOptions(this.ExceptionReceivedHandler)
             {
                 // Maximum number of concurrent calls to the callback ProcessMessagesAsync(), set to 1 for simplicity.
                 // Set it according to how many messages the application wants to process in parallel.
@@ -65,7 +65,7 @@ namespace LC.ServiceBusAdapter
                 AutoComplete = false
             };
 
-            queueClient.RegisterMessageHandler(ProcessMessagesAsync, messageHandlerOptions);
+            this.queueClient.RegisterMessageHandler(this.ProcessMessagesAsync, messageHandlerOptions);
 
             this.logger.LogInformation("The function that processes messages for {QueueName} queue has been registered", this.queueName);
         }
@@ -77,9 +77,9 @@ namespace LC.ServiceBusAdapter
 
             var handlername = this.messageHandler.GetType().Name;
             this.logger.LogInformation("Executing handler {HandlerName}", handlername);
-            await messageHandler.Execute(message.Body);
+            await this.messageHandler.Execute(message.Body);
 
-            await queueClient.CompleteAsync(message.SystemProperties.LockToken);
+            await this.queueClient.CompleteAsync(message.SystemProperties.LockToken);
             this.logger.LogInformation("The message {SequenceNumber} from {QueueName} queue has been completed", sequenceNumber, this.queueName);
 
             // Note: Use the cancellationToken passed as necessary to determine if the queueClient has already been closed.

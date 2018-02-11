@@ -33,7 +33,7 @@ namespace LC.ServiceBusAdapter
                 this.queueClient = new QueueClient(this.connectionString, this.queueName);
                 this.logger.LogInformation("Queue client for {QueueName} queue has been created", this.queueName);
 
-                await SendMessagesAsync(messageBody);
+                await this.SendMessagesAsync(messageBody);
 
                 await this.queueClient.CloseAsync();
             }
