@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using LC.RA.LocationService.Core.Application.Wikipedia;
 using LC.RA.LocationService.Core.Domain;
