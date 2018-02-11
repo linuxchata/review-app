@@ -1,8 +1,10 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 
 namespace LC.RA.LocationService.Core.Domain
 {
     [DebuggerDisplay("{Name} {Region}")]
+    [Serializable]
     public sealed class Location
     {
         public Location()
