@@ -50,7 +50,7 @@ namespace LC.ServiceBusAdapter
             {
                 var message = new Message(messageBody);
 
-                this.logger.LogInformation("Sending message to the {QueueName} queue", this.queueName);
+                this.logger.LogInformation("Sending message of {Length} bytes to the {QueueName} queue", this.queueName, messageBody.Length);
 
                 await this.queueClient.SendAsync(message);
                 this.logger.LogInformation("The message has been sent to the {QueueName} queue", this.queueName);

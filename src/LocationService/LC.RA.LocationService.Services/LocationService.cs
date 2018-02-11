@@ -1,9 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading.Tasks;
 using LC.RA.LocationService.Core.Application.Wikipedia;
 using LC.RA.LocationService.Core.Domain;
 using LC.RA.LocationService.Services.Contracts;
 using LC.RA.LocationService.Services.Extensions;
+using LC.ServiceBusAdapter.Abstractions;
+using Microsoft.Extensions.Logging;
 
 namespace LC.RA.LocationService.Services
 {
@@ -13,17 +20,29 @@ namespace LC.RA.LocationService.Services
 
         private readonly IWikipediaParsingService wikipediaParsingService;
 
+        private readonly IQueueMessageSenderService queueMessageSenderService;
+
+        private readonly ILogger<LocationService> logger;
+
         public LocationService(
             IWikipediaService wikipediaService,
-            IWikipediaParsingService wikipediaParsingService)
+            IWikipediaParsingService wikipediaParsingService,
+            IQueueMessageSenderService queueMessageSenderService,
+            ILogger<LocationService> logger)
         {
+            this.logger = logger;
             this.wikipediaService = wikipediaService;
             this.wikipediaParsingService = wikipediaParsingService;
+            this.queueMessageSenderService = queueMessageSenderService;
         }
 
         public async void Synchronize()
         {
-            await this.GetSourceLocations();
+            var locations = await this.GetSourceLocations();
+
+            var locationsArray = FormatterExtension.Serialize(locations);
+
+            await this.queueMessageSenderService.SendMessage(locationsArray);
         }
 
         private async Task<IEnumerable<Location>> GetSourceLocations()
@@ -33,17 +52,19 @@ namespace LC.RA.LocationService.Services
             var parsedPageContent = this.wikipediaParsingService.ParsePage(pageContent);
             var parsedTable = this.wikipediaParsingService.ParseTable(parsedPageContent);
 
-            var source = new List<Location>();
+            var locations = new List<Location>();
             foreach (var row in parsedTable)
             {
                 if (row is WikiTableRow)
                 {
                     var location = new Location(this.GetName(row), this.GetRegion(row));
-                    source.Add(location);
+                    locations.Add(location);
                 }
             }
 
-            return source;
+            this.logger.LogInformation("{Count} locations have been found", locations.Count);
+
+            return locations;
         }
 
         private string GetName(WikiTableRowBase row)
