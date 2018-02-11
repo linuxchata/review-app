@@ -53,7 +53,7 @@ namespace LC.ServiceBusAdapter
                 this.logger.LogInformation("Sending message to the {QueueName} queue", this.queueName);
 
                 await this.queueClient.SendAsync(message);
-                this.logger.LogInformation("The message {SequenceNumber} has been sent to the {QueueName} queue", this.queueName);
+                this.logger.LogInformation("The message has been sent to the {QueueName} queue", this.queueName);
             }
             catch (Exception exception)
             {
