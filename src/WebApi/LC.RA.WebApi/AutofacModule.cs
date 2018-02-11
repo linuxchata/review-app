@@ -4,6 +4,7 @@ using LC.RA.WebApi.DataAccess;
 using LC.RA.WebApi.DataAccess.Converters;
 using LC.RA.WebApi.Services;
 using LC.RA.WebApi.Services.Synchronization;
+using LC.ServiceBusAdapter;
 using Microsoft.Extensions.Configuration;
 
 namespace LC.RA.WebApi
@@ -19,15 +20,14 @@ namespace LC.RA.WebApi
 
         protected override void Load(ContainerBuilder builder)
         {
-            var connectionString = this.configuration.GetValue<string>("Settings:ConnectionString");
+            var applicationSettings = new ApplicationSettings();
+            this.configuration.GetSection("Settings").Bind(applicationSettings);
 
             builder.RegisterType<DatabaseConnection>()
-                .WithParameter("connectionString", connectionString)
+                .WithParameter("connectionString", applicationSettings.ConnectionString)
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
 
-            var applicationSettings = new ApplicationSettings();
-            this.configuration.GetSection("Settings").Bind(applicationSettings);
             builder.RegisterInstance(applicationSettings)
                 .AsImplementedInterfaces();
 
@@ -35,7 +35,7 @@ namespace LC.RA.WebApi
 
             this.RegisterRepositories(builder);
 
-            this.RegisterServices(builder);
+            this.RegisterServices(builder, applicationSettings);
         }
 
         private void RegisterConverters(ContainerBuilder builder)
@@ -64,7 +64,7 @@ namespace LC.RA.WebApi
                 .InstancePerLifetimeScope();
         }
 
-        private void RegisterServices(ContainerBuilder builder)
+        private void RegisterServices(ContainerBuilder builder, IApplicationSettings applicationSettings)
         {
             builder.RegisterType<LocationService>()
                 .AsImplementedInterfaces()
@@ -84,7 +84,15 @@ namespace LC.RA.WebApi
             builder.RegisterType<LocationSynchronizationService>()
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
-            builder.RegisterType<ServiceBusService>()
+
+            builder.RegisterType<QueueMessageSenderService>()
+                .WithParameter("connectionString", applicationSettings.ConnectionString)
+                .WithParameter("queueName", applicationSettings.LocationServiceQueueName)
+                .AsImplementedInterfaces()
+                .InstancePerLifetimeScope();
+            builder.RegisterType<QueueMessageReceiverService>()
+                .WithParameter("connectionString", applicationSettings.ConnectionString)
+                .WithParameter("queueName", applicationSettings.WebApiQueueName)
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
         }

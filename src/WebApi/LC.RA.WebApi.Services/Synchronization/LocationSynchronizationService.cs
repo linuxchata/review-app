@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using LC.RA.WebApi.Core.Application.Wikipedia;
 using LC.RA.WebApi.Core.Domain;
 using LC.RA.WebApi.Services.Contracts;
+using LC.ServiceBusAdapter.Abstractions;
 
 namespace LC.RA.WebApi.Services.Synchronization
 {
@@ -14,23 +16,23 @@ namespace LC.RA.WebApi.Services.Synchronization
 
         private readonly ILocationService locationService;
 
-        private readonly IServiceBusService serviceBusService;
+        private readonly IQueueMessageSenderService queueService;
 
         public LocationSynchronizationService(
             IWikipediaService wikipediaService,
             IWikipediaParsingService wikipediaParsingService,
             ILocationService locationService,
-            IServiceBusService serviceBusService)
+            IQueueMessageSenderService queueService)
         {
             this.wikipediaService = wikipediaService;
             this.wikipediaParsingService = wikipediaParsingService;
             this.locationService = locationService;
-            this.serviceBusService = serviceBusService;
+            this.queueService = queueService;
         }
 
         public async void Synchronize()
         {
-            await this.serviceBusService.SendMessage();
+            await this.queueService.SendMessage(BitConverter.GetBytes(true));
 
             var source = await this.GetSourceLocations();
             var existed = await this.GetExistedLocations();

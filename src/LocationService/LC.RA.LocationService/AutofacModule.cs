@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using LC.RA.LocationService.Core.Application;
 using LC.RA.LocationService.Services;
+using LC.ServiceBusAdapter;
 using Microsoft.Extensions.Configuration;
 
 namespace LC.RA.LocationService
@@ -18,12 +19,14 @@ namespace LC.RA.LocationService
         {
             var applicationSettings = new ApplicationSettings();
             this.configuration.GetSection("Settings").Bind(applicationSettings);
+
             builder.RegisterInstance(applicationSettings)
                 .AsImplementedInterfaces();
 
-            this.RegisterServices(builder);
+            this.RegisterServices(builder, applicationSettings);
         }
-        private void RegisterServices(ContainerBuilder builder)
+
+        private void RegisterServices(ContainerBuilder builder, IApplicationSettings applicationSettings)
         {
             builder.RegisterType<WikipediaService>()
                 .AsImplementedInterfaces()
@@ -32,6 +35,20 @@ namespace LC.RA.LocationService
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
             builder.RegisterType<LocationSynchronizationService>()
+                .AsImplementedInterfaces()
+                .InstancePerLifetimeScope();
+            builder.RegisterType<LocationServiceQueueMessageHandler>()
+                .AsImplementedInterfaces()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<QueueMessageSenderService>()
+                .WithParameter("connectionString", applicationSettings.ConnectionString)
+                .WithParameter("queueName", applicationSettings.WebApiQueueName)
+                .AsImplementedInterfaces()
+                .InstancePerLifetimeScope();
+            builder.RegisterType<QueueMessageReceiverService>()
+                .WithParameter("connectionString", applicationSettings.ConnectionString)
+                .WithParameter("queueName", applicationSettings.LocationServiceQueueName)
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
         }

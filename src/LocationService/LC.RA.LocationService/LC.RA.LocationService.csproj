@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Shared\LC.ServiceBusAdapter\LC.ServiceBusAdapter.csproj" />
     <ProjectReference Include="..\LC.RA.LocationService.Core\LC.RA.LocationService.Core.csproj" />
     <ProjectReference Include="..\LC.RA.LocationService.Services\LC.RA.LocationService.Services.csproj" />
   </ItemGroup>

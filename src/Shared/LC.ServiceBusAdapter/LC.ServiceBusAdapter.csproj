@@ -7,13 +7,10 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Azure.ServiceBus" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.0.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\LC.ServiceBusAdapter.Abstractions\LC.ServiceBusAdapter.Abstractions.csproj" />
-    <ProjectReference Include="..\LC.RA.WebApi.Core\LC.RA.WebApi.Core.csproj" />
-    <ProjectReference Include="..\LC.RA.WebApi.DataAccess\LC.RA.WebApi.DataAccess.csproj" />
+    <ProjectReference Include="..\LC.ServiceBusAdapter.Abstractions\LC.ServiceBusAdapter.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

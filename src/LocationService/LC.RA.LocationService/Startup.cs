@@ -1,4 +1,7 @@
-﻿using Autofac;
+﻿using System;
+using System.Threading;
+using Autofac;
+using LC.ServiceBusAdapter.Abstractions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -25,7 +28,7 @@ namespace LC.RA.LocationService
             builder.RegisterModule(new AutofacModule(this.configuration));
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
         {
             if (env.IsDevelopment())
             {
@@ -35,6 +38,9 @@ namespace LC.RA.LocationService
             app.UseStatusCodePages();
 
             app.UseMvc();
+
+            var queueMessageListernerService = serviceProvider.GetService<IQueueMessageReceiverService>();
+            queueMessageListernerService.ListenForMessages(new CancellationToken());
         }
     }
 }

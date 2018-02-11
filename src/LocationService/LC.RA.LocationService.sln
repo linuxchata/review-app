@@ -5,11 +5,17 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.LocationService", "LC.RA.LocationService\LC.RA.LocationService.csproj", "{14DCFE5E-8E95-4BBB-A524-212B936554BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LC.RA.LocationService.Core", "LC.RA.LocationService.Core\LC.RA.LocationService.Core.csproj", "{947673A1-F778-4AEB-9A19-78368216A435}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.LocationService.Core", "LC.RA.LocationService.Core\LC.RA.LocationService.Core.csproj", "{947673A1-F778-4AEB-9A19-78368216A435}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LC.RA.LocationService.DataAccess", "LC.RA.LocationService.DataAccess\LC.RA.LocationService.DataAccess.csproj", "{C7A20EF7-8C7D-454A-AC7C-E94575242E7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.LocationService.DataAccess", "LC.RA.LocationService.DataAccess\LC.RA.LocationService.DataAccess.csproj", "{C7A20EF7-8C7D-454A-AC7C-E94575242E7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LC.RA.LocationService.Services", "LC.RA.LocationService.Services\LC.RA.LocationService.Services.csproj", "{5E460553-05EB-46ED-BDF6-7DE8CCB74E61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.LocationService.Services", "LC.RA.LocationService.Services\LC.RA.LocationService.Services.csproj", "{5E460553-05EB-46ED-BDF6-7DE8CCB74E61}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{826A6191-BC9A-4438-9EC1-D3CF8EDC08D5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.ServiceBusAdapter", "..\Shared\LC.ServiceBusAdapter\LC.ServiceBusAdapter.csproj", "{BC909733-69E3-4289-92CD-F53BA8E7DE9D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.ServiceBusAdapter.Abstractions", "..\Shared\LC.ServiceBusAdapter.Abstractions\LC.ServiceBusAdapter.Abstractions.csproj", "{B9F6A2EA-2733-472E-9085-0C784D8F7429}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +39,21 @@ Global
 		{5E460553-05EB-46ED-BDF6-7DE8CCB74E61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E460553-05EB-46ED-BDF6-7DE8CCB74E61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E460553-05EB-46ED-BDF6-7DE8CCB74E61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC909733-69E3-4289-92CD-F53BA8E7DE9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC909733-69E3-4289-92CD-F53BA8E7DE9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC909733-69E3-4289-92CD-F53BA8E7DE9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC909733-69E3-4289-92CD-F53BA8E7DE9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9F6A2EA-2733-472E-9085-0C784D8F7429}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9F6A2EA-2733-472E-9085-0C784D8F7429}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9F6A2EA-2733-472E-9085-0C784D8F7429}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9F6A2EA-2733-472E-9085-0C784D8F7429}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BC909733-69E3-4289-92CD-F53BA8E7DE9D} = {826A6191-BC9A-4438-9EC1-D3CF8EDC08D5}
+		{B9F6A2EA-2733-472E-9085-0C784D8F7429} = {826A6191-BC9A-4438-9EC1-D3CF8EDC08D5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A0CC8321-9C85-470D-B226-130580731E87}
