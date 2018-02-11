@@ -39,12 +39,12 @@ namespace LC.RA.WebApi.DataAccess
 
         public async Task<Specialization> GetByIdAsync(string id)
         {
-            this.logger.LogDebug("Receiving specialization with {id}", id);
+            this.logger.LogDebug("Receiving specialization with {Id}", id);
 
             var cursor = await this.Collection.FindAsync(a => a.Id == id);
             var result = this.converter.Convert(cursor.FirstOrDefault());
 
-            this.logger.LogDebug("Specialization with {id} has been received");
+            this.logger.LogDebug("Specialization with {Id} has been received");
 
             return result;
         }
@@ -53,12 +53,12 @@ namespace LC.RA.WebApi.DataAccess
         {
             var filter = searchCriteria.ToLower();
 
-            this.logger.LogDebug("Receiving specializations by {searchCriteria}", filter);
+            this.logger.LogDebug("Receiving specializations by {SearchCriteria}", filter);
 
             var cursor = await this.Collection.FindAsync(a => a.Name.ToLower().Contains(filter));
             var result = cursor.ToEnumerable().Select(a => this.converter.Convert(a));
 
-            this.logger.LogDebug("Specializations by {searchCriteria} have been received", filter);
+            this.logger.LogDebug("Specializations by {SearchCriteria} have been received", filter);
 
             return result;
         }

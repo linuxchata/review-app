@@ -40,12 +40,12 @@ namespace LC.RA.WebApi.DataAccess
 
         public async Task<Location> GetByIdAsync(string id)
         {
-            this.logger.LogDebug("Receiving location with {id}", id);
+            this.logger.LogDebug("Receiving location with {Id}", id);
 
             var cursor = await this.Collection.FindAsync(a => a.Id == id);
             var result = this.converter.Convert(cursor.FirstOrDefault());
 
-            this.logger.LogDebug("Location with {id} has been received");
+            this.logger.LogDebug("Location with {Id} has been received");
 
             return result;
         }
@@ -54,19 +54,19 @@ namespace LC.RA.WebApi.DataAccess
         {
             var filter = searchCriteria.ToLower();
 
-            this.logger.LogDebug("Receiving locations by {searchCriteria}", filter);
+            this.logger.LogDebug("Receiving locations by {SearchCriteria}", filter);
 
             var cursor = await this.Collection.FindAsync(a => a.Name.ToLower().Contains(filter));
             var result = cursor.ToEnumerable().Select(a => this.converter.Convert(a));
 
-            this.logger.LogDebug("Locations by {searchCriteria} have been received", filter);
+            this.logger.LogDebug("Locations by {SearchCriteria} have been received", filter);
 
             return result;
         }
 
         public Task InsertAsync(Location entity, string user)
         {
-            this.logger.LogDebug("Inserting a new location {name} by {user}", entity.Name, user);
+            this.logger.LogDebug("Inserting a new location {Name} by {User}", entity.Name, user);
 
             var dateTimeNow = DateTime.Now;
             entity.Created = dateTimeNow;
@@ -81,7 +81,7 @@ namespace LC.RA.WebApi.DataAccess
                 {
                     entity.Id = dto.Id;
 
-                    this.logger.LogDebug("A new location {name} has been inserted by {user}", entity.Name, user);
+                    this.logger.LogDebug("A new location {Name} has been inserted by {User}", entity.Name, user);
                 });
         }
     }

@@ -40,12 +40,12 @@ namespace LC.RA.WebApi.DataAccess
 
         public async Task<Doctor> GetByIdAsync(string id)
         {
-            this.logger.LogDebug("Receiving doctor with {id}", id);
+            this.logger.LogDebug("Receiving doctor with {Id}", id);
 
             var cursor = await this.Collection.FindAsync(a => a.Id == id);
             var result = this.converter.Convert(cursor.FirstOrDefault());
 
-            this.logger.LogDebug("Doctor with {id} has been received", id);
+            this.logger.LogDebug("Doctor with {Id} has been received", id);
 
             return result;
         }
@@ -59,7 +59,7 @@ namespace LC.RA.WebApi.DataAccess
                 MiddleName = this.GetLowerCaseString(doctor.MiddleName)
             };
 
-            this.logger.LogDebug("Receiving doctor by {lastName} {firstName} {middleName}", filter.LastName, filter.FirstName, filter.MiddleName);
+            this.logger.LogDebug("Receiving doctor by {LastName} {FirstName} {MiddleName}", filter.LastName, filter.FirstName, filter.MiddleName);
 
             var cursor = await this.Collection.FindAsync(a => a.FirstName.ToLower().Contains(filter.FirstName) &&
                                                               a.LastName.ToLower().Contains(filter.LastName) &&
@@ -67,14 +67,14 @@ namespace LC.RA.WebApi.DataAccess
 
             var result = cursor.ToEnumerable().Select(a => this.converter.Convert(a));
 
-            this.logger.LogDebug("Doctors by {lastName} {firstName} {middleName} have been received", filter.LastName, filter.FirstName, filter.MiddleName);
+            this.logger.LogDebug("Doctors by {LastName} {FirstName} {MiddleName} have been received", filter.LastName, filter.FirstName, filter.MiddleName);
 
             return result;
         }
 
         public Task InsertAsync(Doctor entity, string user)
         {
-            this.logger.LogDebug("Inserting a new doctor {name} by {user}", entity.Name, user);
+            this.logger.LogDebug("Inserting a new doctor {Name} by {User}", entity.Name, user);
 
             var dateTimeNow = DateTime.Now;
             entity.Created = dateTimeNow;
@@ -89,13 +89,13 @@ namespace LC.RA.WebApi.DataAccess
                 {
                     entity.Id = dto.Id;
 
-                    this.logger.LogDebug("A new doctor {name} has been inserted by {user}", entity.Name, user);
+                    this.logger.LogDebug("A new doctor {Name} has been inserted by {User}", entity.Name, user);
                 });
         }
 
         public Task UpdateAsync(Doctor entity, string user)
         {
-            this.logger.LogDebug("Updating doctor {name} by {user}", entity.Name, user);
+            this.logger.LogDebug("Updating doctor {Name} by {User}", entity.Name, user);
 
             entity.Updated = DateTime.Now;
             entity.UpdatedBy = user;
@@ -105,18 +105,18 @@ namespace LC.RA.WebApi.DataAccess
             return this.Collection.ReplaceOneAsync(a => a.Id == dto.Id, dto)
                 .ContinueWith(_ =>
                 {
-                    this.logger.LogDebug("Doctor {name} has been updated by {user}", entity.Name, user);
+                    this.logger.LogDebug("Doctor {Name} has been updated by {User}", entity.Name, user);
                 });
         }
 
         public Task DeleteAsync(string id)
         {
-            this.logger.LogDebug("Deleting doctor with {id}", id);
+            this.logger.LogDebug("Deleting doctor with {Id}", id);
 
             return this.Collection.DeleteOneAsync(a => a.Id == id)
                 .ContinueWith(_ =>
                 {
-                    this.logger.LogDebug("Doctor with {id} has been deleted", id);
+                    this.logger.LogDebug("Doctor with {Id} has been deleted", id);
                 });
         }
 

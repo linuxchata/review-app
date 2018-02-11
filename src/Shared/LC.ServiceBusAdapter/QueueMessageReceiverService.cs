@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 using LC.ServiceBusAdapter.Abstractions;
 using Microsoft.Azure.ServiceBus;
@@ -32,14 +33,22 @@ namespace LC.ServiceBusAdapter
 
         public async Task ListenForMessages(CancellationToken cancellationToken)
         {
-            queueClient = new QueueClient(this.connectionString, this.queueName);
-            this.logger.LogInformation("Queue client for {queuename} has been created", this.queueName);
+            try
+            {
+                queueClient = new QueueClient(this.connectionString, this.queueName);
+                this.logger.LogInformation("Queue client for {QueueName} queue has been created", this.queueName);
 
-            RegisterOnMessageHandlerAndReceiveMessages();
+                RegisterOnMessageHandlerAndReceiveMessages();
 
-            await Task.Delay(-1, cancellationToken);
+                await Task.Delay(-1, cancellationToken);
 
-            await queueClient.CloseAsync();
+                await queueClient.CloseAsync();
+            }
+            catch (Exception exception)
+            {
+                this.logger.LogError("Error in queue client for {QueueName} queue: {Exception}", this.queueName, exception);
+                throw;
+            }
         }
 
         private void RegisterOnMessageHandlerAndReceiveMessages()
@@ -57,18 +66,20 @@ namespace LC.ServiceBusAdapter
             };
 
             queueClient.RegisterMessageHandler(ProcessMessagesAsync, messageHandlerOptions);
-            this.logger.LogInformation("The function that processes messages has been registered");
+            this.logger.LogInformation("The function that processes messages for {QueueName} queue has been registered", this.queueName);
         }
 
         private async Task ProcessMessagesAsync(Message message, CancellationToken token)
         {
-            this.logger.LogInformation("Received message {sequencenumber}", message.SystemProperties.SequenceNumber);
+            var sequenceNumber = message.SystemProperties.SequenceNumber;
+            this.logger.LogInformation("Received message {SequenceNumber} from {QueueName} queue", sequenceNumber, this.queueName);
 
-            this.logger.LogInformation("Executing handler {handlername}", this.messageHandler.GetType().Name);
+            var handlername = this.messageHandler.GetType().Name;
+            this.logger.LogInformation("Executing handler {HandlerName}", handlername);
             await messageHandler.Execute(message.Body);
 
             await queueClient.CompleteAsync(message.SystemProperties.LockToken);
-            this.logger.LogInformation("The message {sequencenumber} has been completed", message.SystemProperties.SequenceNumber);
+            this.logger.LogInformation("The message {SequenceNumber} from {QueueName} queue has been completed", sequenceNumber, this.queueName);
 
             // Note: Use the cancellationToken passed as necessary to determine if the queueClient has already been closed.
             // If queueClient has already been closed, you can choose to not call CompleteAsync() or AbandonAsync() etc.
@@ -77,14 +88,14 @@ namespace LC.ServiceBusAdapter
 
         private Task ExceptionReceivedHandler(ExceptionReceivedEventArgs exceptionReceivedEventArgs)
         {
-            this.logger.LogError("Message handler encountered an exception {exception}", exceptionReceivedEventArgs.Exception);
+            this.logger.LogError("Message handler encountered an exception {Exception} in the {QueueName} queue", exceptionReceivedEventArgs.Exception, this.queueName);
 
             var context = exceptionReceivedEventArgs.ExceptionReceivedContext;
 
             this.logger.LogError("Exception context for troubleshooting:");
-            this.logger.LogError("Endpoint: {endpoint}", context.Endpoint);
+            this.logger.LogError("Endpoint: {Endpoint}", context.Endpoint);
             this.logger.LogError("Entity path: {EntityPath}", context.EntityPath);
-            this.logger.LogError("Executing action: {action}", context.Action);
+            this.logger.LogError("Executing action: {Action}", context.Action);
 
             return Task.CompletedTask;
         }

@@ -31,16 +31,15 @@ namespace LC.ServiceBusAdapter
             try
             {
                 this.queueClient = new QueueClient(this.connectionString, this.queueName);
-                this.logger.LogInformation("Queue client for {queuename} has been created", this.queueName);
+                this.logger.LogInformation("Queue client for {QueueName} queue has been created", this.queueName);
 
                 await SendMessagesAsync(messageBody);
-                this.logger.LogInformation("The message has been sent");
 
                 await this.queueClient.CloseAsync();
             }
             catch (Exception exception)
             {
-                this.logger.LogError("Error in queue client for {queuename}: {exception}", this.queueName, exception);
+                this.logger.LogError("Error in queue client for {QueueName} queue: {Exception}", this.queueName, exception);
                 throw;
             }
         }
@@ -51,12 +50,13 @@ namespace LC.ServiceBusAdapter
             {
                 var message = new Message(messageBody);
 
-                this.logger.LogInformation("Sending message");
+                this.logger.LogInformation("Sending message {SequenceNumber} to the {QueueName} queue", message.SystemProperties.SequenceNumber, this.queueName);
                 await this.queueClient.SendAsync(message);
+                this.logger.LogInformation("The message {SequenceNumber} has been sent to the {QueueName} queue", this.queueName);
             }
             catch (Exception exception)
             {
-                this.logger.LogError("Error sending message to the {queuename}: {exception}", this.queueName, exception);
+                this.logger.LogError("Error sending message to the {QueueName} queue: {Exception}", this.queueName, exception);
             }
         }
     }
