@@ -14,15 +14,15 @@ namespace LC.RA.LocationService
 
             try
             {
-                logger.Info("Building Web host");
+                logger.Info("Building web host for LocationService");
 
                 BuildWebHost(args).Run();
 
-                logger.Info("Web host has been built");
+                logger.Info("Web host for LocationService has been built");
             }
             catch (Exception e)
             {
-                logger.Error(e, "Application initialization exception");
+                logger.Error(e, "LocationService application initialization exception");
                 throw;
             }
         }

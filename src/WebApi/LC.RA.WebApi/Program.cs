@@ -14,15 +14,15 @@ namespace LC.RA.WebApi
 
             try
             {
-                logger.Info("Building Web host");
+                logger.Info("Building web host for WebApi");
 
                 BuildWebHost(args).Run();
 
-                logger.Info("Web host has been built");
+                logger.Info("Web host for WebApi has been built");
             }
             catch (Exception e)
             {
-                logger.Error(e, "Application initialization exception");
+                logger.Error(e, "WebApi application initialization exception");
                 throw;
             }
         }
