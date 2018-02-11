@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using LC.RA.WebApi.Core.Application.Wikipedia;
 using LC.RA.WebApi.Core.Domain;
 using LC.RA.WebApi.Services.Contracts;
-using LC.ServiceBusAdapter.Abstractions;
 
 namespace LC.RA.WebApi.Services.Synchronization
 {
@@ -16,30 +14,24 @@ namespace LC.RA.WebApi.Services.Synchronization
 
         private readonly ILocationService locationService;
 
-        private readonly IQueueMessageSenderService queueService;
-
         public LocationSynchronizationService(
             IWikipediaService wikipediaService,
             IWikipediaParsingService wikipediaParsingService,
-            ILocationService locationService,
-            IQueueMessageSenderService queueService)
+            ILocationService locationService)
         {
             this.wikipediaService = wikipediaService;
             this.wikipediaParsingService = wikipediaParsingService;
             this.locationService = locationService;
-            this.queueService = queueService;
         }
 
-        public async void Synchronize()
+        public async void Synchronize(IEnumerable<Location> sourceLocations)
         {
-            await this.queueService.SendMessage(BitConverter.GetBytes(true));
+            // var source = await this.GetSourceLocations();
+            var existedLocations = await this.GetExistedLocations();
 
-            var source = await this.GetSourceLocations();
-            var existed = await this.GetExistedLocations();
-
-            foreach (var location in source)
+            foreach (var location in sourceLocations)
             {
-                if (!existed.Contains(location))
+                if (!existedLocations.Contains(location))
                 {
                     await this.locationService.CreateAsync(location, "Synchronization User");
                 }

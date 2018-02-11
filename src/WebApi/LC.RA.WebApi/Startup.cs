@@ -1,5 +1,8 @@
-﻿using Autofac;
+﻿using System;
+using System.Threading;
+using Autofac;
 using LC.RA.WebApi.Core.Application;
+using LC.ServiceBusAdapter.Abstractions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -27,7 +30,7 @@ namespace LC.RA.WebApi
             builder.RegisterModule(new AutofacModule(this.configuration));
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
         {
             if (env.IsDevelopment())
             {
@@ -39,6 +42,9 @@ namespace LC.RA.WebApi
             app.UseStatusCodePages();
 
             app.UseMvc();
+
+            var queueMessageListernerService = serviceProvider.GetService<IQueueMessageReceiverService>();
+            queueMessageListernerService.ListenForMessages(new CancellationToken());
         }
     }
 }

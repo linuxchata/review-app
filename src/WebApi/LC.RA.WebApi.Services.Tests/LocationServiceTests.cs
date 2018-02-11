@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using LC.RA.WebApi.Core.Domain;
 using LC.RA.WebApi.DataAccess.Contracts;
 using LC.RA.WebApi.Services.Contracts;
+using LC.ServiceBusAdapter.Abstractions;
 using Moq;
 using Xunit;
 
@@ -19,7 +20,8 @@ namespace LC.RA.WebApi.Services.Tests
         public LocationServiceTests()
         {
             this.locationRepositoryMock = new Mock<ILocationRepository>();
-            this.sut = new LocationService(this.locationRepositoryMock.Object);
+            var queueMessageSenderServiceMock = new Mock<IQueueMessageSenderService>();
+            this.sut = new LocationService(this.locationRepositoryMock.Object, queueMessageSenderServiceMock.Object);
         }
 
         [Fact]

@@ -10,13 +10,13 @@ namespace LC.RA.WebApi.Tests
     {
         private readonly SynchronizationController sut;
 
-        private readonly Mock<ILocationSynchronizationService> synchronizationService;
+        private readonly Mock<ILocationService> locationServiceMock;
 
         public SynchronizationControllerTests()
         {
-            this.synchronizationService = new Mock<ILocationSynchronizationService>();
+            this.locationServiceMock = new Mock<ILocationService>();
 
-            this.sut = new SynchronizationController(this.synchronizationService.Object);
+            this.sut = new SynchronizationController(this.locationServiceMock.Object);
         }
 
         [Fact]
@@ -29,7 +29,7 @@ namespace LC.RA.WebApi.Tests
             // Assert
             var result = Assert.IsType<OkResult>(response);
             Assert.NotNull(result);
-            this.synchronizationService.Verify(a => a.Synchronize());
+            this.locationServiceMock.Verify(a => a.Synchronize());
         }
     }
 }

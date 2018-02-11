@@ -49,6 +49,9 @@ namespace LC.RA.WebApi
             builder.RegisterType<DoctorConverter>()
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
+            builder.RegisterType<Services.Converters.LocationConverter>()
+                .AsImplementedInterfaces()
+                .InstancePerLifetimeScope();
         }
 
         private void RegisterRepositories(ContainerBuilder builder)
@@ -82,6 +85,9 @@ namespace LC.RA.WebApi
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
             builder.RegisterType<LocationSynchronizationService>()
+                .AsImplementedInterfaces()
+                .InstancePerLifetimeScope();
+            builder.RegisterType<WebApiQueueMessageHandler>()
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
 

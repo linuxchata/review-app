@@ -1,7 +1,10 @@
-﻿namespace LC.RA.WebApi.Services.Contracts
+﻿using System.Collections.Generic;
+using LC.RA.WebApi.Core.Domain;
+
+namespace LC.RA.WebApi.Services.Contracts
 {
     public interface ILocationSynchronizationService
     {
-        void Synchronize();
+        void Synchronize(IEnumerable<Location> sourceLocation);
     }
 }

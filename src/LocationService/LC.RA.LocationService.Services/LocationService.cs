@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using LC.RA.LocationService.Core.Application.Wikipedia;
-using LC.RA.LocationService.Core.Domain;
 using LC.RA.LocationService.Services.Contracts;
 using LC.RA.LocationService.Services.Extensions;
+using LC.RA.TransferObjects;
+using LC.RA.Utilities.Extensions;
 using LC.ServiceBusAdapter.Abstractions;
 using Microsoft.Extensions.Logging;
 
@@ -35,7 +37,7 @@ namespace LC.RA.LocationService.Services
         {
             var locations = await this.GetSourceLocations();
 
-            var locationsArray = FormatterExtension.Serialize(locations);
+            var locationsArray = FormatterExtension.Serialize(locations.ToList());
 
             await this.queueMessageSenderService.SendMessage(locationsArray);
         }

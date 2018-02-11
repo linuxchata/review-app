@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace LC.RA.LocationService.Services.Extensions
+namespace LC.RA.Utilities.Extensions
 {
     public static class FormatterExtension
     {
@@ -14,6 +14,18 @@ namespace LC.RA.LocationService.Services.Extensions
                 formatter.Serialize(stream, objectGraph);
 
                 return stream.ToArray();
+            }
+        }
+
+        public static T Deserialize<T>(byte[] array)
+        {
+            var formatter = new BinaryFormatter();
+
+            using (var stream = new MemoryStream(array))
+            {
+                var objectGraph = (T)formatter.Deserialize(stream);
+
+                return objectGraph;
             }
         }
     }

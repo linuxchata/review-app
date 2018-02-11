@@ -1,8 +1,8 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using LC.RA.WebApi.Core.Domain;
 using LC.RA.WebApi.Services.Contracts;
 using LC.RA.WebApi.Services.Synchronization;
-using LC.ServiceBusAdapter.Abstractions;
 using Moq;
 using Xunit;
 
@@ -14,8 +14,6 @@ namespace LC.RA.WebApi.Services.Tests
 
         private readonly Mock<ILocationService> locationServiceMock;
 
-        private readonly Mock<IQueueMessageSenderService> queueMessageSenderServiceMock;
-
         public LocationSynchronizationServiceTests()
         {
             this.wikipediaServiceMock = new Mock<IWikipediaService>();
@@ -24,7 +22,6 @@ namespace LC.RA.WebApi.Services.Tests
                 .Returns(Task.FromResult(Properties.Resources.PageContent));
 
             this.locationServiceMock = new Mock<ILocationService>();
-            this.queueMessageSenderServiceMock = new Mock<IQueueMessageSenderService>();
         }
 
         [Fact]
@@ -35,11 +32,10 @@ namespace LC.RA.WebApi.Services.Tests
             var sut = new LocationSynchronizationService(
                 this.wikipediaServiceMock.Object,
                 parsingService,
-                this.locationServiceMock.Object,
-                this.queueMessageSenderServiceMock.Object);
+                this.locationServiceMock.Object);
 
             // Act
-            sut.Synchronize();
+            sut.Synchronize(new List<Location>());
 
             // Assert
             this.wikipediaServiceMock.Verify(a => a.GetPageContent(), Times.Once);

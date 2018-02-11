@@ -11,5 +11,7 @@ namespace LC.RA.WebApi.Services.Contracts
         Task<IEnumerable<Location>> GetBySearchCriteriaAsync(string searchCriteria);
 
         Task CreateAsync(Location location, string user = null);
+
+        Task Synchronize();
     }
 }

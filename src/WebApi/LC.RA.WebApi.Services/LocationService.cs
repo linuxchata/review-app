@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using LC.RA.WebApi.Core.Domain;
 using LC.RA.WebApi.DataAccess.Contracts;
 using LC.RA.WebApi.Services.Contracts;
+using LC.ServiceBusAdapter.Abstractions;
 
 namespace LC.RA.WebApi.Services
 {
@@ -11,9 +12,14 @@ namespace LC.RA.WebApi.Services
     {
         private readonly ILocationRepository locationRepository;
 
-        public LocationService(ILocationRepository locationRepository)
+        private readonly IQueueMessageSenderService queueService;
+
+        public LocationService(
+            ILocationRepository locationRepository,
+            IQueueMessageSenderService queueService)
         {
             this.locationRepository = locationRepository;
+            this.queueService = queueService;
         }
 
         public Task<IEnumerable<Location>> GetAllAsync()
@@ -39,6 +45,11 @@ namespace LC.RA.WebApi.Services
             }
 
             return this.locationRepository.InsertAsync(location, user);
+        }
+
+        public async Task Synchronize()
+        {
+            await this.queueService.SendMessage(BitConverter.GetBytes(true));
         }
     }
 }

@@ -22,8 +22,8 @@ namespace LC.RA.LocationService.Services
 
         public Task Execute(byte[] messageBody)
         {
-            var startLocationSynchronization = BitConverter.ToBoolean(messageBody, 0);
-            if (startLocationSynchronization)
+            var start = BitConverter.ToBoolean(messageBody, 0);
+            if (start)
             {
                 this.logger.LogInformation("Triggering getting locations");
                 return Task.Run(() => this.locationService.Synchronize());

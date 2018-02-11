@@ -11,6 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Shared\LC.RA.TransferObjects\LC.RA.TransferObjects.csproj" />
+    <ProjectReference Include="..\..\Shared\LC.RA.Utilities\LC.RA.Utilities.csproj" />
     <ProjectReference Include="..\..\Shared\LC.ServiceBusAdapter.Abstractions\LC.ServiceBusAdapter.Abstractions.csproj" />
     <ProjectReference Include="..\LC.RA.WebApi.Core\LC.RA.WebApi.Core.csproj" />
     <ProjectReference Include="..\LC.RA.WebApi.DataAccess\LC.RA.WebApi.DataAccess.csproj" />
