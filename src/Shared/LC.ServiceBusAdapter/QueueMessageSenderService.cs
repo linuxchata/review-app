@@ -28,13 +28,21 @@ namespace LC.ServiceBusAdapter
 
         public async Task SendMessage(byte[] messageBody)
         {
-            this.queueClient = new QueueClient(this.connectionString, this.queueName);
-            this.logger.LogInformation("Queue client for {queuename} has been created", this.queueName);
-            
-            await SendMessagesAsync(messageBody);
-            this.logger.LogInformation("The message has been sent");
+            try
+            {
+                this.queueClient = new QueueClient(this.connectionString, this.queueName);
+                this.logger.LogInformation("Queue client for {queuename} has been created", this.queueName);
 
-            await this.queueClient.CloseAsync();
+                await SendMessagesAsync(messageBody);
+                this.logger.LogInformation("The message has been sent");
+
+                await this.queueClient.CloseAsync();
+            }
+            catch (Exception exception)
+            {
+                this.logger.LogError("Error in queue client for {queuename}: {exception}", this.queueName, exception);
+                throw;
+            }
         }
 
         private async Task SendMessagesAsync(byte[] messageBody)
