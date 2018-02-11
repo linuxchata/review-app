@@ -42,12 +42,12 @@ namespace LC.RA.LocationService
                 .InstancePerLifetimeScope();
 
             builder.RegisterType<QueueMessageSenderService>()
-                .WithParameter("connectionString", applicationSettings.ConnectionString)
+                .WithParameter("connectionString", applicationSettings.ServiceBusConnectionString)
                 .WithParameter("queueName", applicationSettings.WebApiQueueName)
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
             builder.RegisterType<QueueMessageReceiverService>()
-                .WithParameter("connectionString", applicationSettings.ConnectionString)
+                .WithParameter("connectionString", applicationSettings.ServiceBusConnectionString)
                 .WithParameter("queueName", applicationSettings.LocationServiceQueueName)
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
