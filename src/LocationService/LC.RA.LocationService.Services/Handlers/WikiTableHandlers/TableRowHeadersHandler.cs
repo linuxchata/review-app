@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using LC.RA.LocationService.Core.Application.Wikipedia;
+using LC.RA.LocationService.Services.Extensions;
 
-namespace LC.RA.LocationService.Services.WikiTableHandlers
+namespace LC.RA.LocationService.Services.Handlers.WikiTableHandlers
 {
     public sealed class TableRowHeadersHandler : TableBaseHandler
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using LC.RA.LocationService.Core.Application.Wikipedia;
 
-namespace LC.RA.LocationService.Services.WikiPageHandlers
+namespace LC.RA.LocationService.Services.Handlers.WikiPageHandlers
 {
     public abstract class PageBaseHandler
     {

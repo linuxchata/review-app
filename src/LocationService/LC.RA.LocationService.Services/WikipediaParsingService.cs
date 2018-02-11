@@ -2,8 +2,8 @@
 using System.Linq;
 using LC.RA.LocationService.Core.Application.Wikipedia;
 using LC.RA.LocationService.Services.Contracts;
-using LC.RA.LocationService.Services.WikiPageHandlers;
-using LC.RA.LocationService.Services.WikiTableHandlers;
+using LC.RA.LocationService.Services.Handlers.WikiPageHandlers;
+using LC.RA.LocationService.Services.Handlers.WikiTableHandlers;
 
 namespace LC.RA.LocationService.Services
 {

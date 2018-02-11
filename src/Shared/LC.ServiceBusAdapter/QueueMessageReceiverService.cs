@@ -66,6 +66,7 @@ namespace LC.ServiceBusAdapter
             };
 
             queueClient.RegisterMessageHandler(ProcessMessagesAsync, messageHandlerOptions);
+
             this.logger.LogInformation("The function that processes messages for {QueueName} queue has been registered", this.queueName);
         }
 

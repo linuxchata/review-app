@@ -1,6 +1,6 @@
 ﻿namespace LC.RA.LocationService.Services.Contracts
 {
-    public interface ILocationSynchronizationService
+    public interface ILocationService
     {
         void Synchronize();
     }

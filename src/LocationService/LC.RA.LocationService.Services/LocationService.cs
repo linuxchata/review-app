@@ -3,16 +3,17 @@ using System.Threading.Tasks;
 using LC.RA.LocationService.Core.Application.Wikipedia;
 using LC.RA.LocationService.Core.Domain;
 using LC.RA.LocationService.Services.Contracts;
+using LC.RA.LocationService.Services.Extension;
 
 namespace LC.RA.LocationService.Services
 {
-    public sealed class LocationSynchronizationService : ILocationSynchronizationService
+    public sealed class LocationService : ILocationService
     {
         private readonly IWikipediaService wikipediaService;
 
         private readonly IWikipediaParsingService wikipediaParsingService;
 
-        public LocationSynchronizationService(
+        public LocationService(
             IWikipediaService wikipediaService,
             IWikipediaParsingService wikipediaParsingService)
         {
@@ -44,7 +45,7 @@ namespace LC.RA.LocationService.Services
 
             return source;
         }
-        
+
         private string GetName(WikiTableRowBase row)
         {
             var nameMatches = RegexExtension.GetMatches(row.Content[0], RegexPattern.LocationNameMatchPattern);

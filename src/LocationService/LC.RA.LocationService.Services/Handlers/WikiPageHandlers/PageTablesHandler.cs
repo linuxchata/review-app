@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using LC.RA.LocationService.Core.Application.Wikipedia;
+using LC.RA.LocationService.Services.Extension;
 
-namespace LC.RA.LocationService.Services.WikiPageHandlers
+namespace LC.RA.LocationService.Services.Handlers.WikiPageHandlers
 {
     public sealed class PageTablesHandler : PageBaseHandler
     {

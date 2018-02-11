@@ -7,17 +7,17 @@ namespace LC.RA.LocationService.Controllers
     [Route("api/[controller]")]
     public class SynchronizationController : Controller
     {
-        private readonly ILocationSynchronizationService locationSynchronizationService;
+        private readonly ILocationService locationService;
 
-        public SynchronizationController(ILocationSynchronizationService locationSynchronizationService)
+        public SynchronizationController(ILocationService locationService)
         {
-            this.locationSynchronizationService = locationSynchronizationService;
+            this.locationService = locationService;
         }
 
         [HttpGet]
         public IActionResult SyncLocations()
         {
-            this.locationSynchronizationService.Synchronize();
+            this.locationService.Synchronize();
 
             return this.Ok();
         }

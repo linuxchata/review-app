@@ -8,15 +8,15 @@ namespace LC.RA.LocationService.Services
 {
     public sealed class LocationServiceQueueMessageHandler : IQueueMessageHandler
     {
-        private readonly ILocationSynchronizationService locationSynchronizationService;
+        private readonly ILocationService locationService;
 
         private readonly ILogger<LocationServiceQueueMessageHandler> logger;
 
         public LocationServiceQueueMessageHandler(
-            ILocationSynchronizationService locationSynchronizationService,
+            ILocationService locationService,
             ILogger<LocationServiceQueueMessageHandler> logger)
         {
-            this.locationSynchronizationService = locationSynchronizationService;
+            this.locationService = locationService;
             this.logger = logger;
         }
 
@@ -25,8 +25,8 @@ namespace LC.RA.LocationService.Services
             var startLocationSynchronization = BitConverter.ToBoolean(messageBody, 0);
             if (startLocationSynchronization)
             {
-                this.logger.LogInformation("Triggering location synchronization process");
-                return Task.Run(() => this.locationSynchronizationService.Synchronize());
+                this.logger.LogInformation("Triggering getting locations");
+                return Task.Run(() => this.locationService.Synchronize());
             }
 
             return Task.Run(() => { });

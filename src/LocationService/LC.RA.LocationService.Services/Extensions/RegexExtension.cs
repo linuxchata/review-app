@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace LC.RA.LocationService.Services
+namespace LC.RA.LocationService.Services.Extensions
 {
     public static class RegexExtension
     {
