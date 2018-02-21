@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using LC.RA.WebApi.Core.Domain;
 using LC.RA.WebApi.Services.Contracts;
 
-namespace LC.RA.WebApi.Services.Synchronization
+namespace LC.RA.WebApi.Services
 {
     public sealed class LocationSynchronizationService : ILocationSynchronizationService
     {

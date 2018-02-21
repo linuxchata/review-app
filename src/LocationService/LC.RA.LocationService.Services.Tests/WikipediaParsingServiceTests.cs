@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using LC.RA.WebApi.Core.Application.Wikipedia;
-using LC.RA.WebApi.Services.Synchronization;
+using LC.RA.LocationService.Core.Application.Wikipedia;
 using Xunit;
 
-namespace LC.RA.WebApi.Services.Tests
+namespace LC.RA.LocationService.Services.Tests
 {
     public class WikipediaParsingServiceTests
     {

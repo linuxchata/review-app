@@ -1,7 +1,7 @@
-using LC.RA.WebApi.Core.Application.Wikipedia;
+using LC.RA.LocationService.Core.Application.Wikipedia;
 using Xunit;
 
-namespace LC.RA.WebApi.Core.Tests
+namespace LC.RA.LocationService.Core.Tests
 {
     public class ComparerByStartIndexTests
     {

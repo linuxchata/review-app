@@ -6,17 +6,17 @@ using Xunit;
 
 namespace LC.RA.WebApi.Tests
 {
-    public class SynchronizationControllerTests
+    public class SyncControllerTests
     {
-        private readonly SynchronizationController sut;
+        private readonly SyncController sut;
 
         private readonly Mock<ILocationService> locationServiceMock;
 
-        public SynchronizationControllerTests()
+        public SyncControllerTests()
         {
             this.locationServiceMock = new Mock<ILocationService>();
 
-            this.sut = new SynchronizationController(this.locationServiceMock.Object);
+            this.sut = new SyncController(this.locationServiceMock.Object);
         }
 
         [Fact]

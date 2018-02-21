@@ -3,7 +3,6 @@ using LC.RA.WebApi.Core.Application;
 using LC.RA.WebApi.DataAccess;
 using LC.RA.WebApi.DataAccess.Converters;
 using LC.RA.WebApi.Services;
-using LC.RA.WebApi.Services.Synchronization;
 using LC.ServiceBusAdapter;
 using Microsoft.Extensions.Configuration;
 
@@ -76,12 +75,6 @@ namespace LC.RA.WebApi
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
             builder.RegisterType<SubjectService>()
-                .AsImplementedInterfaces()
-                .InstancePerLifetimeScope();
-            builder.RegisterType<WikipediaService>()
-                .AsImplementedInterfaces()
-                .InstancePerLifetimeScope();
-            builder.RegisterType<WikipediaParsingService>()
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
             builder.RegisterType<LocationSynchronizationService>()

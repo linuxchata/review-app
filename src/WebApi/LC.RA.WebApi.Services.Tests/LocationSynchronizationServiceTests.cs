@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Threading.Tasks;
 using LC.RA.WebApi.Core.Domain;
 using LC.RA.WebApi.Services.Contracts;
-using LC.RA.WebApi.Services.Synchronization;
 using Moq;
 using Xunit;
 

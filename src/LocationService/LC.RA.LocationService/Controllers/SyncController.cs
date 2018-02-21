@@ -1,15 +1,15 @@
-﻿using LC.RA.WebApi.Services.Contracts;
+﻿using LC.RA.LocationService.Services.Contracts;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LC.RA.WebApi.Controllers
+namespace LC.RA.LocationService.Controllers
 {
     [Produces("application/json")]
     [Route("api/[controller]")]
-    public class SynchronizationController : Controller
+    public class SyncController : Controller
     {
         private readonly ILocationService locationService;
 
-        public SynchronizationController(ILocationService locationService)
+        public SyncController(ILocationService locationService)
         {
             this.locationService = locationService;
         }
