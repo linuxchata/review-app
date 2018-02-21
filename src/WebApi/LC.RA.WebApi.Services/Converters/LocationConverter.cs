@@ -12,9 +12,9 @@ namespace LC.RA.WebApi.Services.Converters
         {
             var config = new MapperConfiguration(c =>
             {
-                c.CreateMap<Location, TransferObjects.Location>();
+                c.CreateMap<TransferObjects.Location, Location>();
             });
-
+            
             this.mapper = new Mapper(config);
         }
 
