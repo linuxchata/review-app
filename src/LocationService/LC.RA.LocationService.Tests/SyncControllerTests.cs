@@ -1,10 +1,10 @@
-﻿using LC.RA.WebApi.Controllers;
-using LC.RA.WebApi.Services.Contracts;
+﻿using LC.RA.LocationService.Controllers;
+using LC.RA.LocationService.Services.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Xunit;
 
-namespace LC.RA.WebApi.Tests
+namespace LC.RA.LocationService.Tests
 {
     public class SyncControllerTests
     {
@@ -20,7 +20,7 @@ namespace LC.RA.WebApi.Tests
         }
 
         [Fact]
-        public void SyncLocations_ShouldReturnOkResult_Test()
+        public void Synchronize_ShouldReturnOkResult_Test()
         {
             // Arrange
             // Act
