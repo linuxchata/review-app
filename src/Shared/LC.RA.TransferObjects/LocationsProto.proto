@@ -1,0 +1,22 @@
+﻿// [START declaration]
+syntax = "proto3";
+package tutorial;
+
+// [END declaration]
+
+// [START csharp_declaration]
+option csharp_namespace = "LC.RA.TransferObjects";
+// [END csharp_declaration]
+
+// [START messages]
+message LocationProto {
+    string name = 1;
+    string region = 2;
+    string gpslocation = 3;
+}
+
+message LocationsProto {
+    repeated LocationProto locations = 1;
+}
+
+// [END messages]
