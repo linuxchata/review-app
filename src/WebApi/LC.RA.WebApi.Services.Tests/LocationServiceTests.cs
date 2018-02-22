@@ -95,5 +95,19 @@ namespace LC.RA.WebApi.Services.Tests
             await this.sut.CreateAsync(new Location());
             this.locationRepositoryMock.Verify(a => a.InsertAsync(It.IsAny<Location>(), null), Times.Once);
         }
+
+        [Fact]
+        public void Synchronize_WhenContentIsNotEmpty_ShouldNotThrowException_Test()
+        {
+            // Arrange
+            IEnumerable<Location> locations = new List<Location>
+            {
+                new Location("Kiev", "Kiev")
+            };
+
+            // Act
+            // Assert
+            this.sut.Synchronize(locations);
+        }
     }
 }

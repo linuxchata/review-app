@@ -12,6 +12,8 @@ namespace LC.RA.WebApi.Services.Contracts
 
         Task CreateAsync(Location location, string user = null);
 
-        Task Synchronize();
+        Task RequestSynchronization();
+
+        void Synchronize(IEnumerable<Location> sourceLocations);
     }
 }

@@ -47,9 +47,27 @@ namespace LC.RA.WebApi.Services
             return this.locationRepository.InsertAsync(location, user);
         }
 
-        public async Task Synchronize()
+        public async Task RequestSynchronization()
         {
             await this.queueService.SendMessage(BitConverter.GetBytes(true));
+        }
+
+        public async void Synchronize(IEnumerable<Location> sourceLocations)
+        {
+            var existedLocations = await this.GetExistedLocations();
+
+            foreach (var location in sourceLocations)
+            {
+                if (!existedLocations.Contains(location))
+                {
+                    await this.CreateAsync(location, "Synchronization User");
+                }
+            }
+        }
+
+        private async Task<HashSet<Location>> GetExistedLocations()
+        {
+            return new HashSet<Location>(await this.GetAllAsync());
         }
     }
 }

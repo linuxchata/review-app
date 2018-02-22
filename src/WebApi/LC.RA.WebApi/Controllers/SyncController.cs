@@ -17,7 +17,7 @@ namespace LC.RA.WebApi.Controllers
         [HttpGet]
         public IActionResult SyncLocations()
         {
-            this.locationService.Synchronize();
+            this.locationService.RequestSynchronization();
 
             return this.Ok();
         }

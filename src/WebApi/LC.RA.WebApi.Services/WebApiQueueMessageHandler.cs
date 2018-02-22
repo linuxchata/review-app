@@ -12,17 +12,17 @@ namespace LC.RA.WebApi.Services
     {
         private readonly ILocationConverter locationConverter;
 
-        private readonly ILocationSynchronizationService locationSynchronizationService;
+        private readonly ILocationService locationService;
 
         private readonly ILogger<WebApiQueueMessageHandler> logger;
 
         public WebApiQueueMessageHandler(
             ILocationConverter locationConverter,
-            ILocationSynchronizationService locationSynchronizationService,
+            ILocationService locationService,
             ILogger<WebApiQueueMessageHandler> logger)
         {
             this.locationConverter = locationConverter;
-            this.locationSynchronizationService = locationSynchronizationService;
+            this.locationService = locationService;
             this.logger = logger;
         }
 
@@ -31,7 +31,7 @@ namespace LC.RA.WebApi.Services
             var locationsToConvert = Utilities.Extensions.FormatterExtension.Deserialize<List<Location>>(messageBody);
             var locations = locationsToConvert.Select(a => this.locationConverter.Convert(a));
 
-            return Task.Run(() => { this.locationSynchronizationService.Synchronize(locations); });
+            return Task.Run(() => { this.locationService.Synchronize(locations); });
         }
     }
 }

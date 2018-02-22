@@ -29,7 +29,7 @@ namespace LC.RA.WebApi.Tests
             // Assert
             var result = Assert.IsType<OkResult>(response);
             Assert.NotNull(result);
-            this.locationServiceMock.Verify(a => a.Synchronize(), Times.Once);
+            this.locationServiceMock.Verify(a => a.RequestSynchronization(), Times.Once);
         }
     }
 }
