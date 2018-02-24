@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using LC.RA.LocationService.Core.Application;
 using LC.RA.LocationService.Services;
+using LC.RA.LocationService.Services.Converters;
 using LC.ServiceBusAdapter;
 using Microsoft.Extensions.Configuration;
 
@@ -38,6 +39,9 @@ namespace LC.RA.LocationService
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
             builder.RegisterType<LocationServiceQueueMessageHandler>()
+                .AsImplementedInterfaces()
+                .InstancePerLifetimeScope();
+            builder.RegisterType<LocationsConverter>()
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
 

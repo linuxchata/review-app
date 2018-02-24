@@ -48,7 +48,7 @@ namespace LC.RA.WebApi
             builder.RegisterType<DoctorConverter>()
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
-            builder.RegisterType<Services.Converters.LocationConverter>()
+            builder.RegisterType<Services.Converters.LocationsConverter>()
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
         }

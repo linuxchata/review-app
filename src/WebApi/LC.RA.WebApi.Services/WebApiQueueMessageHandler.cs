@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using LC.RA.TransferObjects;
+﻿using System.Threading.Tasks;
 using LC.RA.WebApi.Services.Contracts;
 using LC.ServiceBusAdapter.Abstractions;
 using Microsoft.Extensions.Logging;
@@ -10,14 +7,14 @@ namespace LC.RA.WebApi.Services
 {
     public sealed class WebApiQueueMessageHandler : IQueueMessageHandler
     {
-        private readonly ILocationConverter locationConverter;
+        private readonly ILocationsConverter locationConverter;
 
         private readonly ILocationService locationService;
 
         private readonly ILogger<WebApiQueueMessageHandler> logger;
 
         public WebApiQueueMessageHandler(
-            ILocationConverter locationConverter,
+            ILocationsConverter locationConverter,
             ILocationService locationService,
             ILogger<WebApiQueueMessageHandler> logger)
         {
@@ -28,8 +25,11 @@ namespace LC.RA.WebApi.Services
 
         public Task Execute(byte[] messageBody)
         {
-            var locationsToConvert = Utilities.Extensions.FormatterExtension.Deserialize<List<Location>>(messageBody);
-            var locations = locationsToConvert.Select(a => this.locationConverter.Convert(a));
+            this.logger.LogInformation("Message of {Length} B have been received from the message queue", messageBody.Length);
+
+            var locations = this.locationConverter.Convert(messageBody);
+
+            this.logger.LogInformation("Locations have been converted to domain objects");
 
             return Task.Run(() => { this.locationService.Synchronize(locations); });
         }

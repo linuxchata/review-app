@@ -19,27 +19,35 @@ namespace LC.RA.LocationService.Services
 
         private readonly IQueueMessageSenderService queueMessageSenderService;
 
+        private readonly ILocationsConverter locationsConverter;
+
         private readonly ILogger<LocationService> logger;
 
         public LocationService(
             IWikipediaService wikipediaService,
             IWikipediaParsingService wikipediaParsingService,
             IQueueMessageSenderService queueMessageSenderService,
+            ILocationsConverter locationsConverter,
             ILogger<LocationService> logger)
         {
-            this.logger = logger;
             this.wikipediaService = wikipediaService;
             this.wikipediaParsingService = wikipediaParsingService;
             this.queueMessageSenderService = queueMessageSenderService;
+            this.logger = logger;
+            this.locationsConverter = locationsConverter;
         }
 
         public async void Synchronize()
         {
             var locations = await this.GetSourceLocations();
 
-            var locationsArray = FormatterExtension.Serialize(locations.ToList());
+            var locationsArray = this.locationsConverter.Convert(locations);
+
+            this.logger.LogInformation("Locations have been converter to protobuf byte array of {size} B", locationsArray.Length);
 
             await this.queueMessageSenderService.SendMessage(locationsArray);
+
+            this.logger.LogInformation("Locations have been send to the queue");
         }
 
         private async Task<IEnumerable<Location>> GetSourceLocations()

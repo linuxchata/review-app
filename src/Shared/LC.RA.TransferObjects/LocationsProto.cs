@@ -43,9 +43,7 @@ namespace LC.RA.TransferObjects
     }
 
     #region Messages
-    /// <summary>
-    /// [START messages]
-    /// </summary>
+
     public sealed partial class LocationProto : pb::IMessage<LocationProto>
     {
         private static readonly pb::MessageParser<LocationProto> _parser = new pb::MessageParser<LocationProto>(() => new LocationProto());
