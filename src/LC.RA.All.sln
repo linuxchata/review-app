@@ -9,21 +9,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{5F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Synchronization", "Synchronization", "{E83DB7CB-7FE1-4FA1-8A4D-3BAC2FED1066}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.WebApi", "WebApi\LC.RA.WebApi\LC.RA.WebApi.csproj", "{76545FCD-7BC8-4E84-8F98-533793133AD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.WebApi", "Web\LC.RA.WebApi\LC.RA.WebApi.csproj", "{76545FCD-7BC8-4E84-8F98-533793133AD1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.WebApi.Core", "WebApi\LC.RA.WebApi.Core\LC.RA.WebApi.Core.csproj", "{9381C0E8-9901-46AA-A072-C82F14CF226B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.WebApi.Core", "Web\LC.RA.WebApi.Core\LC.RA.WebApi.Core.csproj", "{9381C0E8-9901-46AA-A072-C82F14CF226B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.WebApi.Core.Tests", "WebApi\LC.RA.WebApi.Core.Tests\LC.RA.WebApi.Core.Tests.csproj", "{F16522BC-6068-4F86-8C14-7C43FF882849}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.WebApi.Core.Tests", "Web\LC.RA.WebApi.Core.Tests\LC.RA.WebApi.Core.Tests.csproj", "{F16522BC-6068-4F86-8C14-7C43FF882849}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.WebApi.DataAccess", "WebApi\LC.RA.WebApi.DataAccess\LC.RA.WebApi.DataAccess.csproj", "{AE7E299B-BA6F-46D3-AC1B-13F1B930DCB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.WebApi.DataAccess", "Web\LC.RA.WebApi.DataAccess\LC.RA.WebApi.DataAccess.csproj", "{AE7E299B-BA6F-46D3-AC1B-13F1B930DCB0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.WebApi.DataAccess.Tests", "WebApi\LC.RA.WebApi.DataAccess.Tests\LC.RA.WebApi.DataAccess.Tests.csproj", "{9642E7B5-CE9D-4CCA-A3FC-0F8605E5131C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.WebApi.DataAccess.Tests", "Web\LC.RA.WebApi.DataAccess.Tests\LC.RA.WebApi.DataAccess.Tests.csproj", "{9642E7B5-CE9D-4CCA-A3FC-0F8605E5131C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.WebApi.Services", "WebApi\LC.RA.WebApi.Services\LC.RA.WebApi.Services.csproj", "{8AF6AC25-BEE0-4CE0-91BC-5D9CF23613CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.WebApi.Services", "Web\LC.RA.WebApi.Services\LC.RA.WebApi.Services.csproj", "{8AF6AC25-BEE0-4CE0-91BC-5D9CF23613CF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.WebApi.Services.Tests", "WebApi\LC.RA.WebApi.Services.Tests\LC.RA.WebApi.Services.Tests.csproj", "{47AEB63C-9F64-45A6-AF98-608941B52A0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.WebApi.Services.Tests", "Web\LC.RA.WebApi.Services.Tests\LC.RA.WebApi.Services.Tests.csproj", "{47AEB63C-9F64-45A6-AF98-608941B52A0F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.WebApi.Tests", "WebApi\LC.RA.WebApi.Tests\LC.RA.WebApi.Tests.csproj", "{1E6FC6B5-A695-43D3-9F62-11715D246A6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.WebApi.Tests", "Web\LC.RA.WebApi.Tests\LC.RA.WebApi.Tests.csproj", "{1E6FC6B5-A695-43D3-9F62-11715D246A6F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{97AB56D5-8FA3-457C-BEA4-E62D5084C162}"
 EndProject
