@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LC.RA.LocationService.Api\LC.RA.SynchronizationService.Api.csproj" />
+    <ProjectReference Include="..\LC.RA.SynchronizationService.Api\LC.RA.SynchronizationService.Api.csproj" />
   </ItemGroup>
 
   <ItemGroup>
