@@ -7,17 +7,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.SynchronizationServic
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{826A6191-BC9A-4438-9EC1-D3CF8EDC08D5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.ServiceBusAdapter", "..\Shared\LC.ServiceBusAdapter\LC.ServiceBusAdapter.csproj", "{BC909733-69E3-4289-92CD-F53BA8E7DE9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.ServiceBusAdapter", "..\..\Shared\LC.ServiceBusAdapter\LC.ServiceBusAdapter.csproj", "{BC909733-69E3-4289-92CD-F53BA8E7DE9D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.ServiceBusAdapter.Abstractions", "..\Shared\LC.ServiceBusAdapter.Abstractions\LC.ServiceBusAdapter.Abstractions.csproj", "{B9F6A2EA-2733-472E-9085-0C784D8F7429}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.ServiceBusAdapter.Abstractions", "..\..\Shared\LC.ServiceBusAdapter.Abstractions\LC.ServiceBusAdapter.Abstractions.csproj", "{B9F6A2EA-2733-472E-9085-0C784D8F7429}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.SynchronizationService.Api.Tests", "LC.RA.SynchronizationService.Api.Tests\LC.RA.SynchronizationService.Api.Tests.csproj", "{703A53EB-3E5E-4583-8AEA-1B9CA2F67F93}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.TransferObjects", "..\Shared\LC.RA.TransferObjects\LC.RA.TransferObjects.csproj", "{24E65493-98E3-4CDB-9451-7D8C7790EF81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.TransferObjects", "..\..\Shared\LC.RA.TransferObjects\LC.RA.TransferObjects.csproj", "{24E65493-98E3-4CDB-9451-7D8C7790EF81}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.Utilities", "..\Shared\LC.RA.Utilities\LC.RA.Utilities.csproj", "{DAB565F3-FDCE-4EA0-A66F-CACA660875E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.Utilities", "..\..\Shared\LC.RA.Utilities\LC.RA.Utilities.csproj", "{DAB565F3-FDCE-4EA0-A66F-CACA660875E0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.Utilities.Tests", "..\Shared\LC.RA.Utilities.Tests\LC.RA.Utilities.Tests.csproj", "{DE6B70E9-B464-4B68-A1BD-C715D76ECB77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.Utilities.Tests", "..\..\Shared\LC.RA.Utilities.Tests\LC.RA.Utilities.Tests.csproj", "{DE6B70E9-B464-4B68-A1BD-C715D76ECB77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

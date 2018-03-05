@@ -2,7 +2,7 @@
 using System.Text.RegularExpressions;
 using LC.RA.SynchronizationService.Api.Infrastructure.Extensions;
 using LC.RA.SynchronizationService.Api.Infrastructure.Services;
-using LC.RA.SynchronizationService.Api.Model.Application.Wikipedia;
+using LC.RA.SynchronizationService.Api.Models.Application.Wikipedia;
 
 namespace LC.RA.SynchronizationService.Api.Infrastructure.Handlers.WikiTableHandlers
 {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using LC.RA.SynchronizationService.Api.Infrastructure.Services;
-using LC.RA.SynchronizationService.Api.Model.Application.Wikipedia;
+using LC.RA.SynchronizationService.Api.Models.Application.Wikipedia;
 using LC.RA.SynchronizationService.Api.Tests.Properties;
 using Xunit;
 

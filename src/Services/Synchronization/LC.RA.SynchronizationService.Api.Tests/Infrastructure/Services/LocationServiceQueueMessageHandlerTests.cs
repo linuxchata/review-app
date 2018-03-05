@@ -1,5 +1,4 @@
 ﻿using System;
-using LC.RA.SynchronizationService.Api.Infrastructure.Contracts;
 using LC.RA.SynchronizationService.Api.Infrastructure.Services;
 using Microsoft.Extensions.Logging;
 using Moq;

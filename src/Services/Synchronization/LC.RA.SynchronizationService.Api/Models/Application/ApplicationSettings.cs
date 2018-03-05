@@ -1,4 +1,4 @@
-﻿namespace LC.RA.SynchronizationService.Api.Model.Application
+﻿namespace LC.RA.SynchronizationService.Api.Models.Application
 {
     public sealed class ApplicationSettings : IApplicationSettings
     {

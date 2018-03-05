@@ -1,4 +1,4 @@
-using LC.RA.SynchronizationService.Api.Model.Application.Wikipedia;
+using LC.RA.SynchronizationService.Api.Models.Application.Wikipedia;
 using Xunit;
 
 namespace LC.RA.SynchronizationService.Api.Tests

@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace LC.RA.SynchronizationService.Api.Infrastructure.Contracts
+namespace LC.RA.SynchronizationService.Api.Infrastructure.Services
 {
     public interface IWikipediaService
     {

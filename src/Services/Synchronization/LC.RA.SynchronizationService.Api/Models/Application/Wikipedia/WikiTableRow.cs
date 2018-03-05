@@ -1,4 +1,4 @@
-﻿namespace LC.RA.SynchronizationService.Api.Model.Application.Wikipedia
+﻿namespace LC.RA.SynchronizationService.Api.Models.Application.Wikipedia
 {
     public sealed class WikiTableRow : WikiTableRowBase
     {

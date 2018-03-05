@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Threading.Tasks;
-using LC.RA.SynchronizationService.Api.Infrastructure.Contracts;
 using LC.ServiceBusAdapter.Abstractions;
 using Microsoft.Extensions.Logging;
 

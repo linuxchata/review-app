@@ -1,10 +1,10 @@
 ﻿using LC.RA.SynchronizationService.Api.Controllers;
-using LC.RA.SynchronizationService.Api.Infrastructure.Contracts;
+using LC.RA.SynchronizationService.Api.Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Xunit;
 
-namespace LC.RA.SynchronizationService.Api.Tests
+namespace LC.RA.SynchronizationService.Api.Tests.Controllers
 {
     public class SyncControllerTests
     {

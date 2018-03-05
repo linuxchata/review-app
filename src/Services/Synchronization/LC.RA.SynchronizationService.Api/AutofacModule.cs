@@ -1,7 +1,7 @@
 ﻿using Autofac;
 using LC.RA.SynchronizationService.Api.Infrastructure.Converters;
 using LC.RA.SynchronizationService.Api.Infrastructure.Services;
-using LC.RA.SynchronizationService.Api.Model.Application;
+using LC.RA.SynchronizationService.Api.Models.Application;
 using LC.ServiceBusAdapter;
 using Microsoft.Extensions.Configuration;
 

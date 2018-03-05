@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace LC.RA.SynchronizationService.Api.Model.Domain
+namespace LC.RA.SynchronizationService.Api.Models.Domain
 {
     [DebuggerDisplay("{Name} {Region}")]
     [Serializable]

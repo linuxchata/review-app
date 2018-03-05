@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using LC.RA.SynchronizationService.Api.Infrastructure.Contracts;
+using LC.RA.SynchronizationService.Api.Infrastructure.Converters;
 using LC.RA.SynchronizationService.Api.Infrastructure.Extensions;
-using LC.RA.SynchronizationService.Api.Model.Application.Wikipedia;
-using LC.RA.SynchronizationService.Api.Model.Domain;
+using LC.RA.SynchronizationService.Api.Models.Application.Wikipedia;
+using LC.RA.SynchronizationService.Api.Models.Domain;
 using LC.ServiceBusAdapter.Abstractions;
 using Microsoft.Extensions.Logging;
 

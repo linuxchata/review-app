@@ -2,8 +2,7 @@
 using System.IO;
 using System.Linq;
 using Google.Protobuf;
-using LC.RA.SynchronizationService.Api.Infrastructure.Contracts;
-using LC.RA.SynchronizationService.Api.Model.Domain;
+using LC.RA.SynchronizationService.Api.Models.Domain;
 using LC.RA.TransferObjects;
 
 namespace LC.RA.SynchronizationService.Api.Infrastructure.Converters

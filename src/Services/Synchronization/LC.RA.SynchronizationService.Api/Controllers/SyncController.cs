@@ -1,4 +1,4 @@
-﻿using LC.RA.SynchronizationService.Api.Infrastructure.Contracts;
+﻿using LC.RA.SynchronizationService.Api.Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LC.RA.SynchronizationService.Api.Controllers

@@ -22,8 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\LC.RA.TransferObjects\LC.RA.TransferObjects.csproj" />
-    <ProjectReference Include="..\..\Shared\LC.ServiceBusAdapter\LC.ServiceBusAdapter.csproj" />
+    <ProjectReference Include="..\..\..\Shared\LC.RA.TransferObjects\LC.RA.TransferObjects.csproj" />
+    <ProjectReference Include="..\..\..\Shared\LC.ServiceBusAdapter.Abstractions\LC.ServiceBusAdapter.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Shared\LC.ServiceBusAdapter\LC.ServiceBusAdapter.csproj" />
   </ItemGroup>
 
 </Project>

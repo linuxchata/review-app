@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using LC.RA.SynchronizationService.Api.Infrastructure.Contracts;
-using LC.RA.SynchronizationService.Api.Model.Application;
-using LC.RA.SynchronizationService.Api.Model.Application.Wikipedia;
+using LC.RA.SynchronizationService.Api.Models.Application;
+using LC.RA.SynchronizationService.Api.Models.Application.Wikipedia;
 using Newtonsoft.Json;
 
 namespace LC.RA.SynchronizationService.Api.Infrastructure.Services
