@@ -1,15 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.LocationService", "LC.RA.LocationService\LC.RA.LocationService.csproj", "{14DCFE5E-8E95-4BBB-A524-212B936554BF}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.LocationService.Core", "LC.RA.LocationService.Core\LC.RA.LocationService.Core.csproj", "{947673A1-F778-4AEB-9A19-78368216A435}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.LocationService.DataAccess", "LC.RA.LocationService.DataAccess\LC.RA.LocationService.DataAccess.csproj", "{C7A20EF7-8C7D-454A-AC7C-E94575242E7A}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.LocationService.Services", "LC.RA.LocationService.Services\LC.RA.LocationService.Services.csproj", "{5E460553-05EB-46ED-BDF6-7DE8CCB74E61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.SynchronizationService.Api", "LC.RA.LocationService.Api\LC.RA.SynchronizationService.Api.csproj", "{14DCFE5E-8E95-4BBB-A524-212B936554BF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{826A6191-BC9A-4438-9EC1-D3CF8EDC08D5}"
 EndProject
@@ -17,13 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.ServiceBusAdapter", "..\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.ServiceBusAdapter.Abstractions", "..\Shared\LC.ServiceBusAdapter.Abstractions\LC.ServiceBusAdapter.Abstractions.csproj", "{B9F6A2EA-2733-472E-9085-0C784D8F7429}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.LocationService.Core.Tests", "LC.RA.LocationService.Core.Tests\LC.RA.LocationService.Core.Tests.csproj", "{E06C5B74-F21C-406B-9132-D6B2AE7A0DCB}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.LocationService.DataAccess.Tests", "LC.RA.LocationService.DataAccess.Tests\LC.RA.LocationService.DataAccess.Tests.csproj", "{1DBBFA47-B9BE-41B0-A8D7-061489B55CD2}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.LocationService.Services.Tests", "LC.RA.LocationService.Services.Tests\LC.RA.LocationService.Services.Tests.csproj", "{04F8D395-9496-4E55-ADE7-DA1E279B765A}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.LocationService.Tests", "LC.RA.LocationService.Tests\LC.RA.LocationService.Tests.csproj", "{703A53EB-3E5E-4583-8AEA-1B9CA2F67F93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.SynchronizationService.Api.Tests", "LC.RA.LocationService.Api.Tests\LC.RA.SynchronizationService.Api.Tests.csproj", "{703A53EB-3E5E-4583-8AEA-1B9CA2F67F93}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.TransferObjects", "..\Shared\LC.RA.TransferObjects\LC.RA.TransferObjects.csproj", "{24E65493-98E3-4CDB-9451-7D8C7790EF81}"
 EndProject
@@ -41,18 +29,6 @@ Global
 		{14DCFE5E-8E95-4BBB-A524-212B936554BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14DCFE5E-8E95-4BBB-A524-212B936554BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14DCFE5E-8E95-4BBB-A524-212B936554BF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{947673A1-F778-4AEB-9A19-78368216A435}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{947673A1-F778-4AEB-9A19-78368216A435}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{947673A1-F778-4AEB-9A19-78368216A435}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{947673A1-F778-4AEB-9A19-78368216A435}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C7A20EF7-8C7D-454A-AC7C-E94575242E7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C7A20EF7-8C7D-454A-AC7C-E94575242E7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C7A20EF7-8C7D-454A-AC7C-E94575242E7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C7A20EF7-8C7D-454A-AC7C-E94575242E7A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5E460553-05EB-46ED-BDF6-7DE8CCB74E61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5E460553-05EB-46ED-BDF6-7DE8CCB74E61}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5E460553-05EB-46ED-BDF6-7DE8CCB74E61}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5E460553-05EB-46ED-BDF6-7DE8CCB74E61}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BC909733-69E3-4289-92CD-F53BA8E7DE9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BC909733-69E3-4289-92CD-F53BA8E7DE9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC909733-69E3-4289-92CD-F53BA8E7DE9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -61,18 +37,6 @@ Global
 		{B9F6A2EA-2733-472E-9085-0C784D8F7429}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9F6A2EA-2733-472E-9085-0C784D8F7429}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9F6A2EA-2733-472E-9085-0C784D8F7429}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E06C5B74-F21C-406B-9132-D6B2AE7A0DCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E06C5B74-F21C-406B-9132-D6B2AE7A0DCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E06C5B74-F21C-406B-9132-D6B2AE7A0DCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E06C5B74-F21C-406B-9132-D6B2AE7A0DCB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1DBBFA47-B9BE-41B0-A8D7-061489B55CD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1DBBFA47-B9BE-41B0-A8D7-061489B55CD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1DBBFA47-B9BE-41B0-A8D7-061489B55CD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1DBBFA47-B9BE-41B0-A8D7-061489B55CD2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{04F8D395-9496-4E55-ADE7-DA1E279B765A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{04F8D395-9496-4E55-ADE7-DA1E279B765A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{04F8D395-9496-4E55-ADE7-DA1E279B765A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{04F8D395-9496-4E55-ADE7-DA1E279B765A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{703A53EB-3E5E-4583-8AEA-1B9CA2F67F93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{703A53EB-3E5E-4583-8AEA-1B9CA2F67F93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{703A53EB-3E5E-4583-8AEA-1B9CA2F67F93}.Release|Any CPU.ActiveCfg = Release|Any CPU
