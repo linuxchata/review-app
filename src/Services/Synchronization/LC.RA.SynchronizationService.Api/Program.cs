@@ -10,7 +10,7 @@ namespace LC.RA.SynchronizationService.Api
     {
         public static void Main(string[] args)
         {
-            var logger = NLogBuilder.ConfigureNLog("NLog.config").GetCurrentClassLogger();
+            var logger = NLog.LogManager.LoadConfiguration("NLog.config").GetCurrentClassLogger();
 
             try
             {
