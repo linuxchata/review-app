@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using LC.ServiceBusAdapter.Abstractions;
 using Microsoft.Extensions.Logging;
 
-namespace LC.RA.SynchronizationService.Api.Infrastructure.Services
+namespace LC.RA.Synchronization.Api.Infrastructure.Services
 {
     public sealed class LocationServiceQueueMessageHandler : IQueueMessageHandler
     {

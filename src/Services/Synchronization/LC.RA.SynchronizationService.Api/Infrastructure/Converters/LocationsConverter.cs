@@ -2,10 +2,10 @@
 using System.IO;
 using System.Linq;
 using Google.Protobuf;
-using LC.RA.SynchronizationService.Api.Models.Domain;
+using LC.RA.Synchronization.Api.Models.Domain;
 using LC.RA.TransferObjects;
 
-namespace LC.RA.SynchronizationService.Api.Infrastructure.Converters
+namespace LC.RA.Synchronization.Api.Infrastructure.Converters
 {
     public sealed class LocationsConverter : ILocationsConverter
     {

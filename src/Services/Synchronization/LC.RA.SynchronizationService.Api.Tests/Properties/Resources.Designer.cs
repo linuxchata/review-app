@@ -8,10 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LC.RA.SynchronizationService.Api.Tests.Properties {
-    using System;
-    
-    
+namespace LC.RA.Synchronization.Api.Tests.Properties {
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>

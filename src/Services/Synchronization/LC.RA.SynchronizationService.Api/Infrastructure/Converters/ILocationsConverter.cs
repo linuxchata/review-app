@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using LC.RA.SynchronizationService.Api.Models.Domain;
+using LC.RA.Synchronization.Api.Models.Domain;
 
-namespace LC.RA.SynchronizationService.Api.Infrastructure.Converters
+namespace LC.RA.Synchronization.Api.Infrastructure.Converters
 {
     public interface ILocationsConverter
     {

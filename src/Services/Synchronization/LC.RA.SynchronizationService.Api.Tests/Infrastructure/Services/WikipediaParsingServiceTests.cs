@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using LC.RA.SynchronizationService.Api.Infrastructure.Services;
-using LC.RA.SynchronizationService.Api.Models.Application.Wikipedia;
-using LC.RA.SynchronizationService.Api.Tests.Properties;
+using LC.RA.Synchronization.Api.Infrastructure.Services;
+using LC.RA.Synchronization.Api.Models.Application.Wikipedia;
+using LC.RA.Synchronization.Api.Tests.Properties;
 using Xunit;
 
-namespace LC.RA.SynchronizationService.Api.Tests.Infrastructure.Services
+namespace LC.RA.Synchronization.Api.Tests.Infrastructure.Services
 {
     public class WikipediaParsingServiceTests
     {

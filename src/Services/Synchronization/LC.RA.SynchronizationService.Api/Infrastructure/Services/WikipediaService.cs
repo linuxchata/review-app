@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using LC.RA.SynchronizationService.Api.Models.Application;
-using LC.RA.SynchronizationService.Api.Models.Application.Wikipedia;
+using LC.RA.Synchronization.Api.Models.Application;
+using LC.RA.Synchronization.Api.Models.Application.Wikipedia;
 using Newtonsoft.Json;
 
-namespace LC.RA.SynchronizationService.Api.Infrastructure.Services
+namespace LC.RA.Synchronization.Api.Infrastructure.Services
 {
     public sealed class WikipediaService : IWikipediaService
     {

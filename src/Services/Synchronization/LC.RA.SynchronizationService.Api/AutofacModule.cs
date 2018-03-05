@@ -1,11 +1,11 @@
 ﻿using Autofac;
-using LC.RA.SynchronizationService.Api.Infrastructure.Converters;
-using LC.RA.SynchronizationService.Api.Infrastructure.Services;
-using LC.RA.SynchronizationService.Api.Models.Application;
+using LC.RA.Synchronization.Api.Infrastructure.Converters;
+using LC.RA.Synchronization.Api.Infrastructure.Services;
+using LC.RA.Synchronization.Api.Models.Application;
 using LC.ServiceBusAdapter;
 using Microsoft.Extensions.Configuration;
 
-namespace LC.RA.SynchronizationService.Api
+namespace LC.RA.Synchronization.Api
 {
     public sealed class AutofacModule : Module
     {

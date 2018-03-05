@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace LC.RA.SynchronizationService.Api.Models.Application.Wikipedia
+namespace LC.RA.Synchronization.Api.Models.Application.Wikipedia
 {
     [DebuggerDisplay("{ContentType}: {StartIndex} - {EndIndex}")]
     public sealed class WikiPageElement

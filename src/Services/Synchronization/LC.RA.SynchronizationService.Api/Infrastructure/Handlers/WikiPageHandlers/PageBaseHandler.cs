@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using LC.RA.SynchronizationService.Api.Models.Application.Wikipedia;
+using LC.RA.Synchronization.Api.Models.Application.Wikipedia;
 
-namespace LC.RA.SynchronizationService.Api.Infrastructure.Handlers.WikiPageHandlers
+namespace LC.RA.Synchronization.Api.Infrastructure.Handlers.WikiPageHandlers
 {
     public abstract class PageBaseHandler
     {

@@ -1,7 +1,7 @@
-using LC.RA.SynchronizationService.Api.Models.Application.Wikipedia;
+using LC.RA.Synchronization.Api.Models.Application.Wikipedia;
 using Xunit;
 
-namespace LC.RA.SynchronizationService.Api.Tests
+namespace LC.RA.Synchronization.Api.Tests
 {
     public class ComparerByStartIndexTests
     {

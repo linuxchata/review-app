@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using LC.RA.SynchronizationService.Api.Infrastructure.Converters;
-using LC.RA.SynchronizationService.Api.Infrastructure.Extensions;
-using LC.RA.SynchronizationService.Api.Models.Application.Wikipedia;
-using LC.RA.SynchronizationService.Api.Models.Domain;
+using LC.RA.Synchronization.Api.Infrastructure.Converters;
+using LC.RA.Synchronization.Api.Infrastructure.Extensions;
+using LC.RA.Synchronization.Api.Models.Application.Wikipedia;
+using LC.RA.Synchronization.Api.Models.Domain;
 using LC.ServiceBusAdapter.Abstractions;
 using Microsoft.Extensions.Logging;
 
-namespace LC.RA.SynchronizationService.Api.Infrastructure.Services
+namespace LC.RA.Synchronization.Api.Infrastructure.Services
 {
     public sealed class LocationService : ILocationService
     {

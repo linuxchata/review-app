@@ -1,4 +1,4 @@
-﻿namespace LC.RA.SynchronizationService.Api.Models.Application.Wikipedia
+﻿namespace LC.RA.Synchronization.Api.Models.Application.Wikipedia
 {
     public enum WikiPageContentType : byte
     {

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using NLog.Web;
 
-namespace LC.RA.SynchronizationService.Api
+namespace LC.RA.Synchronization.Api
 {
     public class Program
     {

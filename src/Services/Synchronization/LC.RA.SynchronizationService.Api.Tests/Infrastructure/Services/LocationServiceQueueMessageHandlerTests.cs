@@ -1,10 +1,10 @@
 ﻿using System;
-using LC.RA.SynchronizationService.Api.Infrastructure.Services;
+using LC.RA.Synchronization.Api.Infrastructure.Services;
 using Microsoft.Extensions.Logging;
 using Moq;
 using Xunit;
 
-namespace LC.RA.SynchronizationService.Api.Tests.Infrastructure.Services
+namespace LC.RA.Synchronization.Api.Tests.Infrastructure.Services
 {
     public class LocationServiceQueueMessageHandlerTests
     {

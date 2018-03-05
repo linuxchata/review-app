@@ -1,4 +1,4 @@
-﻿namespace LC.RA.SynchronizationService.Api.Infrastructure.Services
+﻿namespace LC.RA.Synchronization.Api.Infrastructure.Services
 {
     public static class RegexPattern
     {

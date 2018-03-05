@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using LC.RA.SynchronizationService.Api.Infrastructure.Extensions;
-using LC.RA.SynchronizationService.Api.Infrastructure.Services;
-using LC.RA.SynchronizationService.Api.Models.Application.Wikipedia;
+using LC.RA.Synchronization.Api.Infrastructure.Extensions;
+using LC.RA.Synchronization.Api.Infrastructure.Services;
+using LC.RA.Synchronization.Api.Models.Application.Wikipedia;
 
-namespace LC.RA.SynchronizationService.Api.Infrastructure.Handlers.WikiTableHandlers
+namespace LC.RA.Synchronization.Api.Infrastructure.Handlers.WikiTableHandlers
 {
     public sealed class TableRowsHandler : TableBaseHandler
     {

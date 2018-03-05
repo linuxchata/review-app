@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace LC.RA.SynchronizationService.Api.Infrastructure.Extensions
+namespace LC.RA.Synchronization.Api.Infrastructure.Extensions
 {
     public static class RegexExtension
     {
