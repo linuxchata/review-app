@@ -1,7 +1,7 @@
-﻿using LC.RA.Synchronization.Api.Infrastructure.Services;
+﻿using LC.RA.Location.Api.Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LC.RA.Synchronization.Api.Controllers
+namespace LC.RA.Location.Api.Controllers
 {
     [Produces("application/json")]
     [Route("api/[controller]")]

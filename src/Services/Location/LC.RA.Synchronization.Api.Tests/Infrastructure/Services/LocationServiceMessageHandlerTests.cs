@@ -1,12 +1,12 @@
 ﻿using System;
-using LC.RA.Synchronization.Api.Infrastructure.Converters;
-using LC.RA.Synchronization.Api.Infrastructure.Services;
+using LC.RA.Location.Api.Infrastructure.Converters;
+using LC.RA.Location.Api.Infrastructure.Services;
 using LC.ServiceBusAdapter.Abstractions;
 using Microsoft.Extensions.Logging;
 using Moq;
 using Xunit;
 
-namespace LC.RA.Synchronization.Api.Tests.Infrastructure.Services
+namespace LC.RA.Location.Api.Tests.Infrastructure.Services
 {
     public class LocationServiceMessageHandlerTests
     {

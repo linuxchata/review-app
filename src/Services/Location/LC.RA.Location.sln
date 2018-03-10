@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.Synchronization.Api", "LC.RA.Synchronization.Api\LC.RA.Synchronization.Api.csproj", "{14DCFE5E-8E95-4BBB-A524-212B936554BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.Location.Api", "LC.RA.Synchronization.Api\LC.RA.Location.Api.csproj", "{14DCFE5E-8E95-4BBB-A524-212B936554BF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{826A6191-BC9A-4438-9EC1-D3CF8EDC08D5}"
 EndProject
@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.ServiceBusAdapter", "..\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.ServiceBusAdapter.Abstractions", "..\..\Shared\LC.ServiceBusAdapter.Abstractions\LC.ServiceBusAdapter.Abstractions.csproj", "{B9F6A2EA-2733-472E-9085-0C784D8F7429}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.Synchronization.Api.Tests", "LC.RA.Synchronization.Api.Tests\LC.RA.Synchronization.Api.Tests.csproj", "{703A53EB-3E5E-4583-8AEA-1B9CA2F67F93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.Location.Api.Tests", "LC.RA.Synchronization.Api.Tests\LC.RA.Location.Api.Tests.csproj", "{703A53EB-3E5E-4583-8AEA-1B9CA2F67F93}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.TransferObjects", "..\..\Shared\LC.RA.TransferObjects\LC.RA.TransferObjects.csproj", "{24E65493-98E3-4CDB-9451-7D8C7790EF81}"
 EndProject

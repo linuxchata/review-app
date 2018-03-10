@@ -37,9 +37,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.TransferObjects", "Sh
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.Utilities.Tests", "Shared\LC.RA.Utilities.Tests\LC.RA.Utilities.Tests.csproj", "{A1C22D97-1F4A-46B0-B18D-8F5EF8639318}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.SynchronizationService.Api", "Services\Location\LC.RA.Synchronization.Api\LC.RA.Synchronization.Api.csproj", "{9ADCF7E2-34F4-41AD-8D9D-DD37400510EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.Location.Api", "Services\Location\LC.RA.Synchronization.Api\LC.RA.Location.Api.csproj", "{9ADCF7E2-34F4-41AD-8D9D-DD37400510EC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.SynchronizationService.Api.Tests", "Services\Location\LC.RA.Synchronization.Api.Tests\LC.RA.Synchronization.Api.Tests.csproj", "{B9DD0CFD-06E1-4CBF-A498-542C33116DBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC.RA.Location.Api.Tests", "Services\Location\LC.RA.Synchronization.Api.Tests\LC.RA.Location.Api.Tests.csproj", "{B9DD0CFD-06E1-4CBF-A498-542C33116DBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

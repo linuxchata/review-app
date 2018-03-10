@@ -1,4 +1,4 @@
-﻿namespace LC.RA.Synchronization.Api.Models.Application.Wikipedia
+﻿namespace LC.RA.Location.Api.Models.Application.Wikipedia
 {
     public sealed class WikipediaResponse
     {

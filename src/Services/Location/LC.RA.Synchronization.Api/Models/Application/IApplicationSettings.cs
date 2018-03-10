@@ -1,4 +1,4 @@
-﻿namespace LC.RA.Synchronization.Api.Models.Application
+﻿namespace LC.RA.Location.Api.Models.Application
 {
     public interface IApplicationSettings
     {

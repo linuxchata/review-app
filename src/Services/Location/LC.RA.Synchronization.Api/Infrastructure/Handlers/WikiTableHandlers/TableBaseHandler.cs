@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using LC.RA.Synchronization.Api.Models.Application.Wikipedia;
+using LC.RA.Location.Api.Models.Application.Wikipedia;
 
-namespace LC.RA.Synchronization.Api.Infrastructure.Handlers.WikiTableHandlers
+namespace LC.RA.Location.Api.Infrastructure.Handlers.WikiTableHandlers
 {
     public abstract class TableBaseHandler
     {

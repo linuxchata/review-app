@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using LC.RA.Synchronization.Api.Infrastructure.Extensions;
-using LC.RA.Synchronization.Api.Models.Application.Wikipedia;
-using LC.RA.Synchronization.Api.Models.Domain;
+using LC.RA.Location.Api.Infrastructure.Extensions;
+using LC.RA.Location.Api.Models.Application.Wikipedia;
 using Microsoft.Extensions.Logging;
 
-namespace LC.RA.Synchronization.Api.Infrastructure.Services
+namespace LC.RA.Location.Api.Infrastructure.Services
 {
     public sealed class LocationService : ILocationService
     {
@@ -25,25 +24,25 @@ namespace LC.RA.Synchronization.Api.Infrastructure.Services
             this.logger = logger;
         }
 
-        public async Task<IEnumerable<Location>> GetLocations()
+        public async Task<IEnumerable<Models.Domain.Location>> GetLocations()
         {
             var locations = await this.GetSourceLocations();
             return locations;
         }
 
-        private async Task<IEnumerable<Location>> GetSourceLocations()
+        private async Task<IEnumerable<Models.Domain.Location>> GetSourceLocations()
         {
             var pageContent = await this.wikipediaService.GetPageContent();
 
             var parsedPageContent = this.wikipediaParsingService.ParsePage(pageContent);
             var parsedTable = this.wikipediaParsingService.ParseTable(parsedPageContent);
 
-            var locations = new List<Location>();
+            var locations = new List<Models.Domain.Location>();
             foreach (var row in parsedTable)
             {
                 if (row is WikiTableRow)
                 {
-                    var location = new Location(this.GetName(row), this.GetRegion(row));
+                    var location = new Models.Domain.Location(this.GetName(row), this.GetRegion(row));
                     locations.Add(location);
                 }
             }

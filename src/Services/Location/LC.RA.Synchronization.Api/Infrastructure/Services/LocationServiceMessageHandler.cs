@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using LC.RA.Synchronization.Api.Infrastructure.Converters;
-using LC.RA.Synchronization.Api.Models.Domain;
+using LC.RA.Location.Api.Infrastructure.Converters;
 using LC.ServiceBusAdapter.Abstractions;
 using Microsoft.Extensions.Logging;
 
-namespace LC.RA.Synchronization.Api.Infrastructure.Services
+namespace LC.RA.Location.Api.Infrastructure.Services
 {
     public sealed class LocationServiceMessageHandler : IMessageHandler
     {
@@ -43,7 +42,7 @@ namespace LC.RA.Synchronization.Api.Infrastructure.Services
             return Task.Run(() => { });
         }
 
-        private async Task SendResponce(IEnumerable<Location> locations, string replyTo)
+        private async Task SendResponce(IEnumerable<Models.Domain.Location> locations, string replyTo)
         {
             var locationsArray = this.locationsConverter.Convert(locations);
             this.logger.LogInformation("Locations have been converter to protobuf byte array of {size} B", locationsArray.Length);

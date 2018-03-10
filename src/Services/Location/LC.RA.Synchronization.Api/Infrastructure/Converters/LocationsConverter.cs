@@ -2,14 +2,13 @@
 using System.IO;
 using System.Linq;
 using Google.Protobuf;
-using LC.RA.Synchronization.Api.Models.Domain;
 using LC.RA.TransferObjects;
 
-namespace LC.RA.Synchronization.Api.Infrastructure.Converters
+namespace LC.RA.Location.Api.Infrastructure.Converters
 {
     public sealed class LocationsConverter : ILocationsConverter
     {
-        public byte[] Convert(IEnumerable<Location> locations)
+        public byte[] Convert(IEnumerable<Models.Domain.Location> locations)
         {
             if (locations == null)
             {

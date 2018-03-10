@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using LC.RA.Synchronization.Api.Models.Application.Wikipedia;
+using LC.RA.Location.Api.Models.Application.Wikipedia;
 
-namespace LC.RA.Synchronization.Api.Infrastructure.Handlers.WikiPageHandlers
+namespace LC.RA.Location.Api.Infrastructure.Handlers.WikiPageHandlers
 {
     public sealed class PageDefaultHandler : PageBaseHandler
     {

@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
-using LC.RA.Synchronization.Api.Models.Domain;
 
-namespace LC.RA.Synchronization.Api.Infrastructure.Converters
+namespace LC.RA.Location.Api.Infrastructure.Converters
 {
     public interface ILocationsConverter
     {
-        byte[] Convert(IEnumerable<Location> locations);
+        byte[] Convert(IEnumerable<Models.Domain.Location> locations);
     }
 }

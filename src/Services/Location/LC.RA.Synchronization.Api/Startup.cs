@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace LC.RA.Synchronization.Api
+namespace LC.RA.Location.Api
 {
     public class Startup
     {

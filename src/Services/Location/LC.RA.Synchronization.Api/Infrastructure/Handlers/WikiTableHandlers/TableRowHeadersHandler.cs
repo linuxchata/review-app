@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using LC.RA.Synchronization.Api.Infrastructure.Extensions;
-using LC.RA.Synchronization.Api.Infrastructure.Services;
-using LC.RA.Synchronization.Api.Models.Application.Wikipedia;
+using LC.RA.Location.Api.Infrastructure.Extensions;
+using LC.RA.Location.Api.Infrastructure.Services;
+using LC.RA.Location.Api.Models.Application.Wikipedia;
 
-namespace LC.RA.Synchronization.Api.Infrastructure.Handlers.WikiTableHandlers
+namespace LC.RA.Location.Api.Infrastructure.Handlers.WikiTableHandlers
 {
     public sealed class TableRowHeadersHandler : TableBaseHandler
     {

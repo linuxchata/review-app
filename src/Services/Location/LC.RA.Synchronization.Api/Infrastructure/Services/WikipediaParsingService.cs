@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using LC.RA.Synchronization.Api.Infrastructure.Handlers.WikiPageHandlers;
-using LC.RA.Synchronization.Api.Infrastructure.Handlers.WikiTableHandlers;
-using LC.RA.Synchronization.Api.Models.Application.Wikipedia;
+using LC.RA.Location.Api.Infrastructure.Handlers.WikiPageHandlers;
+using LC.RA.Location.Api.Infrastructure.Handlers.WikiTableHandlers;
+using LC.RA.Location.Api.Models.Application.Wikipedia;
 
-namespace LC.RA.Synchronization.Api.Infrastructure.Services
+namespace LC.RA.Location.Api.Infrastructure.Services
 {
     public sealed class WikipediaParsingService : IWikipediaParsingService
     {
