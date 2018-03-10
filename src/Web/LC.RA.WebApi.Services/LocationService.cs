@@ -12,14 +12,14 @@ namespace LC.RA.WebApi.Services
     {
         private readonly ILocationRepository locationRepository;
 
-        private readonly IQueueMessageSenderService queueService;
+        private readonly ITopicSenderService topicSenderService;
 
         public LocationService(
             ILocationRepository locationRepository,
-            IQueueMessageSenderService queueService)
+            ITopicSenderService topicSenderService)
         {
             this.locationRepository = locationRepository;
-            this.queueService = queueService;
+            this.topicSenderService = topicSenderService;
         }
 
         public Task<IEnumerable<Location>> GetAllAsync()
@@ -49,7 +49,7 @@ namespace LC.RA.WebApi.Services
 
         public async Task RequestSynchronization()
         {
-            await this.queueService.SendMessage(BitConverter.GetBytes(true));
+            await this.topicSenderService.SendMessageAsync(BitConverter.GetBytes(true), "SynchronizationApi", "WebApi");
         }
 
         public async void Synchronize(IEnumerable<Location> sourceLocations)

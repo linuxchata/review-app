@@ -10,7 +10,7 @@ namespace LC.RA.WebApi
     {
         public static void Main(string[] args)
         {
-            var logger = NLogBuilder.ConfigureNLog("NLog.config").GetCurrentClassLogger();
+            var logger = NLog.LogManager.LoadConfiguration("nlog.config").GetCurrentClassLogger();
 
             try
             {

@@ -39,8 +39,8 @@ namespace LC.RA.Synchronization.Api
 
             app.UseMvc();
 
-            var queueMessageListernerService = serviceProvider.GetService<IQueueMessageReceiverService>();
-            queueMessageListernerService.ListenForMessages(new CancellationToken());
+            var topicReceiverService = serviceProvider.GetService<ITopicReceiverService>();
+            topicReceiverService.ReceiveMessagesAsync("SynchronizationApi", new CancellationToken());
         }
     }
 }

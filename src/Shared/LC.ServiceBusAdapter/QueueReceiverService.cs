@@ -7,23 +7,23 @@ using Microsoft.Extensions.Logging;
 
 namespace LC.ServiceBusAdapter
 {
-    public sealed class QueueMessageReceiverService : IQueueMessageReceiverService
+    public sealed class QueueReceiverService : IQueueReceiverService
     {
         private readonly string connectionString;
 
         private readonly string queueName;
 
-        private readonly IQueueMessageHandler messageHandler;
+        private readonly IMessageHandler messageHandler;
 
-        private readonly ILogger logger;
+        private readonly ILogger<QueueReceiverService> logger;
 
         private IQueueClient queueClient;
 
-        public QueueMessageReceiverService(
+        public QueueReceiverService(
             string connectionString,
             string queueName,
-            IQueueMessageHandler messageHandler,
-            ILogger<QueueMessageReceiverService> logger)
+            IMessageHandler messageHandler,
+            ILogger<QueueReceiverService> logger)
         {
             this.connectionString = connectionString;
             this.queueName = queueName;
@@ -77,7 +77,7 @@ namespace LC.ServiceBusAdapter
 
             var handlername = this.messageHandler.GetType().Name;
             this.logger.LogInformation("Executing handler {HandlerName}", handlername);
-            await this.messageHandler.Execute(message.Body);
+            await this.messageHandler.Execute(string.Empty, message.Body);
 
             await this.queueClient.CompleteAsync(message.SystemProperties.LockToken);
             this.logger.LogInformation("The message {SequenceNumber} from {QueueName} queue has been completed", sequenceNumber, this.queueName);

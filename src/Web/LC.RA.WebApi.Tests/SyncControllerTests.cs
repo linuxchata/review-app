@@ -20,11 +20,11 @@ namespace LC.RA.WebApi.Tests
         }
 
         [Fact]
-        public void SyncLocations_ShouldReturnOkResult_Test()
+        public async void SyncLocations_ShouldReturnOkResult_Test()
         {
             // Arrange
             // Act
-            var response = this.sut.SyncLocations();
+            var response = await this.sut.SyncLocations();
 
             // Assert
             var result = Assert.IsType<OkResult>(response);

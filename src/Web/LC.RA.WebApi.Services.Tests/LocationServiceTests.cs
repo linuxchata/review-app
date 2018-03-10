@@ -20,8 +20,8 @@ namespace LC.RA.WebApi.Services.Tests
         public LocationServiceTests()
         {
             this.locationRepositoryMock = new Mock<ILocationRepository>();
-            var queueMessageSenderServiceMock = new Mock<IQueueMessageSenderService>();
-            this.sut = new LocationService(this.locationRepositoryMock.Object, queueMessageSenderServiceMock.Object);
+            var topicSenderServiceMock = new Mock<ITopicSenderService>();
+            this.sut = new LocationService(this.locationRepositoryMock.Object, topicSenderServiceMock.Object);
         }
 
         [Fact]

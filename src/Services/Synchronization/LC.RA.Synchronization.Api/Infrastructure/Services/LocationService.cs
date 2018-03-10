@@ -1,10 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using LC.RA.Synchronization.Api.Infrastructure.Converters;
 using LC.RA.Synchronization.Api.Infrastructure.Extensions;
 using LC.RA.Synchronization.Api.Models.Application.Wikipedia;
 using LC.RA.Synchronization.Api.Models.Domain;
-using LC.ServiceBusAdapter.Abstractions;
 using Microsoft.Extensions.Logging;
 
 namespace LC.RA.Synchronization.Api.Infrastructure.Services
@@ -15,37 +13,22 @@ namespace LC.RA.Synchronization.Api.Infrastructure.Services
 
         private readonly IWikipediaParsingService wikipediaParsingService;
 
-        private readonly IQueueMessageSenderService queueMessageSenderService;
-
-        private readonly ILocationsConverter locationsConverter;
-
         private readonly ILogger<LocationService> logger;
 
         public LocationService(
             IWikipediaService wikipediaService,
             IWikipediaParsingService wikipediaParsingService,
-            IQueueMessageSenderService queueMessageSenderService,
-            ILocationsConverter locationsConverter,
             ILogger<LocationService> logger)
         {
             this.wikipediaService = wikipediaService;
             this.wikipediaParsingService = wikipediaParsingService;
-            this.queueMessageSenderService = queueMessageSenderService;
             this.logger = logger;
-            this.locationsConverter = locationsConverter;
         }
 
-        public async void Synchronize()
+        public async Task<IEnumerable<Location>> GetLocations()
         {
             var locations = await this.GetSourceLocations();
-
-            var locationsArray = this.locationsConverter.Convert(locations);
-
-            this.logger.LogInformation("Locations have been converter to protobuf byte array of {size} B", locationsArray.Length);
-
-            await this.queueMessageSenderService.SendMessage(locationsArray);
-
-            this.logger.LogInformation("Locations have been send to the queue");
+            return locations;
         }
 
         private async Task<IEnumerable<Location>> GetSourceLocations()

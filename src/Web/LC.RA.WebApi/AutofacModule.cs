@@ -77,18 +77,19 @@ namespace LC.RA.WebApi
             builder.RegisterType<SubjectService>()
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
-            builder.RegisterType<WebApiQueueMessageHandler>()
+            builder.RegisterType<WebApiMessageHandler>()
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
 
-            builder.RegisterType<QueueMessageSenderService>()
+            builder.RegisterType<TopicSenderService>()
                 .WithParameter("connectionString", applicationSettings.ServiceBusConnectionString)
-                .WithParameter("queueName", applicationSettings.LocationServiceQueueName)
+                .WithParameter("topicName", applicationSettings.ServiceBusTopicName)
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
-            builder.RegisterType<QueueMessageReceiverService>()
+            builder.RegisterType<TopicReceiverService>()
                 .WithParameter("connectionString", applicationSettings.ServiceBusConnectionString)
-                .WithParameter("queueName", applicationSettings.WebApiQueueName)
+                .WithParameter("topicName", applicationSettings.ServiceBusTopicName)
+                .WithParameter("subscriptionName", applicationSettings.ServiceBusSubscriptionName)
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
         }

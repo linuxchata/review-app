@@ -43,8 +43,8 @@ namespace LC.RA.WebApi
 
             app.UseMvc();
 
-            var queueMessageListernerService = serviceProvider.GetService<IQueueMessageReceiverService>();
-            queueMessageListernerService.ListenForMessages(new CancellationToken());
+            var topicReceiverService = serviceProvider.GetService<ITopicReceiverService>();
+            topicReceiverService.ReceiveMessagesAsync("WebApi", new CancellationToken());
         }
     }
 }

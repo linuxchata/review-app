@@ -1,4 +1,5 @@
-﻿using LC.RA.WebApi.Services.Contracts;
+﻿using System.Threading.Tasks;
+using LC.RA.WebApi.Services.Contracts;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LC.RA.WebApi.Controllers
@@ -15,9 +16,9 @@ namespace LC.RA.WebApi.Controllers
         }
 
         [HttpGet]
-        public IActionResult SyncLocations()
+        public async Task<IActionResult> SyncLocations()
         {
-            this.locationService.RequestSynchronization();
+            await this.locationService.RequestSynchronization();
 
             return this.Ok();
         }

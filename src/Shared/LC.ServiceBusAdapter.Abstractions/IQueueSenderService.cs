@@ -2,7 +2,7 @@
 
 namespace LC.ServiceBusAdapter.Abstractions
 {
-    public interface IQueueMessageSenderService
+    public interface IQueueSenderService
     {
         Task SendMessage(byte[] messageBody);
     }

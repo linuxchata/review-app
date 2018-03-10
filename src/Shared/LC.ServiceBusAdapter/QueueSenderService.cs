@@ -6,20 +6,20 @@ using Microsoft.Extensions.Logging;
 
 namespace LC.ServiceBusAdapter
 {
-    public sealed class QueueMessageSenderService : IQueueMessageSenderService
+    public sealed class QueueSenderService : IQueueSenderService
     {
         private readonly string connectionString;
 
         private readonly string queueName;
 
-        private readonly ILogger logger;
+        private readonly ILogger<QueueSenderService> logger;
 
         private IQueueClient queueClient;
 
-        public QueueMessageSenderService(
+        public QueueSenderService(
             string connectionString,
             string queueName,
-            ILogger<QueueMessageSenderService> logger)
+            ILogger<QueueSenderService> logger)
         {
             this.connectionString = connectionString;
             this.queueName = queueName;
@@ -39,7 +39,7 @@ namespace LC.ServiceBusAdapter
             }
             catch (Exception exception)
             {
-                this.logger.LogError("Error in queue client for {QueueName} queue: {Exception}", this.queueName, exception);
+                this.logger.LogError("Error in queue client for {QueueName} queue: {Exception}", this.queueName, exception.Message);
                 throw;
             }
         }
@@ -49,15 +49,14 @@ namespace LC.ServiceBusAdapter
             try
             {
                 var message = new Message(messageBody);
-
-                this.logger.LogInformation("Sending message of {Length} bytes to the {QueueName} queue", this.queueName, messageBody.Length);
+                this.logger.LogInformation("Sending message of {Length} bytes to the {QueueName} queue", messageBody.Length, this.queueName);
 
                 await this.queueClient.SendAsync(message);
                 this.logger.LogInformation("The message has been sent to the {QueueName} queue", this.queueName);
             }
             catch (Exception exception)
             {
-                this.logger.LogError("Error sending message to the {QueueName} queue: {Exception}", this.queueName, exception);
+                this.logger.LogError("Error sending message to the {QueueName} queue: {Exception}", this.queueName, exception.Message);
             }
         }
     }

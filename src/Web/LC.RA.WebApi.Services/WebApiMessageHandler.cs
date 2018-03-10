@@ -5,25 +5,25 @@ using Microsoft.Extensions.Logging;
 
 namespace LC.RA.WebApi.Services
 {
-    public sealed class WebApiQueueMessageHandler : IQueueMessageHandler
+    public sealed class WebApiMessageHandler : IMessageHandler
     {
         private readonly ILocationsConverter locationConverter;
 
         private readonly ILocationService locationService;
 
-        private readonly ILogger<WebApiQueueMessageHandler> logger;
+        private readonly ILogger<WebApiMessageHandler> logger;
 
-        public WebApiQueueMessageHandler(
+        public WebApiMessageHandler(
             ILocationsConverter locationConverter,
             ILocationService locationService,
-            ILogger<WebApiQueueMessageHandler> logger)
+            ILogger<WebApiMessageHandler> logger)
         {
             this.locationConverter = locationConverter;
             this.locationService = locationService;
             this.logger = logger;
         }
 
-        public Task Execute(byte[] messageBody)
+        public Task Execute(string replyTo, byte[] messageBody)
         {
             this.logger.LogInformation("Message of {Length} B have been received from the message queue", messageBody.Length);
 

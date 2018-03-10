@@ -6,9 +6,9 @@
 
         public string ServiceBusConnectionString { get; set; }
 
-        public string WebApiQueueName { get; set; }
+        public string ServiceBusTopicName { get; set; }
 
-        public string LocationServiceQueueName { get; set; }
+        public string ServiceBusSubscriptionName { get; set; }
 
         public string WikipediaBaseUrl { get; set; }
 

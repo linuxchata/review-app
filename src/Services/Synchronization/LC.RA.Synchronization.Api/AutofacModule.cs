@@ -35,24 +35,25 @@ namespace LC.RA.Synchronization.Api
             builder.RegisterType<WikipediaParsingService>()
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
-            builder.RegisterType<Infrastructure.Services.LocationService>()
+            builder.RegisterType<LocationService>()
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
-            builder.RegisterType<LocationServiceQueueMessageHandler>()
+            builder.RegisterType<LocationServiceMessageHandler>()
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
             builder.RegisterType<LocationsConverter>()
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
 
-            builder.RegisterType<QueueMessageSenderService>()
+            builder.RegisterType<TopicSenderService>()
                 .WithParameter("connectionString", applicationSettings.ServiceBusConnectionString)
-                .WithParameter("queueName", applicationSettings.WebApiQueueName)
+                .WithParameter("topicName", applicationSettings.ServiceBusTopicName)
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
-            builder.RegisterType<QueueMessageReceiverService>()
+            builder.RegisterType<TopicReceiverService>()
                 .WithParameter("connectionString", applicationSettings.ServiceBusConnectionString)
-                .WithParameter("queueName", applicationSettings.LocationServiceQueueName)
+                .WithParameter("topicName", applicationSettings.ServiceBusTopicName)
+                .WithParameter("subscriptionName", applicationSettings.ServiceBusSubscriptionName)
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
         }
