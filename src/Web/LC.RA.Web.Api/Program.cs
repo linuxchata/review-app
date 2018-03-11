@@ -29,6 +29,7 @@ namespace LC.RA.Web.Api
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseApplicationInsights()
                 .ConfigureServices(s => s.AddAutofac())
                 .UseNLog()
                 .UseStartup<Startup>()

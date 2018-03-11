@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <ApplicationInsightsResourceId>/subscriptions/992990ef-e1fb-4ed0-974a-07fa16ccd32f/resourcegroups/Default-ApplicationInsights-EastUS/providers/microsoft.insights/components/LC.RA.Web.Api</ApplicationInsightsResourceId>
+    <ApplicationInsightsAnnotationResourceId>/subscriptions/992990ef-e1fb-4ed0-974a-07fa16ccd32f/resourcegroups/Default-ApplicationInsights-EastUS/providers/microsoft.insights/components/LC.RA.Web.Api</ApplicationInsightsAnnotationResourceId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -15,6 +17,7 @@
   <ItemGroup>
     <PackageReference Include="Autofac" Version="4.6.2" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.1" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" />
     <PackageReference Include="NLog" Version="4.5.0-rc07" />
@@ -33,6 +36,10 @@
     <Content Update="nlog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
   </ItemGroup>
 
 </Project>

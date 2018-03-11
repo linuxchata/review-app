@@ -1,8 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    @Html.Raw(JavaScriptSnippet.FullScript)
 </head>
 <body>
     <div>
