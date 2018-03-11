@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using LC.RA.WebApi.Core.Domain;
-using LC.RA.WebApi.DataAccess.Contracts;
-using LC.RA.WebApi.Services.Contracts;
+using LC.RA.Web.Core.Domain;
+using LC.RA.Web.DataAccess.Contracts;
+using LC.RA.Web.Services.Contracts;
 using Moq;
 using Xunit;
 
-namespace LC.RA.WebApi.Services.Tests
+namespace LC.RA.Web.Services.Tests
 {
     public class SubjectServiceTests
     {

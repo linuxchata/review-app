@@ -1,7 +1,7 @@
-﻿using LC.RA.WebApi.DataAccess.Contracts;
+﻿using LC.RA.Web.DataAccess.Contracts;
 using MongoDB.Driver;
 
-namespace LC.RA.WebApi.DataAccess.Tests
+namespace LC.RA.Web.DataAccess.Tests
 {
     public class TestDatabaseConnection : IDatabaseConnection
     {

@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Threading;
 using Autofac;
-using LC.RA.WebApi.Core.Application;
+using LC.RA.Web.Core.Application;
 using LC.ServiceBusAdapter.Abstractions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace LC.RA.WebApi
+namespace LC.RA.Web.Api
 {
     public class Startup
     {

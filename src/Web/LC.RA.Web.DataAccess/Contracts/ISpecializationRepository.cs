@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using LC.RA.WebApi.Core.Domain;
+using LC.RA.Web.Core.Domain;
 
-namespace LC.RA.WebApi.DataAccess.Contracts
+namespace LC.RA.Web.DataAccess.Contracts
 {
     public interface ISpecializationRepository
     {

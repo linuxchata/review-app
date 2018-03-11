@@ -1,7 +1,7 @@
-﻿using LC.RA.WebApi.DataAccess.Contracts;
+﻿using LC.RA.Web.DataAccess.Contracts;
 using MongoDB.Driver;
 
-namespace LC.RA.WebApi.DataAccess
+namespace LC.RA.Web.DataAccess
 {
     public abstract class BaseRepository<T, TD>
     {

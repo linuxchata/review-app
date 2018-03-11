@@ -1,4 +1,4 @@
-﻿namespace LC.RA.WebApi.Core.Application
+﻿namespace LC.RA.Web.Core.Application
 {
     public sealed class ApplicationSettings : IApplicationSettings
     {

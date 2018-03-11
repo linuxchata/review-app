@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
-using LC.RA.WebApi.Services.Contracts;
+using LC.RA.Web.Services.Contracts;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LC.RA.WebApi.Controllers
+namespace LC.RA.Web.Api.Controllers
 {
     [Produces("application/json")]
     [Route("api/[controller]")]

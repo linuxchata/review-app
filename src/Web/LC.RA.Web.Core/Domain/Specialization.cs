@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace LC.RA.WebApi.Core.Domain
+namespace LC.RA.Web.Core.Domain
 {
     [DebuggerDisplay(nameof(Name))]
     public sealed class Specialization : RootModelBase

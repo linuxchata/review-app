@@ -1,12 +1,12 @@
 ﻿using Autofac;
-using LC.RA.WebApi.Core.Application;
-using LC.RA.WebApi.DataAccess;
-using LC.RA.WebApi.DataAccess.Converters;
-using LC.RA.WebApi.Services;
+using LC.RA.Web.Core.Application;
+using LC.RA.Web.DataAccess;
+using LC.RA.Web.DataAccess.Converters;
+using LC.RA.Web.Services;
 using LC.ServiceBusAdapter;
 using Microsoft.Extensions.Configuration;
 
-namespace LC.RA.WebApi
+namespace LC.RA.Web.Api
 {
     public class AutofacModule : Module
     {

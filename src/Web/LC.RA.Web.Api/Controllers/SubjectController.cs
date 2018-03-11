@@ -1,11 +1,11 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
-using LC.RA.WebApi.Core.Domain;
-using LC.RA.WebApi.Services.Contracts;
+using LC.RA.Web.Core.Domain;
+using LC.RA.Web.Services.Contracts;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LC.RA.WebApi.Controllers
+namespace LC.RA.Web.Api.Controllers
 {
     [Route("api/[controller]")]
     public class SubjectController : Controller

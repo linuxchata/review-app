@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace LC.RA.WebApi.Core.Domain
+namespace LC.RA.Web.Core.Domain
 {
     [DebuggerDisplay("{Name} {Region}")]
     public sealed class Location : RootModelBase, IEquatable<Location>

@@ -1,11 +1,11 @@
 ﻿using System.Linq;
-using LC.RA.WebApi.DataAccess.Contracts;
-using LC.RA.WebApi.DataAccess.Converters;
+using LC.RA.Web.DataAccess.Contracts;
+using LC.RA.Web.DataAccess.Converters;
 using Microsoft.Extensions.Logging;
 using Moq;
 using Xunit;
 
-namespace LC.RA.WebApi.DataAccess.Tests
+namespace LC.RA.Web.DataAccess.Tests
 {
     [Trait("Category", "IntegrationTests")]
     public class SpecializationRepositoryTests

@@ -1,7 +1,7 @@
-﻿using LC.RA.WebApi.Core.Domain;
-using LC.RA.WebApi.Core.TransferObjects;
+﻿using LC.RA.Web.Core.Domain;
+using LC.RA.Web.Core.TransferObjects;
 
-namespace LC.RA.WebApi.DataAccess.Contracts
+namespace LC.RA.Web.DataAccess.Contracts
 {
     public interface ILocationConverter
     {

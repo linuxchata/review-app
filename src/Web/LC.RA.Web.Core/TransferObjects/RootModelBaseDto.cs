@@ -2,7 +2,7 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace LC.RA.WebApi.Core.TransferObjects
+namespace LC.RA.Web.Core.TransferObjects
 {
     public class RootModelBaseDto
     {

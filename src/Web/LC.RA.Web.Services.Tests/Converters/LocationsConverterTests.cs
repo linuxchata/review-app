@@ -2,12 +2,12 @@
 using System.Linq;
 using Google.Protobuf;
 using LC.RA.TransferObjects;
-using LC.RA.WebApi.Services.Converters;
+using LC.RA.Web.Services.Converters;
 using Microsoft.Extensions.Logging;
 using Moq;
 using Xunit;
 
-namespace LC.RA.WebApi.Services.Tests.Converters
+namespace LC.RA.Web.Services.Tests.Converters
 {
     public class LocationConverterTests
     {

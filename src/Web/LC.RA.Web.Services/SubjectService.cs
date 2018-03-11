@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using LC.RA.WebApi.Core.Domain;
-using LC.RA.WebApi.DataAccess.Contracts;
-using LC.RA.WebApi.Services.Contracts;
+using LC.RA.Web.Core.Domain;
+using LC.RA.Web.DataAccess.Contracts;
+using LC.RA.Web.Services.Contracts;
 
-namespace LC.RA.WebApi.Services
+namespace LC.RA.Web.Services
 {
     public sealed class SubjectService : ISubjectService
     {

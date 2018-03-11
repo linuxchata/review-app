@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using LC.RA.WebApi.Core.Domain;
+using LC.RA.Web.Core.Domain;
 
-namespace LC.RA.WebApi.Core.TransferObjects
+namespace LC.RA.Web.Core.TransferObjects
 {
     public sealed class DoctorDto : SubjectDto
     {

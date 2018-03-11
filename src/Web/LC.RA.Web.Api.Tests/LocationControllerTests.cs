@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using LC.RA.WebApi.Controllers;
-using LC.RA.WebApi.Core.Domain;
-using LC.RA.WebApi.Services.Contracts;
+using LC.RA.Web.Api.Controllers;
+using LC.RA.Web.Core.Domain;
+using LC.RA.Web.Services.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Xunit;
 
-namespace LC.RA.WebApi.Tests
+namespace LC.RA.Web.Api.Tests
 {
     public class LocationControllerTests
     {

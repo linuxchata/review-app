@@ -1,4 +1,4 @@
-﻿namespace LC.RA.WebApi.Core.TransferObjects
+﻿namespace LC.RA.Web.Core.TransferObjects
 {
     public sealed class LocationDto : RootModelBaseDto
     {

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using AutoMapper;
 using LC.RA.TransferObjects;
-using LC.RA.WebApi.Services.Contracts;
+using LC.RA.Web.Services.Contracts;
 using Microsoft.Extensions.Logging;
-using Location = LC.RA.WebApi.Core.Domain.Location;
+using Location = LC.RA.Web.Core.Domain.Location;
 
-namespace LC.RA.WebApi.Services.Converters
+namespace LC.RA.Web.Services.Converters
 {
     public sealed class LocationsConverter : ILocationsConverter
     {

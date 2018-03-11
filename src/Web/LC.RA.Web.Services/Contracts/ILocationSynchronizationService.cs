@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using LC.RA.WebApi.Core.Domain;
+using LC.RA.Web.Core.Domain;
 
-namespace LC.RA.WebApi.Services.Contracts
+namespace LC.RA.Web.Services.Contracts
 {
     public interface ILocationSynchronizationService
     {

@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
-using LC.RA.WebApi.Services.Contracts;
+using LC.RA.Web.Services.Contracts;
 using LC.ServiceBusAdapter.Abstractions;
 using Microsoft.Extensions.Logging;
 
-namespace LC.RA.WebApi.Services
+namespace LC.RA.Web.Services
 {
     public sealed class WebApiMessageHandler : IMessageHandler
     {

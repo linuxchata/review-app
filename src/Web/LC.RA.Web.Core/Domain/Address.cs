@@ -1,4 +1,4 @@
-﻿namespace LC.RA.WebApi.Core.Domain
+﻿namespace LC.RA.Web.Core.Domain
 {
     public sealed class Address : EmbededModelBase
     {
