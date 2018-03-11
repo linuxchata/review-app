@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LC.RA.WebApi.Core\LC.RA.WebApi.Core.csproj" />
+    <ProjectReference Include="..\LC.RA.Web.Core\LC.RA.Web.Core.csproj" />
   </ItemGroup>
 
 </Project>
