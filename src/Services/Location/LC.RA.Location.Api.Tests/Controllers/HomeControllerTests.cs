@@ -23,7 +23,7 @@ namespace LC.RA.Location.Api.Tests.Controllers
             var response = this.sut.Index();
 
             // Assert
-            var result = Assert.IsType<OkResult>(response);
+            var result = Assert.IsType<OkObjectResult>(response);
             Assert.NotNull(result);
         }
     }
