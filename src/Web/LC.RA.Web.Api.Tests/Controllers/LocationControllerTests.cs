@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using LC.RA.Web.Api.Controllers;
 using LC.RA.Web.Core.Domain;
@@ -7,18 +7,18 @@ using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Xunit;
 
-namespace LC.RA.Web.Api.Tests
+namespace LC.RA.Web.Api.Tests.Controllers
 {
-    public class SpecializationControllerTests
+    public class LocationControllerTests
     {
-        private readonly SpecializationController sut;
+        private readonly LocationController sut;
 
-        private readonly Mock<ISpecializationService> specializationServiceMock;
+        private readonly Mock<ILocationService> locationServiceMock;
 
-        public SpecializationControllerTests()
+        public LocationControllerTests()
         {
-            this.specializationServiceMock = new Mock<ISpecializationService>();
-            this.sut = new SpecializationController(this.specializationServiceMock.Object);
+            this.locationServiceMock = new Mock<ILocationService>();
+            this.sut = new LocationController(this.locationServiceMock.Object);
         }
 
         [Fact]
@@ -36,17 +36,16 @@ namespace LC.RA.Web.Api.Tests
         public async void GetAll_WhenResultIsAvailable_ShouldReturnOk_Test()
         {
             // Arrange
-            var specializations = new List<Specialization>
+            var locations = new List<Location>
             {
-                new Specialization
+                new Location("New York", null)
                 {
-                    Id = "5a3eddd75ac5641b4ca8e652",
-                    Name = "Oculist"
+                    Id = "5a3eddd75ac5641b4ca8e652"
                 }
             };
-            this.specializationServiceMock
+            this.locationServiceMock
                 .Setup(a => a.GetAllAsync())
-                .Returns(Task.FromResult<IEnumerable<Specialization>>(specializations))
+                .Returns(Task.FromResult<IEnumerable<Location>>(locations))
                 .Verifiable();
 
             // Act
@@ -54,8 +53,8 @@ namespace LC.RA.Web.Api.Tests
 
             // Assert
             var result = Assert.IsType<OkObjectResult>(response);
-            this.specializationServiceMock.Verify();
-            Assert.Equal(specializations, result.Value);
+            this.locationServiceMock.Verify();
+            Assert.Equal(locations, result.Value);
         }
 
         [Theory]
@@ -76,7 +75,7 @@ namespace LC.RA.Web.Api.Tests
         {
             // Arrange
             // Act
-            var response = await this.sut.GetBySearchCriteria("Oculist");
+            var response = await this.sut.GetBySearchCriteria("Kiev");
 
             // Assert
             Assert.IsType<NotFoundResult>(response);
@@ -86,17 +85,16 @@ namespace LC.RA.Web.Api.Tests
         public async void GetBySearchCriteria_WhenResultIsAvailable_ShouldReturnOk_Test()
         {
             // Arrange
-            var specializations = new List<Specialization>
+            var locations = new List<Location>
             {
-                new Specialization
+                new Location("New York", null)
                 {
-                    Id = "5a3eddd75ac5641b4ca8e652",
-                    Name = "Oculist"
+                    Id = "5a3eddd75ac5641b4ca8e652"
                 }
             };
-            this.specializationServiceMock
+            this.locationServiceMock
                 .Setup(a => a.GetBySearchCriteriaAsync(It.IsAny<string>()))
-                .Returns(Task.FromResult<IEnumerable<Specialization>>(specializations))
+                .Returns(Task.FromResult<IEnumerable<Location>>(locations))
                 .Verifiable();
 
             // Act
@@ -104,8 +102,8 @@ namespace LC.RA.Web.Api.Tests
 
             // Assert
             var result = Assert.IsType<OkObjectResult>(response);
-            this.specializationServiceMock.Verify();
-            Assert.Equal(specializations, result.Value);
+            this.locationServiceMock.Verify();
+            Assert.Equal(locations, result.Value);
         }
     }
 }

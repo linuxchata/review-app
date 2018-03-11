@@ -41,7 +41,10 @@ namespace LC.RA.Web.Api
 
             app.UseStatusCodePages();
 
-            app.UseMvc();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute("default", "{controller=Home}/{action=Index}");
+            });
 
             var topicReceiverService = serviceProvider.GetService<ITopicReceiverService>();
             topicReceiverService.ReceiveMessagesAsync("WebApi", new CancellationToken());

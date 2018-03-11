@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Xunit;
 
-namespace LC.RA.Web.Api.Tests
+namespace LC.RA.Web.Api.Tests.Controllers
 {
     public class SubjectControllerTests
     {
