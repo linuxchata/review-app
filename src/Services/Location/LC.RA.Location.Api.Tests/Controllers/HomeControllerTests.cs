@@ -1,7 +1,5 @@
 ﻿using LC.RA.Location.Api.Controllers;
-using LC.RA.Location.Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
-using Moq;
 using Xunit;
 
 namespace LC.RA.Location.Api.Tests.Controllers
