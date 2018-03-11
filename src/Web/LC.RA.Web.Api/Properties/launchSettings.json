@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "LC.RA.WebApi": {
+    "LC.RA.Web.Api": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
