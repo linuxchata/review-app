@@ -1,4 +1,4 @@
-﻿using LC.RA.Location.Api.Infrastructure.Services;
+﻿using LC.RA.Location.Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LC.RA.Location.Api.Controllers

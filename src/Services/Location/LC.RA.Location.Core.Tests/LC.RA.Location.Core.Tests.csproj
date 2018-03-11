@@ -15,11 +15,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LC.RA.Location.Api\LC.RA.Location.Api.csproj" />
+    <Folder Include="Properties\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Properties\" />
+    <ProjectReference Include="..\LC.RA.Location.Core\LC.RA.Location.Core.csproj" />
   </ItemGroup>
 
 </Project>

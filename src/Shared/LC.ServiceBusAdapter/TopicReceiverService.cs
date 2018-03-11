@@ -86,8 +86,8 @@ namespace LC.ServiceBusAdapter
                 });
             }
 
-            var ammendedRules = (await subscriptionClient.GetRulesAsync()).ToList();
-            this.logger.LogInformation("Rule for {SubscriptionName} is {Name}", subscriptionClient.SubscriptionName, ammendedRules[0].Name);
+            var ammendedRules = (await this.subscriptionClient.GetRulesAsync()).ToList();
+            this.logger.LogInformation("Rule for {SubscriptionName} is {Name}", this.subscriptionClient.SubscriptionName, ammendedRules[0].Name);
         }
 
         private void RegisterOnMessageHandlerAndReceiveMessages()

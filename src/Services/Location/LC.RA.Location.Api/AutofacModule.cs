@@ -1,7 +1,7 @@
 ﻿using Autofac;
-using LC.RA.Location.Api.Infrastructure.Converters;
-using LC.RA.Location.Api.Infrastructure.Services;
-using LC.RA.Location.Api.Models.Application;
+using LC.RA.Location.Core.Application;
+using LC.RA.Location.Infrastructure.Converters;
+using LC.RA.Location.Infrastructure.Services;
 using LC.ServiceBusAdapter;
 using Microsoft.Extensions.Configuration;
 
