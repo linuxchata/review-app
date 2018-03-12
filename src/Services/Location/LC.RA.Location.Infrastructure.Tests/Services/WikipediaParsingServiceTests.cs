@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Castle.Core.Logging;
 using LC.RA.Location.Core.Application.Wikipedia;
 using LC.RA.Location.Infrastructure.Services;
 using LC.RA.Location.Infrastructure.Tests.Properties;
@@ -43,7 +42,7 @@ namespace LC.RA.Location.Infrastructure.Tests.Services
 
             // Assert
             Assert.NotNull(result);
-            Assert.Equal(5, result.Count);
+            Assert.True(result.Count == 5, string.Format("Result is {0}", result));
         }
 
         [Fact]
@@ -62,7 +61,7 @@ namespace LC.RA.Location.Infrastructure.Tests.Services
         public void ParseTable_WhenPageContentIsWithoutTables_ShouldReturnEmptyResult_Test()
         {
             // Arrange
-            var pageContent = this.sut.ParsePage(Resources.PageContent);
+            var pageContent = this.sut.ParsePage(this.GetTestPageContent());
             var pageContentWithoutTables = pageContent.Where(a => a.ContentType != WikiPageContentType.Table);
             var page = new SortedSet<WikiPageElement>(pageContentWithoutTables, new ComparerByStartIndex());
 
@@ -78,14 +77,14 @@ namespace LC.RA.Location.Infrastructure.Tests.Services
         public void ParseTable_WhenPageContentIsWithTable_ShouldReturnResult_Test()
         {
             // Arrange
-            var pageContent = this.sut.ParsePage(Resources.PageContent);
+            var pageContent = this.sut.ParsePage(this.GetTestPageContent());
 
             // Act
             var result = this.sut.ParseTable(pageContent);
 
             // Assert
             Assert.NotNull(result);
-            Assert.Equal(462, result.Count);
+            Assert.True(result.Count == 462, string.Format("Result is {0}", result));
         }
 
         private string GetTestPageContent()
