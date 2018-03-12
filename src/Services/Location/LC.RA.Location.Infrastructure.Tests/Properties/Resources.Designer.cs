@@ -22,7 +22,7 @@ namespace LC.RA.Location.Infrastructure.Tests.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace LC.RA.Location.Infrastructure.Tests.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("LC.RA.Location.Infrastructure.Tests.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace LC.RA.Location.Infrastructure.Tests.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -65,9 +65,20 @@ namespace LC.RA.Location.Infrastructure.Tests.Properties {
         ///
         ///Населення міст на 2001 рік подане в межах на 1 січня 2003 року, населення 2014 року&amp;nbsp;— в межах  [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string PageContent {
+        public static string PageContent {
             get {
                 return ResourceManager.GetString("PageContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Нижче наведений список усіх &apos;&apos;&apos;[[Міста України|міст України]]&apos;&apos;&apos; (станом на 10 листопада 2017 року), а також їх наявне населення за даними [[Перепис населення України 2001|Всеукраїнського перепису населення]] [[5 грудня]] [[2001]] року та статистичного збірника «Чисельність наявного населення України» [[Державна служба статистики України|Державного комітету статистики України]] станом на 1 січня 2014 року.
+        ///
+        ///Населення міст на 2001 рік подане в межах на 1 січня 2003 року, населення 2014 року&amp;nbsp;— в межах  [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string TestPageContent {
+            get {
+                return ResourceManager.GetString("TestPageContent", resourceCulture);
             }
         }
     }

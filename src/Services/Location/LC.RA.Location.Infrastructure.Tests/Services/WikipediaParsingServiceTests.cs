@@ -91,10 +91,9 @@ namespace LC.RA.Location.Infrastructure.Tests.Services
 
         private string GetTestPageContent()
         {
-            var content = Resources.PageContent;
+            var content = Resources.TestPageContent;
 
-            Console.WriteLine("Console Content {0}", content);
-            Debug.Write("Debug Content {0}", content);
+            Console.WriteLine("Test content {0}", content);
 
             Assert.False(string.IsNullOrEmpty(content), "Test content is null or empty");
 
