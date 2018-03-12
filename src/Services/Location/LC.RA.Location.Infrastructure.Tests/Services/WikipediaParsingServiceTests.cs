@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using LC.RA.Location.Core.Application.Wikipedia;
 using LC.RA.Location.Infrastructure.Services;
@@ -93,7 +92,8 @@ namespace LC.RA.Location.Infrastructure.Tests.Services
         {
             var content = Resources.TestPageContent;
 
-            Console.WriteLine("Test content {0}", content);
+            Console.WriteLine("Test content {0}", content.Length);
+            Console.WriteLine("Page content {0}", Resources.PageContent.Length);
 
             Assert.False(string.IsNullOrEmpty(content), "Test content is null or empty");
 
