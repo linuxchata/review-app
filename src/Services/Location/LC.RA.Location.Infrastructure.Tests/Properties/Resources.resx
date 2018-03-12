@@ -117,10 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PageContent" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Services\PageContent.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
   <data name="TestPageContent" xml:space="preserve">
     <value>Нижче наведений список усіх '''[[Міста України|міст України]]''' (станом на 10 листопада 2017 року), а також їх наявне населення за даними [[Перепис населення України 2001|Всеукраїнського перепису населення]] [[5 грудня]] [[2001]] року та статистичного збірника «Чисельність наявного населення України» [[Державна служба статистики України|Державного комітету статистики України]] станом на 1 січня 2014 року.
 

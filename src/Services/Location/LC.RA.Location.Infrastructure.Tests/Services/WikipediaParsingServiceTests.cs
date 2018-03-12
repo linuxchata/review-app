@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using LC.RA.Location.Core.Application.Wikipedia;
 using LC.RA.Location.Infrastructure.Services;
@@ -43,7 +42,7 @@ namespace LC.RA.Location.Infrastructure.Tests.Services
 
             // Assert
             Assert.NotNull(result);
-            Assert.True(result.Count == 5, string.Format("Result is {0}", string.Join(';', result)));
+            Assert.Equal(5, result.Count);
         }
 
         [Fact]
@@ -90,14 +89,7 @@ namespace LC.RA.Location.Infrastructure.Tests.Services
 
         private string GetTestPageContent()
         {
-            var content = Resources.TestPageContent;
-
-            Console.WriteLine("Test content {0}", content.Length);
-            Console.WriteLine("Page content {0}", Resources.PageContent.Length);
-
-            Assert.False(string.IsNullOrEmpty(content), "Test content is null or empty");
-
-            return content;
+            return Resources.TestPageContent;
         }
     }
 }

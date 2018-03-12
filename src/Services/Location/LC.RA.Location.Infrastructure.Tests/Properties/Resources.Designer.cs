@@ -65,17 +65,6 @@ namespace LC.RA.Location.Infrastructure.Tests.Properties {
         ///
         ///Населення міст на 2001 рік подане в межах на 1 січня 2003 року, населення 2014 року&amp;nbsp;— в межах  [rest of string was truncated]&quot;;.
         /// </summary>
-        public static string PageContent {
-            get {
-                return ResourceManager.GetString("PageContent", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Нижче наведений список усіх &apos;&apos;&apos;[[Міста України|міст України]]&apos;&apos;&apos; (станом на 10 листопада 2017 року), а також їх наявне населення за даними [[Перепис населення України 2001|Всеукраїнського перепису населення]] [[5 грудня]] [[2001]] року та статистичного збірника «Чисельність наявного населення України» [[Державна служба статистики України|Державного комітету статистики України]] станом на 1 січня 2014 року.
-        ///
-        ///Населення міст на 2001 рік подане в межах на 1 січня 2003 року, населення 2014 року&amp;nbsp;— в межах  [rest of string was truncated]&quot;;.
-        /// </summary>
         public static string TestPageContent {
             get {
                 return ResourceManager.GetString("TestPageContent", resourceCulture);
