@@ -1,11 +1,17 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using LC.RA.Location.Core.Application.Wikipedia;
+using LC.RA.Location.Infrastructure.Services;
+using Microsoft.Extensions.Logging;
 
 namespace LC.RA.Location.Infrastructure.Handlers.WikiPageHandlers
 {
     public sealed class PageDefaultHandler : PageBaseHandler
     {
+        public PageDefaultHandler(ILogger<WikipediaParsingService> logger) : base(logger)
+        {
+        }
+
         protected override void HandlerRequestInternal(string content, SortedSet<WikiPageElement> elements)
         {
             var missingPageElements = new List<WikiPageElement>();

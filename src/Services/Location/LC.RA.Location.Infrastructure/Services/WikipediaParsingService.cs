@@ -3,11 +3,19 @@ using System.Linq;
 using LC.RA.Location.Core.Application.Wikipedia;
 using LC.RA.Location.Infrastructure.Handlers.WikiPageHandlers;
 using LC.RA.Location.Infrastructure.Handlers.WikiTableHandlers;
+using Microsoft.Extensions.Logging;
 
 namespace LC.RA.Location.Infrastructure.Services
 {
     public sealed class WikipediaParsingService : IWikipediaParsingService
     {
+        private readonly ILogger<WikipediaParsingService> logger;
+
+        public WikipediaParsingService(ILogger<WikipediaParsingService> logger)
+        {
+            this.logger = logger;
+        }
+
         public SortedSet<WikiPageElement> ParsePage(string content)
         {
             if (string.IsNullOrEmpty(content))
@@ -16,13 +24,13 @@ namespace LC.RA.Location.Infrastructure.Services
             }
 
             // Parse tables
-            var tablesHandler = new PageTablesHandler();
+            var tablesHandler = new PageTablesHandler(this.logger);
 
             // Parse page headers
-            var headersHandler = new PageHeadersHandler();
+            var headersHandler = new PageHeadersHandler(this.logger);
 
             // Include rest of the page
-            var defaultHandler = new PageDefaultHandler();
+            var defaultHandler = new PageDefaultHandler(this.logger);
 
             tablesHandler.SetNextHandler(headersHandler);
             headersHandler.SetNextHandler(defaultHandler);

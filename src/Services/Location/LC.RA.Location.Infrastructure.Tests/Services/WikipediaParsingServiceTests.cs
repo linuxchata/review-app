@@ -1,8 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Castle.Core.Logging;
 using LC.RA.Location.Core.Application.Wikipedia;
 using LC.RA.Location.Infrastructure.Services;
 using LC.RA.Location.Infrastructure.Tests.Properties;
+using Microsoft.Extensions.Logging;
+using Moq;
 using Xunit;
 
 namespace LC.RA.Location.Infrastructure.Tests.Services
@@ -13,7 +16,8 @@ namespace LC.RA.Location.Infrastructure.Tests.Services
 
         public WikipediaParsingServiceTests()
         {
-            this.sut = new WikipediaParsingService();
+            var loggerMock = new Mock<ILogger<WikipediaParsingService>>();
+            this.sut = new WikipediaParsingService(loggerMock.Object);
         }
 
         [Theory]
@@ -35,7 +39,7 @@ namespace LC.RA.Location.Infrastructure.Tests.Services
         {
             // Arrange
             // Act
-            var result = this.sut.ParsePage(Resources.PageContent);
+            var result = this.sut.ParsePage(this.GetTestPageContent());
 
             // Assert
             Assert.NotNull(result);
@@ -82,6 +86,15 @@ namespace LC.RA.Location.Infrastructure.Tests.Services
             // Assert
             Assert.NotNull(result);
             Assert.Equal(462, result.Count);
+        }
+
+        private string GetTestPageContent()
+        {
+            var content = Resources.PageContent;
+
+            Assert.False(string.IsNullOrEmpty(content), "Test content is null or empty");
+
+            return content;
         }
     }
 }
