@@ -6,8 +6,15 @@ using NLog.Web;
 
 namespace LC.RA.Web.Api
 {
+    /// <summary>
+    /// Program class
+    /// </summary>
     public class Program
     {
+        /// <summary>
+        /// Entry point of the application
+        /// </summary>
+        /// <param name="args"></param>
         public static void Main(string[] args)
         {
             var logger = NLog.LogManager.LoadConfiguration("nlog.config").GetCurrentClassLogger();
@@ -27,6 +34,11 @@ namespace LC.RA.Web.Api
             }
         }
 
+        /// <summary>
+        /// Build web host
+        /// </summary>
+        /// <param name="args">Command line arguments</param>
+        /// <returns>Created web host</returns>
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseApplicationInsights()
