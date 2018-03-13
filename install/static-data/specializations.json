@@ -1,138 +1,138 @@
-﻿{ "Name": "Лікар-акушер-гінеколог", "Specialization": "Акушерство і гінекологія" }
-{ "Name": "Лікар-алерголог", "Specialization": "Алергологія" }
-{ "Name": "Лікар-алерголог дитячий", "Specialization": "Дитяча алергологія" }
-{ "Name": "Лікар-анестезіолог", "Specialization": "Анестезіологія" }
-{ "Name": "Лікар-анестезіолог дитячий", "Specialization": "Дитяча анестезіологія" }
-{ "Name": "Лікар-бактеріолог", "Specialization": "Бактеріологія" }
-{ "Name": "Лікар-вірусолог", "Specialization": "Вірусологія" }
-{ "Name": "Лікар-гастроентеролог", "Specialization": "Гастроентерологія" }
-{ "Name": "Лікар-гастроентеролог дитячий", "Specialization": "Дитяча гастроентерологія" }
-{ "Name": "Лікар-генетик", "Specialization": "Генетика медична" }
-{ "Name": "Лікар-гематолог", "Specialization": "Гематологія" }
-{ "Name": "Лікар-гематолог дитячий", "Specialization": "Дитяча гематологія" }
-{ "Name": "Лікар-геріатр", "Specialization": "Геріатрія" }
-{ "Name": "Лікар-гінеколог дитячого та підліткового віку", "Specialization": "Дитяча гінекологія" }
-{ "Name": "Лікар-гінеколог-онколог", "Specialization": "Онкогінекологія" }
-{ "Name": "Лікар з гігієни дітей та підлітків", "Specialization": "Гігієна дітей та підлітків" }
-{ "Name": "Лікар з гігієни праці", "Specialization": "Гігієна праці" }
-{ "Name": "Лікар з гігієни харчування", "Specialization": "Гігієна харчування" }
-{ "Name": "Лікар-дерматовенеролог", "Specialization": "Дерматовенерологія" }
-{ "Name": "Лікар-дерматовенеролог дитячий", "Specialization": "Дитяча дерматовенерологія" }
-{ "Name": "Лікар-дезинфекціоніст", "Specialization": "Дезинфекційна справа" }
-{ "Name": "Лікар-дієтолог", "Specialization": "Дієтологія" }
-{ "Name": "Лікар-епідеміолог", "Specialization": "Епідеміологія" }
-{ "Name": "Лікар-ендокринолог", "Specialization": "Ендокринологія" }
-{ "Name": "Лікар-ендокринолог дитячий", "Specialization": "Дитяча ендокринологія" }
-{ "Name": "Лікар-ендоскопіст", "Specialization": "Ендоскопія" }
-{ "Name": "Лікар загальної практики - сімейний лікар", "Specialization": "Загальна практика - сімейна медицина" }
-{ "Name": "Лікар з загальної гігієни", "Specialization": "Загальна гігієна" }
-{ "Name": "Лікар-імунолог", "Specialization": "Імунологія" }
-{ "Name": "Лікар-імунолог клінічний", "Specialization": "Клінічна імунологія" }
-{ "Name": "Лікар-імунолог дитячий", "Specialization": "Дитяча імунологія" }
-{ "Name": "Лікар-імунолог-лаборант", "Specialization": "Лабораторна імунологія" }
-{ "Name": "Лікар-інфекціоніст дитячий", "Specialization": "Дитячі інфекційні хвороби" }
-{ "Name": "Лікар-інфекціоніст", "Specialization": "Інфекційні хвороби" }
-{ "Name": "Лікар-інтерн", "Specialization": "Відповідна спеціальність" }
-{ "Name": "Лікар-кардіолог", "Specialization": "Кардіологія" }
-{ "Name": "Лікар-кардіоревматолог дитячий", "Specialization": "Дитяча кардіоревматологія" }
-{ "Name": "Лікар-комбустіолог", "Specialization": "Комбустіологія" }
-{ "Name": "Лікар з комунальної гігієни", "Specialization": "Комунальна гігієна" }
-{ "Name": "Лікар-лаборант", "Specialization": "Клінічна лабораторна діагностика" }
-{ "Name": "Лікар-лаборант з клінічної біохімії", "Specialization": "Клінічна біохімія" }
-{ "Name": "Лікар-лаборант-генетик", "Specialization": "Генетика лабораторна" }
-{ "Name": "Лікар-лаборант-гігієніст", "Specialization": "Лабораторні дослідження факторів навколишнього середовища" }
-{ "Name": "Лікар-лаборант-гігієніст з дослідження хімічних факторів навколишнього середовища", "Specialization": "Лабораторні дослідження хімічних факторів навколишнього середовища" }
-{ "Name": "Лікар-лаборант-гігієніст з дослідження фізичних факторів навколишнього середовища", "Specialization": "Лабораторні дослідження фізичних факторів навколишнього середовища" }
-{ "Name": "Лікар з лікувальної фізкуль-тури і спортивної медицини", "Specialization": "Лікувальна фізкультура і спортивна медицина" }
-{ "Name": "Лікар з лікувальної фізкультури   Лікувальна фізкультура", "Specialization": "$1" }
-{ "Name": "Лікар-методист", "Specialization": "Організація і управління охороною здоров'я" }
-{ "Name": "Лікар-мікробіолог-вірусолог", "Specialization": "Мікробіологія і вірусоло-гія" }
-{ "Name": "Лікар-нарколог", "Specialization": "Наркологія" }
-{ "Name": "Лікар-нарколог дільничний", "Specialization": "Наркологія" }
-{ "Name": "Лікар-невропатолог", "Specialization": "Неврологія" }
-{ "Name": "Лікар-невролог дитячий", "Specialization": "Дитяча неврологія" }
-{ "Name": "Лікар-нефролог", "Specialization": "Нефрологія" }
-{ "Name": "Лікар-нефролог дитячий", "Specialization": "Дитяча нефрологія" }
-{ "Name": "Лікар-нейрохірург", "Specialization": "Нейрохірургія" }
-{ "Name": "Лікар-онколог", "Specialization": "Онкологія" }
-{ "Name": "Лікар-онколог дитячий", "Specialization": "Дитяча онкологія" }
-{ "Name": "Лікар-ортопед-травматолог", "Specialization": "Ортопедія і травматологія" }
-{ "Name": "Лікар-ортопед-травматолог дитячий Дитяча ортопедія і травматологія", "Specialization": "$1" }
-{ "Name": "Лікар-отоларинголог", "Specialization": "Отоларингологія" }
-{ "Name": "Лікар-отоларинголог дитячий", "Specialization": "Дитяча отоларингологія" }
-{ "Name": "Лікар-отоларинголог-онколог", "Specialization": "Онкоотоларингологія" }
-{ "Name": "Лікар-офтальмолог", "Specialization": "Офтальмологія" }
-{ "Name": "Лікар-офтальмолог дитячий", "Specialization": "Дитяча офтальмологія" }
-{ "Name": "Лікар-паразитолог", "Specialization": "Паразитологія" }
-{ "Name": "Лікар-патологоанатом", "Specialization": "Патологічна анатомія" }
-{ "Name": "Лікар-патологоанатом дитячий", "Specialization": "Дитяча патологічна анатомія" }
-{ "Name": "Лікар-педіатр", "Specialization": "Педіатрія" }
-{ "Name": "Лікар-педіатр дільничний", "Specialization": "Педіатрія" }
-{ "Name": "Лікар-педіатр-неонатолог", "Specialization": "Неонатологія" }
-{ "Name": "Лікар з променевої терапії", "Specialization": "Променева терапія" }
-{ "Name": "Лікар приймальної палати (відділення)", "Specialization": "Лікарська спеціальність за профілем підрозділу" }
-{ "Name": "Лікар-профпатолог", "Specialization": "Професійна патологія" }
-{ "Name": "Лікар-психіатр", "Specialization": "Психіатрія" }
-{ "Name": "Лікар-психіатр дільничний", "Specialization": "Психіатрія" }
-{ "Name": "Лікар-психіатр дитячий", "Specialization": "Дитяча психіатрія" }
-{ "Name": "Лікар-психіатр дитячий дільничний", "Specialization": "Дитяча психіатрія" }
-{ "Name": "Лікар-психіатр підлітковий", "Specialization": "Дитяча психіатрія" }
-{ "Name": "Лікар-психіатр підлітковий дільничний", "Specialization": "Дитяча психіатрія" }
-{ "Name": "Лікар-психотерапевт", "Specialization": "Психотерапія" }
-{ "Name": "Лікар-психофізіолог", "Specialization": "Психофізіологія" }
-{ "Name": "Лікар-пульмонолог", "Specialization": "Пульмонологія" }
-{ "Name": "Лікар-пульмонолог дитячий", "Specialization": "Дитяча пульмонологія" }
-{ "Name": "Лікар пункту охорони здоров'я", "Specialization": "Терапія" }
-{ "Name": "Лікар з радіаційної гігієни", "Specialization": "Радіаційна гігієна" }
-{ "Name": "Лікар-радіолог", "Specialization": "Радіологія" }
-{ "Name": "Лікар з радіонуклідної діагностики", "Specialization": "Радіонуклідна діагностика" }
-{ "Name": "Лікар-рентгенолог", "Specialization": "Рентгенологія" }
-{ "Name": "Лікар-ревматолог", "Specialization": "Ревматологія" }
-{ "Name": "Лікар-рефлексотерапевт", "Specialization": "Рефлексотерапія" }
-{ "Name": "Лікар-санолог", "Specialization": "Санологія" }
-{ "Name": "Лікар із спортивної медицини", "Specialization": "Спортивна медицина" }
-{ "Name": "Лікар-сексопатолог", "Specialization": "Сексопатологія" }
-{ "Name": "Лікар-статистик", "Specialization": "Організація і управління охороною здоров'я" }
-{ "Name": "Лікар-стажист", "Specialization": "Відповідна спеціальність" }
-{ "Name": "Лікар-стоматолог", "Specialization": "Стоматологія" }
-{ "Name": "Лікар-стоматолог-терапевт", "Specialization": "Терапевтична стоматологія" }
-{ "Name": "Лікар-стоматолог дитячий", "Specialization": "Дитяча стоматологія" }
-{ "Name": "Лікар-стоматолог-хірург", "Specialization": "Хірургічна стоматологія" }
-{ "Name": "Лікар-стоматолог-ортопед", "Specialization": "Ортопедична стоматологія" }
-{ "Name": "Лікар-стоматолог-ортодонт", "Specialization": "Ортодонтія" }
-{ "Name": "Лікар судновий", "Specialization": "Суднова медицина" }
-{ "Name": "Лікар-судово-психіатричний експерт", "Specialization": "Судово-психіатрична експертиза" }
-{ "Name": "Лікар-судово-медичний експерт", "Specialization": "Судово-медична експертиза" }
-{ "Name": "Лікар-судово-медичний гістолог   Судово-медична гістологія", "Specialization": "$1" }
-{ "Name": "Лікар-судово медичний імунолог   Судово-медична імунологія", "Specialization": "$1" }
-{ "Name": "Лікар-судово-медичний криміналіст Судово-медична криміналістика", "Specialization": "$1" }
-{ "Name": "Лікар-судово-медичний цитолог", "Specialization": "Судово-медична цитологія" }
-{ "Name": "Лікар-судово-медичний токсигія", "Specialization": "Судово-медична токсиколоколог" }
-{ "Name": "Лікар-сурдолог", "Specialization": "Сурдологія" }
-{ "Name": "Лікар-токсиколог", "Specialization": "Токсикологія" }
-{ "Name": "Лікар-терапевт", "Specialization": "Терапія" }
-{ "Name": "Лікар-терапевт дільничний", "Specialization": "Терапія" }
-{ "Name": "Лікар-терапевт цехової лікарської дільниці", "Specialization": "Терапія" }
-{ "Name": "Лікар-терапевт підлітковий", "Specialization": "Підліткова терапія" }
-{ "Name": "Лікар-трансплантолог", "Specialization": "Трансплантологія" }
-{ "Name": "Лікар-трансфузіолог", "Specialization": "Трансфузіологія" }
-{ "Name": "Лікар-уролог", "Specialization": "Урологія" }
-{ "Name": "Лікар-уролог дитячий", "Specialization": "Дитяча урологія" }
-{ "Name": "Лікар з ультразвукової діагностики", "Specialization": "Ультразвукова діагностика" }
-{ "Name": "Лікар-фтизіатр", "Specialization": "Фтизіатрія" }
-{ "Name": "Лікар-фтизіатр дільничний", "Specialization": "Фтизіатрія" }
-{ "Name": "Лікар-фтизіатр дитячий", "Specialization": "Дитяча фтизіатрія" }
-{ "Name": "Лікар-фізіотерапевт", "Specialization": "Фізіотерапія" }
-{ "Name": "Лікар з функціональної діагностики Функціональна діагностика", "Specialization": "$1" }
-{ "Name": "Лікар-хірург", "Specialization": "Хірургія" }
-{ "Name": "Лікар-хірург дитячий", "Specialization": "Дитяча хірургія" }
-{ "Name": "Лікар-хірург-онколог", "Specialization": "Онкохірургія" }
-{ "Name": "Лікар-хірург судинний", "Specialization": "Судинна хірургія" }
-{ "Name": "Лікар-хірург серцево-судинний", "Specialization": "Хірургія серця і магістральних судин" }
-{ "Name": "Лікар-хірург торакальний", "Specialization": "Торакальна хірургія" }
-{ "Name": "Лікар-хірург проктолог", "Specialization": "Проктологія" }
-{ "Name": "Лікар швидкої медичної допомоги", "Specialization": "Медицина невідкладних станів" }
-{ "Name": "Лікар з народної та нетрадиційної медицини", "Specialization": "Народна та нетрадиційна медицина" }
-{ "Name": "Лікар з авіаційної медицини", "Specialization": "Авіаційна та космічна медицина" }
-{ "Name": "Лікар-психолог", "Specialization": "Медична психологія" }
-{ "Name": "Лікар-нейрохірург дитячий", "Specialization": "Дитяча нейрохірургія" }
+﻿{ "Name": "Лікар-акушер-гінеколог", "Specialty": "Акушерство і гінекологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-алерголог", "Specialty": "Алергологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-алерголог дитячий", "Specialty": "Дитяча алергологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-анестезіолог", "Specialty": "Анестезіологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-анестезіолог дитячий", "Specialty": "Дитяча анестезіологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-бактеріолог", "Specialty": "Бактеріологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-вірусолог", "Specialty": "Вірусологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-гастроентеролог", "Specialty": "Гастроентерологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-гастроентеролог дитячий", "Specialty": "Дитяча гастроентерологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-генетик", "Specialty": "Генетика медична", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-гематолог", "Specialty": "Гематологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-гематолог дитячий", "Specialty": "Дитяча гематологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-геріатр", "Specialty": "Геріатрія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-гінеколог дитячого та підліткового віку", "Specialty": "Дитяча гінекологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-гінеколог-онколог", "Specialty": "Онкогінекологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар з гігієни дітей та підлітків", "Specialty": "Гігієна дітей та підлітків", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар з гігієни праці", "Specialty": "Гігієна праці", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар з гігієни харчування", "Specialty": "Гігієна харчування", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-дерматовенеролог", "Specialty": "Дерматовенерологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-дерматовенеролог дитячий", "Specialty": "Дитяча дерматовенерологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-дезинфекціоніст", "Specialty": "Дезинфекційна справа", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-дієтолог", "Specialty": "Дієтологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-епідеміолог", "Specialty": "Епідеміологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-ендокринолог", "Specialty": "Ендокринологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-ендокринолог дитячий", "Specialty": "Дитяча ендокринологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-ендоскопіст", "Specialty": "Ендоскопія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар загальної практики - сімейний лікар", "Specialty": "Загальна практика - сімейна медицина", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар з загальної гігієни", "Specialty": "Загальна гігієна", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-імунолог", "Specialty": "Імунологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-імунолог клінічний", "Specialty": "Клінічна імунологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-імунолог дитячий", "Specialty": "Дитяча імунологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-імунолог-лаборант", "Specialty": "Лабораторна імунологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-інфекціоніст дитячий", "Specialty": "Дитячі інфекційні хвороби", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-інфекціоніст", "Specialty": "Інфекційні хвороби", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-інтерн", "Specialty": "Відповідна спеціальність", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-кардіолог", "Specialty": "Кардіологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-кардіоревматолог дитячий", "Specialty": "Дитяча кардіоревматологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-комбустіолог", "Specialty": "Комбустіологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар з комунальної гігієни", "Specialty": "Комунальна гігієна", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-лаборант", "Specialty": "Клінічна лабораторна діагностика", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-лаборант з клінічної біохімії", "Specialty": "Клінічна біохімія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-лаборант-генетик", "Specialty": "Генетика лабораторна", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-лаборант-гігієніст", "Specialty": "Лабораторні дослідження факторів навколишнього середовища", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-лаборант-гігієніст з дослідження хімічних факторів навколишнього середовища", "Specialty": "Лабораторні дослідження хімічних факторів навколишнього середовища", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-лаборант-гігієніст з дослідження фізичних факторів навколишнього середовища", "Specialty": "Лабораторні дослідження фізичних факторів навколишнього середовища", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар з лікувальної фізкуль-тури і спортивної медицини", "Specialty": "Лікувальна фізкультура і спортивна медицина", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар з лікувальної фізкультури   Лікувальна фізкультура", "Specialty": "$1", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-методист", "Specialty": "Організація і управління охороною здоров'я", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-мікробіолог-вірусолог", "Specialty": "Мікробіологія і вірусоло-гія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-нарколог", "Specialty": "Наркологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-нарколог дільничний", "Specialty": "Наркологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-невропатолог", "Specialty": "Неврологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-невролог дитячий", "Specialty": "Дитяча неврологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-нефролог", "Specialty": "Нефрологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-нефролог дитячий", "Specialty": "Дитяча нефрологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-нейрохірург", "Specialty": "Нейрохірургія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-онколог", "Specialty": "Онкологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-онколог дитячий", "Specialty": "Дитяча онкологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-ортопед-травматолог", "Specialty": "Ортопедія і травматологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-ортопед-травматолог дитячий Дитяча ортопедія і травматологія", "Specialty": "$1", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-отоларинголог", "Specialty": "Отоларингологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-отоларинголог дитячий", "Specialty": "Дитяча отоларингологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-отоларинголог-онколог", "Specialty": "Онкоотоларингологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-офтальмолог", "Specialty": "Офтальмологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-офтальмолог дитячий", "Specialty": "Дитяча офтальмологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-паразитолог", "Specialty": "Паразитологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-патологоанатом", "Specialty": "Патологічна анатомія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-патологоанатом дитячий", "Specialty": "Дитяча патологічна анатомія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-педіатр", "Specialty": "Педіатрія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-педіатр дільничний", "Specialty": "Педіатрія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-педіатр-неонатолог", "Specialty": "Неонатологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар з променевої терапії", "Specialty": "Променева терапія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар приймальної палати (відділення)", "Specialty": "Лікарська спеціальність за профілем підрозділу", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-профпатолог", "Specialty": "Професійна патологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-психіатр", "Specialty": "Психіатрія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-психіатр дільничний", "Specialty": "Психіатрія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-психіатр дитячий", "Specialty": "Дитяча психіатрія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-психіатр дитячий дільничний", "Specialty": "Дитяча психіатрія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-психіатр підлітковий", "Specialty": "Дитяча психіатрія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-психіатр підлітковий дільничний", "Specialty": "Дитяча психіатрія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-психотерапевт", "Specialty": "Психотерапія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-психофізіолог", "Specialty": "Психофізіологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-пульмонолог", "Specialty": "Пульмонологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-пульмонолог дитячий", "Specialty": "Дитяча пульмонологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар пункту охорони здоров'я", "Specialty": "Терапія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар з радіаційної гігієни", "Specialty": "Радіаційна гігієна", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-радіолог", "Specialty": "Радіологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар з радіонуклідної діагностики", "Specialty": "Радіонуклідна діагностика", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-рентгенолог", "Specialty": "Рентгенологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-ревматолог", "Specialty": "Ревматологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-рефлексотерапевт", "Specialty": "Рефлексотерапія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-санолог", "Specialty": "Санологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар із спортивної медицини", "Specialty": "Спортивна медицина", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-сексопатолог", "Specialty": "Сексопатологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-статистик", "Specialty": "Організація і управління охороною здоров'я", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-стажист", "Specialty": "Відповідна спеціальність", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-стоматолог", "Specialty": "Стоматологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-стоматолог-терапевт", "Specialty": "Терапевтична стоматологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-стоматолог дитячий", "Specialty": "Дитяча стоматологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-стоматолог-хірург", "Specialty": "Хірургічна стоматологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-стоматолог-ортопед", "Specialty": "Ортопедична стоматологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-стоматолог-ортодонт", "Specialty": "Ортодонтія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар судновий", "Specialty": "Суднова медицина", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-судово-психіатричний експерт", "Specialty": "Судово-психіатрична експертиза", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-судово-медичний експерт", "Specialty": "Судово-медична експертиза", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-судово-медичний гістолог   Судово-медична гістологія", "Specialty": "$1", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-судово медичний імунолог   Судово-медична імунологія", "Specialty": "$1", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-судово-медичний криміналіст Судово-медична криміналістика", "Specialty": "$1", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-судово-медичний цитолог", "Specialty": "Судово-медична цитологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-судово-медичний токсигія", "Specialty": "Судово-медична токсиколоколог", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-сурдолог", "Specialty": "Сурдологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-токсиколог", "Specialty": "Токсикологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-терапевт", "Specialty": "Терапія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-терапевт дільничний", "Specialty": "Терапія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-терапевт цехової лікарської дільниці", "Specialty": "Терапія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-терапевт підлітковий", "Specialty": "Підліткова терапія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-трансплантолог", "Specialty": "Трансплантологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-трансфузіолог", "Specialty": "Трансфузіологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-уролог", "Specialty": "Урологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-уролог дитячий", "Specialty": "Дитяча урологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар з ультразвукової діагностики", "Specialty": "Ультразвукова діагностика", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-фтизіатр", "Specialty": "Фтизіатрія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-фтизіатр дільничний", "Specialty": "Фтизіатрія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-фтизіатр дитячий", "Specialty": "Дитяча фтизіатрія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-фізіотерапевт", "Specialty": "Фізіотерапія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар з функціональної діагностики Функціональна діагностика", "Specialty": "$1", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-хірург", "Specialty": "Хірургія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-хірург дитячий", "Specialty": "Дитяча хірургія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-хірург-онколог", "Specialty": "Онкохірургія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-хірург судинний", "Specialty": "Судинна хірургія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-хірург серцево-судинний", "Specialty": "Хірургія серця і магістральних судин", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-хірург торакальний", "Specialty": "Торакальна хірургія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-хірург проктолог", "Specialty": "Проктологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар швидкої медичної допомоги", "Specialty": "Медицина невідкладних станів", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар з народної та нетрадиційної медицини", "Specialty": "Народна та нетрадиційна медицина", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар з авіаційної медицини", "Specialty": "Авіаційна та космічна медицина", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-психолог", "Specialty": "Медична психологія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }
+{ "Name": "Лікар-нейрохірург дитячий", "Specialty": "Дитяча нейрохірургія", "Created": "2000-01-01T00:00:00.000Z", "CreatedBy": "System User", "Updated": "2000-01-01T00:00:00.000Z", "UpatedBy": "System User" }

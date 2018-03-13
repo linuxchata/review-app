@@ -6,5 +6,7 @@ namespace LC.RA.Web.Core.Domain
     public sealed class Specialization : RootModelBase
     {
         public string Name { get; set; }
+
+        public string Specialty { get; set; }
     }
 }
