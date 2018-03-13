@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LC.RA.Web.Api.Controllers
 {
+    [Produces("application/json")]
     [Route("api/[controller]")]
     public class SubjectController : Controller
     {
