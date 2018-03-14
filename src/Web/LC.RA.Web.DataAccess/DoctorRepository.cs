@@ -12,7 +12,7 @@ namespace LC.RA.Web.DataAccess
 {
     public sealed class DoctorRepository : BaseRepository<Doctor, DoctorDto>, IDoctorRepository
     {
-        private readonly ILogger logger;
+        private readonly ILogger<DoctorRepository> logger;
 
         private readonly IDoctorConverter converter;
 

@@ -12,7 +12,7 @@ namespace LC.RA.Web.DataAccess
 {
     public sealed class LocationRepository : BaseRepository<Location, LocationDto>, ILocationRepository
     {
-        private readonly ILogger logger;
+        private readonly ILogger<LocationRepository> logger;
 
         private readonly ILocationConverter converter;
 
