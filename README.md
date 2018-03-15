@@ -8,10 +8,10 @@ A simple review system for different subjects (e.g. doctors, clinics)
 
 ## Technologies and frameworks
 - ASP.NET Core 2.0
--- Autofac
--- nlog
--- Swagger
--- xunit / moq
+* Autofac
+* nlog
+* Swagger
+* xunit / moq
 - MongoDB
 - Azure Service Bus
 - Application Insights
