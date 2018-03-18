@@ -45,7 +45,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js']
   },
   output: {
-    publicPath: path.resolve(__dirname, './dist'),
+    publicPath: path.resolve(__dirname, './dist'), // Needed for file-loader
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   }
