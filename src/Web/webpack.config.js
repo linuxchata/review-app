@@ -1,11 +1,19 @@
 const path = require('path');
+
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: './src/app.tsx',
   watch: true,
   plugins: [
-    new MiniCssExtractPlugin({ filename: 'bundle.css' }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: 'index.html',
+      filename: 'index.html',
+      title: 'Review Application',
+    }),
+    new MiniCssExtractPlugin({ filename: 'bundle.css' })
   ],
   module: {
     rules: [
@@ -35,7 +43,7 @@ module.exports = {
           loader: 'url-loader',
           options: {
             limit: 8000,
-            name: '/images/[hash]-[name].[ext]'
+            name: 'images/[hash]-[name].[ext]'
           }
         }]
       }
@@ -45,8 +53,8 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js']
   },
   output: {
-    publicPath: path.resolve(__dirname, './dist'), // Needed for file-loader
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: './'
   }
 };
