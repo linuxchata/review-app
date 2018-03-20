@@ -2,33 +2,14 @@ const webpack = require('webpack');
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/app.tsx',
-  devServer: {
-    contentBase: './dist'
-  },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.(scss)$/,
-        use: [
-          {
-            loader: "style-loader"
-          },
-          {
-            loader: "css-loader"
-          },
-          {
-            loader: "sass-loader"
-          }],
         exclude: /node_modules/
       },
       {
@@ -58,14 +39,12 @@ module.exports = {
     }
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       hash: true,
       template: 'index.html',
       filename: 'index.html',
-      title: 'Review Application',
+      title: 'Review Application'
     }),
-    new MiniCssExtractPlugin({ filename: 'bundle.min.css' })
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
