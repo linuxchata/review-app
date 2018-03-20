@@ -1,5 +1,4 @@
-var webpack = require('webpack');
-
+const webpack = require('webpack');
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -21,15 +20,14 @@ module.exports = {
       {
         test: /\.(scss)$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            loader: "style-loader"
+          },
           {
             loader: "css-loader"
           },
           {
-            loader: "sass-loader",
-            options: {
-              sourceMap: true,
-            },
+            loader: "sass-loader"
           }],
         exclude: /node_modules/
       },
@@ -67,10 +65,7 @@ module.exports = {
       filename: 'index.html',
       title: 'Review Application',
     }),
-    new MiniCssExtractPlugin({ filename: 'bundle.min.css' }),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': '"production"'
-    })
+    new MiniCssExtractPlugin({ filename: 'bundle.min.css' })
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
