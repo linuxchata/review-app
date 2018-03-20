@@ -1,3 +1,5 @@
+var webpack = require('webpack');
+
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -9,16 +11,6 @@ module.exports = {
   devServer: {
     contentBase: './dist'
   },
-  plugins: [
-    new CleanWebpackPlugin(['dist']),
-    new HtmlWebpackPlugin({
-      hash: true,
-      template: 'index.html',
-      filename: 'index.html',
-      title: 'Review Application',
-    }),
-    new MiniCssExtractPlugin({ filename: 'bundle.css' })
-  ],
   module: {
     rules: [
       {
@@ -56,8 +48,32 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js']
   },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendor',
+          chunks: 'all'
+        }
+      }
+    }
+  },
+  plugins: [
+    new CleanWebpackPlugin(['dist']),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: 'index.html',
+      filename: 'index.html',
+      title: 'Review Application',
+    }),
+    new MiniCssExtractPlugin({ filename: 'bundle.min.css' }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': '"production"'
+    })
+  ],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: '[name].min.js'
   }
 };
