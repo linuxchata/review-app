@@ -1,9 +1,11 @@
-@import 'colors';
+@import "colors";
+
 $theme-font: verdana, sans-serif;
 
 body {
   font: $theme-font;
+
   h1, h2 {
-      color: green;
+    color: green;
   }
 }
