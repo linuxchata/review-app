@@ -1,6 +1,7 @@
 {
   "name": "review-app-web",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
     "start": "webpack-dev-server --mode development --open --config webpack.dev.js",
     "build": "webpack --mode production -p --colors --config webpack.prod.js"
