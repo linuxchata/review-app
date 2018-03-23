@@ -1,10 +1,19 @@
 @import "colors";
 @import "const";
 
+body {
+    background: $background;
+}
+
 p {
     font-family: $theme-font;
     color: $text-color;
     margin: 0;
+}
+
+a {
+    font-family: $theme-font;
+    color: $text-color;
 }
 
 .clearfix {

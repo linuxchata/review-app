@@ -7,6 +7,8 @@ import './styles/colors.scss';
 import './styles/const.scss';
 import './styles/styles.scss';
 import './styles/navbar.scss';
+import './styles/rating.scss';
+import './styles/doctors.scss';
 import './styles/doctor.scss';
 
 import * as doctor from './images/sample_doctor.png';

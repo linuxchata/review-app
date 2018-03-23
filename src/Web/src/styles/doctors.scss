@@ -1,0 +1,47 @@
+@import "colors";
+@import "const";
+
+.list {
+    display: flex;
+    width: 90%;
+    margin: 0 auto 20px auto;
+    background: white;
+    border: 1px solid $border-color;
+    border-radius: 2px;
+
+    .photo {
+        img {
+            width: 100px;
+            height: 100px;
+            display: block;
+            border: 1px solid $border-color;
+            margin: 15px 0 15px 15px;
+        }
+    }
+
+    .info {
+        padding: 15px;
+    }
+
+    a.name {
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    a.name:hover {
+        text-decoration: underline;
+    }
+
+    p.spec {
+        font-size: 15px;
+        font-weight: 300;
+        color: $text-color-light;
+        margin: 5px 0;
+    }
+
+    p.desc {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

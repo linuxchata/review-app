@@ -3,8 +3,7 @@
 
 .main {
     width: 90%;
-    margin: 0 auto;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
     background: $content-background;
     border: 1px solid $border-color;
     border-radius: 2px;
@@ -17,7 +16,9 @@
         img {
             width: 220px;
             height: 220px;
-            padding: 15px 0 15px 15px;
+            display: block;
+            margin: 15px 0 15px 15px;
+            border: 1px solid $border-color;
         }
     }
 
@@ -28,26 +29,27 @@
     p.name {
         font-size: 24px;
         font-weight: 500;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 
     p.spec {
         font-size: 18px;
         font-weight: 300;
         color: $text-color-light;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 
     p.desc {
         font-size: 16px;
         line-height: 20px;
+        padding-top: 10px;
     }
 }
 
 .additional {
     width: 90%;
-    margin: 0 auto;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
+    background: $content-background;
     border: 1px solid $border-color;
     border-radius: 2px;
 
