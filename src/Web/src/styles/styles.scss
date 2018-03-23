@@ -1,0 +1,12 @@
+@import "colors";
+@import "const";
+
+p {
+    font-family: $theme-font;
+    color: $text-color;
+    margin: 0;
+}
+
+.clearfix {
+    overflow: auto;
+}

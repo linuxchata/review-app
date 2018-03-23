@@ -1,15 +1,8 @@
 @import "colors";
 @import "const";
 
-p {
-    font-family: $theme-font;
-    color: $text-color;
-    margin: 0;
-}
-
-.main-info {
+.main {
     width: 90%;
-    height: 250px;
     margin: 0 auto;
     margin-bottom: 20px;
     background: $content-background;
@@ -19,19 +12,17 @@ p {
     .left-side {
         float: left;
         width: 250px;
-        overflow: hidden;
         margin: 0 auto;
 
-        .image-wrapper {
+        img {
             width: 220px;
             height: 220px;
-            padding: 15px;
+            padding: 15px 0 15px 15px;
         }
     }
 
     .right-side {
-        padding: 15px 0;
-        overflow: hidden;
+        padding: 15px;
     }
 
     p.name {
@@ -53,7 +44,7 @@ p {
     }
 }
 
-.additional-info {
+.additional {
     width: 90%;
     margin: 0 auto;
     margin-bottom: 20px;
