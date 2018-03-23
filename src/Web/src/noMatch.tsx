@@ -6,11 +6,11 @@ interface NoMatchProps {
   location: any;
 }
 
-const NoMatch: React.StatelessComponent<NoMatchProps> = () => {
+const NoMatch: React.StatelessComponent<NoMatchProps> = ({location}) => {
   return (
     <div className='no-match'>
       <p>Page not found</p>
-      <p>No matches for {this.props.location.pathname} path</p>
+      <p>No matches for {location.pathname} path</p>
     </div>
   )
 }
