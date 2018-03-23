@@ -4,6 +4,9 @@ import Hello from "./Hello";
 
 import 'normalize.css';
 import './styles/colors.scss';
+import './styles/const.scss';
+import './styles/navbar.scss';
+import './styles/doctor.scss';
 import './styles/styles.scss';
 
 import * as doctor from './images/sample_doctor.png';

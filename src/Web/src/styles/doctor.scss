@@ -1,0 +1,106 @@
+@import "colors";
+@import "const";
+
+p {
+    font-family: $theme-font;
+    color: $text-color;
+    margin: 0;
+}
+
+.main-info {
+    width: 90%;
+    height: 250px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background: $content-background;
+    border: 1px solid $border-color;
+    border-radius: 2px;
+
+    .left-side {
+        float: left;
+        width: 250px;
+        overflow: hidden;
+        margin: 0 auto;
+
+        .image-wrapper {
+            width: 220px;
+            height: 220px;
+            padding: 15px;
+        }
+    }
+
+    .right-side {
+        padding: 15px 0;
+        overflow: hidden;
+    }
+
+    p.name {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+
+    p.spec {
+        font-size: 18px;
+        font-weight: 300;
+        color: $text-color-light;
+        margin-bottom: 15px;
+    }
+
+    p.desc {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+.additional-info {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: 1px solid $border-color;
+    border-radius: 2px;
+
+    .left-side {
+        float: left;
+        width: 50%;
+        overflow: hidden;
+    }
+
+    .right-side {
+        width: 50%;
+        overflow: hidden;
+    }
+
+    h2, h3 {
+        font-family: $theme-font;
+        font-weight: 400;
+        color: $text-color;
+        margin: 0;
+    }
+
+    header {
+        margin-bottom: 20px;
+        background: $content-background;
+
+        h2 {
+            font-size: 20px;
+            padding: 10px 0 10px 10px;
+            border-bottom: 1px solid $border-color;
+        }
+    }
+
+    .content {
+        padding: 20px 50px 20px 20px;
+        margin-bottom: 20px;
+
+        h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 25px;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@import "colors";
+@import "const";
+
+nav {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+    background-color: $navbar-background;
+}
+
+li {
+    float: left;
+    font-family: $theme-font;
+    font-size: 14px;
+    font-weight: 500;
+
+    a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: $navbar-link;
+        padding: 20px 16px;
+    }
+
+    .active {
+        color: $navbar-link-active;
+    }
+
+    :hover {
+        color: $navbar-link-active;
+    }
+}
