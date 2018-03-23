@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import './styles/doctorItem.scss';
+
 interface DoctorItemProps {
   name: string;
   specializations: string;
@@ -10,27 +12,25 @@ interface DoctorItemProps {
 class DoctorItem extends React.Component<DoctorItemProps, {}> {
   render() {
     return (
-      <div>
-        <section className='list'>
-          <div className='photo'>
-            <img src={this.props.photo} />
-          </div>
-          <div className='info'>
-            <a href='#' className='name'>{this.props.name}</a>
-            <p className='spec'>{this.props.specializations}</p>
-            <div className='rating-wrapper'>
-              <div className='rating'>
-                <span>☆</span>
-                <span>☆</span>
-                <span>★</span>
-                <span>★</span>
-                <span>★</span>
-              </div>
+      <section className='doctor-item-main'>
+        <div className='photo'>
+          <img src={this.props.photo} />
+        </div>
+        <div className='info'>
+          <a href='#' className='name'>{this.props.name}</a>
+          <p className='spec'>{this.props.specializations}</p>
+          <div className='rating-wrapper'>
+            <div className='rating'>
+              <span>☆</span>
+              <span>☆</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
             </div>
-            <p className='address'>{this.props.facilityAddress}</p>
           </div>
-        </section>
-      </div>
+          <p className='address'>{this.props.facilityAddress}</p>
+        </div>
+      </section>
     );
   }
 }

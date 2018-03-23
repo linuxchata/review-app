@@ -1,28 +1,27 @@
 import * as React from 'react';
+import { Link } from "react-router-dom";
+
+import './styles/navbar.scss';
 
 class Navbar extends React.Component<{}, {}>{
   render() {
     return (
-      <div>
+      <div className='navbar'>
         <nav>
           <ul>
             <li>
-              <a href="#">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a className="active" href="#">News</a>
+              <Link to="/doctors">Doctors</Link>
             </li>
             <li>
-              <a href="#">Contact</a>
-            </li>
-            <li>
-              <li>
-                <a href="#">About</a>
-              </li>
+              <Link to="/about">About</Link>
             </li>
           </ul>
         </nav>
-      </div>)
+      </div>
+    )
   }
 }
 

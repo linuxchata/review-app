@@ -1,8 +1,9 @@
 @import "colors";
 @import "const";
 
-.main {
+.doctor-main {
     width: 90%;
+    height: 250px;
     margin: 0 auto 20px auto;
     background: $content-background;
     border: 1px solid $border-color;
@@ -12,18 +13,18 @@
         float: left;
         width: 250px;
         margin: 0 auto;
-
-        img {
-            width: 220px;
-            height: 220px;
-            display: block;
-            margin: 15px 0 15px 15px;
-            border: 1px solid $border-color;
-        }
     }
 
     .right-side {
         padding: 15px;
+    }
+
+    img {
+        width: 220px;
+        height: 220px;
+        margin: 15px 0 15px 15px;
+        display: block;
+        border: 1px solid $border-color;
     }
 
     p.name {
@@ -46,7 +47,7 @@
     }
 }
 
-.additional {
+.doctor-additional {
     width: 90%;
     margin: 0 auto 20px auto;
     background: $content-background;

@@ -1,0 +1,15 @@
+@import "colors";
+@import "const";
+
+.about {
+    width: 90%;
+    height: 100px;
+    margin: 0 auto 20px auto;
+    background: white;
+    border: 1px solid $border-color;
+    border-radius: 2px;
+
+    p {
+        padding: 15px;
+    }
+}
