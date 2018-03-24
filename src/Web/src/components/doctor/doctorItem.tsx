@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 import '../../styles/doctorItem.scss';
 
@@ -14,10 +15,10 @@ class DoctorItem extends React.Component<DoctorItemProps, {}> {
     return (
       <section className='doctor-item-main'>
         <div className='photo'>
-          <img src={this.props.photo} />
+          <img src={this.props.photo} alt='photo' />
         </div>
         <div className='info'>
-          <a href='#' className='name'>{this.props.name}</a>
+          <Link to='/doctor' className='name'>{this.props.name}</Link>
           <p className='spec'>{this.props.specializations}</p>
           <div className='rating-wrapper'>
             <div className='rating'>

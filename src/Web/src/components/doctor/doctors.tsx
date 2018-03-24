@@ -1,23 +1,38 @@
 import * as React from 'react';
+import { inject, observer } from 'mobx-react';
+
+import { DoctorStore } from '../../stores/DoctorStore';
+import { STORE_DOCTOR } from '../../constants/Stores';
 
 import DoctorItem from './DoctorItem';
+import DoctorModel from '../../models/DoctorModel';
 
-import * as doctor from '../../images/sample_doctor.png';
+import * as doctorPhoto from '../../images/sample_doctor.png';
 
-class Doctors extends React.Component<{}, {}>{
+interface DoctorsProps {
+  [STORE_DOCTOR]: DoctorStore;
+}
+
+export interface DoctorsState { }
+
+@inject(STORE_DOCTOR)
+@observer
+class Doctors extends React.Component<DoctorsProps, DoctorsState>{
+  constructor(props?: DoctorsProps, context?: any) {
+    super(props, context);
+  }
+
   render() {
+    const doctorStore = this.props[STORE_DOCTOR] as DoctorStore;
     return (
       <div>
-        <DoctorItem
-          name='mgr Adam Kondrad Lewanowicz'
-          specializations='Psycholog, Terapeuta, Psychoterapeuta'
-          facilityAddress='ul.Grzegórzecka 67H klatka B /41(Wiślane Tarasy) I piętro'
-          photo={doctor}></DoctorItem>
-        <DoctorItem
-          name='mgr Adam Kondrad Lewanowicz'
-          specializations='Psycholog, Terapeuta, Psychoterapeuta'
-          facilityAddress='ul.Grzegórzecka 67H klatka B /41(Wiślane Tarasy) I piętro'
-          photo={doctor}></DoctorItem>
+        {doctorStore.doctors.map((doctor) => (
+          <DoctorItem
+            name={doctor.name}
+            specializations={doctor.specialization}
+            facilityAddress={doctor.facilityAddress}
+            photo={doctorPhoto} />
+        ))}
       </div>
     )
   }
