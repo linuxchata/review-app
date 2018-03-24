@@ -28,18 +28,19 @@ class Doctors extends React.Component<DoctorsProps, DoctorsState>{
 
   render() {
     const doctorStore = this.props[STORE_DOCTOR] as DoctorStore;
+
     return (
       <div>
-        {doctorStore.doctors.map((doctor) => (
+        {doctorStore.doctors.length > 0 ? doctorStore.doctors.map((doctor) => (
           <DoctorItem
             key={doctor.id}
             name={doctor.name}
             specializations={doctor.specialization}
             facilityAddress={doctor.facilityAddress}
             photo={doctorPhoto} />
-        ))}
+        )) : <section className='main-container'><p>No data</p></section>}
       </div>
-    )
+    );
   }
 }
 

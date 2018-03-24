@@ -30,7 +30,7 @@ const defaultDoctors = [
     "Kurniki 4, Kraków Estetica Beauty Dent")
 ];
 
-const doctorStore = createStores(defaultDoctors);
+const doctorStore = createStores([]);
 
 ReactDOM.render(
   <Provider {...doctorStore}>
