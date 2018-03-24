@@ -28,6 +28,7 @@ class Doctors extends React.Component<DoctorsProps, DoctorsState>{
       <div>
         {doctorStore.doctors.map((doctor) => (
           <DoctorItem
+            key={doctor.id}
             name={doctor.name}
             specializations={doctor.specialization}
             facilityAddress={doctor.facilityAddress}
