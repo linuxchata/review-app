@@ -22,6 +22,10 @@ class Doctors extends React.Component<DoctorsProps, DoctorsState>{
     super(props, context);
   }
 
+  componentDidMount() {
+    this.props.doctorStore.getAll();
+  }
+
   render() {
     const doctorStore = this.props[STORE_DOCTOR] as DoctorStore;
     return (

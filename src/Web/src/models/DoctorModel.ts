@@ -6,8 +6,8 @@ export class DoctorModel {
   @observable public specialization: string;
   @observable public facilityAddress: string;
 
-  constructor(name: string, specialization: string, facilityAddress: string) {
-    this.id = 1;
+  constructor(id: number, name: string, specialization: string, facilityAddress: string) {
+    this.id = id;
     this.name = name;
     this.specialization = specialization;
     this.facilityAddress = facilityAddress;
