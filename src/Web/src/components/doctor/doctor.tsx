@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import './styles/doctor.scss';
-import * as doctor from './images/sample_doctor.png';
+import '../../styles/doctor.scss';
+import * as doctor from '../../images/sample_doctor.png';
 
 class Doctor extends React.Component<{}, {}>{
   render() {

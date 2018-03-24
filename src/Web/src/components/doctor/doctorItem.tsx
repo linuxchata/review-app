@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import './styles/doctorItem.scss';
+import '../../styles/doctorItem.scss';
 
 interface DoctorItemProps {
   name: string;

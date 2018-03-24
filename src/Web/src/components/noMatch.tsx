@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import './styles/noMatch.scss';
+import '../styles/noMatch.scss';
 
 interface NoMatchProps {
   location: any;

@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import DoctorItem from './DoctorItem';
 
-import * as doctor from './images/sample_doctor.png';
+import * as doctor from '../../images/sample_doctor.png';
 
 class Doctors extends React.Component<{}, {}>{
   render() {

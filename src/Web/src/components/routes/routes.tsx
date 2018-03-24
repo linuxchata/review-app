@@ -2,10 +2,10 @@ import * as React from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
 import Navbar from './Navbar';
-import Doctors from './Doctors';
-import Doctor from './Doctor';
-import About from './About';
-import NoMatch from './NoMatch';
+import Doctors from '../doctor/Doctors';
+import Doctor from '../doctor/Doctor';
+import About from '../about/About';
+import NoMatch from '../NoMatch';
 
 class Routes extends React.Component<{}, {}>{
   render() {
