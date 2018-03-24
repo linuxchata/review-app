@@ -15,3 +15,24 @@ a {
     font-family: $theme-font;
     color: $text-color;
 }
+
+.main-container {
+    width: 90%;
+    height: 100px;
+    margin: 0 auto 20px auto;
+    background: white;
+    border: 1px solid $border-color;
+    border-radius: 2px;
+
+    h2 {
+        font-family: $theme-font;
+        font-weight: 400;
+        color: $text-color;
+        margin: 0;
+        padding: 5px 15px 15px 15px;
+    }
+
+    p {
+        padding: 15px;
+    }
+}

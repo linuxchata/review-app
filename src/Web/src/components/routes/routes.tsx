@@ -2,7 +2,7 @@ import * as React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Navbar from './Navbar';
-import Index from '../index';
+import Home from '../Home';
 import Doctors from '../doctor/Doctors';
 import Doctor from '../doctor/Doctor';
 import About from '../about/About';
@@ -16,7 +16,7 @@ class Routes extends React.Component<{}, {}>{
           <div>
             <Navbar />
             <Switch>
-              <Route exact path="/" component={Index} />
+              <Route exact path="/" component={Home} />
               <Route exact path="/doctor" component={Doctor} />
               <Route exact path="/doctors" component={Doctors} />
               <Route path="/about" component={About} />
