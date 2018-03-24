@@ -16,8 +16,7 @@ module.exports = merge(common, {
           },
           {
             loader: "sass-loader"
-          }],
-        exclude: /node_modules/
+          }]
       }
     ]
   },
