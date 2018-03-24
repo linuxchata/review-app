@@ -34,6 +34,8 @@ namespace LC.RA.Web.Api
         /// <param name="services">Collection of the services</param>
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
+
             services.AddMvc();
 
             services.Configure<ApplicationSettings>(this.configuration.GetSection("Settings"));
@@ -84,6 +86,12 @@ namespace LC.RA.Web.Api
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Review application API V1");
             });
+
+            app.UseCors(builder => builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials());
 
             app.UseMvc(routes =>
             {
