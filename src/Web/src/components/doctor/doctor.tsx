@@ -1,20 +1,42 @@
 import * as React from 'react';
+import { inject, observer } from 'mobx-react';
+
+import { DoctorStore } from '../../stores/DoctorStore';
+import { STORE_DOCTOR } from '../../constants/Stores';
 
 import '../../styles/doctor.scss';
-import * as doctor from '../../images/sample_doctor.png';
+import * as doctorPhoto from '../../images/sample_doctor.png';
 
-class Doctor extends React.Component<{}, {}>{
+interface DoctorProps {
+  [STORE_DOCTOR]: DoctorStore;
+  match: any;
+}
+
+export interface DoctorState {
+}
+
+@inject(STORE_DOCTOR)
+@observer
+class Doctor extends React.Component<DoctorProps, DoctorState> {
+  constructor(props?: DoctorProps, context?: any) {
+    super(props, context);
+  }
+
   render() {
+    const doctorStore = this.props[STORE_DOCTOR] as DoctorStore;
+    const id = this.props.match.params._id;
+    const doctor = doctorStore.doctors.filter(d => d.id == id)[0];
+
     return (
       <div>
         <section className='doctor-main'>
           <div className='clearfix' />
           <div className='left-side'>
-            <img src={doctor} alt='photo' />
+            <img src={`/${doctorPhoto}`} alt='photo' />
           </div>
           <div className='right-side'>
-            <p className='name'>mgr Adam Kondrad Lewanowicz</p>
-            <p className='spec'>Psycholog, Terapeuta, Psychoterapeuta</p>
+            <p className='name'>{doctor.name}</p>
+            <p className='spec'>{doctor.specializations.join(', ')}</p>
             <div className='rating-wrapper'>
               <div className='rating'>
                 <span>☆</span>

@@ -1,9 +1,9 @@
 import { observable } from 'mobx';
 
 export class DoctorModel {
-  readonly id: number;
+  readonly id: string;
   public name: string;
-  public specialization: string;
+  public specializations: string[];
   public facilityAddress: string;
   public certificateNumber: string;
 }

@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
+import DoctorModel from '../../models/DoctorModel';
+
 import '../../styles/doctorItem.scss';
 
 interface DoctorItemProps {
-  name: string;
-  specializations: string;
-  facilityAddress: string;
   photo: any;
+  doctor: DoctorModel;
 }
 
 class DoctorItem extends React.Component<DoctorItemProps, {}> {
@@ -18,8 +18,8 @@ class DoctorItem extends React.Component<DoctorItemProps, {}> {
           <img src={this.props.photo} alt='photo' />
         </div>
         <div className='info'>
-          <Link to='/doctor' className='name'>{this.props.name}</Link>
-          <p className='spec'>{this.props.specializations}</p>
+          <Link to={`/doctor/${this.props.doctor.id}`} className='name'>{this.props.doctor.name}</Link>
+          <p className='spec'>{this.props.doctor.specializations.join(', ')}</p>
           <div className='rating-wrapper'>
             <div className='rating'>
               <span>☆</span>
@@ -29,7 +29,7 @@ class DoctorItem extends React.Component<DoctorItemProps, {}> {
               <span>★</span>
             </div>
           </div>
-          <p className='address'>{this.props.facilityAddress}</p>
+          <p className='address'>{this.props.doctor.facilityAddress}</p>
         </div>
       </section>
     );

@@ -13,7 +13,8 @@ interface DoctorsProps {
   [STORE_DOCTOR]: DoctorStore;
 }
 
-export interface DoctorsState { }
+export interface DoctorsState {
+}
 
 @inject(STORE_DOCTOR)
 @observer
@@ -30,29 +31,21 @@ class Doctors extends React.Component<DoctorsProps, DoctorsState>{
     const doctorStore = this.props[STORE_DOCTOR] as DoctorStore;
 
     let container = null;
-
     if (doctorStore.loading) {
-      container = <section className='loading-container'><p>Loading data...</p></section>
+      container = (<section className='loading-container'><p>Loading data...</p></section>);
     }
     else {
       if (doctorStore.doctors.length > 0) {
-        container = doctorStore.doctors.map((doctor) => (
-          <DoctorItem
-            key={doctor.id}
-            name={doctor.name}
-            specializations={doctor.specialization}
-            facilityAddress={doctor.facilityAddress}
-            photo={doctorPhoto} />
-        ))
+        container = (doctorStore.doctors.map((item) => (
+          <DoctorItem key={item.id} photo={doctorPhoto} doctor={item} />
+        )));
       }
       else {
-        container = <section className='main-container'><p>No data</p></section>
+        container = (<section className='main-container'><p>No data</p></section>);
       }
     }
 
-    return (
-      <div>{container}</div>
-    );
+    return <div>{container}</div>;
   }
 }
 

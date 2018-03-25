@@ -26,7 +26,6 @@ export class DoctorStore {
       );
 
       if (response.data) {
-
         let doctorModels: Array<DoctorModel> = JSON.parse(JSON.stringify(response.data));
         this.doctors = [ ...this.doctors, ...doctorModels];
       }
