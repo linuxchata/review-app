@@ -29,18 +29,29 @@ class Doctors extends React.Component<DoctorsProps, DoctorsState>{
   render() {
     const doctorStore = this.props[STORE_DOCTOR] as DoctorStore;
 
-    return (
-      <div>
-        {doctorStore.loading ? <p className='loading'>Loading</p> : null}
-        {doctorStore.doctors.length > 0 ? doctorStore.doctors.map((doctor) => (
+    let container = null;
+
+    if (doctorStore.loading) {
+      container = <section className='loading-container'><p>Loading data...</p></section>
+    }
+    else {
+      if (doctorStore.doctors.length > 0) {
+        container = doctorStore.doctors.map((doctor) => (
           <DoctorItem
             key={doctor.id}
             name={doctor.name}
             specializations={doctor.specialization}
             facilityAddress={doctor.facilityAddress}
             photo={doctorPhoto} />
-        )) : <section className='main-container'><p>No data</p></section>}
-      </div>
+        ))
+      }
+      else {
+        container = <section className='main-container'><p>No data</p></section>
+      }
+    }
+
+    return (
+      <div>{container}</div>
     );
   }
 }

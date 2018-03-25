@@ -19,12 +19,13 @@ export class DoctorStore {
   async getAll() {
     try {
       this.loading = true;
+      this.doctors = [];
+      
       const response = await axios.get(
         this.serviceName
       );
 
       if (response.data) {
-        this.doctors = [];
 
         let doctorModels: Array<DoctorModel> = JSON.parse(JSON.stringify(response.data));
         this.doctors = [ ...this.doctors, ...doctorModels];
