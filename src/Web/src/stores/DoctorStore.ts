@@ -20,13 +20,16 @@ export class DoctorStore {
       );
       console.log(response);
 
-      if (!response.data) {
-        this.doctors.push(new DoctorModel(
-          this.id++,
-          "mgr Adam Kondrad Lewanowicz",
-          "Psycholog, Terapeuta, Psychoterapeuta",
-          "ul.Grzegórzecka 67H klatka B /41(Wiślane Tarasy) I piętro"
-        ));
+      if (response.data) {
+        this.doctors = [];
+        response.data.map((doctor: any) => {
+          this.doctors.push(new DoctorModel(
+            doctor.id,
+            doctor.name,
+            doctor.specializations.join(', '),
+            doctor.facility.name
+          ));
+        });
       }
 
     } catch (error) {
