@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import * as React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Navbar from './Navbar';
-import Home from '../Home';
-import Doctors from '../doctor/Doctors';
-import Doctor from '../doctor/Doctor';
-import About from '../about/About';
-import NoMatch from '../NoMatch';
+import Navbar from "./Navbar";
+import Home from "../Home";
+import Doctors from "../doctor/Doctors";
+import Doctor from "../doctor/Doctor";
+import About from "../about/About";
+import NoMatch from "../NoMatch";
 
-class Routes extends React.Component<{}, {}>{
+class Routes extends React.Component<{}, {}> {
   render() {
     return (
       <div>
@@ -25,7 +25,7 @@ class Routes extends React.Component<{}, {}>{
           </div>
         </Router>
       </div>
-    )
+    );
   }
 }
 

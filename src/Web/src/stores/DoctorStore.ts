@@ -1,7 +1,7 @@
-import { observable, computed, action } from 'mobx';
-import axios from 'axios';
+import { observable, computed, action } from "mobx";
+import axios from "axios";
 
-import { DoctorModel } from '../models/DoctorModel';
+import { DoctorModel } from "../models/DoctorModel";
 
 export class DoctorStore {
   private serviceName: string;
@@ -12,7 +12,7 @@ export class DoctorStore {
 
   constructor(doctors: DoctorModel[]) {
     this.doctors = doctors;
-    this.serviceName = 'https://reviewappweb.azurewebsites.net/api/subject';
+    this.serviceName = "https://reviewappweb.azurewebsites.net/api/subject";
   }
 
   @action
@@ -20,16 +20,16 @@ export class DoctorStore {
     try {
       this.loading = true;
       this.doctors = [];
-      
+
       const response = await axios.get(
         this.serviceName
       );
 
       if (response.data) {
         let doctorModels: Array<DoctorModel> = JSON.parse(JSON.stringify(response.data));
-        this.doctors = [ ...this.doctors, ...doctorModels];
+        this.doctors = [...this.doctors, ...doctorModels];
       }
-      
+
       this.loading = false;
     } catch (error) {
       console.error(error);
