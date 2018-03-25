@@ -12,24 +12,6 @@ import './styles/const.scss';
 import './styles/styles.scss';
 import './styles/rating.scss';
 
-const defaultDoctors = [
-  new DoctorModel(
-    1,
-    "mgr Adam Kondrad Lewanowicz",
-    "Psycholog, Terapeuta, Psychoterapeuta",
-    "ul.Grzegórzecka 67H klatka B /41(Wiślane Tarasy) I piętro"),
-  new DoctorModel(
-    2,
-    "lek. dent. Marek Mastalerz",
-    "Stomatolog",
-    "Kurniki 4, Kraków Estetica Beauty Dent"),
-  new DoctorModel(
-    3,
-    "lek. dent. Marek Mastalerz",
-    "Stomatolog",
-    "Kurniki 4, Kraków Estetica Beauty Dent")
-];
-
 const doctorStore = createStores([]);
 
 ReactDOM.render(

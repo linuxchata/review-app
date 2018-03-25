@@ -31,6 +31,7 @@ class Doctors extends React.Component<DoctorsProps, DoctorsState>{
 
     return (
       <div>
+        {doctorStore.loading ? <p className='loading'>Loading</p> : null}
         {doctorStore.doctors.length > 0 ? doctorStore.doctors.map((doctor) => (
           <DoctorItem
             key={doctor.id}

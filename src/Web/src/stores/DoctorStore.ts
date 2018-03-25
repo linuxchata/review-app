@@ -4,36 +4,36 @@ import axios from 'axios';
 import { DoctorModel } from '../models/DoctorModel';
 
 export class DoctorStore {
+  private serviceName: string;
+
+  @observable public doctors: Array<DoctorModel>;
+
+  @observable public loading: boolean;
+
   constructor(doctors: DoctorModel[]) {
     this.doctors = doctors;
-    this.id = 0;
+    this.serviceName = 'https://reviewappweb.azurewebsites.net/api/subject';
   }
-
-  private id: number;
-  @observable public doctors: Array<DoctorModel>;
 
   @action
   async getAll() {
     try {
+      this.loading = true;
       const response = await axios.get(
-        'https://reviewappweb.azurewebsites.net/api/subject'
+        this.serviceName
       );
-      console.log(response);
 
       if (response.data) {
         this.doctors = [];
-        response.data.map((doctor: any) => {
-          this.doctors.push(new DoctorModel(
-            doctor.id,
-            doctor.name,
-            doctor.specializations.join(', '),
-            doctor.facility.name
-          ));
-        });
-      }
 
+        let doctorModels: Array<DoctorModel> = JSON.parse(JSON.stringify(response.data));
+        this.doctors = [ ...this.doctors, ...doctorModels];
+      }
+      
+      this.loading = false;
     } catch (error) {
       console.error(error);
+      this.loading = false;
     }
   }
 }
