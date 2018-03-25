@@ -11,5 +11,7 @@
         public string Street { get; set; }
 
         public string ZipCode { get; set; }
+
+        public string FormattedAddress => string.Format("{0} {1}, {2}", this.ZipCode, this.City, this.Street);
     }
 }
