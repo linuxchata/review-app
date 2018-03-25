@@ -15,3 +15,8 @@ A simple review system for different subjects (e.g. doctors, clinics)
 * MongoDB
 * Azure Service Bus
 * Application Insights
+* ReactJS / React Router
+* TypeScript
+* Mobx
+* Axios
+* Webpack
