@@ -8,7 +8,7 @@ export interface IHomeProps {
 export interface IHomeState {
 }
 
-class Home extends React.Component<IHomeProps, IHomeState>{
+class Home extends React.Component<IHomeProps, IHomeState> {
   constructor(props: IHomeProps, context: any) {
     super(props, context);
   }

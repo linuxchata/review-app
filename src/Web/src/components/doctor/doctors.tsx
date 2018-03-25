@@ -33,14 +33,12 @@ class Doctors extends React.Component<IDoctorsProps, IDoctorsState> {
     let container = null;
     if (doctorStore.loading) {
       container = (<section className="loading-container"><p>Loading data...</p></section>);
-    }
-    else {
+    } else {
       if (doctorStore.doctors.length > 0) {
         container = (doctorStore.doctors.map((item) => (
           <DoctorItem key={item.id} photo={doctorPhoto} doctor={item} />
         )));
-      }
-      else {
+      } else {
         container = (<section className="main-container"><p>No data</p></section>);
       }
     }
