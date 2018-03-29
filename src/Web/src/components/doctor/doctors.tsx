@@ -23,14 +23,14 @@ class Doctors extends React.Component<IDoctorsProps, IDoctorsState> {
     super(props, context);
   }
 
-  componentDidMount() {
+  componentDidMount(): void {
     this.props.doctorStore.getAll();
   }
 
-  render() {
-    const doctorStore = this.props[STORE_DOCTOR] as DoctorStore;
+  render(): any {
+    const doctorStore: DoctorStore = this.props[STORE_DOCTOR] as DoctorStore;
 
-    let container = null;
+    let container: any = null;
     if (doctorStore.loading) {
       container = (<section className="loading-container"><p>Loading data...</p></section>);
     } else {

@@ -11,7 +11,9 @@ interface IDoctorItemProps {
 }
 
 class DoctorItem extends React.Component<IDoctorItemProps, {}> {
-  render() {
+  render(): any {
+    const address: any = this.props.doctor.facility.address;
+    const formattedAddress: string = `${address.city}`;
     return (
       <section className="doctor-item-main">
         <div className="photo">
@@ -29,7 +31,7 @@ class DoctorItem extends React.Component<IDoctorItemProps, {}> {
               <span>★</span>
             </div>
           </div>
-          <p className="address">{this.props.doctor.facilityAddress}</p>
+          <p className="address">{formattedAddress}</p>
         </div>
       </section>
     );

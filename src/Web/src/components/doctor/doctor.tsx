@@ -3,6 +3,7 @@ import { inject, observer } from "mobx-react";
 
 import { DoctorStore } from "../../stores/DoctorStore";
 import { STORE_DOCTOR } from "../../constants/Stores";
+import DoctorModel from "../../models/DoctorModel";
 
 import "../../styles/doctor.scss";
 import * as doctorPhoto from "../../images/sample_doctor.png";
@@ -22,10 +23,10 @@ class Doctor extends React.Component<IDoctorProps, IDoctorState> {
     super(props, context);
   }
 
-  render() {
-    const doctorStore = this.props[STORE_DOCTOR] as DoctorStore;
-    const id = this.props.match.params._id;
-    const doctor = doctorStore.doctors.filter(d => d.id === id)[0];
+  render(): any {
+    const doctorStore: DoctorStore = this.props[STORE_DOCTOR] as DoctorStore;
+    const id: string = this.props.match.params._id;
+    const doctor: DoctorModel = doctorStore.doctors.filter(d => d.id === id)[0];
 
     return (
       <div>

@@ -9,7 +9,7 @@ import About from "../about/About";
 import NoMatch from "../NoMatch";
 
 class Routes extends React.Component<{}, {}> {
-  render() {
+  render(): any {
     return (
       <div>
         <Router>

@@ -21,7 +21,7 @@ export class DoctorStore {
       this.loading = true;
       this.doctors = [];
 
-      const response = await axios.get(
+      const response: any = await axios.get(
         this.serviceName
       );
 

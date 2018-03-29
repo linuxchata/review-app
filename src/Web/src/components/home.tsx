@@ -13,7 +13,7 @@ class Home extends React.Component<IHomeProps, IHomeState> {
     super(props, context);
   }
 
-  render() {
+  render(): any {
     return (
       <section className="main-container">
         <header>

@@ -12,7 +12,7 @@ import "./styles/const.scss";
 import "./styles/styles.scss";
 import "./styles/rating.scss";
 
-const doctorStore = createStores([]);
+const doctorStore: any = createStores([]);
 
 ReactDOM.render(
   <Provider {...doctorStore}>
