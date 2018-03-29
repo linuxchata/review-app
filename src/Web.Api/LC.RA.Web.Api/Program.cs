@@ -14,7 +14,7 @@ namespace LC.RA.Web.Api
         /// <summary>
         /// Entry point of the application
         /// </summary>
-        /// <param name="args"></param>
+        /// <param name="args">Command line arguments</param>
         public static void Main(string[] args)
         {
             var logger = NLog.LogManager.LoadConfiguration("nlog.config").GetCurrentClassLogger();
