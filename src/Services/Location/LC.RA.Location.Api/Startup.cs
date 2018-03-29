@@ -45,7 +45,7 @@ namespace LC.RA.Location.Api
             });
 
             var topicReceiverService = serviceProvider.GetService<ITopicReceiverService>();
-            topicReceiverService.ReceiveMessagesAsync("SynchronizationApi", new CancellationToken());
+            topicReceiverService.ReceiveMessagesAsync("LocationApi", new CancellationToken());
         }
     }
 }

@@ -49,7 +49,7 @@ namespace LC.RA.Web.Services
 
         public async Task RequestSynchronization()
         {
-            await this.topicSenderService.SendMessageAsync(BitConverter.GetBytes(true), "SynchronizationApi", "WebApi");
+            await this.topicSenderService.SendMessageAsync(BitConverter.GetBytes(true), "LocationApi", "WebApi");
         }
 
         public async void Synchronize(IEnumerable<Location> sourceLocations)
