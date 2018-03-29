@@ -1,1 +1,1 @@
-export const STORE_DOCTOR = 'doctorStore';
+export const STORE_DOCTOR = "doctorStore";

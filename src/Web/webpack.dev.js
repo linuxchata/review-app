@@ -5,6 +5,11 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
+        test: /\.tsx?$/,
+        use: 'tslint-loader',
+        exclude: /node_modules/
+      },
+      {
         test: /\.((s*)css)$/,
         use: [
           {

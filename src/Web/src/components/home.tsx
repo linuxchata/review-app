@@ -1,27 +1,27 @@
-import * as React from 'react';
+import * as React from "react";
 
-import '../styles/home.scss';
+import "../styles/home.scss";
 
-export interface HomeProps {
+export interface IHomeProps {
 }
 
-export interface HomeState {
+export interface IHomeState {
 }
 
-class Home extends React.Component<HomeProps, HomeState>{
-  constructor(props: HomeProps, context: any) {
+class Home extends React.Component<IHomeProps, IHomeState> {
+  constructor(props: IHomeProps, context: any) {
     super(props, context);
   }
 
   render() {
     return (
-      <section className='main-container'>
+      <section className="main-container">
         <header>
           <h2>Welcome!</h2>
         </header>
         <p>Review Application</p>
       </section>
-    )
+    );
   }
 }
 

@@ -1,17 +1,11 @@
 import { observable } from 'mobx';
 
 export class DoctorModel {
-  readonly id: number;
-  @observable public name: string;
-  @observable public specialization: string;
-  @observable public facilityAddress: string;
-
-  constructor(name: string, specialization: string, facilityAddress: string) {
-    this.id = 1;
-    this.name = name;
-    this.specialization = specialization;
-    this.facilityAddress = facilityAddress;
-  }
+  readonly id: string;
+  public name: string;
+  public specializations: string[];
+  public facilityAddress: string;
+  public certificateNumber: string;
 }
 
 export default DoctorModel;
