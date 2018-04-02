@@ -6,7 +6,7 @@
     <ProjectGuid>499c5f71-966a-434b-8eef-e0f7517df582</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>http://{ServiceIPAddress}</DockerServiceUrl>
-    <DockerServiceName>lc.ra.web.api</DockerServiceName>
+    <DockerServiceName>reviewapp</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">
