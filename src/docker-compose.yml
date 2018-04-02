@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  lc.ra.web.api:
+    image: reviewapp-webapi
+    build:
+      context: .
+      dockerfile: Web.Api\LC.RA.Web.Api\Dockerfile
+
+  lc.ra.location.api:
+    image: reviewapp-locationapi
+    build:
+      context: .
+      dockerfile: Services\Location\LC.RA.Location.Api\Dockerfile

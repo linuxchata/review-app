@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <ApplicationInsightsResourceId>/subscriptions/992990ef-e1fb-4ed0-974a-07fa16ccd32f/resourcegroups/Default-ApplicationInsights-EastUS/providers/microsoft.insights/components/ReviewApp</ApplicationInsightsResourceId>
     <ApplicationInsightsAnnotationResourceId>/subscriptions/992990ef-e1fb-4ed0-974a-07fa16ccd32f/resourceGroups/Default-ApplicationInsights-EastUS/providers/microsoft.insights/components/ReviewApp</ApplicationInsightsAnnotationResourceId>
+    <DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

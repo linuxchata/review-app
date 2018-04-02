@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  lc.ra.web.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+  lc.ra.location.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "81"
+networks:
+  default:
+    external:
+      name: nat
