@@ -24,6 +24,7 @@ A simple review system for different subjects (e.g. doctors, clinics)
 ## Docker
 Public repository:
 https://hub.docker.com/r/linuxchata
+https://cloud.docker.com/swarm/linuxchata/repository/list
 
 Pull image:
 `docker pull linuxchata/reviewapp-webapi:1.0.0`
