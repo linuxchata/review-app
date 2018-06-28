@@ -5,7 +5,6 @@ EXPOSE 80
 FROM microsoft/aspnetcore-build:2.0-nanoserver-sac2016 AS build
 WORKDIR /src
 COPY . .
-COPY /src/Web.Api/LC.RA.Web.sln ./
 #COPY Web.Api/LC.RA.Web.Api/LC.RA.Web.Api.csproj Web.Api/LC.RA.Web.Api/
 #COPY Shared/LC.ServiceBusAdapter.Abstractions/LC.ServiceBusAdapter.Abstractions.csproj Shared/LC.ServiceBusAdapter.Abstractions/
 #COPY Web.Api/LC.RA.Web.Core/LC.RA.Web.Core.csproj Web.Api/LC.RA.Web.Core/
