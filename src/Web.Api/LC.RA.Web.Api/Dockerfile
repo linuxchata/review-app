@@ -14,7 +14,7 @@ COPY . .
 #COPY Web.Api/LC.RA.Web.DataAccess/LC.RA.Web.DataAccess.csproj Web.Api/LC.RA.Web.DataAccess/
 #COPY Shared/LC.ServiceBusAdapter/LC.ServiceBusAdapter.csproj Shared/LC.ServiceBusAdapter/
 #COPY . .
-WORKDIR /src/Web.Api
+WORKDIR /src/Web.Api/LC.RA.Web.Api
 RUN dotnet restore -nowarn:msb3202,nu1503
 RUN dotnet build --no-restore -c Release -o /app
 
