@@ -86,6 +86,7 @@ namespace LC.RA.Web.Api
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Review application API V1");
+                c.RoutePrefix = "swagger/ui";
             });
 
             app.UseCors(builder => builder
