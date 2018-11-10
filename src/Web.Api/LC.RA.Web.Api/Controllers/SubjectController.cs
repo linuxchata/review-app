@@ -32,8 +32,8 @@ namespace LC.RA.Web.Api.Controllers
         /// <returns>List of all subjects</returns>
         /// <response code="204">No subjects were found</response>
         [HttpGet]
-        [ProducesResponseType(typeof(List<Subject>), 200)]
-        [ProducesResponseType(204)]
+        [ProducesResponseType(typeof(List<Subject>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
         public async Task<IActionResult> GetAll()
         {
             var result = await this.subjectService.GetAllAsync();
@@ -52,9 +52,9 @@ namespace LC.RA.Web.Api.Controllers
         /// <param name="id">The identifier of subject</param>
         /// <returns>Subject for given id</returns>
         [HttpGet("{id}", Name = "GetSubject")]
-        [ProducesResponseType(typeof(Subject), 200)]
-        [ProducesResponseType(400)]
-        [ProducesResponseType(404)]
+        [ProducesResponseType(typeof(Subject), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Get(string id)
         {
             if (string.IsNullOrEmpty(id))
@@ -79,9 +79,9 @@ namespace LC.RA.Web.Api.Controllers
         /// <response code="400">Subject is null or invalid</response>
         /// <response code="209">Subject with the same name has already been created</response>
         [HttpPost]
-        [ProducesResponseType(400)]
-        [ProducesResponseType(409)]
-        [ProducesResponseType(201)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status409Conflict)]
+        [ProducesResponseType(StatusCodes.Status201Created)]
         public async Task<IActionResult> Create([FromBody]Doctor subject)
         {
             if (subject == null || !ModelState.IsValid)
@@ -109,9 +109,9 @@ namespace LC.RA.Web.Api.Controllers
         /// <response code="400">Identifier is null or empty</response>
         /// <response code="404">No subject was found</response>
         [HttpPut("{id}")]
-        [ProducesResponseType(400)]
-        [ProducesResponseType(404)]
-        [ProducesResponseType(204)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
         public async Task<IActionResult> Update(string id, [FromBody]Doctor subject)
         {
             if (subject == null || subject.Id != id || !ModelState.IsValid)
@@ -138,9 +138,9 @@ namespace LC.RA.Web.Api.Controllers
         /// <response code="400">Identifier is null or empty</response>
         /// <response code="404">No subject was found</response>
         [HttpDelete("{id}")]
-        [ProducesResponseType(400)]
-        [ProducesResponseType(404)]
-        [ProducesResponseType(204)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
         public async Task<IActionResult> Delete(string id)
         {
             if (string.IsNullOrEmpty(id))

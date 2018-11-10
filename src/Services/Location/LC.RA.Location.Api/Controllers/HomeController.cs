@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace LC.RA.Location.Api.Controllers
 {
@@ -12,6 +13,7 @@ namespace LC.RA.Location.Api.Controllers
         /// </summary>
         /// <returns>200 status code</returns>
         [HttpGet]
+        [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
         public IActionResult Index()
         {
             return this.Ok("Location service is up and running");

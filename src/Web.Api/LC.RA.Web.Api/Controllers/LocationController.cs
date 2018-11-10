@@ -3,6 +3,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using LC.RA.Web.Core.Domain;
 using LC.RA.Web.Services.Contracts;
+
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LC.RA.Web.Api.Controllers
@@ -31,8 +33,8 @@ namespace LC.RA.Web.Api.Controllers
         /// <returns>List of all locations</returns>
         /// <response code="204">No locations were found</response>
         [HttpGet]
-        [ProducesResponseType(typeof(List<Location>), 200)]
-        [ProducesResponseType(204)]
+        [ProducesResponseType(typeof(List<Location>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
         public async Task<IActionResult> GetAll()
         {
             var result = await this.locationService.GetAllAsync();
@@ -53,9 +55,9 @@ namespace LC.RA.Web.Api.Controllers
         /// <response code="400">Search criteria is null or empty</response>
         /// <response code="404">No locations were found</response>
         [HttpGet("{searchCriteria}")]
-        [ProducesResponseType(typeof(List<Location>), 200)]
-        [ProducesResponseType(400)]
-        [ProducesResponseType(404)]
+        [ProducesResponseType(typeof(List<Location>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetBySearchCriteria(string searchCriteria)
         {
             if (string.IsNullOrEmpty(searchCriteria))

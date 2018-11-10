@@ -1,5 +1,7 @@
 ﻿using System.Threading.Tasks;
 using LC.RA.Web.Services.Contracts;
+
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LC.RA.Web.Api.Controllers
@@ -27,7 +29,7 @@ namespace LC.RA.Web.Api.Controllers
         /// </summary>
         /// <returns>200 status code</returns>
         [HttpGet]
-        [ProducesResponseType(200)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<IActionResult> SyncLocations()
         {
             await this.locationService.RequestSynchronization();

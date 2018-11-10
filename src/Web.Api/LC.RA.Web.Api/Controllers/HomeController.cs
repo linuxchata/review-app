@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace LC.RA.Web.Api.Controllers
 {
@@ -13,7 +14,7 @@ namespace LC.RA.Web.Api.Controllers
         /// </summary>
         /// <returns>200 status code</returns>
         [HttpGet]
-        [ProducesResponseType(typeof(string), 200)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
         public IActionResult Index()
         {
             return this.Ok("Web is up and running");
