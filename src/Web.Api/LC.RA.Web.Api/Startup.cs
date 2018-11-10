@@ -6,6 +6,7 @@ using LC.RA.Web.Core.Application;
 using LC.ServiceBusAdapter.Abstractions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
@@ -36,7 +37,7 @@ namespace LC.RA.Web.Api
         {
             services.AddCors();
 
-            services.AddMvc();
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.Configure<ApplicationSettings>(this.configuration.GetSection("Settings"));
 

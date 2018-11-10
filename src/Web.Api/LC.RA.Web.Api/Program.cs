@@ -21,30 +21,29 @@ namespace LC.RA.Web.Api
 
             try
             {
-                logger.Info("Building web host for WebApi");
+                logger.Info("Building web host for LC.RA.Web.Api");
 
-                BuildWebHost(args).Run();
+                CreateWebHostBuilder(args).Build().Run();
 
-                logger.Info("Web host for WebApi has been built");
+                logger.Info("Web host for LC.RA.Web.Api has been built");
             }
             catch (Exception e)
             {
-                logger.Error(e, "WebApi application initialization exception");
+                logger.Error(e, "LC.RA.Web.Api application initialization exception");
                 throw;
             }
         }
 
         /// <summary>
-        /// Build web host
+        /// Create web host builder
         /// </summary>
         /// <param name="args">Command line arguments</param>
-        /// <returns>Created web host</returns>
-        public static IWebHost BuildWebHost(string[] args) =>
+        /// <returns>Created web host builder</returns>
+        private static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseApplicationInsights()
                 .ConfigureServices(s => s.AddAutofac())
                 .UseNLog()
-                .UseStartup<Startup>()
-                .Build();
+                .UseStartup<Startup>();
     }
 }

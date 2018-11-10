@@ -21,30 +21,29 @@ namespace LC.RA.Location.Api
 
             try
             {
-                logger.Info("Building web host for LocationService");
+                logger.Info("Building web host for LC.RA.Location.Api");
 
-                BuildWebHost(args).Run();
+                CreateWebHostBuilder(args).Build().Run();
 
-                logger.Info("Web host for LocationService has been built");
+                logger.Info("Web host for LC.RA.Location.Api has been built");
             }
             catch (Exception e)
             {
-                logger.Error(e, "LocationService application initialization exception");
+                logger.Error(e, "LC.RA.Location.Api application initialization exception");
                 throw;
             }
         }
 
         /// <summary>
-        /// Build web host
+        /// Create web host builder
         /// </summary>
         /// <param name="args">Command line arguments</param>
-        /// <returns>Created web host</returns>
-        public static IWebHost BuildWebHost(string[] args) =>
+        /// <returns>Created web host builder</returns>
+        private static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseApplicationInsights()
                 .ConfigureServices(s => s.AddAutofac())
                 .UseNLog()
-                .UseStartup<Startup>()
-                .Build();
+                .UseStartup<Startup>();
     }
 }
