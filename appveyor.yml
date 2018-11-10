@@ -8,8 +8,7 @@ build:
 before_build:
   - dotnet restore src/
 install:
-  # Download .NET Core 2.0 2 SDK and add to PATH
-  - ps: $urlCurrent = "https://download.visualstudio.microsoft.com/download/pr/45f93081-cdb4-41c1-8d8d-e6c3bbf2872b/62d6a598956fdfe585acb1f15268d930/dotnet-sdk-2.1.403-win-x64.exe"
+  - ps: $urlCurrent = "https://download.visualstudio.microsoft.com/download/pr/28820b2a-0aec-4c24-a271-a14bcb3e2686/5e0ad8ae32f1497e8d0cace2447b9e01/dotnet-sdk-2.1.403-win-x64.zip"
   - ps: $env:DOTNET_INSTALL_DIR = "$pwd\.dotnetsdk"
   - ps: mkdir $env:DOTNET_INSTALL_DIR -Force | Out-Null
   - ps: $tempFileCurrent = [System.IO.Path]::GetTempFileName()
