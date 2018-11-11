@@ -4,7 +4,7 @@ environment:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
 build:
   parallel: true
-  project: src/LC.RA.All.sln
+  project: src/ReviewApp.All.sln
 before_build:
   - dotnet restore src/
 install:
