@@ -24,15 +24,15 @@ namespace ReviewApp.Location.Api
 
             try
             {
-                logger.Info("Building web host for LC.RA.Location.Api");
+                logger.Info("Building web host for ReviewApp.Location.Api");
 
                 CreateWebHostBuilder(args).Build().Run();
 
-                logger.Info("Web host for LC.RA.Location.Api has been built");
+                logger.Info("Web host for ReviewApp.Location.Api has been built");
             }
             catch (Exception e)
             {
-                logger.Error(e, "LC.RA.Location.Api application initialization exception");
+                logger.Error(e, "ReviewApp.Location.Api application initialization exception");
                 throw;
             }
         }

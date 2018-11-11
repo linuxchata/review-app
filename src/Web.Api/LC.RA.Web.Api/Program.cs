@@ -24,15 +24,15 @@ namespace ReviewApp.Web.Api
 
             try
             {
-                logger.Info("Building web host for LC.RA.Web.Api");
+                logger.Info("Building web host for ReviewApp.Web.Api");
 
                 CreateWebHostBuilder(args).Build().Run();
 
-                logger.Info("Web host for LC.RA.Web.Api has been built");
+                logger.Info("Web host for ReviewApp.Web.Api has been built");
             }
             catch (Exception e)
             {
-                logger.Error(e, "LC.RA.Web.Api application initialization exception");
+                logger.Error(e, "ReviewApp.Web.Api application initialization exception");
                 throw;
             }
         }
