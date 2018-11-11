@@ -20,14 +20,3 @@ A simple review system for different subjects (e.g. doctors, clinics)
 * Mobx
 * Axios
 * Webpack
-
-## Docker
-Public repository:
-https://hub.docker.com/r/linuxchata
-https://cloud.docker.com/swarm/linuxchata/repository/list
-
-Pull image:
-`docker pull linuxchata/reviewapp-webapi:1.0.0`
-
-Run image:
-`docker run -p 5000:80 linuxchata/reviewapp-webapi:1.0.0`
