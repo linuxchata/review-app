@@ -5,12 +5,12 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "80"
+      - "5000"
   lc.ra.location.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "81"
+      - "5001"
 networks:
   default:
     external:
