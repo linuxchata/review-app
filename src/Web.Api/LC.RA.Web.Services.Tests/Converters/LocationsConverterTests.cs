@@ -3,12 +3,11 @@ using System.Linq;
 
 using Google.Protobuf;
 
-using LC.RA.TransferObjects;
-
 using Microsoft.Extensions.Logging;
 
 using Moq;
 
+using ReviewApp.TransferObjects;
 using ReviewApp.Web.Services.Converters;
 
 using Xunit;

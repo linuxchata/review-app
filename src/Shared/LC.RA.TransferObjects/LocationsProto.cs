@@ -10,7 +10,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 
-namespace LC.RA.TransferObjects
+namespace ReviewApp.TransferObjects
 {
     /// <summary>Holder for reflection information generated from LocationsProto.proto</summary>
     public static partial class LocationsProtoReflection
@@ -35,8 +35,8 @@ namespace LC.RA.TransferObjects
             descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
                 new pbr::FileDescriptor[] { },
                 new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::LC.RA.TransferObjects.LocationProto), global::LC.RA.TransferObjects.LocationProto.Parser, new[]{ "Name", "Region", "Gpslocation" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::LC.RA.TransferObjects.LocationsProto), global::LC.RA.TransferObjects.LocationsProto.Parser, new[]{ "Locations" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::ReviewApp.TransferObjects.LocationProto), global::ReviewApp.TransferObjects.LocationProto.Parser, new[]{ "Name", "Region", "Gpslocation" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ReviewApp.TransferObjects.LocationsProto), global::ReviewApp.TransferObjects.LocationsProto.Parser, new[]{ "Locations" }, null, null, null)
                 }));
         }
         #endregion
@@ -54,7 +54,7 @@ namespace LC.RA.TransferObjects
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor
         {
-            get { return global::LC.RA.TransferObjects.LocationsProtoReflection.Descriptor.MessageTypes[0]; }
+            get { return global::ReviewApp.TransferObjects.LocationsProtoReflection.Descriptor.MessageTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -278,7 +278,7 @@ namespace LC.RA.TransferObjects
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor
         {
-            get { return global::LC.RA.TransferObjects.LocationsProtoReflection.Descriptor.MessageTypes[1]; }
+            get { return global::ReviewApp.TransferObjects.LocationsProtoReflection.Descriptor.MessageTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -310,11 +310,11 @@ namespace LC.RA.TransferObjects
 
         /// <summary>Field number for the "locations" field.</summary>
         public const int LocationsFieldNumber = 1;
-        private static readonly pb::FieldCodec<global::LC.RA.TransferObjects.LocationProto> _repeated_locations_codec
-            = pb::FieldCodec.ForMessage(10, global::LC.RA.TransferObjects.LocationProto.Parser);
-        private readonly pbc::RepeatedField<global::LC.RA.TransferObjects.LocationProto> locations_ = new pbc::RepeatedField<global::LC.RA.TransferObjects.LocationProto>();
+        private static readonly pb::FieldCodec<global::ReviewApp.TransferObjects.LocationProto> _repeated_locations_codec
+            = pb::FieldCodec.ForMessage(10, global::ReviewApp.TransferObjects.LocationProto.Parser);
+        private readonly pbc::RepeatedField<global::ReviewApp.TransferObjects.LocationProto> locations_ = new pbc::RepeatedField<global::ReviewApp.TransferObjects.LocationProto>();
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pbc::RepeatedField<global::LC.RA.TransferObjects.LocationProto> Locations
+        public pbc::RepeatedField<global::ReviewApp.TransferObjects.LocationProto> Locations
         {
             get { return locations_; }
         }

@@ -1,8 +1,10 @@
 using System.Collections.Generic;
-using LC.RA.Utilities.Extensions;
+
+using ReviewApp.Utilities.Extensions;
+
 using Xunit;
 
-namespace LC.RA.Utilities.Tests.Extensions
+namespace ReviewApp.Utilities.Tests.Extensions
 {
     public class FormatterExtensionTests
     {

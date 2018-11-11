@@ -4,14 +4,13 @@ using System.Threading;
 
 using Autofac;
 
-using LC.ServiceBusAdapter.Abstractions;
-
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
+using ReviewApp.ServiceBusAdapter.Abstractions;
 using ReviewApp.Web.Core.Application;
 
 using Swashbuckle.AspNetCore.Swagger;

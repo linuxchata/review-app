@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-using LC.ServiceBusAdapter.Abstractions;
-
+using ReviewApp.ServiceBusAdapter.Abstractions;
 using ReviewApp.Web.Core.Domain;
 using ReviewApp.Web.DataAccess.Contracts;
 using ReviewApp.Web.Services.Contracts;

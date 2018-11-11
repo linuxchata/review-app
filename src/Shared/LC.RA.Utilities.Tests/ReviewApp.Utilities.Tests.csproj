@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LC.RA.Utilities\LC.RA.Utilities.csproj" />
+    <ProjectReference Include="..\LC.RA.Utilities\ReviewApp.Utilities.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,7 +2,8 @@
 using System.IO;
 using System.Linq;
 using Google.Protobuf;
-using LC.RA.TransferObjects;
+
+using ReviewApp.TransferObjects;
 
 namespace LC.RA.Location.Infrastructure.Converters
 {

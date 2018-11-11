@@ -1,9 +1,8 @@
 ﻿using System.Threading.Tasks;
 
-using LC.ServiceBusAdapter.Abstractions;
-
 using Microsoft.Extensions.Logging;
 
+using ReviewApp.ServiceBusAdapter.Abstractions;
 using ReviewApp.Web.Services.Contracts;
 
 namespace ReviewApp.Web.Services

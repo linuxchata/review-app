@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace LC.RA.Utilities.Extensions
+namespace ReviewApp.Utilities.Extensions
 {
     public static class FormatterExtension
     {

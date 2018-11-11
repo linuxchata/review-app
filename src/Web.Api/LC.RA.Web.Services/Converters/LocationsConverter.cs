@@ -4,10 +4,9 @@ using System.IO;
 
 using AutoMapper;
 
-using LC.RA.TransferObjects;
-
 using Microsoft.Extensions.Logging;
 
+using ReviewApp.TransferObjects;
 using ReviewApp.Web.Services.Contracts;
 
 using Location = ReviewApp.Web.Core.Domain.Location;

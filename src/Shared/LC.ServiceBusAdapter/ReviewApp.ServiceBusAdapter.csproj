@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LC.ServiceBusAdapter.Abstractions\LC.ServiceBusAdapter.Abstractions.csproj" />
+    <ProjectReference Include="..\LC.ServiceBusAdapter.Abstractions\ReviewApp.ServiceBusAdapter.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

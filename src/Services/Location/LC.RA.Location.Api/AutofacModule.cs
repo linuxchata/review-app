@@ -2,8 +2,10 @@
 using LC.RA.Location.Core.Application;
 using LC.RA.Location.Infrastructure.Converters;
 using LC.RA.Location.Infrastructure.Services;
-using LC.ServiceBusAdapter;
+
 using Microsoft.Extensions.Configuration;
+
+using ReviewApp.ServiceBusAdapter;
 
 namespace LC.RA.Location.Api
 {

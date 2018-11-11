@@ -1,9 +1,8 @@
 ﻿using Autofac;
 
-using LC.ServiceBusAdapter;
-
 using Microsoft.Extensions.Configuration;
 
+using ReviewApp.ServiceBusAdapter;
 using ReviewApp.Web.Core.Application;
 using ReviewApp.Web.DataAccess;
 using ReviewApp.Web.DataAccess.Converters;

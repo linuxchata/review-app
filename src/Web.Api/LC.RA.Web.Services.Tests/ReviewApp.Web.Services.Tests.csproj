@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\LC.RA.TransferObjects\LC.RA.TransferObjects.csproj" />
+    <ProjectReference Include="..\..\Shared\LC.RA.TransferObjects\ReviewApp.TransferObjects.csproj" />
     <ProjectReference Include="..\LC.RA.Web.Core\ReviewApp.Web.Core.csproj" />
     <ProjectReference Include="..\LC.RA.Web.Services\ReviewApp.Web.Services.csproj" />
   </ItemGroup>

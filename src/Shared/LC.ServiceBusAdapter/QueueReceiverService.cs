@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-using LC.ServiceBusAdapter.Abstractions;
+
 using Microsoft.Azure.ServiceBus;
 using Microsoft.Extensions.Logging;
 
-namespace LC.ServiceBusAdapter
+using ReviewApp.ServiceBusAdapter.Abstractions;
+
+namespace ReviewApp.ServiceBusAdapter
 {
     public sealed class QueueReceiverService : IQueueReceiverService
     {

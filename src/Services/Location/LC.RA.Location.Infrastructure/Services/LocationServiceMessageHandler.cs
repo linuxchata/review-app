@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using LC.RA.Location.Infrastructure.Converters;
-using LC.ServiceBusAdapter.Abstractions;
+
 using Microsoft.Extensions.Logging;
+
+using ReviewApp.ServiceBusAdapter.Abstractions;
 
 namespace LC.RA.Location.Infrastructure.Services
 {

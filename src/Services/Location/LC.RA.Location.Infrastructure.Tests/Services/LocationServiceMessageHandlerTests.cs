@@ -1,9 +1,12 @@
 ﻿using System;
 using LC.RA.Location.Infrastructure.Converters;
 using LC.RA.Location.Infrastructure.Services;
-using LC.ServiceBusAdapter.Abstractions;
+
 using Microsoft.Extensions.Logging;
 using Moq;
+
+using ReviewApp.ServiceBusAdapter.Abstractions;
+
 using Xunit;
 
 namespace LC.RA.Location.Infrastructure.Tests.Services

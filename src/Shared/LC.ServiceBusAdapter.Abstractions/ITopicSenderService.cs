@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace LC.ServiceBusAdapter.Abstractions
+namespace ReviewApp.ServiceBusAdapter.Abstractions
 {
     public interface ITopicSenderService
     {
