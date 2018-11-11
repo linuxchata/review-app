@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
@@ -11,15 +11,15 @@
     <PackageReference Include="Moq" Version="4.10.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\Shared\LC.RA.TransferObjects\ReviewApp.TransferObjects.csproj" />
-    <ProjectReference Include="..\LC.RA.Web.Core\ReviewApp.Web.Core.csproj" />
-    <ProjectReference Include="..\LC.RA.Web.Services\ReviewApp.Web.Services.csproj" />
+    <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ReviewApp.Location.Core\ReviewApp.Location.Core.csproj" />
+  </ItemGroup>
+
 </Project>

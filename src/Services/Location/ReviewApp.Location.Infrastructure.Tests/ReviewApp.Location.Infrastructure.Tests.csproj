@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
@@ -15,8 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LC.RA.Location.Core\ReviewApp.Location.Core.csproj" />
-    <ProjectReference Include="..\LC.RA.Location.Infrastructure\ReviewApp.Location.Infrastructure.csproj" />
+    <ProjectReference Include="..\ReviewApp.Location.Core\ReviewApp.Location.Core.csproj" />
+    <ProjectReference Include="..\ReviewApp.Location.Infrastructure\ReviewApp.Location.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

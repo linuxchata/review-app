@@ -9,45 +9,45 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{5F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Location", "Location", "{E83DB7CB-7FE1-4FA1-8A4D-3BAC2FED1066}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Web.Api", "Web.Api\LC.RA.Web.Api\ReviewApp.Web.Api.csproj", "{76545FCD-7BC8-4E84-8F98-533793133AD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Web.Api", "Web.Api\ReviewApp.Web.Api\ReviewApp.Web.Api.csproj", "{76545FCD-7BC8-4E84-8F98-533793133AD1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Web.Core", "Web.Api\LC.RA.Web.Core\ReviewApp.Web.Core.csproj", "{9381C0E8-9901-46AA-A072-C82F14CF226B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Web.Core", "Web.Api\ReviewApp.Web.Core\ReviewApp.Web.Core.csproj", "{9381C0E8-9901-46AA-A072-C82F14CF226B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Web.Core.Tests", "Web.Api\LC.RA.Web.Core.Tests\ReviewApp.Web.Core.Tests.csproj", "{F16522BC-6068-4F86-8C14-7C43FF882849}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Web.Core.Tests", "Web.Api\ReviewApp.Web.Core.Tests\ReviewApp.Web.Core.Tests.csproj", "{F16522BC-6068-4F86-8C14-7C43FF882849}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Web.DataAccess", "Web.Api\LC.RA.Web.DataAccess\ReviewApp.Web.DataAccess.csproj", "{AE7E299B-BA6F-46D3-AC1B-13F1B930DCB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Web.DataAccess", "Web.Api\ReviewApp.Web.DataAccess\ReviewApp.Web.DataAccess.csproj", "{AE7E299B-BA6F-46D3-AC1B-13F1B930DCB0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Web.DataAccess.Tests", "Web.Api\LC.RA.Web.DataAccess.Tests\ReviewApp.Web.DataAccess.Tests.csproj", "{9642E7B5-CE9D-4CCA-A3FC-0F8605E5131C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Web.DataAccess.Tests", "Web.Api\ReviewApp.Web.DataAccess.Tests\ReviewApp.Web.DataAccess.Tests.csproj", "{9642E7B5-CE9D-4CCA-A3FC-0F8605E5131C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Web.Services", "Web.Api\LC.RA.Web.Services\ReviewApp.Web.Services.csproj", "{8AF6AC25-BEE0-4CE0-91BC-5D9CF23613CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Web.Services", "Web.Api\ReviewApp.Web.Services\ReviewApp.Web.Services.csproj", "{8AF6AC25-BEE0-4CE0-91BC-5D9CF23613CF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Web.Services.Tests", "Web.Api\LC.RA.Web.Services.Tests\ReviewApp.Web.Services.Tests.csproj", "{47AEB63C-9F64-45A6-AF98-608941B52A0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Web.Services.Tests", "Web.Api\ReviewApp.Web.Services.Tests\ReviewApp.Web.Services.Tests.csproj", "{47AEB63C-9F64-45A6-AF98-608941B52A0F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Web.Api.Tests", "Web.Api\LC.RA.Web.Api.Tests\ReviewApp.Web.Api.Tests.csproj", "{1E6FC6B5-A695-43D3-9F62-11715D246A6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Web.Api.Tests", "Web.Api\ReviewApp.Web.Api.Tests\ReviewApp.Web.Api.Tests.csproj", "{1E6FC6B5-A695-43D3-9F62-11715D246A6F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{97AB56D5-8FA3-457C-BEA4-E62D5084C162}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.ServiceBusAdapter", "Shared\LC.ServiceBusAdapter\ReviewApp.ServiceBusAdapter.csproj", "{C09EB89F-B42F-42D7-BA67-D32B025958D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.ServiceBusAdapter", "Shared\ReviewApp.ServiceBusAdapter\ReviewApp.ServiceBusAdapter.csproj", "{C09EB89F-B42F-42D7-BA67-D32B025958D5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.ServiceBusAdapter.Abstractions", "Shared\LC.ServiceBusAdapter.Abstractions\ReviewApp.ServiceBusAdapter.Abstractions.csproj", "{138007AC-F5BB-4F5E-8280-3C9F33E571A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.ServiceBusAdapter.Abstractions", "Shared\ReviewApp.ServiceBusAdapter.Abstractions\ReviewApp.ServiceBusAdapter.Abstractions.csproj", "{138007AC-F5BB-4F5E-8280-3C9F33E571A0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Utilities", "Shared\LC.RA.Utilities\ReviewApp.Utilities.csproj", "{A6ADED7D-0EDA-40A7-BCF9-DE652FA940FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Utilities", "Shared\ReviewApp.Utilities\ReviewApp.Utilities.csproj", "{A6ADED7D-0EDA-40A7-BCF9-DE652FA940FD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.TransferObjects", "Shared\LC.RA.TransferObjects\ReviewApp.TransferObjects.csproj", "{A6991BE8-55F9-4104-B37C-D5EEAE501871}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.TransferObjects", "Shared\ReviewApp.TransferObjects\ReviewApp.TransferObjects.csproj", "{A6991BE8-55F9-4104-B37C-D5EEAE501871}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Utilities.Tests", "Shared\LC.RA.Utilities.Tests\ReviewApp.Utilities.Tests.csproj", "{A1C22D97-1F4A-46B0-B18D-8F5EF8639318}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Utilities.Tests", "Shared\ReviewApp.Utilities.Tests\ReviewApp.Utilities.Tests.csproj", "{A1C22D97-1F4A-46B0-B18D-8F5EF8639318}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Location.Api", "Services\Location\LC.RA.Location.Api\ReviewApp.Location.Api.csproj", "{9ADCF7E2-34F4-41AD-8D9D-DD37400510EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Location.Api", "Services\Location\ReviewApp.Location.Api\ReviewApp.Location.Api.csproj", "{9ADCF7E2-34F4-41AD-8D9D-DD37400510EC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Location.Api.Tests", "Services\Location\LC.RA.Location.Api.Tests\ReviewApp.Location.Api.Tests.csproj", "{B9DD0CFD-06E1-4CBF-A498-542C33116DBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Location.Api.Tests", "Services\Location\ReviewApp.Location.Api.Tests\ReviewApp.Location.Api.Tests.csproj", "{B9DD0CFD-06E1-4CBF-A498-542C33116DBB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Location.Core", "Services\Location\LC.RA.Location.Core\ReviewApp.Location.Core.csproj", "{F47353A8-2B42-4EDB-A3DC-A55E912D2F21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Location.Core", "Services\Location\ReviewApp.Location.Core\ReviewApp.Location.Core.csproj", "{F47353A8-2B42-4EDB-A3DC-A55E912D2F21}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Location.Core.Tests", "Services\Location\LC.RA.Location.Core.Tests\ReviewApp.Location.Core.Tests.csproj", "{5F0D3CDB-21AB-4734-B92A-E07803C555C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Location.Core.Tests", "Services\Location\ReviewApp.Location.Core.Tests\ReviewApp.Location.Core.Tests.csproj", "{5F0D3CDB-21AB-4734-B92A-E07803C555C3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Location.Infrastructure", "Services\Location\LC.RA.Location.Infrastructure\ReviewApp.Location.Infrastructure.csproj", "{A8693257-5605-4126-888C-B252D11B15C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Location.Infrastructure", "Services\Location\ReviewApp.Location.Infrastructure\ReviewApp.Location.Infrastructure.csproj", "{A8693257-5605-4126-888C-B252D11B15C6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Location.Infrastructure.Tests", "Services\Location\LC.RA.Location.Infrastructure.Tests\ReviewApp.Location.Infrastructure.Tests.csproj", "{2696E96C-85D1-442C-B38E-2B59C0909EA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Location.Infrastructure.Tests", "Services\Location\ReviewApp.Location.Infrastructure.Tests\ReviewApp.Location.Infrastructure.Tests.csproj", "{2696E96C-85D1-442C-B38E-2B59C0909EA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
