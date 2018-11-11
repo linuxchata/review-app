@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using LC.RA.Location.Core.Application.Wikipedia;
-using LC.RA.Location.Infrastructure.Extensions;
+
 using Microsoft.Extensions.Logging;
 
-namespace LC.RA.Location.Infrastructure.Services
+using ReviewApp.Location.Core.Application.Wikipedia;
+using ReviewApp.Location.Infrastructure.Extensions;
+
+namespace ReviewApp.Location.Infrastructure.Services
 {
     public sealed class LocationService : ILocationService
     {

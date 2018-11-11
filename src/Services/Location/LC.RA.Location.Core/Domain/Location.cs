@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace LC.RA.Location.Core.Domain
+namespace ReviewApp.Location.Core.Domain
 {
     [DebuggerDisplay("{Name} {Region}")]
     [Serializable]

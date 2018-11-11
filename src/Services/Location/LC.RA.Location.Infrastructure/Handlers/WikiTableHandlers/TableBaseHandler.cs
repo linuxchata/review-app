@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
-using LC.RA.Location.Core.Application.Wikipedia;
 
-namespace LC.RA.Location.Infrastructure.Handlers.WikiTableHandlers
+using ReviewApp.Location.Core.Application.Wikipedia;
+
+namespace ReviewApp.Location.Infrastructure.Handlers.WikiTableHandlers
 {
     public abstract class TableBaseHandler
     {

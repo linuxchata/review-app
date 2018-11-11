@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace LC.RA.Location.Infrastructure.Extensions
+namespace ReviewApp.Location.Infrastructure.Extensions
 {
     public static class RegexExtension
     {

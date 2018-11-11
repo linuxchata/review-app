@@ -1,15 +1,16 @@
 ﻿using System;
-using LC.RA.Location.Infrastructure.Converters;
-using LC.RA.Location.Infrastructure.Services;
 
 using Microsoft.Extensions.Logging;
+
 using Moq;
 
+using ReviewApp.Location.Infrastructure.Converters;
+using ReviewApp.Location.Infrastructure.Services;
 using ReviewApp.ServiceBusAdapter.Abstractions;
 
 using Xunit;
 
-namespace LC.RA.Location.Infrastructure.Tests.Services
+namespace ReviewApp.Location.Infrastructure.Tests.Services
 {
     public class LocationServiceMessageHandlerTests
     {

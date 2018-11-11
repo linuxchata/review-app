@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LC.RA.Location.Core\LC.RA.Location.Core.csproj" />
+    <ProjectReference Include="..\LC.RA.Location.Core\ReviewApp.Location.Core.csproj" />
   </ItemGroup>
 
 </Project>

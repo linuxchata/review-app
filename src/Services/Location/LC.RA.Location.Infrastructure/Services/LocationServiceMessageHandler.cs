@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using LC.RA.Location.Infrastructure.Converters;
 
 using Microsoft.Extensions.Logging;
 
+using ReviewApp.Location.Infrastructure.Converters;
 using ReviewApp.ServiceBusAdapter.Abstractions;
 
-namespace LC.RA.Location.Infrastructure.Services
+namespace ReviewApp.Location.Infrastructure.Services
 {
     public sealed class LocationServiceMessageHandler : IMessageHandler
     {

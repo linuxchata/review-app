@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using LC.RA.Location.Core.Application.Wikipedia;
-using LC.RA.Location.Infrastructure.Services;
+
 using Microsoft.Extensions.Logging;
 
-namespace LC.RA.Location.Infrastructure.Handlers.WikiPageHandlers
+using ReviewApp.Location.Core.Application.Wikipedia;
+using ReviewApp.Location.Infrastructure.Services;
+
+namespace ReviewApp.Location.Infrastructure.Handlers.WikiPageHandlers
 {
     public sealed class PageDefaultHandler : PageBaseHandler
     {

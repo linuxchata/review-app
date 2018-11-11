@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using LC.RA.Location.Core.Application;
-using LC.RA.Location.Core.Application.Wikipedia;
+
 using Newtonsoft.Json;
 
-namespace LC.RA.Location.Infrastructure.Services
+using ReviewApp.Location.Core.Application;
+using ReviewApp.Location.Core.Application.Wikipedia;
+
+namespace ReviewApp.Location.Infrastructure.Services
 {
     public sealed class WikipediaService : IWikipediaService
     {

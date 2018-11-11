@@ -1,8 +1,10 @@
-﻿using LC.RA.Location.Api.Controllers;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+
+using ReviewApp.Location.Api.Controllers;
+
 using Xunit;
 
-namespace LC.RA.Location.Api.Tests.Controllers
+namespace ReviewApp.Location.Api.Tests.Controllers
 {
     public class HomeControllerTests
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LC.RA.Location.Api.Controllers
+namespace ReviewApp.Location.Api.Controllers
 {
     /// <summary>
     /// Default controller

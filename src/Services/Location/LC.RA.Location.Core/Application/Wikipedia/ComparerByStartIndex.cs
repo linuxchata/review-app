@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace LC.RA.Location.Core.Application.Wikipedia
+namespace ReviewApp.Location.Core.Application.Wikipedia
 {
     public sealed class ComparerByStartIndex : IComparer<WikiPageElement>
     {

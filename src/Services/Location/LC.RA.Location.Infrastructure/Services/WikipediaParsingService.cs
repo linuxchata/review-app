@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using LC.RA.Location.Core.Application.Wikipedia;
-using LC.RA.Location.Infrastructure.Handlers.WikiPageHandlers;
-using LC.RA.Location.Infrastructure.Handlers.WikiTableHandlers;
+
 using Microsoft.Extensions.Logging;
 
-namespace LC.RA.Location.Infrastructure.Services
+using ReviewApp.Location.Core.Application.Wikipedia;
+using ReviewApp.Location.Infrastructure.Handlers.WikiPageHandlers;
+using ReviewApp.Location.Infrastructure.Handlers.WikiTableHandlers;
+
+namespace ReviewApp.Location.Infrastructure.Services
 {
     public sealed class WikipediaParsingService : IWikipediaParsingService
     {

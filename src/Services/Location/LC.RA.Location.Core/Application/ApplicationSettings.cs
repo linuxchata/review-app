@@ -1,4 +1,4 @@
-﻿namespace LC.RA.Location.Core.Application
+﻿namespace ReviewApp.Location.Core.Application
 {
     public sealed class ApplicationSettings : IApplicationSettings
     {

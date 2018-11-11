@@ -8,10 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LC.RA.Location.Infrastructure.Tests.Properties {
-    using System;
-    
-    
+namespace ReviewApp.Location.Infrastructure.Tests.Properties {
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>

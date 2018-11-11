@@ -1,13 +1,13 @@
 ﻿using Autofac;
-using LC.RA.Location.Core.Application;
-using LC.RA.Location.Infrastructure.Converters;
-using LC.RA.Location.Infrastructure.Services;
 
 using Microsoft.Extensions.Configuration;
 
+using ReviewApp.Location.Core.Application;
+using ReviewApp.Location.Infrastructure.Converters;
+using ReviewApp.Location.Infrastructure.Services;
 using ReviewApp.ServiceBusAdapter;
 
-namespace LC.RA.Location.Api
+namespace ReviewApp.Location.Api
 {
     /// <summary>
     /// Autofac module

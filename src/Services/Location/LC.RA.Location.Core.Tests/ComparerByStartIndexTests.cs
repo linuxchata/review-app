@@ -1,7 +1,8 @@
-using LC.RA.Location.Core.Application.Wikipedia;
+using ReviewApp.Location.Core.Application.Wikipedia;
+
 using Xunit;
 
-namespace LC.RA.Location.Core.Tests
+namespace ReviewApp.Location.Core.Tests
 {
     public class ComparerByStartIndexTests
     {

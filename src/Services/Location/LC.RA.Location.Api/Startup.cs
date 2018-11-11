@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+
 using Autofac;
 
 using Microsoft.AspNetCore.Builder;
@@ -10,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 using ReviewApp.ServiceBusAdapter.Abstractions;
 
-namespace LC.RA.Location.Api
+namespace ReviewApp.Location.Api
 {
     /// <summary>
     /// Startup class for the application

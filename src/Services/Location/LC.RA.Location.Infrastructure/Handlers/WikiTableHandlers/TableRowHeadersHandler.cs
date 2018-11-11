@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using LC.RA.Location.Core.Application.Wikipedia;
-using LC.RA.Location.Infrastructure.Extensions;
-using LC.RA.Location.Infrastructure.Services;
 
-namespace LC.RA.Location.Infrastructure.Handlers.WikiTableHandlers
+using ReviewApp.Location.Core.Application.Wikipedia;
+using ReviewApp.Location.Infrastructure.Extensions;
+using ReviewApp.Location.Infrastructure.Services;
+
+namespace ReviewApp.Location.Infrastructure.Handlers.WikiTableHandlers
 {
     public sealed class TableRowHeadersHandler : TableBaseHandler
     {

@@ -1,4 +1,4 @@
-﻿namespace LC.RA.Location.Infrastructure.Services
+﻿namespace ReviewApp.Location.Infrastructure.Services
 {
     public static class RegexPattern
     {

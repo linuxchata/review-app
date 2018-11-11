@@ -37,8 +37,8 @@
     <ProjectReference Include="..\..\..\Shared\LC.RA.TransferObjects\ReviewApp.TransferObjects.csproj" />
     <ProjectReference Include="..\..\..\Shared\LC.ServiceBusAdapter.Abstractions\ReviewApp.ServiceBusAdapter.Abstractions.csproj" />
     <ProjectReference Include="..\..\..\Shared\LC.ServiceBusAdapter\ReviewApp.ServiceBusAdapter.csproj" />
-    <ProjectReference Include="..\LC.RA.Location.Core\LC.RA.Location.Core.csproj" />
-    <ProjectReference Include="..\LC.RA.Location.Infrastructure\LC.RA.Location.Infrastructure.csproj" />
+    <ProjectReference Include="..\LC.RA.Location.Core\ReviewApp.Location.Core.csproj" />
+    <ProjectReference Include="..\LC.RA.Location.Infrastructure\ReviewApp.Location.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

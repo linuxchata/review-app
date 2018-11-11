@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+
 using Google.Protobuf;
 
 using ReviewApp.TransferObjects;
 
-namespace LC.RA.Location.Infrastructure.Converters
+namespace ReviewApp.Location.Infrastructure.Converters
 {
     public sealed class LocationsConverter : ILocationsConverter
     {

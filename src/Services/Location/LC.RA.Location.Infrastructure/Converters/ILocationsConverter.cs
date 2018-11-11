@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace LC.RA.Location.Infrastructure.Converters
+namespace ReviewApp.Location.Infrastructure.Converters
 {
     public interface ILocationsConverter
     {

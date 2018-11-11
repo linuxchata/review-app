@@ -1,13 +1,17 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using LC.RA.Location.Core.Application.Wikipedia;
-using LC.RA.Location.Infrastructure.Services;
-using LC.RA.Location.Infrastructure.Tests.Properties;
+
 using Microsoft.Extensions.Logging;
+
 using Moq;
+
+using ReviewApp.Location.Core.Application.Wikipedia;
+using ReviewApp.Location.Infrastructure.Services;
+using ReviewApp.Location.Infrastructure.Tests.Properties;
+
 using Xunit;
 
-namespace LC.RA.Location.Infrastructure.Tests.Services
+namespace ReviewApp.Location.Infrastructure.Tests.Services
 {
     public class WikipediaParsingServiceTests
     {
