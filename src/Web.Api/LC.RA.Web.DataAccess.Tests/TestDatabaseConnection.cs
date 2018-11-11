@@ -1,7 +1,8 @@
-﻿using LC.RA.Web.DataAccess.Contracts;
-using MongoDB.Driver;
+﻿using MongoDB.Driver;
 
-namespace LC.RA.Web.DataAccess.Tests
+using ReviewApp.Web.DataAccess.Contracts;
+
+namespace ReviewApp.Web.DataAccess.Tests
 {
     public class TestDatabaseConnection : IDatabaseConnection
     {

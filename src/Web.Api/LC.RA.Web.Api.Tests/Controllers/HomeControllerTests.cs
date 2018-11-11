@@ -1,8 +1,10 @@
-﻿using LC.RA.Web.Api.Controllers;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+
+using ReviewApp.Web.Api.Controllers;
+
 using Xunit;
 
-namespace LC.RA.Web.Api.Tests.Controllers
+namespace ReviewApp.Web.Api.Tests.Controllers
 {
     public class HomeControllerTests
     {

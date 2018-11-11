@@ -1,8 +1,9 @@
 ﻿using System;
+
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace LC.RA.Web.Core.Domain
+namespace ReviewApp.Web.Core.Domain
 {
     public abstract class RootModelBase
     {

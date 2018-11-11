@@ -1,13 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using LC.RA.Web.Core.Domain;
-using LC.RA.Web.Core.TransferObjects;
-using LC.RA.Web.DataAccess.Contracts;
+
 using Microsoft.Extensions.Logging;
+
 using MongoDB.Driver;
 
-namespace LC.RA.Web.DataAccess
+using ReviewApp.Web.Core.Domain;
+using ReviewApp.Web.Core.TransferObjects;
+using ReviewApp.Web.DataAccess.Contracts;
+
+namespace ReviewApp.Web.DataAccess
 {
     public sealed class SpecializationRepository : BaseRepository<Specialization, SpecializationDto>, ISpecializationRepository
     {

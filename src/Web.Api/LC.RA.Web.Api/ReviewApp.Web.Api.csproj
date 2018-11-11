@@ -34,9 +34,9 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Shared\LC.ServiceBusAdapter.Abstractions\LC.ServiceBusAdapter.Abstractions.csproj" />
     <ProjectReference Include="..\..\Shared\LC.ServiceBusAdapter\LC.ServiceBusAdapter.csproj" />
-    <ProjectReference Include="..\LC.RA.Web.Core\LC.RA.Web.Core.csproj" />
-    <ProjectReference Include="..\LC.RA.Web.DataAccess\LC.RA.Web.DataAccess.csproj" />
-    <ProjectReference Include="..\LC.RA.Web.Services\LC.RA.Web.Services.csproj" />
+    <ProjectReference Include="..\LC.RA.Web.Core\ReviewApp.Web.Core.csproj" />
+    <ProjectReference Include="..\LC.RA.Web.DataAccess\ReviewApp.Web.DataAccess.csproj" />
+    <ProjectReference Include="..\LC.RA.Web.Services\ReviewApp.Web.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
-using LC.RA.Web.Core.Domain;
 
-namespace LC.RA.Web.Core.TransferObjects
+using ReviewApp.Web.Core.Domain;
+
+namespace ReviewApp.Web.Core.TransferObjects
 {
     public sealed class DoctorDto : SubjectDto
     {

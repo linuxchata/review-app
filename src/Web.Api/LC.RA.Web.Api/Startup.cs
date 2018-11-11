@@ -1,17 +1,22 @@
 ﻿using System;
 using System.IO;
 using System.Threading;
+
 using Autofac;
-using LC.RA.Web.Core.Application;
+
 using LC.ServiceBusAdapter.Abstractions;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+
+using ReviewApp.Web.Core.Application;
+
 using Swashbuckle.AspNetCore.Swagger;
 
-namespace LC.RA.Web.Api
+namespace ReviewApp.Web.Api
 {
     /// <summary>
     /// Startup class for the application

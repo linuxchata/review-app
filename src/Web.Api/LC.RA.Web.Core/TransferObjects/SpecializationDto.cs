@@ -1,4 +1,4 @@
-﻿namespace LC.RA.Web.Core.TransferObjects
+﻿namespace ReviewApp.Web.Core.TransferObjects
 {
     public sealed class SpecializationDto : RootModelBaseDto
     {

@@ -1,15 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using LC.RA.Web.Core.Domain;
-using LC.RA.Web.DataAccess.Contracts;
-using LC.RA.Web.DataAccess.Converters;
+
 using Microsoft.Extensions.Logging;
+
 using MongoDB.Bson;
+
 using Moq;
+
+using ReviewApp.Web.Core.Domain;
+using ReviewApp.Web.DataAccess.Contracts;
+using ReviewApp.Web.DataAccess.Converters;
+
 using Xunit;
 
-namespace LC.RA.Web.DataAccess.Tests
+namespace ReviewApp.Web.DataAccess.Tests
 {
     [Trait("Category", "IntegrationTests")]
     public class DoctorRepositoryTests

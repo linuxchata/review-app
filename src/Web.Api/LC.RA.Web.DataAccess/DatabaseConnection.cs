@@ -1,8 +1,10 @@
 ﻿using System.Security.Authentication;
-using LC.RA.Web.DataAccess.Contracts;
+
 using MongoDB.Driver;
 
-namespace LC.RA.Web.DataAccess
+using ReviewApp.Web.DataAccess.Contracts;
+
+namespace ReviewApp.Web.DataAccess
 {
     public sealed class DatabaseConnection : IDatabaseConnection
     {

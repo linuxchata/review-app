@@ -16,7 +16,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "LC.RA.Web.Api": {
+    "ReviewApp.Web.Api": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger/ui",

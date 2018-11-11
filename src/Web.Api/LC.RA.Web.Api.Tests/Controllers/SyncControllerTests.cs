@@ -1,10 +1,13 @@
-﻿using LC.RA.Web.Api.Controllers;
-using LC.RA.Web.Services.Contracts;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+
 using Moq;
+
+using ReviewApp.Web.Api.Controllers;
+using ReviewApp.Web.Services.Contracts;
+
 using Xunit;
 
-namespace LC.RA.Web.Api.Tests.Controllers
+namespace ReviewApp.Web.Api.Tests.Controllers
 {
     public class SyncControllerTests
     {

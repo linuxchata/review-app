@@ -1,12 +1,15 @@
 ﻿using Autofac;
-using LC.RA.Web.Core.Application;
-using LC.RA.Web.DataAccess;
-using LC.RA.Web.DataAccess.Converters;
-using LC.RA.Web.Services;
+
 using LC.ServiceBusAdapter;
+
 using Microsoft.Extensions.Configuration;
 
-namespace LC.RA.Web.Api
+using ReviewApp.Web.Core.Application;
+using ReviewApp.Web.DataAccess;
+using ReviewApp.Web.DataAccess.Converters;
+using ReviewApp.Web.Services;
+
+namespace ReviewApp.Web.Api
 {
     /// <summary>
     /// Autofac module

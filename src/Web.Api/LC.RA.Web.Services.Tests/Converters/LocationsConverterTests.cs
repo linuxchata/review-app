@@ -1,13 +1,19 @@
 ﻿using System.IO;
 using System.Linq;
+
 using Google.Protobuf;
+
 using LC.RA.TransferObjects;
-using LC.RA.Web.Services.Converters;
+
 using Microsoft.Extensions.Logging;
+
 using Moq;
+
+using ReviewApp.Web.Services.Converters;
+
 using Xunit;
 
-namespace LC.RA.Web.Services.Tests.Converters
+namespace ReviewApp.Web.Services.Tests.Converters
 {
     public class LocationConverterTests
     {

@@ -1,7 +1,7 @@
-﻿using LC.RA.Web.Core.Domain;
-using LC.RA.Web.Core.TransferObjects;
+﻿using ReviewApp.Web.Core.Domain;
+using ReviewApp.Web.Core.TransferObjects;
 
-namespace LC.RA.Web.DataAccess.Contracts
+namespace ReviewApp.Web.DataAccess.Contracts
 {
     public interface ISpecializationConverter
     {

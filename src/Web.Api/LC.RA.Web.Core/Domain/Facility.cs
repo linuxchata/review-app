@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace LC.RA.Web.Core.Domain
+namespace ReviewApp.Web.Core.Domain
 {
     [DebuggerDisplay(nameof(Name))]
     public sealed class Facility : EmbededModelBase

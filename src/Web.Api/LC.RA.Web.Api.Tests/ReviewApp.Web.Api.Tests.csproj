@@ -14,8 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LC.RA.Web.Services\LC.RA.Web.Services.csproj" />
-    <ProjectReference Include="..\LC.RA.Web.Api\LC.RA.Web.Api.csproj" />
+    <ProjectReference Include="..\LC.RA.Web.Api\ReviewApp.Web.Api.csproj" />
+    <ProjectReference Include="..\LC.RA.Web.Services\ReviewApp.Web.Services.csproj" />
   </ItemGroup>
 
 </Project>

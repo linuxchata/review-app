@@ -1,10 +1,13 @@
 ﻿using System;
+
 using Autofac.Extensions.DependencyInjection;
+
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+
 using NLog.Web;
 
-namespace LC.RA.Web.Api
+namespace ReviewApp.Web.Api
 {
     /// <summary>
     /// Program class

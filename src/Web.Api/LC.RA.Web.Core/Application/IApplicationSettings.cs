@@ -1,4 +1,4 @@
-﻿namespace LC.RA.Web.Core.Application
+﻿namespace ReviewApp.Web.Core.Application
 {
     public interface IApplicationSettings
     {

@@ -1,10 +1,11 @@
 ﻿using System.Threading.Tasks;
-using LC.RA.Web.Services.Contracts;
 
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LC.RA.Web.Api.Controllers
+using ReviewApp.Web.Services.Contracts;
+
+namespace ReviewApp.Web.Api.Controllers
 {
     /// <summary>
     /// Provides API for synchronization

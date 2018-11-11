@@ -14,8 +14,8 @@
     <ProjectReference Include="..\..\Shared\LC.RA.TransferObjects\LC.RA.TransferObjects.csproj" />
     <ProjectReference Include="..\..\Shared\LC.RA.Utilities\LC.RA.Utilities.csproj" />
     <ProjectReference Include="..\..\Shared\LC.ServiceBusAdapter.Abstractions\LC.ServiceBusAdapter.Abstractions.csproj" />
-    <ProjectReference Include="..\LC.RA.Web.Core\LC.RA.Web.Core.csproj" />
-    <ProjectReference Include="..\LC.RA.Web.DataAccess\LC.RA.Web.DataAccess.csproj" />
+    <ProjectReference Include="..\LC.RA.Web.Core\ReviewApp.Web.Core.csproj" />
+    <ProjectReference Include="..\LC.RA.Web.DataAccess\ReviewApp.Web.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

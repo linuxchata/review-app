@@ -8,18 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
-    <PackageReference Include="Moq" Version="4.10.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
+    <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\LC.RA.TransferObjects\LC.RA.TransferObjects.csproj" />
-    <ProjectReference Include="..\LC.RA.Web.Core\LC.RA.Web.Core.csproj" />
-    <ProjectReference Include="..\LC.RA.Web.Services\LC.RA.Web.Services.csproj" />
+    <ProjectReference Include="..\LC.RA.Web.Core\ReviewApp.Web.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
 </Project>

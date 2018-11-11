@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using LC.RA.Web.Core.Domain;
-using LC.RA.Web.DataAccess.Contracts;
-using LC.RA.Web.Services.Contracts;
 
-namespace LC.RA.Web.Services
+using ReviewApp.Web.Core.Domain;
+using ReviewApp.Web.DataAccess.Contracts;
+using ReviewApp.Web.Services.Contracts;
+
+namespace ReviewApp.Web.Services
 {
     public sealed class SpecializationService : ISpecializationService
     {

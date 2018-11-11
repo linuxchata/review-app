@@ -1,8 +1,9 @@
 ﻿using System;
+
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace LC.RA.Web.Core.TransferObjects
+namespace ReviewApp.Web.Core.TransferObjects
 {
     public class RootModelBaseDto
     {

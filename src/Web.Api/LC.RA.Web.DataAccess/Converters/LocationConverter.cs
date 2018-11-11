@@ -1,9 +1,10 @@
 ﻿using AutoMapper;
-using LC.RA.Web.Core.Domain;
-using LC.RA.Web.Core.TransferObjects;
-using LC.RA.Web.DataAccess.Contracts;
 
-namespace LC.RA.Web.DataAccess.Converters
+using ReviewApp.Web.Core.Domain;
+using ReviewApp.Web.Core.TransferObjects;
+using ReviewApp.Web.DataAccess.Contracts;
+
+namespace ReviewApp.Web.DataAccess.Converters
 {
     public sealed class LocationConverter : ILocationConverter
     {
