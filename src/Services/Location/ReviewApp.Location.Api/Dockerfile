@@ -1,25 +1,24 @@
-FROM microsoft/aspnetcore:2.0-nanoserver-sac2016 AS base
+FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
 WORKDIR /app
 EXPOSE 80
 
-FROM microsoft/aspnetcore-build:2.0-nanoserver-sac2016 AS build
+FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /src
+COPY Services/Location/ReviewApp.Location.Api/ReviewApp.Location.Api.csproj Services/Location/ReviewApp.Location.Api/
+COPY Shared/ReviewApp.ServiceBusAdapter.Abstractions/ReviewApp.ServiceBusAdapter.Abstractions.csproj Shared/ReviewApp.ServiceBusAdapter.Abstractions/
+COPY Shared/ReviewApp.ServiceBusAdapter/ReviewApp.ServiceBusAdapter.csproj Shared/ReviewApp.ServiceBusAdapter/
+COPY Shared/ReviewApp.TransferObjects/ReviewApp.TransferObjects.csproj Shared/ReviewApp.TransferObjects/
+COPY Services/Location/ReviewApp.Location.Infrastructure/ReviewApp.Location.Infrastructure.csproj Services/Location/ReviewApp.Location.Infrastructure/
+COPY Services/Location/ReviewApp.Location.Core/ReviewApp.Location.Core.csproj Services/Location/ReviewApp.Location.Core/
+RUN dotnet restore Services/Location/ReviewApp.Location.Api/ReviewApp.Location.Api.csproj
 COPY . .
-#COPY LC.RA.All.sln ./
-#COPY Services/Location/LC.RA.Location.Api/LC.RA.Location.Api.csproj Services/Location/LC.RA.Location.Api/
-#COPY Shared/LC.ServiceBusAdapter/LC.ServiceBusAdapter.csproj Shared/LC.ServiceBusAdapter/
-#COPY Shared/LC.ServiceBusAdapter.Abstractions/LC.ServiceBusAdapter.Abstractions.csproj Shared/LC.ServiceBusAdapter.Abstractions/
-#COPY Shared/LC.RA.TransferObjects/LC.RA.TransferObjects.csproj Shared/LC.RA.TransferObjects/
-#COPY Services/Location/LC.RA.Location.Core/LC.RA.Location.Core.csproj Services/Location/LC.RA.Location.Core/
-#COPY Services/Location/LC.RA.Location.Infrastructure/LC.RA.Location.Infrastructure.csproj Services/Location/LC.RA.Location.Infrastructure/
-WORKDIR /src/Services/Location/LC.RA.Location.Api
-RUN dotnet restore -nowarn:msb3202,nu1503
-RUN dotnet build --no-restore -c Release -o /app
+WORKDIR /src/Services/Location/ReviewApp.Location.Api
+RUN dotnet build ReviewApp.Location.Api.csproj -c Release -o /app
 
 FROM build AS publish
-RUN dotnet publish --no-restore -c Release -o /app
+RUN dotnet publish ReviewApp.Location.Api.csproj -c Release -o /app
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "LC.RA.Location.Api.dll"]
+ENTRYPOINT ["dotnet", "ReviewApp.Location.Api.dll"]

@@ -1,17 +1,14 @@
-version: '3'
+version: '3.4'
 
 services:
-  lc.ra.web.api:
+  reviewapp.web.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "5000"
-  lc.ra.location.api:
+      - "80"
+
+  reviewapp.location.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "5001"
-networks:
-  default:
-    external:
-      name: nat
+      - "80"
