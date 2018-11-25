@@ -11,7 +11,7 @@ using ReviewApp.Web.Services;
 namespace ReviewApp.Web.Api
 {
     /// <summary>
-    /// Autofac module
+    /// <see cref="Autofac"/> module
     /// </summary>
     public class AutofacModule : Module
     {
@@ -43,14 +43,14 @@ namespace ReviewApp.Web.Api
             builder.RegisterInstance(applicationSettings)
                 .AsImplementedInterfaces();
 
-            this.RegisterConverters(builder);
+            RegisterConverters(builder);
 
-            this.RegisterRepositories(builder);
+            RegisterRepositories(builder);
 
-            this.RegisterServices(builder, applicationSettings);
+            RegisterServices(builder, applicationSettings);
         }
 
-        private void RegisterConverters(ContainerBuilder builder)
+        private static void RegisterConverters(ContainerBuilder builder)
         {
             builder.RegisterType<LocationConverter>()
                 .AsImplementedInterfaces()
@@ -66,7 +66,7 @@ namespace ReviewApp.Web.Api
                 .InstancePerLifetimeScope();
         }
 
-        private void RegisterRepositories(ContainerBuilder builder)
+        private static void RegisterRepositories(ContainerBuilder builder)
         {
             builder.RegisterType<LocationRepository>()
                 .AsImplementedInterfaces()
@@ -79,7 +79,7 @@ namespace ReviewApp.Web.Api
                 .InstancePerLifetimeScope();
         }
 
-        private void RegisterServices(ContainerBuilder builder, IApplicationSettings applicationSettings)
+        private static void RegisterServices(ContainerBuilder builder, IApplicationSettings applicationSettings)
         {
             builder.RegisterType<LocationService>()
                 .AsImplementedInterfaces()

@@ -57,16 +57,16 @@ namespace ReviewApp.Web.DataAccess
         {
             var filter = new
             {
-                FirstName = this.GetLowerCaseString(doctor.FirstName),
-                LastName = this.GetLowerCaseString(doctor.LastName),
-                MiddleName = this.GetLowerCaseString(doctor.MiddleName)
+                FirstName = GetLowerCaseString(doctor.FirstName),
+                LastName = GetLowerCaseString(doctor.LastName),
+                MiddleName = GetLowerCaseString(doctor.MiddleName)
             };
 
             this.logger.LogDebug("Receiving doctor by {LastName} {FirstName} {MiddleName}", filter.LastName, filter.FirstName, filter.MiddleName);
 
             var cursor = await this.Collection.FindAsync(a => a.FirstName.ToLower().Contains(filter.FirstName) &&
-                                                              a.LastName.ToLower().Contains(filter.LastName) &&
-                                                              a.MiddleName.ToLower().Contains(filter.MiddleName));
+                a.LastName.ToLower().Contains(filter.LastName) &&
+                a.MiddleName.ToLower().Contains(filter.MiddleName));
 
             var result = cursor.ToEnumerable().Select(a => this.converter.Convert(a));
 
@@ -123,7 +123,7 @@ namespace ReviewApp.Web.DataAccess
                 });
         }
 
-        private string GetLowerCaseString(string value)
+        private static string GetLowerCaseString(string value)
         {
             return !string.IsNullOrWhiteSpace(value) ? value.ToLower() : string.Empty;
         }

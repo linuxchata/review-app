@@ -42,7 +42,7 @@ namespace ReviewApp.Location.Infrastructure.Tests.Services
         {
             // Arrange
             // Act
-            var result = this.sut.ParsePage(this.GetTestPageContent());
+            var result = this.sut.ParsePage(GetTestPageContent());
 
             // Assert
             Assert.NotNull(result);
@@ -65,7 +65,7 @@ namespace ReviewApp.Location.Infrastructure.Tests.Services
         public void ParseTable_WhenPageContentIsWithoutTables_ShouldReturnEmptyResult_Test()
         {
             // Arrange
-            var pageContent = this.sut.ParsePage(this.GetTestPageContent());
+            var pageContent = this.sut.ParsePage(GetTestPageContent());
             var pageContentWithoutTables = pageContent.Where(a => a.ContentType != WikiPageContentType.Table);
             var page = new SortedSet<WikiPageElement>(pageContentWithoutTables, new ComparerByStartIndex());
 
@@ -81,7 +81,7 @@ namespace ReviewApp.Location.Infrastructure.Tests.Services
         public void ParseTable_WhenPageContentIsWithTable_ShouldReturnResult_Test()
         {
             // Arrange
-            var pageContent = this.sut.ParsePage(this.GetTestPageContent());
+            var pageContent = this.sut.ParsePage(GetTestPageContent());
 
             // Act
             var result = this.sut.ParseTable(pageContent);
@@ -91,7 +91,7 @@ namespace ReviewApp.Location.Infrastructure.Tests.Services
             Assert.Equal(462, result.Count);
         }
 
-        private string GetTestPageContent()
+        private static string GetTestPageContent()
         {
             return Resources.TestPageContent;
         }

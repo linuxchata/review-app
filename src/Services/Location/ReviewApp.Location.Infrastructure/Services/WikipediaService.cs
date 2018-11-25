@@ -30,7 +30,7 @@ namespace ReviewApp.Location.Infrastructure.Services
             if (response.IsSuccessStatusCode)
             {
                 var stringContent = await response.Content.ReadAsStringAsync();
-                var result = this.HandleResponse(stringContent);
+                var result = HandleResponse(stringContent);
 
                 return result.Query.Pages[0].Revisions[0].Content;
             }
@@ -38,7 +38,7 @@ namespace ReviewApp.Location.Infrastructure.Services
             return string.Empty;
         }
 
-        private WikipediaResponse HandleResponse(string stringContent)
+        private static WikipediaResponse HandleResponse(string stringContent)
         {
             var response = JsonConvert.DeserializeObject<WikipediaResponse>(stringContent);
 

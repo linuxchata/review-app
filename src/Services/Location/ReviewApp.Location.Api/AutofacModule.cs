@@ -10,7 +10,7 @@ using ReviewApp.ServiceBusAdapter;
 namespace ReviewApp.Location.Api
 {
     /// <summary>
-    /// Autofac module
+    /// <see cref="Autofac"/> module
     /// </summary>
     public sealed class AutofacModule : Module
     {
@@ -37,10 +37,10 @@ namespace ReviewApp.Location.Api
             builder.RegisterInstance(applicationSettings)
                 .AsImplementedInterfaces();
 
-            this.RegisterServices(builder, applicationSettings);
+            RegisterServices(builder, applicationSettings);
         }
 
-        private void RegisterServices(ContainerBuilder builder, IApplicationSettings applicationSettings)
+        private static void RegisterServices(ContainerBuilder builder, IApplicationSettings applicationSettings)
         {
             builder.RegisterType<WikipediaService>()
                 .AsImplementedInterfaces()

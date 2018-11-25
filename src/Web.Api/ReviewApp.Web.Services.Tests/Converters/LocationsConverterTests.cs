@@ -37,7 +37,7 @@ namespace ReviewApp.Web.Services.Tests.Converters
         }
 
         [Fact]
-        public void Convert_WhenDtoIsNotNull_ShouldReturnNotNulResultl_Test()
+        public void Convert_WhenDtoIsNotNull_ShouldReturnNotNulResult_Test()
         {
             // Arrange
             var locationsProto = new LocationProto
@@ -46,7 +46,7 @@ namespace ReviewApp.Web.Services.Tests.Converters
                 Region = "Test",
                 Gpslocation = string.Empty
             };
-            var locationsArray = this.GetLocationsArray(locationsProto);
+            var locationsArray = GetLocationsArray(locationsProto);
 
             // Act
             var result = this.sut.Convert(locationsArray);
@@ -58,7 +58,7 @@ namespace ReviewApp.Web.Services.Tests.Converters
             Assert.Equal("Test", result[0].Region);
         }
 
-        private byte[] GetLocationsArray(LocationProto locationsProto)
+        private static byte[] GetLocationsArray(LocationProto locationsProto)
         {
             var protoBufLocations = new LocationsProto();
             protoBufLocations.Locations.Add(locationsProto);

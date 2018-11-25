@@ -32,29 +32,7 @@ namespace ReviewApp.Location.Infrastructure.Services
             return locations;
         }
 
-        private async Task<IEnumerable<Core.Domain.Location>> GetSourceLocations()
-        {
-            var pageContent = await this.wikipediaService.GetPageContent();
-
-            var parsedPageContent = this.wikipediaParsingService.ParsePage(pageContent);
-            var parsedTable = this.wikipediaParsingService.ParseTable(parsedPageContent);
-
-            var locations = new List<Core.Domain.Location>();
-            foreach (var row in parsedTable)
-            {
-                if (row is WikiTableRow)
-                {
-                    var location = new Core.Domain.Location(this.GetName(row), this.GetRegion(row));
-                    locations.Add(location);
-                }
-            }
-
-            this.logger.LogInformation("{Count} locations have been found", locations.Count);
-
-            return locations;
-        }
-
-        private string GetName(WikiTableRowBase row)
+        private static string GetName(WikiTableRowBase row)
         {
             var nameMatches = RegexExtension.GetMatches(row.Content[0], RegexPattern.LocationNameMatchPattern);
             var name = nameMatches[0].Groups[1].Value;
@@ -69,11 +47,33 @@ namespace ReviewApp.Location.Infrastructure.Services
             return name;
         }
 
-        private string GetRegion(WikiTableRowBase row)
+        private static string GetRegion(WikiTableRowBase row)
         {
             var regionMatches = RegexExtension.GetMatches(row.Content[1], RegexPattern.LocationRegionMatchPattern);
             var region = regionMatches[0].Groups[1].Value;
             return region;
+        }
+
+        private async Task<IEnumerable<Core.Domain.Location>> GetSourceLocations()
+        {
+            var pageContent = await this.wikipediaService.GetPageContent();
+
+            var parsedPageContent = this.wikipediaParsingService.ParsePage(pageContent);
+            var parsedTable = this.wikipediaParsingService.ParseTable(parsedPageContent);
+
+            var locations = new List<Core.Domain.Location>();
+            foreach (var row in parsedTable)
+            {
+                if (row is WikiTableRow)
+                {
+                    var location = new Core.Domain.Location(GetName(row), GetRegion(row));
+                    locations.Add(location);
+                }
+            }
+
+            this.logger.LogInformation("{Count} locations have been found", locations.Count);
+
+            return locations;
         }
     }
 }

@@ -17,13 +17,13 @@ namespace ReviewApp.Location.Infrastructure.Handlers.WikiTableHandlers
 
             foreach (Match collection in collections)
             {
-                header.Content.Add(this.GetHeaderContent(collection.Value));
+                header.Content.Add(GetHeaderContent(collection.Value));
             }
 
             rows.Add(header);
         }
 
-        private string GetHeaderContent(string @string)
+        private static string GetHeaderContent(string @string)
         {
             var matches = RegexExtension.GetMatches(@string, RegexPattern.TableTextHeaderMatchPattern);
             var contentValue = matches[0].Value;

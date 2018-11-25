@@ -19,12 +19,12 @@ namespace ReviewApp.Location.Infrastructure.Handlers.WikiTableHandlers
                 var group = collection.Groups[0];
 
                 var row = new WikiTableRow();
-                row.Content.AddRange(this.GetRowColumnsContent(group.Value));
+                row.Content.AddRange(GetRowColumnsContent(group.Value));
                 rows.Add(row);
             }
         }
 
-        private List<string> GetRowColumnsContent(string @string)
+        private static List<string> GetRowColumnsContent(string @string)
         {
             // Remove leading row separator (|-)
             RegexExtension.Replace(ref @string, RegexPattern.TableRowSeparatorMatchPattern);
