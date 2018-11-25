@@ -49,7 +49,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Location.Infrastr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Location.Infrastructure.Tests", "Services\Location\ReviewApp.Location.Infrastructure.Tests\ReviewApp.Location.Infrastructure.Tests.csproj", "{2696E96C-85D1-442C-B38E-2B59C0909EA5}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{17FD7784-0AB2-4056-A5E0-76CA88152A06}"
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "Docker\docker-compose.dcproj", "{17FD7784-0AB2-4056-A5E0-76CA88152A06}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

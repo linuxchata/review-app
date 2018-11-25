@@ -5,10 +5,10 @@ services:
     image: ${DOCKER_REGISTRY}reviewappwebapi
     build:
       context: .
-      dockerfile: Web.Api/ReviewApp.Web.Api/Dockerfile
+      dockerfile: ../Web.Api/ReviewApp.Web.Api/Dockerfile
 
   reviewapp.location.api:
     image: ${DOCKER_REGISTRY}reviewapplocationapi
     build:
       context: .
-      dockerfile: Services/Location/ReviewApp.Location.Api/Dockerfile
+      dockerfile: ../Services/Location/ReviewApp.Location.Api/Dockerfile
