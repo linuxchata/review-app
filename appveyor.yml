@@ -15,7 +15,7 @@ install:
   - ps: $env:Path = "$env:DOTNET_INSTALL_DIR;$env:Path"  
 
 before_build:
-  - dotnet restore src\  
+  - dotnet restore src\ReviewApp.All.sln
 
 build:
   parallel: true
