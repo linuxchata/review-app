@@ -41,7 +41,7 @@ namespace ReviewApp.Web.Api
         {
             services.AddCors();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.Configure<ApplicationSettings>(this.configuration.GetSection("Settings"));
 
@@ -96,8 +96,7 @@ namespace ReviewApp.Web.Api
             app.UseCors(builder => builder
                 .AllowAnyOrigin()
                 .AllowAnyMethod()
-                .AllowAnyHeader()
-                .AllowCredentials());
+                .AllowAnyHeader());
 
             app.UseMvc(routes =>
             {

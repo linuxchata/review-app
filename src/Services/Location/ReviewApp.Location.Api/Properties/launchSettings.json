@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "LC.RA.Location.Api": {
+    "ReviewApp.Location.Api": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
