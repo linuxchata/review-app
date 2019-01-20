@@ -17,7 +17,8 @@ namespace ReviewApp.Web.Api.Controllers
         [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
         public IActionResult Index()
         {
-            return this.Ok("Web is up and running");
+            string runtime = System.Runtime.InteropServices.RuntimeInformation.OSDescription.Trim();
+            return this.Ok($"Web API is up and running. OS is {runtime}");
         }
     }
 }

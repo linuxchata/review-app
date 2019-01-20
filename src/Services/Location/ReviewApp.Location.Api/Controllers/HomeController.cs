@@ -16,7 +16,8 @@ namespace ReviewApp.Location.Api.Controllers
         [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
         public IActionResult Index()
         {
-            return this.Ok("Location service is up and running");
+            string runtime = System.Runtime.InteropServices.RuntimeInformation.OSDescription.Trim();
+            return this.Ok($"Location API is up and running. OS is {runtime}");
         }
     }
 }
