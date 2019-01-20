@@ -16,7 +16,7 @@ namespace ReviewApp.Location.Api.Tests.Controllers
         }
 
         [Fact]
-        public void Synchronize_ShouldReturnOkResult_Test()
+        public void Index_ShouldReturnOkResult_Test()
         {
             // Arrange
             // Act
