@@ -1,12 +1,9 @@
 image: Visual Studio 2017
+
 environment:
   DOTNET_CLI_TELEMETRY_OPTOUT: true
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
-build:
-  parallel: true
-  project: src\ReviewApp.All.sln
-before_build:
-  - dotnet restore src\  
+
 install:
   # https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2.1/2.2.1.md
   - ps: $urlCurrent = "https://download.visualstudio.microsoft.com/download/pr/c332d70f-6582-4471-96af-4b0c17a616ad/5f3043d4bc506bf91cb89fa90462bb58/dotnet-sdk-2.2.103-win-x64.zip"
@@ -16,9 +13,18 @@ install:
   - ps: (New-Object System.Net.WebClient).DownloadFile($urlCurrent, $tempFileCurrent)
   - ps: Add-Type -AssemblyName System.IO.Compression.FileSystem; [System.IO.Compression.ZipFile]::ExtractToDirectory($tempFileCurrent, $env:DOTNET_INSTALL_DIR)
   - ps: $env:Path = "$env:DOTNET_INSTALL_DIR;$env:Path"  
+
+before_build:
+  - dotnet restore src\  
+
+build:
+  parallel: true
+  project: src\ReviewApp.All.sln
+
 branches:  
   only:
   - master
+
 test:
   categories:
     except:
