@@ -4,9 +4,9 @@ environment:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
 build:
   parallel: true
-  project: src/ReviewApp.All.sln
+  project: src\ReviewApp.All.sln
 before_build:
-  - dotnet restore src/
+  - dotnet restore src\  
 install:
   # https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2.1/2.2.1.md
   - ps: $urlCurrent = "https://download.visualstudio.microsoft.com/download/pr/c332d70f-6582-4471-96af-4b0c17a616ad/5f3043d4bc506bf91cb89fa90462bb58/dotnet-sdk-2.2.103-win-x64.zip"
