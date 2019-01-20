@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  reviewapp.web.api:
+    image: reviewappwebapi
+    restart: on-failure
+    build:
+      context: .
+      dockerfile: Web.Api/ReviewApp.Web.Api/Dockerfile
+
+  reviewapp.location.api:
+    image: reviewapplocationapi
+    restart: on-failure
+    build:
+      context: .
+      dockerfile: Services/Location/ReviewApp.Location.Api/Dockerfile

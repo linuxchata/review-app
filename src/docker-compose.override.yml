@@ -1,14 +1,14 @@
-version: '3.4'
+version: '3.7'
 
 services:
   reviewapp.web.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "80"
+      - "5001:80"
 
   reviewapp.location.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "80"
+      - "5002:80"
