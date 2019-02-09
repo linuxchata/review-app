@@ -32,7 +32,8 @@ docker-compose up
 ```
 
 ## Roadmap
-* Docker build on Azure DevOps with pushing images to docker hub
+* Merge unit test projects :heavy_check_mark:
+* Docker build on Azure DevOps with pushing images to Docker Hub :heavy_check_mark:
 * Add health check monitoring
 * Implement using RabbitMQ instead of ServiceBus
 * Add Sonar code analysis
