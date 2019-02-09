@@ -18,7 +18,7 @@ A simple review system for different subjects (e.g. doctors, clinics)
 * MongoDB
 * Azure Service Bus
 * Application Insights
-* Docker for Windows
+* Docker (Linux containers only)
 * ReactJS / React Router
 * TypeScript
 * Mobx
@@ -26,12 +26,7 @@ A simple review system for different subjects (e.g. doctors, clinics)
 * Webpack
 
 ## Docker support
-Run docker images
-```
-docker run -it -p 5001:80 reviewappwebapi:latest
-docker run -it -p 5002:80 reviewapplocationapi:latest
-```
-or
+Run application on Docker (Linux containers only)
 ```
 docker-compose up
 ```
