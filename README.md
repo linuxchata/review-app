@@ -15,7 +15,7 @@ A simple review system for different subjects (e.g. doctors, clinics)
 * MongoDB
 * Azure Service Bus
 * Application Insights
-* Docker
+* Docker for Windows
 * ReactJS / React Router
 * TypeScript
 * Mobx
@@ -34,7 +34,6 @@ docker-compose up
 ```
 
 ## Roadmap
-* Docker build
+* Docker build on Azure DevOps with pushing images to docker hub
 * Add health check monitoring
-* Merge unit tests project to one per bounded context
 * Implement using RabbitMQ instead of ServiceBus
