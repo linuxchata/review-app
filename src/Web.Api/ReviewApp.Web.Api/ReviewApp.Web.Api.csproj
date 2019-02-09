@@ -6,6 +6,7 @@
     <ApplicationInsightsAnnotationResourceId>/subscriptions/992990ef-e1fb-4ed0-974a-07fa16ccd32f/resourceGroups/Default-ApplicationInsights-EastUS/providers/microsoft.insights/components/ReviewApp</ApplicationInsightsAnnotationResourceId>
     <DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <Configurations>Debug;Release;ReleaseWithoutDocker</Configurations>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -14,6 +15,10 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.1\LC.RA.Web.Api.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWithoutDocker|AnyCPU'">
     <DocumentationFile>bin\Release\netcoreapp2.1\LC.RA.Web.Api.xml</DocumentationFile>
   </PropertyGroup>
 
