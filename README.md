@@ -4,7 +4,9 @@ A simple review system for different subjects (e.g. doctors, clinics)
 ## Build Status
 | Build server| Platform       | Status      |
 |-------------|----------------|-------------|
-| appveyor    | Windows        |[![Build status](https://ci.appveyor.com/api/projects/status/84djajia77jann58?svg=true)](https://ci.appveyor.com/project/linuxchata/review-app/branch/master) [![BCH compliance](https://bettercodehub.com/edge/badge/linuxchata/review-app?branch=master)](https://bettercodehub.com/) |
+| appveyor    | Windows        |[![Build status](https://ci.appveyor.com/api/projects/status/84djajia77jann58?svg=true)](https://ci.appveyor.com/project/linuxchata/review-app/branch/master) |
+| Azure DevOps | Windows | [![Build status](https://linuxchata.visualstudio.com/review-app/_apis/build/status/ReviewAppLocation%20-%20CI)](https://linuxchata.visualstudio.com/review-app/_build/latest?definitionId=11)
+| bettercodehub | | [![BCH compliance](https://bettercodehub.com/edge/badge/linuxchata/review-app?branch=master)](https://bettercodehub.com/) |
 
 ## Technologies and frameworks
 * ASP.NET Core 2.2
