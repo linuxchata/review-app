@@ -6,11 +6,11 @@ services:
     restart: on-failure
     build:
       context: .
-      dockerfile: Web.Api/ReviewApp.Web.Api/Dockerfile
+      dockerfile: src/Web.Api/ReviewApp.Web.Api/Dockerfile
 
   reviewapp.location.api:
     image: linuxchata/reviewapplocationapi
     restart: on-failure
     build:
       context: .
-      dockerfile: Services/Location/ReviewApp.Location.Api/Dockerfile
+      dockerfile: src/Services/Location/ReviewApp.Location.Api/Dockerfile
