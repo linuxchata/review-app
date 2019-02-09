@@ -44,7 +44,6 @@ namespace ReviewApp.Location.Api
         /// <returns>Created web host builder</returns>
         private static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseApplicationInsights()
                 .ConfigureServices(s => s.AddAutofac())
                 .UseNLog()
                 .UseStartup<Startup>();
