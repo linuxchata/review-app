@@ -4,7 +4,7 @@ using ReviewApp.Web.Api.Controllers;
 
 using Xunit;
 
-namespace ReviewApp.Web.Api.Tests.Controllers
+namespace ReviewApp.Web.UnitTests.Api.Controllers
 {
     public class HomeControllerTests
     {

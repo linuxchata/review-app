@@ -12,7 +12,7 @@ using ReviewApp.Web.Services.Converters;
 
 using Xunit;
 
-namespace ReviewApp.Web.Services.Tests.Converters
+namespace ReviewApp.Web.UnitTests.Services.Converters
 {
     public class LocationConverterTests
     {

@@ -2,7 +2,7 @@
 
 using ReviewApp.Web.DataAccess.Contracts;
 
-namespace ReviewApp.Web.DataAccess.Tests
+namespace ReviewApp.Web.UnitTests.DataAccess
 {
     public class TestDatabaseConnection : IDatabaseConnection
     {

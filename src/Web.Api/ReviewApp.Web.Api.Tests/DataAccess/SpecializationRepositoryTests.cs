@@ -4,12 +4,13 @@ using Microsoft.Extensions.Logging;
 
 using Moq;
 
+using ReviewApp.Web.DataAccess;
 using ReviewApp.Web.DataAccess.Contracts;
 using ReviewApp.Web.DataAccess.Converters;
 
 using Xunit;
 
-namespace ReviewApp.Web.DataAccess.Tests
+namespace ReviewApp.Web.UnitTests.DataAccess
 {
     [Trait("Category", "IntegrationTests")]
     public class SpecializationRepositoryTests

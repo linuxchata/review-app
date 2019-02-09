@@ -9,12 +9,13 @@ using MongoDB.Bson;
 using Moq;
 
 using ReviewApp.Web.Core.Domain;
+using ReviewApp.Web.DataAccess;
 using ReviewApp.Web.DataAccess.Contracts;
 using ReviewApp.Web.DataAccess.Converters;
 
 using Xunit;
 
-namespace ReviewApp.Web.DataAccess.Tests
+namespace ReviewApp.Web.UnitTests.DataAccess
 {
     [Trait("Category", "IntegrationTests")]
     public class DoctorRepositoryTests

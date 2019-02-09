@@ -7,7 +7,7 @@ using ReviewApp.Web.Services.Contracts;
 
 using Xunit;
 
-namespace ReviewApp.Web.Api.Tests.Controllers
+namespace ReviewApp.Web.UnitTests.Api.Controllers
 {
     public class SyncControllerTests
     {

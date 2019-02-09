@@ -8,11 +8,12 @@ using Moq;
 using ReviewApp.ServiceBusAdapter.Abstractions;
 using ReviewApp.Web.Core.Domain;
 using ReviewApp.Web.DataAccess.Contracts;
+using ReviewApp.Web.Services;
 using ReviewApp.Web.Services.Contracts;
 
 using Xunit;
 
-namespace ReviewApp.Web.Services.Tests
+namespace ReviewApp.Web.UnitTests.Services
 {
     public class LocationServiceTests
     {
