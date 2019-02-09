@@ -2,14 +2,14 @@ version: '3.7'
 
 services:
   reviewapp.web.api:
-    image: reviewappwebapi
+    image: linuxchata/reviewappwebapi
     restart: on-failure
     build:
       context: .
       dockerfile: Web.Api/ReviewApp.Web.Api/Dockerfile
 
   reviewapp.location.api:
-    image: reviewapplocationapi
+    image: linuxchata/reviewapplocationapi
     restart: on-failure
     build:
       context: .
