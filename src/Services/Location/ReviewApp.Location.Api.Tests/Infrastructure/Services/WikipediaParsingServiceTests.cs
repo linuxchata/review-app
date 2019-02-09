@@ -7,11 +7,10 @@ using Moq;
 
 using ReviewApp.Location.Core.Application.Wikipedia;
 using ReviewApp.Location.Infrastructure.Services;
-using ReviewApp.Location.Infrastructure.Tests.Properties;
 
 using Xunit;
 
-namespace ReviewApp.Location.Infrastructure.Tests.Services
+namespace ReviewApp.Location.Tests.Infrastructure.Services
 {
     public class WikipediaParsingServiceTests
     {

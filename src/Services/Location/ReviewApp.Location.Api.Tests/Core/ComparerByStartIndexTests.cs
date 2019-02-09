@@ -2,7 +2,7 @@ using ReviewApp.Location.Core.Application.Wikipedia;
 
 using Xunit;
 
-namespace ReviewApp.Location.Core.Tests
+namespace ReviewApp.Location.Tests.Core
 {
     public class ComparerByStartIndexTests
     {

@@ -10,7 +10,7 @@ using ReviewApp.ServiceBusAdapter.Abstractions;
 
 using Xunit;
 
-namespace ReviewApp.Location.Infrastructure.Tests.Services
+namespace ReviewApp.Location.Tests.Infrastructure.Services
 {
     public class LocationServiceMessageHandlerTests
     {

@@ -4,7 +4,7 @@ using ReviewApp.Location.Api.Controllers;
 
 using Xunit;
 
-namespace ReviewApp.Location.Api.Tests.Controllers
+namespace ReviewApp.Location.Tests.Api.Controllers
 {
     public class HomeControllerTests
     {
