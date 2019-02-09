@@ -32,3 +32,9 @@ or
 ```
 docker-compose up
 ```
+
+## Roadmap
+* Docker build
+* Add health check monitoring
+* Merge unit tests project to one per bounded context
+* Implement using RabbitMQ instead of ServiceBus
