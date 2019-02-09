@@ -29,7 +29,7 @@ namespace ReviewApp.Web.Api.Controllers
         }
 
         /// <summary>
-        /// Get all locations
+        /// Gets all locations
         /// </summary>
         /// <returns>List of all locations</returns>
         /// <response code="204">No locations were found</response>
@@ -49,7 +49,7 @@ namespace ReviewApp.Web.Api.Controllers
         }
 
         /// <summary>
-        /// Get all locations for given search criteria
+        /// Gets all locations for given search criteria
         /// </summary>
         /// <param name="searchCriteria">Search criteria</param>
         /// <returns>List of all locations for given search criteria</returns>

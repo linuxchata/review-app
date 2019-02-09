@@ -29,7 +29,7 @@ namespace ReviewApp.Web.Api.Controllers
         }
 
         /// <summary>
-        /// Get all subjects
+        /// Gets all subjects
         /// </summary>
         /// <returns>List of all subjects</returns>
         /// <response code="204">No subjects were found</response>
@@ -49,7 +49,7 @@ namespace ReviewApp.Web.Api.Controllers
         }
 
         /// <summary>
-        /// Get subject by id
+        /// Gets subject by id
         /// </summary>
         /// <param name="id">The identifier of subject</param>
         /// <returns>Subject for given id</returns>
@@ -74,7 +74,7 @@ namespace ReviewApp.Web.Api.Controllers
         }
 
         /// <summary>
-        /// Create subject
+        /// Creates subject
         /// </summary>
         /// <param name="subject">The identifier of subject</param>
         /// <returns>201 status code</returns>
@@ -103,7 +103,7 @@ namespace ReviewApp.Web.Api.Controllers
         }
 
         /// <summary>
-        /// Update subject
+        /// Updates subject
         /// </summary>
         /// <param name="id">The identifier of subject</param>
         /// <param name="subject">The subject</param>
@@ -133,7 +133,7 @@ namespace ReviewApp.Web.Api.Controllers
         }
 
         /// <summary>
-        /// Delete subject
+        /// Deletes subject
         /// </summary>
         /// <param name="id">The identifier of subject</param>
         /// <returns>204 status code</returns>

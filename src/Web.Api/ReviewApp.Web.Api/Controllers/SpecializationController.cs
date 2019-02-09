@@ -29,7 +29,7 @@ namespace ReviewApp.Web.Api.Controllers
         }
 
         /// <summary>
-        /// Get all specializations
+        /// Gets all specializations
         /// </summary>
         /// <returns>List of all specializations</returns>
         /// <response code="204">No specializations were found</response>
@@ -49,7 +49,7 @@ namespace ReviewApp.Web.Api.Controllers
         }
 
         /// <summary>
-        /// Get all specializations for given search criteria
+        /// Gets all specializations for given search criteria
         /// </summary>
         /// <param name="searchCriteria">Search criteria</param>
         /// <returns>List of all specializations for given search criteria</returns>

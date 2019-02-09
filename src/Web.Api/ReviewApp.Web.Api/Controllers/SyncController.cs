@@ -26,7 +26,7 @@ namespace ReviewApp.Web.Api.Controllers
         }
 
         /// <summary>
-        /// Trigger locations synchronization process
+        /// Triggers locations synchronization process
         /// </summary>
         /// <returns>200 status code</returns>
         [HttpGet]
