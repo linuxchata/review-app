@@ -39,3 +39,4 @@ docker-compose up
 * Docker build on Azure DevOps with pushing images to docker hub
 * Add health check monitoring
 * Implement using RabbitMQ instead of ServiceBus
+* Add Sonar code analysis
