@@ -7,6 +7,7 @@ using Moq;
 
 using ReviewApp.Location.Core.Application.Wikipedia;
 using ReviewApp.Location.Infrastructure.Services;
+using ReviewApp.Location.Tests.Properties;
 
 using Xunit;
 

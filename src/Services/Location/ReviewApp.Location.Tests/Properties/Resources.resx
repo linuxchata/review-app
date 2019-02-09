@@ -1,0 +1,2491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="TestPageContent" xml:space="preserve">
+    <value>Нижче наведений список усіх '''[[Міста України|міст України]]''' (станом на 10 листопада 2017 року), а також їх наявне населення за даними [[Перепис населення України 2001|Всеукраїнського перепису населення]] [[5 грудня]] [[2001]] року та статистичного збірника «Чисельність наявного населення України» [[Державна служба статистики України|Державного комітету статистики України]] станом на 1 січня 2014 року.
+
+Населення міст на 2001 рік подане в межах на 1 січня 2003 року, населення 2014 року&amp;nbsp;— в межах на 1 січня 2014 року. За цей період межі міст могли змінитися. Наприклад, у 2003 році зі складу [[Чернівці]]в було виділене село [[Новий Киселів]], у 2009 році до складу міста [[Запоріжжя]] було включене смт [[Тепличне (Запоріжжя)|Тепличне]] (населення 2001 року&amp;nbsp;— 2626 осіб), до складу [[Кривий Ріг|Кривого Рогу]] включено селище [[Степне (Кривий Ріг)|Степне]], у 2012 році низка населених пунктів Дергачівського і Харківського районів включена в межі [[Харків|Харкова]] тощо.
+
+Станом на 1 січня 2014 року в Україні налічувалося 460 міст. Ще одне нове місто з'явилося протягом 2014—2017 років.
+
+__TOC__
+
+== Міста України (за кількістю населення) ==
+
+&lt;center&gt;[[#1000000|Понад 1&amp;nbsp;000&amp;nbsp;000]] | [[#500000|500&amp;nbsp;000&amp;nbsp;— 1&amp;nbsp;000&amp;nbsp;000]] | [[#250000|250&amp;nbsp;000&amp;nbsp;— 500&amp;nbsp;000]] | [[#100000|100&amp;nbsp;000&amp;nbsp;— 250&amp;nbsp;000]] | [[#50000|50&amp;nbsp;000&amp;nbsp;— 100&amp;nbsp;000]] | [[#25000|25&amp;nbsp;000&amp;nbsp;— 50&amp;nbsp;000]] | [[#10000|10&amp;nbsp;000&amp;nbsp;— 25&amp;nbsp;000]] | [[#5000|5000&amp;nbsp;— 10&amp;nbsp;000]] | [[#2500|2500&amp;nbsp;— 5000]] | [[#0|До 2500]]&lt;/center&gt;
+{| class=wikitable width=100%
+! [[Місто]]
+! [[Область]], [[Автономна Республіка Крим|АРК]], міськрада
+! Чисельність населення, 2014
+! Чисельність населення, 2001
+|-
+!  colspan="4" style="background-color:silver;text-align:center;" | &lt;div id=1000000&gt;Понад 1&amp;nbsp;000&amp;nbsp;000&lt;/div&gt;
+|-
+| [[Київ]]
+| м. [[Київ]]
+|  align=right NOWRAP | 2 868 702
+|  align=right NOWRAP | 2 611 327
+|-
+| [[Харків]]
+| [[Харківська область|Харківська]]
+|  align=right NOWRAP | 1 451 132
+|  align=right NOWRAP | 1 470 902
+|-
+| [[Одеса]]
+| [[Одеська область|Одеська]]
+|  align=right NOWRAP | 1 017 022
+|  align=right NOWRAP | 1 029 049
+|-
+!  colspan="4" style="background-color:silver;text-align:center;" | &lt;div id=500000&gt;500&amp;nbsp;000&amp;nbsp;— 1&amp;nbsp;000&amp;nbsp;000&lt;/div&gt;
+|-
+| [[Дніпро (місто)|Дніпро]]&lt;ref&gt;До 2016 року&amp;nbsp;— Дніпропетровськ&lt;/ref&gt;&lt;ref name=dnipropetrovs'k&gt;У тому числі смт [[Таромське]] (населення: 15&amp;nbsp;838 осіб), яке ввійшло до складу міста в грудні 2001 року.&lt;/ref&gt;
+| [[Дніпропетровська область|Дніпропетровська]]
+|  align=right NOWRAP | 993 094
+|  align=right NOWRAP | 1 080 846
+|-
+| [[Донецьк]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 949 825
+|  align=right NOWRAP | 1 016 194
+|-
+| [[Запоріжжя]]&lt;ref name=zaporizhzya&gt;У тому числі смт [[Тепличне (Запоріжжя)|Тепличне]] (населення: 2626 осіб), яке ввійшло до складу міста в квітні 2009 року.&lt;/ref&gt;
+| [[Запорізька область|Запорізька]]
+|  align=right NOWRAP | 766 268
+|  align=right NOWRAP | 817 882
+|-
+| [[Львів]]
+| [[Львівська область|Львівська]]
+| align=right NOWRAP | 729 038
+| align=right NOWRAP | 732 818
+|-
+| [[Кривий Ріг]]&lt;ref name="KR"&gt;У тому числі м.&amp;nbsp;[[Інгулець (Кривий Ріг)|Інгулець]] (населення 38 986) і смт [[Зелене (Кривий Ріг)|Зелене]] (1048), які були включені до складу міста в жовтні 2002 року.&lt;/ref&gt;
+| [[Дніпропетровська область|Дніпропетровська]]
+|  align=right NOWRAP | 652 137
+|  align=right NOWRAP | 709 014
+|-
+!  colspan="4" style="background-color:silver;text-align:center;" | &lt;div id=250000&gt;250&amp;nbsp;000&amp;nbsp;— 500&amp;nbsp;000&lt;/div&gt;
+|-
+| [[Миколаїв]]
+| [[Миколаївська область|Миколаївська]]
+|  align=right NOWRAP | 494 922
+|  align=right NOWRAP | 514 136
+|-
+| [[Маріуполь]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 458 533
+|  align=right NOWRAP | 492 176
+|-
+| [[Луганськ]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 424 113
+|  align=right NOWRAP | 463 097
+|-
+| [[Вінниця]]
+| [[Вінницька область|Вінницька]]
+|  align=right NOWRAP | 372 116
+|  align=right NOWRAP | 384 840
+|-
+| [[Макіївка]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 351 820
+|  align=right NOWRAP | 389 589
+|-
+| [[Севастополь]]
+| м.[[Севастополь]]
+|  align=right NOWRAP | 344 853
+|  align=right NOWRAP | 342 451
+|-
+| [[Сімферополь]]
+| [[Автономна Республіка Крим]]
+|  align=right NOWRAP | 338 319
+|  align=right NOWRAP | 343 644
+|-
+| [[Херсон]]
+| [[Херсонська область|Херсонська]]
+|  align=right NOWRAP | 297 593
+|  align=right NOWRAP | 328 360
+|-
+| [[Полтава]]
+| [[Полтавська область|Полтавська]]
+|  align=right NOWRAP | 295 950
+|  align=right NOWRAP | 317 998
+|-
+| [[Чернігів]]
+| [[Чернігівська область|Чернігівська]]
+|  align=right NOWRAP | 295 670
+|  align=right NOWRAP | 304 994
+|-
+| [[Черкаси]]
+| [[Черкаська область|Черкаська]]
+|  align=right NOWRAP | 285 170
+|  align=right NOWRAP | 295 414
+|-
+| [[Житомир]]
+| [[Житомирська область|Житомирська]]
+| align=right NOWRAP | 270 922
+| align=right NOWRAP | 284 236
+|-
+| [[Суми]]
+| [[Сумська область|Сумська]]
+|  align=right NOWRAP | 268 874
+|  align=right NOWRAP | 293 141
+|-
+| [[Хмельницький]]
+| [[Хмельницька область|Хмельницька]]
+| align=right NOWRAP | 266 095
+| align=right NOWRAP | 253 994
+|-
+| [[Чернівці]]
+| [[Чернівецька область|Чернівецька]]
+|  align=right NOWRAP | 262 129
+|  align=right NOWRAP | 240 621
+|-
+| [[Горлівка]]
+| [[Донецька область|Донецька]]
+| align=right NOWRAP | 254 416
+| align=right NOWRAP | 292 250
+|-
+!  colspan="4" style="background-color:silver;text-align:center;" | &lt;div id=100000&gt;100&amp;nbsp;000&amp;nbsp;— 250&amp;nbsp;000&lt;/div&gt;
+|-
+| [[Рівне]]
+| [[Рівненська область|Рівненська]]
+|  align=right NOWRAP | 249 912
+|  align=right NOWRAP | 248 813
+|-
+| [[Кам'янське]]&lt;ref&gt;До 2016 року&amp;nbsp;— Дніпродзержинськ&lt;/ref&gt;
+| [[Дніпропетровська область|Дніпропетровська]]
+| align=right NOWRAP | 241 475
+| align=right NOWRAP | 255 841
+|-
+| [[Кропивницький]]&lt;ref&gt;До 2016 року&amp;nbsp;— Кіровоград&lt;/ref&gt;
+| [[Кіровоградська область|Кіровоградська]]
+| align=right NOWRAP | 233 333
+| align=right NOWRAP | 254 103
+|-
+| [[Івано-Франківськ]]
+| [[Івано-Франківська область|Івано-Франківська]]
+|  align=right NOWRAP | 227 030
+|  align=right NOWRAP | 218 359
+|-
+| [[Кременчук]]
+| [[Полтавська область|Полтавська]]
+|  align=right NOWRAP | 225 828
+|  align=right NOWRAP | 234 073
+|-
+| [[Тернопіль]]
+| [[Тернопільська область|Тернопільська]]
+|  align=right NOWRAP | 217 110
+|  align=right NOWRAP | 227 755
+|-
+| [[Луцьк]]
+| [[Волинська область|Волинська]]
+|  align=right NOWRAP | 216 076
+|  align=right NOWRAP | 208 816
+|-
+| [[Біла Церква]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 211 205
+|  align=right NOWRAP | 210 128
+|-
+| [[Краматорськ]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 162 811
+|  align=right NOWRAP | 181 025
+|-
+| [[Мелітополь]]
+| [[Запорізька область|Запорізька]]
+|  align=right NOWRAP | 156 889
+|  align=right NOWRAP | 160 657
+|-
+| [[Керч]]
+| [[Автономна Республіка Крим]]
+|  align=right NOWRAP | 144 626
+|  align=right NOWRAP | 157 007
+|-
+| [[Нікополь]]
+| [[Дніпропетровська область|Дніпропетровська]]
+|  align=right NOWRAP | 117 857
+|  align=right NOWRAP | 136 280
+|-
+| [[Слов'янськ]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 116 694
+|  align=right NOWRAP | 124 829
+|-
+| [[Ужгород]]
+| [[Закарпатська область|Закарпатська]]
+|  align=right NOWRAP | 115 947
+|  align=right NOWRAP | 117 317
+|-
+| [[Бердянськ]]
+| [[Запорізька область|Запорізька]]
+|  align=right NOWRAP | 115 500
+|  align=right NOWRAP | 121 692
+|-
+| [[Алчевськ]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 110 474
+|  align=right NOWRAP | 119 193
+|-
+| [[Павлоград]]
+| [[Дніпропетровська область|Дніпропетровська]]
+|  align=right NOWRAP | 109 739
+|  align=right NOWRAP | 118 816
+|-
+| [[Сєвєродонецьк]]&lt;ref&gt;До 2008 року&amp;nbsp;— Сєверодонецьк&lt;/ref&gt;
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 108 899
+|  align=right NOWRAP | 119 940
+|-
+| [[Євпаторія]]
+| [[Автономна Республіка Крим]]
+|  align=right NOWRAP | 107 040
+|  align=right NOWRAP | 105 915
+|-
+| [[Лисичанськ]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 103 459
+|  align=right NOWRAP | 115 229
+|-
+| [[Кам'янець-Подільський]]
+| [[Хмельницька область|Хмельницька]]
+|  align=right NOWRAP | 102 254
+|  align=right NOWRAP | 99 610
+|-
+!  colspan="4" style="background-color:silver;text-align:center;" | &lt;div id=50000&gt;50&amp;nbsp;000&amp;nbsp;— 100&amp;nbsp;000&lt;/div&gt;
+|-
+| [[Бровари]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 98 874
+|  align=right NOWRAP | 86 839
+|-
+| [[Конотоп]]
+| [[Сумська область|Сумська]]
+|  align=right NOWRAP | 88 477
+|  align=right NOWRAP | 92 657
+|-
+| [[Умань]]
+| [[Черкаська область|Черкаська]]
+|  align=right NOWRAP | 86 621
+|  align=right NOWRAP | 88 735
+|-
+| [[Мукачево]]&lt;ref&gt;До 2017 року&amp;nbsp;— Мукачеве&lt;/ref&gt;
+| [[Закарпатська область|Закарпатська]]
+|  align=right NOWRAP | 85 487
+|  align=right NOWRAP | 82 346
+|-
+| [[Олександрія]]
+| [[Кіровоградська область|Кіровоградська]]
+|  align=right NOWRAP | 82 636
+|  align=right NOWRAP | 93 357
+|-
+| [[Хрустальний]]&lt;ref&gt;До 2016 року&amp;nbsp;— Красний Луч&lt;/ref&gt;
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 82 228
+|  align=right NOWRAP | 94 875
+|-
+| [[Єнакієве]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 81 054
+|  align=right NOWRAP | 103 997
+|-
+| [[Шостка]]
+| [[Сумська область|Сумська]]
+|  align=right NOWRAP | 78 505
+|  align=right NOWRAP | 87 130
+|-
+| [[Бердичів]]
+| [[Житомирська область|Житомирська]]
+|  align=right NOWRAP | 78 312
+|  align=right NOWRAP | 87 575
+|-
+| [[Ялта]]
+| [[Автономна Республіка Крим]]
+|  align=right NOWRAP | 78 200
+|  align=right NOWRAP | 81 654
+|-
+| [[Бахмут]]&lt;ref&gt;До 2016 року&amp;nbsp;— Артемівськ&lt;/ref&gt;
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 77 474
+|  align=right NOWRAP | 82 916
+|-
+| [[Кадіївка]]&lt;ref&gt;До 2016 року&amp;nbsp;— Стаханов&lt;/ref&gt;
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 77 168
+|  align=right NOWRAP | 90 152
+|-
+| [[Дрогобич]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 76 866
+|  align=right NOWRAP | 79 119
+|-
+| [[Костянтинівка]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 76 065
+|  align=right NOWRAP | 95 111
+|-
+| [[Ніжин]]
+| [[Чернігівська область|Чернігівська]]
+|  align=right NOWRAP | 72 869
+|  align=right NOWRAP | 76 625
+|-
+| [[Ізмаїл]]
+| [[Одеська область|Одеська]]
+|  align=right NOWRAP | 72 501
+|  align=right NOWRAP | 84 815
+|-
+| [[Новомосковськ]]
+| [[Дніпропетровська область|Дніпропетровська]]
+|  align=right NOWRAP | 71 299
+|  align=right NOWRAP | 72 439
+|-
+| [[Феодосія]]
+| [[Автономна Республіка Крим]]
+|  align=right NOWRAP | 69 040
+|  align=right NOWRAP | 74 669
+|-
+| [[Ковель]]
+| [[Волинська область|Волинська]]
+|  align=right NOWRAP | 69 032
+|  align=right NOWRAP | 66 401
+|-
+| [[Сміла]]
+| [[Черкаська область|Черкаська]]
+|  align=right NOWRAP | 68 740
+|  align=right NOWRAP | 69 681
+|-
+| [[Червоноград]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 67 993
+|  align=right NOWRAP | 70 568
+|-
+| [[Калуш]]
+| [[Івано-Франківська область|Івано-Франківська]]
+|  align=right NOWRAP | 67 559
+|  align=right NOWRAP | 67 902
+|-
+| [[Первомайськ (Миколаївська область)|Первомайськ]]
+| [[Миколаївська область|Миколаївська]]
+|  align=right NOWRAP | 66 672
+|  align=right NOWRAP | 70 170
+|-
+| [[Коростень]]
+| [[Житомирська область|Житомирська]]
+|  align=right NOWRAP | 65 454
+|  align=right NOWRAP | 66 669
+|-
+| [[Довжанськ]]&lt;ref&gt;До 2016 року&amp;nbsp;— Сведловськ&lt;/ref&gt;
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 64 895
+|  align=right NOWRAP | 72 531
+|-
+| [[Покровськ]]&lt;ref&gt;До 2016 року&amp;nbsp;— Красноармійськ&lt;/ref&gt;
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 64 533
+|  align=right NOWRAP | 69 154
+|-
+| [[Коломия]]
+| [[Івано-Франківська область|Івано-Франківська]]
+|  align=right NOWRAP | 61 350
+|  align=right NOWRAP | 61 989
+|-
+| [[Бориспіль]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 60 160
+|  align=right NOWRAP | 53 975
+|-
+| [[Рубіжне]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 59 951
+|  align=right NOWRAP | 65 322
+|-
+| [[Чорноморськ]]&lt;ref&gt;До 2016 року&amp;nbsp;— Іллічівськ&lt;/ref&gt;
+| [[Одеська область|Одеська]]
+|  align=right NOWRAP | 59 840
+|  align=right NOWRAP | 54 151
+|-
+| [[Стрий]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 59 835
+|  align=right NOWRAP | 62 479
+|-
+| [[Дружківка]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 59 596
+|  align=right NOWRAP | 64 557
+|-
+| [[Харцизьк]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 58 641
+|  align=right NOWRAP | 64 175
+|-
+| [[Прилуки]]
+| [[Чернігівська область|Чернігівська]]
+|  align=right NOWRAP | 58 202
+|  align=right NOWRAP | 64 861
+|-
+| [[Лозова (місто)|Лозова]]
+| [[Харківська область|Харківська]]
+|  align=right NOWRAP | 57 916
+|  align=right NOWRAP | 64 041
+|-
+| [[Чистякове]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 56 993
+|  align=right NOWRAP | 72 346
+|-
+| [[Новоград-Волинський]]
+| [[Житомирська область|Житомирська]]
+|  align=right NOWRAP | 56 049
+|  align=right NOWRAP | 56 259
+|-
+| [[Енергодар]]
+| [[Запорізька область|Запорізька]]
+|  align=right NOWRAP | 54 536
+|  align=right NOWRAP | 56 242
+|-
+| [[Антрацит (місто)|Антрацит]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 54 242
+|  align=right NOWRAP | 63 698
+|-
+| [[Нововолинськ]]
+| [[Волинська область|Волинська]]
+|  align=right NOWRAP | 53 298
+|  align=right NOWRAP | 53 838
+|-
+| [[Горішні Плавні]]&lt;ref&gt;До 2016 року&amp;nbsp;— Комсомольськ&lt;/ref&gt;
+| [[Полтавська область|Полтавська]]
+|  align=right NOWRAP | 51 958
+|  align=right NOWRAP | 51 740
+|-
+| [[Ізюм]]
+| [[Харківська область|Харківська]]
+|  align=right NOWRAP | 51 175
+|  align=right NOWRAP | 56 114
+|-
+| [[Шахтарськ]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 50 468
+|  align=right NOWRAP | 59 589
+|-
+| [[Білгород-Дністровський]]
+| [[Одеська область|Одеська]]
+|  align=right NOWRAP | 50 105
+|  align=right NOWRAP | 51 890
+|-
+!  colspan="4" style="background-color:silver;text-align:center;" | &lt;div id=25000&gt;25&amp;nbsp;000&amp;nbsp;— 50&amp;nbsp;000&lt;/div&gt;
+|-
+| [[Мирноград]]&lt;ref&gt;До 2016 року — Димитров&lt;/ref&gt;
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 49 519
+|  align=right NOWRAP | 54 787
+|-
+| [[Охтирка]]
+| [[Сумська область|Сумська]]
+|  align=right NOWRAP | 48 881
+|  align=right NOWRAP | 50 399
+|-
+| [[Марганець (місто)|Марганець]]
+| [[Дніпропетровська область|Дніпропетровська]]
+|  align=right NOWRAP | 48 345
+|  align=right NOWRAP | 49 592
+|-
+| [[Фастів]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 48 098
+|  align=right NOWRAP | 51 976
+|-
+| [[Сніжне]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 48 003
+|  align=right NOWRAP | 58 496
+|-
+| [[Нова Каховка]]
+| [[Херсонська область|Херсонська]]
+|  align=right NOWRAP | 47 638
+|  align=right NOWRAP | 52 137
+|-
+| [[Лубни]]
+| [[Полтавська область|Полтавська]]
+|  align=right NOWRAP | 47 397
+|  align=right NOWRAP | 52 572
+|-
+| [[Ровеньки]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 47 370
+|  align=right NOWRAP | 53 725
+|-
+| [[Жовті Води]]
+| [[Дніпропетровська область|Дніпропетровська]]
+|  align=right NOWRAP | 47 284
+|  align=right NOWRAP | 53 582
+|-
+| [[Брянка]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 46 830
+|  align=right NOWRAP | 54 767
+|-
+| [[Світловодськ]]
+| [[Кіровоградська область|Кіровоградська]]
+|  align=right NOWRAP | 46 372
+|  align=right NOWRAP | 50 094
+|-
+| [[Ірпінь]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 44 023
+|  align=right NOWRAP | 40 593
+|-
+| [[Сорокине]]&lt;ref&gt;До 2016 року&amp;nbsp;— Краснодон&lt;/ref&gt;
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 44 014
+|  align=right NOWRAP | 50 560
+|-
+| [[Шепетівка]]
+| [[Хмельницька область|Хмельницька]]
+|  align=right NOWRAP | 43 255
+|  align=right NOWRAP | 48 212
+|-
+| [[Ромни]]
+| [[Сумська область|Сумська]]
+|  align=right NOWRAP | 41 951
+|  align=right NOWRAP | 50 448
+|-
+| [[Вараш]]&lt;ref&gt;До 2016 року&amp;nbsp;— Кузнецовськ&lt;/ref&gt;
+| [[Рівненська область|Рівненська]]
+|  align=right NOWRAP | 41 560
+|  align=right NOWRAP | 38 830
+|-
+| [[Покров]]&lt;ref&gt;До 2016 року — Орджонікідзе&lt;/ref&gt;
+| [[Дніпропетровська область|Дніпропетровська]]
+|  align=right NOWRAP | 41 152
+|  align=right NOWRAP | 44 834
+|-
+| [[Миргород]]
+| [[Полтавська область|Полтавська]]
+|  align=right NOWRAP | 40 876
+|  align=right NOWRAP | 42 886
+|-
+| [[Подільськ]]&lt;ref&gt;До 2016 року&amp;nbsp;— Котовськ&lt;/ref&gt;
+| [[Одеська область|Одеська]]
+|  align=right NOWRAP | 40 717
+|  align=right NOWRAP | 40 718
+|-
+| [[Южноукраїнськ]]
+| [[Миколаївська область|Миколаївська]]
+|  align=right NOWRAP | 40 378
+|  align=right NOWRAP | 38 206
+|-
+| [[Володимир-Волинський]]
+| [[Волинська область|Волинська]]
+|  align=right NOWRAP | 38 964
+|  align=right NOWRAP | 38 256
+|-
+| [[Первомайськ (Луганська область)|Первомайськ]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 38 235
+|  align=right NOWRAP | 43 082
+|-
+| [[Дубно]]
+| [[Рівненська область|Рівненська]]
+|  align=right NOWRAP | 38 087
+|  align=right NOWRAP | 39 146
+|-
+| [[Вишневе (місто)|Вишневе]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 38 011
+|  align=right NOWRAP | 34 465
+|-
+| [[Каховка]]
+| [[Херсонська область|Херсонська]]
+|  align=right NOWRAP | 37 316
+|  align=right NOWRAP | 38 238
+|-
+| [[Васильків]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 36 888
+|  align=right NOWRAP | 39 722
+|-
+| [[Нетішин]]
+| [[Хмельницька область|Хмельницька]]
+|  align=right NOWRAP | 36 844
+|  align=right NOWRAP | 34 358
+|-
+| [[Вознесенськ]]
+| [[Миколаївська область|Миколаївська]]
+|  align=right NOWRAP | 36 192
+|  align=right NOWRAP | 42 634
+|-
+| [[Славута]]
+| [[Хмельницька область|Хмельницька]]
+|  align=right NOWRAP | 35 892
+|  align=right NOWRAP | 34 340
+|-
+| [[Ясинувата]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 35 701
+|  align=right NOWRAP | 37 552
+|-
+| [[Джанкой]]
+| [[Автономна Республіка Крим]]
+|  align=right NOWRAP | 35 693
+|  align=right NOWRAP | 43 343
+|-
+| [[Боярка]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 35 558
+|  align=right NOWRAP | 35 968
+|-
+| [[Жмеринка]]
+| [[Вінницька область|Вінницька]]
+|  align=right NOWRAP | 35 354
+|  align=right NOWRAP | 37 349
+|-
+| [[Старокостянтинів]]
+| [[Хмельницька область|Хмельницька]]
+|  align=right NOWRAP | 35 104
+|  align=right NOWRAP | 35 206
+|-
+| [[Авдіївка]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 35 090
+|  align=right NOWRAP | 37 210
+|-
+| [[Самбір]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 34 879
+|  align=right NOWRAP | 36 556
+|-
+| [[Борислав]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 34 877
+|  align=right NOWRAP | 38 122
+|-
+| [[Торецьк]]&lt;ref&gt;До 2016 року&amp;nbsp;— Дзержинськ&lt;/ref&gt;
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 34 750
+|  align=right NOWRAP | 43 371
+|-
+| [[Глухів]]
+| [[Сумська область|Сумська]]
+|  align=right NOWRAP | 34 282
+|  align=right NOWRAP | 35 768
+|-
+| [[Обухів]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 33 180
+|  align=right NOWRAP | 32 776
+|-
+| [[Токмак]]
+| [[Запорізька область|Запорізька]]
+|  align=right NOWRAP | 32 772
+|  align=right NOWRAP | 36 275
+|-
+| [[Чугуїв]]
+| [[Харківська область|Харківська]]
+|  align=right NOWRAP | 32 379
+|  align=right NOWRAP | 36 789
+|-
+| [[Могилів-Подільський]]
+| [[Вінницька область|Вінницька]]
+|  align=right NOWRAP | 31 832
+|  align=right NOWRAP | 32 853
+|-
+| [[Южне]]
+| [[Одеська область|Одеська]]
+|  align=right NOWRAP | 31 796
+|  align=right NOWRAP | 23 977
+|-
+| [[Костопіль]]
+| [[Рівненська область|Рівненська]]
+|  align=right NOWRAP | 31 668
+|  align=right NOWRAP | 30 467
+|-
+| [[Синельникове]]
+| [[Дніпропетровська область|Дніпропетровська]]
+|  align=right NOWRAP | 31 576
+|  align=right NOWRAP | 32 302
+|-
+| [[Первомайський (місто)|Первомайський]]
+| [[Харківська область|Харківська]]
+|  align=right NOWRAP | 30 984
+|  align=right NOWRAP | 32 523
+|-
+| [[Добропілля]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 30 884
+|  align=right NOWRAP | 35 638
+|-
+| [[Новояворівськ]]&lt;ref&gt;До 2008 року&amp;nbsp;— Новояворівське&lt;/ref&gt;
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 29 950
+|  align=right NOWRAP | 26 483
+|-
+| [[Буча]]&lt;ref name=bucha&gt;Смт [[Буча]] [[Ірпінська міська рада|Ірпінської міськради]] [[Київська область|Київської області]] віднесене до категорії міст обласного значення постановою Верховної Ради України №&amp;nbsp;3434-IV від 9.02.2006 року. Постанова набула чинності з [[1 січня]] [[2007]] року.&lt;/ref&gt;
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 29 805
+|  align=right NOWRAP | 28 533
+|-
+| [[Красноперекопськ]] (Яни Капу)
+| [[Автономна Республіка Крим]]
+|  align=right NOWRAP | 29 672
+|  align=right NOWRAP | 31 023
+|-
+| [[Чортків]]
+| [[Тернопільська область|Тернопільська]]
+|  align=right NOWRAP | 29 662
+|  align=right NOWRAP | 29 057
+|-
+| [[Балаклія]]
+| [[Харківська область|Харківська]]
+|  align=right NOWRAP | 29 395
+|  align=right NOWRAP | 32 408
+|-
+| [[Трускавець]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 29 386
+|  align=right NOWRAP | 31 037
+|-
+| [[Куп'янськ]]
+| [[Харківська область|Харківська]]
+|  align=right NOWRAP | 29 247
+|  align=right NOWRAP | 32 449
+|-
+| [[Першотравенськ]]
+| [[Дніпропетровська область|Дніпропетровська]]
+|  align=right NOWRAP | 28 994
+|  align=right NOWRAP | 29 140
+|-
+| [[Новий Розділ]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 28 875
+|  align=right NOWRAP | 28 227
+|-
+| [[Тернівка (місто)|Тернівка]]
+| [[Дніпропетровська область|Дніпропетровська]]
+|  align=right NOWRAP | 28 853
+|  align=right NOWRAP | 29 226
+|-
+| [[Сарни]]
+| [[Рівненська область|Рівненська]]
+|  align=right NOWRAP | 28 835
+|  align=right NOWRAP | 28 144
+|-
+| [[Хуст]]
+| [[Закарпатська область|Закарпатська]]
+|  align=right NOWRAP | 28 600
+|  align=right NOWRAP | 29 080
+|-
+| [[Золотоноша]]
+| [[Черкаська область|Черкаська]]
+|  align=right NOWRAP | 28 321
+|  align=right NOWRAP | 28 793
+|-
+| [[Алушта]]
+| [[Автономна Республіка Крим]]
+|  align=right NOWRAP | 28 295
+|  align=right NOWRAP | 31 440
+|-
+| [[Хмільник]]
+| [[Вінницька область|Вінницька]]
+|  align=right NOWRAP | 28 275
+|  align=right NOWRAP | 27 898
+|-
+| [[Голубівка]]&lt;ref&gt;До 2016 року&amp;nbsp;— Кіровськ&lt;/ref&gt;
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 28 244
+|  align=right NOWRAP | 35 199
+|-
+| [[Хрестівка]]&lt;ref&gt;До 2016 року&amp;nbsp;— Кіровське&lt;/ref&gt;
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 28 155
+|  align=right NOWRAP | 30 910
+|-
+| [[Переяслав-Хмельницький]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 27 864
+|  align=right NOWRAP | 31 634
+|-
+| [[Малин]]
+| [[Житомирська область|Житомирська]]
+|  align=right NOWRAP | 26 886
+|  align=right NOWRAP | 28 113
+|-
+| [[Вишгород]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 26 866
+|  align=right NOWRAP | 22 933
+|-
+| [[Бахчисарай]]
+| [[Автономна Республіка Крим]]
+|  align=right NOWRAP | 26 651
+|  align=right NOWRAP | 27 549
+|-
+| [[Гайсин]]
+| [[Вінницька область|Вінницька]]
+|  align=right NOWRAP | 25 879
+|  align=right NOWRAP | 25 640
+|-
+| [[Коростишів]]
+| [[Житомирська область|Житомирська]]
+|  align=right NOWRAP | 25 845
+|  align=right NOWRAP | 26 068
+|-
+| [[Лебедин]]
+| [[Сумська область|Сумська]]
+|  align=right NOWRAP | 25 816
+|  align=right NOWRAP | 28 948
+|-
+| [[Перевальськ]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 25 744
+|  align=right NOWRAP | 29 665
+|-
+| [[Виноградів]]
+| [[Закарпатська область|Закарпатська]]
+|  align=right NOWRAP | 25 580
+|  align=right NOWRAP | 25 760
+|-
+| [[Дебальцеве]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 25 525
+|  align=right NOWRAP | 30 246
+|-
+| [[Канів]]
+| [[Черкаська область|Черкаська]]
+|  align=right NOWRAP | 25 354
+|  align=right NOWRAP | 26 657
+|-
+| [[Олешки]]&lt;ref&gt;До 2016 року&amp;nbsp;— Цюрупинськ&lt;/ref&gt;
+| [[Херсонська область|Херсонська]]
+|  align=right NOWRAP | 25 086
+|  align=right NOWRAP | 24 123
+|-
+!  colspan="4" style="background-color:silver;text-align:center;" | &lt;div id=10000&gt;10&amp;nbsp;000&amp;nbsp;— 25&amp;nbsp;000&lt;/div&gt;
+|-
+| [[Славутич]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 24 952
+|  align=right NOWRAP | 24 402
+|-
+| [[Здолбунів]]
+| [[Рівненська область|Рівненська]]
+|  align=right NOWRAP | 24 693
+|  align=right NOWRAP | 24 612
+|-
+| [[Берегове]]
+| [[Закарпатська область|Закарпатська]]
+|  align=right NOWRAP | 24 371
+|  align=right NOWRAP | 26 735
+|-
+| [[Гадяч]]
+| [[Полтавська область|Полтавська]]
+|  align=right NOWRAP | 24 187
+|  align=right NOWRAP | 22 698
+|-
+| [[Козятин]]
+| [[Вінницька область|Вінницька]]
+|  align=right NOWRAP | 24 180
+|  align=right NOWRAP | 26 635
+|-
+| [[Золочів]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 24 119
+|  align=right NOWRAP | 23 481
+|-
+| [[Селидове]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 23 989
+|  align=right NOWRAP | 26 793
+|-
+| [[Броди]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 23 803
+|  align=right NOWRAP | 23 239
+|-
+| [[Вільногірськ]]
+| [[Дніпропетровська область|Дніпропетровська]]
+|  align=right NOWRAP | 23 766
+|  align=right NOWRAP | 23 782
+|-
+| [[Знам'янка]]
+| [[Кіровоградська область|Кіровоградська]]
+|  align=right NOWRAP | 23 743
+|  align=right NOWRAP | 29 412
+|-
+| [[Докучаєвськ]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 23 641
+|  align=right NOWRAP | 24 383
+|-
+| [[Кролевець]]
+| [[Сумська область|Сумська]]
+|  align=right NOWRAP | 23 507
+|  align=right NOWRAP | 25 183
+|-
+| [[Саки (місто)|Саки]]
+| [[Автономна Республіка Крим]]
+|  align=right NOWRAP | 23 391
+|  align=right NOWRAP | 29 416
+|-
+| [[Волноваха]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 23 164
+|  align=right NOWRAP | 24 647
+|-
+| [[Молодогвардійськ]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 23 113
+|  align=right NOWRAP | 25 528
+|-
+| [[Ладижин]]
+| [[Вінницька область|Вінницька]]
+|  align=right NOWRAP | 22 783
+|  align=right NOWRAP | 22 219
+|-
+| [[Лиман (місто)|Лиман]]&lt;ref&gt;До 2016 року&amp;nbsp;— Красний Лиман&lt;/ref&gt;
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 22 409
+|  align=right NOWRAP | 28 172
+|-
+| [[Мерефа]]
+| [[Харківська область|Харківська]]
+|  align=right NOWRAP | 22 383
+|  align=right NOWRAP | 25 018
+|-
+| [[Армянськ]]
+| [[Автономна Республіка Крим]]
+|  align=right NOWRAP | 22 286
+|  align=right NOWRAP | 23 869
+|-
+| [[Надвірна]]
+| [[Івано-Франківська область|Івано-Франківська]]
+|  align=right NOWRAP | 22 255
+|  align=right NOWRAP | 20 932
+|-
+| [[Люботин]]
+| [[Харківська область|Харківська]]
+|  align=right NOWRAP | 21 853
+|  align=right NOWRAP | 24 173
+|-
+| [[Попасна]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 21 765
+|  align=right NOWRAP | 25 951
+|-
+| [[Полонне]]
+| [[Хмельницька область|Хмельницька]]
+|  align=right NOWRAP | 21 651
+|  align=right NOWRAP | 23 211
+|-
+| [[Кременець]]
+| [[Тернопільська область|Тернопільська]]
+|  align=right NOWRAP | 21 624
+|  align=right NOWRAP | 22 051
+|-
+| [[Сокаль]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 21 371
+|  align=right NOWRAP | 21 693
+|-
+| [[Красноград]]
+| [[Харківська область|Харківська]]
+|  align=right NOWRAP | 21 231
+|  align=right NOWRAP | 22 670
+|-
+| [[Тростянець]]
+| [[Сумська область|Сумська]]
+|  align=right NOWRAP | 21 220
+|  align=right NOWRAP | 23 308
+|-
+| [[Стебник]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 20 988
+|  align=right NOWRAP | 20 863
+|-
+| [[Суходільськ]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 20 949
+|  align=right NOWRAP | 23 642
+|-
+| [[Долина (місто)|Долина]]
+| [[Івано-Франківська область|Івано-Франківська]]
+|  align=right NOWRAP | 20 654
+|  align=right NOWRAP | 20 906
+|-
+| [[Кілія]]
+| [[Одеська область|Одеська]]
+|  align=right NOWRAP | 20 449
+|  align=right NOWRAP | 22 594
+|-
+| [[Яготин]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 20 340
+|  align=right NOWRAP | 23 659
+|-
+| [[Кремінна]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 20 137
+|  align=right NOWRAP | 24 447
+|-
+| [[Генічеськ]]
+| [[Херсонська область|Херсонська]]
+|  align=right NOWRAP | 20 132
+|  align=right NOWRAP | 21 793
+|-
+| [[Курахове]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 19 950
+|  align=right NOWRAP | 21 479
+|-
+| [[Пологи (місто)|Пологи]]
+| [[Запорізька область|Запорізька]]
+|  align=right NOWRAP | 19 750
+|  align=right NOWRAP | 22 206
+|-
+| [[Красилів]]
+| [[Хмельницька область|Хмельницька]]
+|  align=right NOWRAP | 19 679
+|  align=right NOWRAP | 20 580
+|-
+| [[Волочиськ]]
+| [[Хмельницька область|Хмельницька]]
+|  align=right NOWRAP | 19 574
+|  align=right NOWRAP | 20 958
+|-
+| [[Підгородне]]
+| [[Дніпропетровська область|Дніпропетровська]]
+|  align=right NOWRAP | 19 530
+|  align=right NOWRAP | 17 763
+|-
+| [[Долинська]]
+| [[Кіровоградська область|Кіровоградська]]
+|  align=right NOWRAP | 19 457
+|  align=right NOWRAP | 18 768
+|-
+| [[Дніпрорудне]]
+| [[Запорізька область|Запорізька]]
+|  align=right NOWRAP | 19 361
+|  align=right NOWRAP | 21 054
+|-
+| [[Рені]]
+| [[Одеська область|Одеська]]
+|  align=right NOWRAP | 19 315
+|  align=right NOWRAP | 20 481
+|-
+| [[Калинівка (місто)|Калинівка]]
+| [[Вінницька область|Вінницька]]
+|  align=right NOWRAP | 19 226
+|  align=right NOWRAP | 20 061
+|-
+| [[Балта]]
+| [[Одеська область|Одеська]]
+|  align=right NOWRAP | 19 082
+|  align=right NOWRAP | 19 962
+|-
+| [[Вовчанськ]]
+| [[Харківська область|Харківська]]
+|  align=right NOWRAP | 19 029
+|  align=right NOWRAP | 20 695
+|-
+| [[П'ятихатки]]
+| [[Дніпропетровська область|Дніпропетровська]]
+|  align=right NOWRAP | 18 886
+|  align=right NOWRAP | 20 563
+|-
+| [[Скадовськ]]
+| [[Херсонська область|Херсонська]]
+|  align=right NOWRAP | 18 824
+|  align=right NOWRAP | 19 641
+|-
+| [[Амвросіївка]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 18 682
+|  align=right NOWRAP | 22 130
+|-
+| [[Корсунь-Шевченківський]]
+| [[Черкаська область|Черкаська]]
+|  align=right NOWRAP | 18 656
+|  align=right NOWRAP | 19 311
+|-
+| [[Бахмач]]
+| [[Чернігівська область|Чернігівська]]
+|  align=right NOWRAP | 18 604
+|  align=right NOWRAP | 20 332
+|-
+| [[Зугрес]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 18 474
+|  align=right NOWRAP | 19 859
+|-
+| [[Бережани]]
+| [[Тернопільська область|Тернопільська]]
+|  align=right NOWRAP | 18 264
+|  align=right NOWRAP | 17 617
+|-
+| [[Білогірськ]]
+| [[Автономна Республіка Крим]]
+|  align=right NOWRAP | 18 252
+|  align=right NOWRAP | 18 790
+|-
+| [[Дергачі]]
+| [[Харківська область|Харківська]]
+|  align=right NOWRAP | 18 210
+|  align=right NOWRAP | 20 258
+|-
+| [[Сватове]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 18 093
+|  align=right NOWRAP | 19 495
+|-
+| [[Старобільськ]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 17 980
+|  align=right NOWRAP | 22 371
+|-
+| [[Роздільна]]
+| [[Одеська область|Одеська]]
+|  align=right NOWRAP | 17 930
+|  align=right NOWRAP | 17 754
+|-
+| [[Лутугине]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 17 905
+|  align=right NOWRAP | 18 833
+|-
+| [[Звенигородка]]
+| [[Черкаська область|Черкаська]]
+|  align=right NOWRAP | 17 771
+|  align=right NOWRAP | 19 901
+|-
+| [[Новоукраїнка]]
+| [[Кіровоградська область|Кіровоградська]]
+|  align=right NOWRAP | 17 554
+|  align=right NOWRAP | 19 353
+|-
+| [[Шпола]]
+| [[Черкаська область|Черкаська]]
+|  align=right NOWRAP | 17 549
+|  align=right NOWRAP | 19 427
+|-
+| [[Ватутіне]]
+| [[Черкаська область|Черкаська]]
+|  align=right NOWRAP | 17 278
+|  align=right NOWRAP | 20 156
+|-
+| [[Ізяслав]]
+| [[Хмельницька область|Хмельницька]]
+|  align=right NOWRAP | 17 212
+|  align=right NOWRAP | 18 444
+|-
+| [[Свалява]]
+| [[Закарпатська область|Закарпатська]]
+|  align=right NOWRAP | 17 066
+|  align=right NOWRAP | 17 145
+|-
+| [[Богуслав]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 16 786
+|  align=right NOWRAP | 17 135
+|-
+| [[Верхньодніпровськ]]
+| [[Дніпропетровська область|Дніпропетровська]]
+|  align=right NOWRAP | 16 760
+|  align=right NOWRAP | 16 976
+|-
+| [[Городок (Хмельницька область)|Городок]]
+| [[Хмельницька область|Хмельницька]]
+|  align=right NOWRAP | 16 741
+|  align=right NOWRAP | 17 746
+|-
+| [[Білопілля]]
+| [[Сумська область|Сумська]]
+|  align=right NOWRAP | 16 659
+|  align=right NOWRAP | 18 384
+|-
+| [[Сквира]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 16 616
+|  align=right NOWRAP | 18 126
+|-
+| [[Березань (місто)|Березань]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 16 570
+|  align=right NOWRAP | 17 367
+|-
+| [[Винники]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 16 517
+|  align=right NOWRAP | 13 654
+|-
+| [[Овруч]]
+| [[Житомирська область|Житомирська]]
+|  align=right NOWRAP | 16 515
+|  align=right NOWRAP | 17 031
+|-
+| [[Бар (місто)|Бар]]
+| [[Вінницька область|Вінницька]]
+|  align=right NOWRAP | 16 380
+|  align=right NOWRAP | 17 284
+|-
+| [[Дунаївці]]
+| [[Хмельницька область|Хмельницька]]
+|  align=right NOWRAP | 16 232
+|  align=right NOWRAP | 16 448
+|-
+| [[Путивль]]
+| [[Сумська область|Сумська]]
+|  align=right NOWRAP | 16 175
+|  align=right NOWRAP | 17 354
+|-
+| [[Городок (Львівська область)|Городок]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 16 046
+|  align=right NOWRAP | 16 082
+|-
+| [[Пирятин]]
+| [[Полтавська область|Полтавська]]
+|  align=right NOWRAP | 15 933
+|  align=right NOWRAP | 16 664
+|-
+| [[Білозерське]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 15 916
+|  align=right NOWRAP | 17 868
+|-
+| [[Красногорівка]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 15 912
+|  align=right NOWRAP | 16 714
+|-
+| [[Тульчин]]
+| [[Вінницька область|Вінницька]]
+|  align=right NOWRAP | 15 845
+|  align=right NOWRAP | 16 136
+|-
+| [[Іловайськ]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 15 808
+|  align=right NOWRAP | 17 620
+|-
+| [[Вільнянськ]]
+| [[Запорізька область|Запорізька]]
+|  align=right NOWRAP | 15 787
+|  align=right NOWRAP | 16 522
+|-
+| [[Українка (місто)|Українка]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 15 775
+|  align=right NOWRAP | 14 163
+|-
+| [[Острог]]
+| [[Рівненська область|Рівненська]]
+|  align=right NOWRAP | 15 745
+|  align=right NOWRAP | 14 801
+|-
+| [[Богодухів]]
+| [[Харківська область|Харківська]]
+|  align=right NOWRAP | 15 720
+|  align=right NOWRAP | 18 224
+|-
+| [[Новий Буг]]
+| [[Миколаївська область|Миколаївська]]
+|  align=right NOWRAP | 15 603
+|  align=right NOWRAP | 16 250
+|-
+| [[Болград]]
+| [[Одеська область|Одеська]]
+|  align=right NOWRAP | 15 584
+|  align=right NOWRAP | 17 353
+|-
+| [[Вознесенівка]]&lt;ref&gt;До 2016 року&amp;nbsp;— Червонопартизанськ&lt;/ref&gt;
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 15 582
+|  align=right NOWRAP | 17 680
+|-
+| [[Миколаївка (місто)|Миколаївка]]&lt;ref name=mykolayivka&gt;Смт [[Миколаївка (місто)|Миколаївка]] [[Слов'янська міська рада|Слов'янської міськради]] [[Донецька область|Донецької області]] віднесене до категорії міст районного значення постановою Верховної Ради України №&amp;nbsp;1246-IV від 18.11.2003 року.&lt;/ref&gt;
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 15 559
+|  align=right NOWRAP | 16 620
+|-
+| [[Судак (місто)|Судак]]
+| [[Автономна Республіка Крим]]
+|  align=right NOWRAP | 15 532
+|  align=right NOWRAP | 14 495
+|-
+| [[Бурштин (місто)|Бурштин]]
+| [[Івано-Франківська область|Івано-Франківська]]
+|  align=right NOWRAP | 15 370
+|  align=right NOWRAP | 15 298
+|-
+| [[Вугледар]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 15 294
+|  align=right NOWRAP | 17 440
+|-
+| [[Рахів]]
+| [[Закарпатська область|Закарпатська]]
+|  align=right NOWRAP | 15 283
+|  align=right NOWRAP | 15 241
+|-
+| [[Новогродівка]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 15 247
+|  align=right NOWRAP | 17 473
+|-
+| [[Оріхів]]
+| [[Запорізька область|Запорізька]]
+|  align=right NOWRAP | 15 161
+|  align=right NOWRAP | 17 955
+|-
+| [[Зміїв]]
+| [[Харківська область|Харківська]]
+|  align=right NOWRAP | 15 160
+|  align=right NOWRAP | 17 063
+|-
+| [[Гайворон]]
+| [[Кіровоградська область|Кіровоградська]]
+|  align=right NOWRAP | 15 087
+|  align=right NOWRAP | 16 126
+|-
+| [[Карлівка]]
+| [[Полтавська область|Полтавська]]
+|  align=right NOWRAP | 15 071
+|  align=right NOWRAP | 17 995
+|-
+| [[Арциз]]
+| [[Одеська область|Одеська]]
+|  align=right NOWRAP | 15 021
+|  align=right NOWRAP | 16 370
+|-
+| [[Миколаїв (Львівська область)|Миколаїв]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 14 934
+|  align=right NOWRAP | 14 801
+|-
+| [[Радомишль]]
+| [[Житомирська область|Житомирська]]
+|  align=right NOWRAP | 14 930
+|  align=right NOWRAP | 15 326
+|-
+| [[Гола Пристань]]
+| [[Херсонська область|Херсонська]]
+|  align=right NOWRAP | 14 785
+|  align=right NOWRAP | 16 028
+|-
+| [[Очаків]]
+| [[Миколаївська область|Миколаївська]]
+|  align=right NOWRAP | 14 566
+|  align=right NOWRAP | 16 929
+|-
+| [[Ківерці]]
+| [[Волинська область|Волинська]]
+|  align=right NOWRAP | 14 480
+|  align=right NOWRAP | 16 678
+|-
+| [[Сторожинець]]
+| [[Чернівецька область|Чернівецька]]
+|  align=right NOWRAP | 14 407
+|  align=right NOWRAP | 14 693
+|-
+| [[Золоте]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 14 376
+|  align=right NOWRAP | 17 836
+|-
+| [[Апостолове]]
+| [[Дніпропетровська область|Дніпропетровська]]
+|  align=right NOWRAP | 14 348
+|  align=right NOWRAP | 16 439
+|-
+| [[Городище (місто)|Городище]]
+| [[Черкаська область|Черкаська]]
+|  align=right NOWRAP | 14 249
+|  align=right NOWRAP | 15 645
+|-
+| [[Гуляйполе]]
+| [[Запорізька область|Запорізька]]
+|  align=right NOWRAP | 14 180
+|  align=right NOWRAP | 17 077
+|-
+| [[Тальне]]
+| [[Черкаська область|Черкаська]]
+|  align=right NOWRAP | 14 160
+|  align=right NOWRAP | 16 388
+|-
+| [[Жашків]]
+| [[Черкаська область|Черкаська]]
+|  align=right NOWRAP | 14 146
+|  align=right NOWRAP | 15 853
+|-
+| [[Збараж]]
+| [[Тернопільська область|Тернопільська]]
+|  align=right NOWRAP | 14 054
+|  align=right NOWRAP | 13 228
+|-
+| [[Носівка]]
+| [[Чернігівська область|Чернігівська]]
+|  align=right NOWRAP | 14 007
+|  align=right NOWRAP | 15 966
+|-
+| [[Бунге (місто)|Бунге]]&lt;ref&gt;До 2016 року&amp;nbsp;— Юнокомунарівськ&lt;/ref&gt;
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 13 945
+|  align=right NOWRAP | 17 813
+|-
+| [[Василівка (місто)|Василівка]]
+| [[Запорізька область|Запорізька]]
+|  align=right NOWRAP | 13 875
+|  align=right NOWRAP | 15 592
+|-
+| [[Зеленодольськ]]
+| [[Дніпропетровська область|Дніпропетровська]]
+|  align=right NOWRAP | 13 907
+|  align=right NOWRAP | 14 792
+|-
+| [[Часів Яр]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 13 817
+|  align=right NOWRAP | 16 612
+|-
+| [[Новгород-Сіверський]]
+| [[Чернігівська область|Чернігівська]]
+|  align=right NOWRAP | 13 753
+|  align=right NOWRAP | 15 175
+|-
+| [[Кагарлик]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 13 730
+|  align=right NOWRAP | 13 757
+|-
+| [[Теребовля]]
+| [[Тернопільська область|Тернопільська]]
+|  align=right NOWRAP | 13 709
+|  align=right NOWRAP | 13 661
+|-
+| [[Жовква]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 13 629
+|  align=right NOWRAP | 13 474
+|-
+| [[Хорол (місто)|Хорол]]
+| [[Полтавська область|Полтавська]]
+|  align=right NOWRAP | 13 532
+|  align=right NOWRAP | 14 753
+|-
+| [[Березне]]
+| [[Рівненська область|Рівненська]]
+|  align=right NOWRAP | 13 435
+|  align=right NOWRAP | 13 669
+|-
+| [[Кам'янка-Дніпровська]]
+| [[Запорізька область|Запорізька]]
+|  align=right NOWRAP | 13 383
+|  align=right NOWRAP | 15 522
+|-
+| [[Рожище]]
+| [[Волинська область|Волинська]]
+|  align=right NOWRAP | 13 306
+|  align=right NOWRAP | 13 636
+|-
+| [[Тетіїв]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 13 270
+|  align=right NOWRAP | 14 944
+|-
+| [[Петрово-Красносілля]]&lt;ref&gt;До 2016 року&amp;nbsp;— Петровське&lt;/ref&gt;
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 13 117
+|  align=right NOWRAP | 15 478
+|-
+| [[Корюківка]]
+| [[Чернігівська область|Чернігівська]]
+|  align=right NOWRAP | 13 114
+|  align=right NOWRAP | 14 318
+|-
+| [[Бершадь]]
+| [[Вінницька область|Вінницька]]
+|  align=right NOWRAP | 13 098
+|  align=right NOWRAP | 13 336
+|-
+| [[Берислав]]
+| [[Херсонська область|Херсонська]]
+|  align=right NOWRAP | 13 044
+|  align=right NOWRAP | 15 455
+|-
+| [[Яворів]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 13 009
+|  align=right NOWRAP | 13 510
+|-
+| [[Снігурівка]]
+| [[Миколаївська область|Миколаївська]]
+|  align=right NOWRAP | 12 992
+|  align=right NOWRAP | 15 447
+|-
+| [[Баштанка]]
+| [[Миколаївська область|Миколаївська]]
+|  align=right NOWRAP | 12 658
+|  align=right NOWRAP | 13 146
+|-
+| [[Бучач]]
+| [[Тернопільська область|Тернопільська]]
+|  align=right NOWRAP | 12 631
+|  align=right NOWRAP | 12 549
+|-
+| [[Щастя (місто)|Щастя]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 12 629
+|  align=right NOWRAP | 13 770
+|-
+| [[Гнівань]]
+| [[Вінницька область|Вінницька]]
+|  align=right NOWRAP | 12 577
+|  align=right NOWRAP | 12 832
+|-
+| [[Городня]]
+| [[Чернігівська область|Чернігівська]]
+|  align=right NOWRAP | 12 431
+|  align=right NOWRAP | 14 043
+|-
+| [[Кам'янка (Черкаська область)|Кам'янка]]
+| [[Черкаська область|Черкаська]]
+|  align=right NOWRAP | 12 427
+|  align=right NOWRAP | 15 109
+|-
+| [[Жданівка]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 12 301
+|  align=right NOWRAP | 13 688
+|-
+| [[Нова Одеса]]
+| [[Миколаївська область|Миколаївська]]
+|  align=right NOWRAP | 12 253
+|  align=right NOWRAP | 14 070
+|-
+| [[Приморськ (Україна)|Приморськ]]
+| [[Запорізька область|Запорізька]]
+|  align=right NOWRAP | 12 194
+|  align=right NOWRAP | 12 973
+|-
+| [[Камінь-Каширський]]
+| [[Волинська область|Волинська]]
+|  align=right NOWRAP | 12 190
+|  align=right NOWRAP | 10 818
+|-
+| [[Мена (місто)|Мена]]
+| [[Чернігівська область|Чернігівська]]
+|  align=right NOWRAP | 12 181
+|  align=right NOWRAP | 12 940
+|-
+| [[Узин]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 12 150
+|  align=right NOWRAP | 13 217
+|-
+| [[Світлодарськ]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 12 127
+|  align=right NOWRAP | 13 184
+|-
+| [[Сіверськ]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 12 036
+|  align=right NOWRAP | 14 393
+|-
+| [[Інкерман]]
+| м.[[Севастополь]]
+|  align=right NOWRAP | 12 028
+|  align=right NOWRAP | 10 628
+|-
+| [[Біляївка]]
+| [[Одеська область|Одеська]]
+|  align=right NOWRAP | 11 993
+|  align=right NOWRAP | 14 294
+|-
+| [[Баранівка]]
+| [[Житомирська область|Житомирська]]
+|  align=right NOWRAP | 11 948
+|  align=right NOWRAP | 12 584
+|-
+| [[Українськ]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 11 928
+|  align=right NOWRAP | 13 236
+|-
+| [[Немирів]]
+| [[Вінницька область|Вінницька]]
+|  align=right NOWRAP | 11 861
+|  align=right NOWRAP | 12 082
+|-
+| [[Миронівка]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 11 851
+|  align=right NOWRAP | 13 368
+|-
+| [[Лохвиця]]
+| [[Полтавська область|Полтавська]]
+|  align=right NOWRAP | 11 801
+|  align=right NOWRAP | 12 389
+|-
+| [[Новоазовськ]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 11 740
+|  align=right NOWRAP | 12 702
+|-
+| [[Боково-Хрустальне]]&lt;ref&gt;До 2016 року&amp;nbsp;— Вахрушеве&lt;/ref&gt;
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 11 731
+|  align=right NOWRAP | 14 773
+|-
+| [[Кальміуське]]&lt;ref&gt;До 2016 року&amp;nbsp;— Комсомольське&lt;/ref&gt;
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 11 672
+|  align=right NOWRAP | 12 813
+|-
+| [[Соледар]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 11 560
+|  align=right NOWRAP | 13 151
+|-
+| [[Гірник (місто)|Гірник]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 11 510
+|  align=right NOWRAP | 14 207
+|-
+| [[Новомиргород]]
+| [[Кіровоградська область|Кіровоградська]]
+|  align=right NOWRAP | 11 495
+|  align=right NOWRAP | 13 220
+|-
+| [[Сновськ]]&lt;ref&gt;До 2016 року&amp;nbsp;— Щорс&lt;/ref&gt;
+| [[Чернігівська область|Чернігівська]]
+|  align=right NOWRAP | 11 455
+|  align=right NOWRAP | 12 315
+|-
+| [[Ічня]]
+| [[Чернігівська область|Чернігівська]]
+|  align=right NOWRAP | 11 454
+|  align=right NOWRAP | 12 780
+|-
+| [[Соснівка (місто)|Соснівка]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 11 437
+|  align=right NOWRAP | 11 889
+|-
+| [[Іллінці]]
+| [[Вінницька область|Вінницька]]
+|  align=right NOWRAP | 11 360
+|  align=right NOWRAP | 11 186
+|-
+| [[Ямпіль]]
+| [[Вінницька область|Вінницька]]
+|  align=right NOWRAP | 11 329
+|  align=right NOWRAP | 11 787
+|-
+| [[Бобровиця]]
+| [[Чернігівська область|Чернігівська]]
+|  align=right NOWRAP | 11 279
+|  align=right NOWRAP | 11 916
+|-
+| [[Тараща]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 11 275
+|  align=right NOWRAP | 13 452
+|-
+| [[Борщів]]
+| [[Тернопільська область|Тернопільська]]
+|  align=right NOWRAP | 11 202
+|  align=right NOWRAP | 11 382
+|-
+| [[Щолкіне]]
+| [[Автономна Республіка Крим]]
+|  align=right NOWRAP | 11 169
+|  align=right NOWRAP | 11 699
+|-
+| [[Жидачів]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 11 149
+|  align=right NOWRAP | 11 798
+|-
+| [[Мала Виска]]
+| [[Кіровоградська область|Кіровоградська]]
+|  align=right NOWRAP | 11 014
+|  align=right NOWRAP | 13 132
+|-
+| [[Бобринець]]
+| [[Кіровоградська область|Кіровоградська]]
+|  align=right NOWRAP | 11 005
+|  align=right NOWRAP | 12 300
+|-
+| [[Татарбунари]]
+| [[Одеська область|Одеська]]
+|  align=right NOWRAP | 10 974
+|  align=right NOWRAP | 10 797
+|-
+| [[Таврійськ]]
+| [[Херсонська область|Херсонська]]
+|  align=right NOWRAP | 10 941
+|  align=right NOWRAP | 11 452
+|-
+| [[Гребінка]]
+| [[Полтавська область|Полтавська]]
+|  align=right NOWRAP | 10 938
+|  align=right NOWRAP | 11 662
+|-
+| [[Христинівка]]
+| [[Черкаська область|Черкаська]]
+|  align=right NOWRAP | 10 853
+|  align=right NOWRAP | 11 650
+|-
+| [[Моспине]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 10 745
+|  align=right NOWRAP | 11 736
+|-
+| [[Кам'янка-Бузька]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 10 837
+|  align=right NOWRAP | 11 674
+|-
+| [[Болехів]]
+| [[Івано-Франківська область|Івано-Франківська]]
+|  align=right NOWRAP | 10 770
+|  align=right NOWRAP | 10 633
+|-
+| [[Новодністровськ]]
+| [[Чернівецька область|Чернівецька]]
+|  align=right NOWRAP | 10 729
+|  align=right NOWRAP | 10 342
+|-
+| [[Родинське]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 10 641
+|  align=right NOWRAP | 11 996
+|-
+| [[Радивилів]]
+| [[Рівненська область|Рівненська]]
+|  align=right NOWRAP | 10 558
+|  align=right NOWRAP | 10 311
+|-
+| [[Борзна]]
+| [[Чернігівська область|Чернігівська]]
+|  align=right NOWRAP | 10 396
+|  align=right NOWRAP | 11 707
+|-
+| [[Деражня]]
+| [[Хмельницька область|Хмельницька]]
+|  align=right NOWRAP | 10 302
+|  align=right NOWRAP | 10 446
+|-
+| [[Любомль]]
+| [[Волинська область|Волинська]]
+|  align=right NOWRAP | 10 274
+|  align=right NOWRAP | 10 395
+|-
+| [[Теплодар]]
+| [[Одеська область|Одеська]]
+|  align=right NOWRAP | 10 227
+|  align=right NOWRAP | 8830
+|-
+| [[Олевськ]]&lt;ref name="olevsk"&gt;Смт [[Олевськ]] [[Олевський район|Олевського району]] [[Житомирська область|Житомирської області]] віднесене до категорії міст районного значення постановою [[Верховна Рада України|Верховної Ради України]] №&amp;nbsp;829-IV від 22.05.2003 року.&lt;/ref&gt;
+| [[Житомирська область|Житомирська]]
+|  align=right NOWRAP | 10 222
+|  align=right NOWRAP | 10 896
+|-
+| [[Перещепине]]
+| [[Дніпропетровська область|Дніпропетровська]]
+|  align=right NOWRAP | 10 138
+|  align=right NOWRAP | 10 041
+|-
+| [[Дубляни]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 10 132
+|  align=right NOWRAP | 8469
+|-
+| [[Снятин]]
+| [[Івано-Франківська область|Івано-Франківська]]
+|  align=right NOWRAP | 10 102
+|  align=right NOWRAP | 10 479
+|-
+| [[Кобеляки]]
+| [[Полтавська область|Полтавська]]
+|  align=right NOWRAP | 10 041
+|  align=right NOWRAP | 12 076
+|-
+| [[Гірське]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 10 041
+|  align=right NOWRAP | 11 473
+|-
+| [[Верхівцеве]]
+| [[Дніпропетровська область|Дніпропетровська]]
+|  align=right NOWRAP | 10 062
+|  align=right NOWRAP | 10 142
+|-
+!  colspan="4" style="background-color:silver;text-align:center;" | &lt;div id=5000&gt;5000&amp;nbsp;— 10&amp;nbsp;000&lt;/div&gt;
+|-
+| [[Глобине]]
+| [[Полтавська область|Полтавська]]
+|  align=right NOWRAP | 9921
+|  align=right NOWRAP | 12 902
+|-
+| [[Зіньків]]
+| [[Полтавська область|Полтавська]]
+|  align=right NOWRAP | 9899
+|  align=right NOWRAP | 10 577
+|-
+| [[Ірміно]]&lt;ref&gt;До [[8 липня]] [[2010]] року&amp;nbsp;— Теплогірськ&lt;/ref&gt;
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 9886
+|  align=right NOWRAP | 13 053
+|-
+| [[Зимогір'я]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 9881
+|  align=right NOWRAP | 11 295
+|-
+| [[Мар'їнка]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 9829
+|  align=right NOWRAP | 10 722
+|-
+| [[Погребище]]
+| [[Вінницька область|Вінницька]]
+|  align=right NOWRAP | 9814
+|  align=right NOWRAP | 10 754
+|-
+| [[Ходорів]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 9813
+|  align=right NOWRAP | 10 565
+|-
+| [[Березівка]]
+| [[Одеська область|Одеська]]
+|  align=right NOWRAP | 9778
+|  align=right NOWRAP | 9481
+|-
+| [[Радехів]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 9612
+|  align=right NOWRAP | 9230
+|-
+| [[Хотин]]
+| [[Чернівецька область|Чернівецька]]
+|  align=right NOWRAP | 9591
+|  align=right NOWRAP | 11 216
+|-
+| [[Старий Крим]]
+| [[Автономна Республіка Крим]]
+|  align=right NOWRAP | 9478
+|  align=right NOWRAP | 10 101
+|-
+| [[Барвінкове]]
+| [[Харківська область|Харківська]]
+|  align=right NOWRAP | 9465
+|  align=right NOWRAP | 12 998
+|-
+| [[Дубровиця]]
+| [[Рівненська область|Рівненська]]
+|  align=right NOWRAP | 9459
+|  align=right NOWRAP | 9644
+|-
+| [[Тисмениця (місто)|Тисмениця]]
+| [[Івано-Франківська область|Івано-Франківська]]
+|  align=right NOWRAP | 9443
+|  align=right NOWRAP | 9790
+|-
+| [[Решетилівка]]&lt;ref&gt;Смт [[Решетилівка]] Решетилівського району Полтавської області віднесене до категорії міст районного значення постановою [[Верховна Рада України|Верховної Ради України]] №&amp;nbsp;2185-VIII від 7.11.2017 року.&lt;/ref&gt;
+| [[Полтавська область|Полтавська]]
+|  align=right NOWRAP | 9412
+|  align=right NOWRAP | 9457
+|-
+| [[Сокиряни]]
+| [[Чернівецька область|Чернівецька]]
+|  align=right NOWRAP | 9388
+|  align=right NOWRAP | 10 258
+|-
+| [[Городенка]]
+| [[Івано-Франківська область|Івано-Франківська]]
+|  align=right NOWRAP | 9384
+|  align=right NOWRAP | 9794
+|-
+| [[Заліщики]]
+| [[Тернопільська область|Тернопільська]]
+|  align=right NOWRAP | 9379
+|  align=right NOWRAP | 10 125
+|-
+| [[Валки (місто)|Валки]]
+| [[Харківська область|Харківська]]
+|  align=right NOWRAP | 9355
+|  align=right NOWRAP | 10 381
+|-
+| [[Мостиська]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 9258
+|  align=right NOWRAP | 9150
+|-
+| [[Чигирин]]
+| [[Черкаська область|Черкаська]]
+|  align=right NOWRAP | 9258
+|  align=right NOWRAP | 11 960
+|-
+| [[Іршава]]
+| [[Закарпатська область|Закарпатська]]
+|  align=right NOWRAP | 9220
+|  align=right NOWRAP | 9515
+|-
+| [[Пустомити]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 9211
+|  align=right NOWRAP | 9798
+|-
+| [[Помічна]]
+| [[Кіровоградська область|Кіровоградська]]
+|  align=right NOWRAP | 9201
+|  align=right NOWRAP | 10 946
+|-
+| [[Горохів]]
+| [[Волинська область|Волинська]]
+|  align=right NOWRAP | 9172
+|  align=right NOWRAP | 9015
+|-
+| [[Тячів]]
+| [[Закарпатська область|Закарпатська]]
+|  align=right NOWRAP | 9127
+|  align=right NOWRAP | 9786
+|-
+| [[Буринь]]
+| [[Сумська область|Сумська]]
+|  align=right NOWRAP | 9031
+|  align=right NOWRAP | 11 678
+|-
+| [[Чоп]]
+| [[Закарпатська область|Закарпатська]]
+|  align=right NOWRAP | 9018
+|  align=right NOWRAP | 8919
+|-
+| [[Монастирище]]
+| [[Черкаська область|Черкаська]]
+|  align=right NOWRAP | 8970
+|  align=right NOWRAP | 9463
+|-
+| [[Андрушівка]]
+| [[Житомирська область|Житомирська]]
+|  align=right NOWRAP | 8951
+|  align=right NOWRAP | 9890
+|-
+| [[Тлумач]]
+| [[Івано-Франківська область|Івано-Франківська]]
+|  align=right NOWRAP | 8885
+|  align=right NOWRAP | 8831
+|-
+| [[Кодима]]
+| [[Одеська область|Одеська]]
+|  align=right NOWRAP | 8860
+|  align=right NOWRAP | 9634
+|-
+| [[Ланівці]]
+| [[Тернопільська область|Тернопільська]]
+|  align=right NOWRAP | 8746
+|  align=right NOWRAP | 8680
+|-
+| [[Липовець]]
+| [[Вінницька область|Вінницька]]
+|  align=right NOWRAP | 8691
+|  align=right NOWRAP | 9406
+|-
+| [[Білицьке]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 8627
+|  align=right NOWRAP | 10 093
+|-
+| [[Косів]]
+| [[Івано-Франківська область|Івано-Франківська]]
+|  align=right NOWRAP | 8621
+|  align=right NOWRAP | 8301
+|-
+| [[Ананьїв]]
+| [[Одеська область|Одеська]]
+|  align=right NOWRAP | 8563
+|  align=right NOWRAP | 9476
+|-
+| [[Заводське]]&lt;ref&gt;До 2016 року&amp;nbsp;— Червонозаводське&lt;/ref&gt;
+| [[Полтавська область|Полтавська]]
+|  align=right NOWRAP | 8560
+|  align=right NOWRAP | 9024
+|-
+| [[Алупка]]
+| [[Автономна Республіка Крим]]
+|  align=right NOWRAP | 8528
+|  align=right NOWRAP | 9018
+|-
+| [[Рава-Руська]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 8487
+|  align=right NOWRAP | 8070
+|-
+| [[Семенівка]]
+| [[Чернігівська область|Чернігівська]]
+|  align=right NOWRAP | 8486
+|  align=right NOWRAP | 9656
+|-
+| [[Буськ]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 8484
+|  align=right NOWRAP | 8673
+|-
+| [[Вилкове]]
+| [[Одеська область|Одеська]]
+|  align=right NOWRAP | 8422
+|  align=right NOWRAP | 9260
+|-
+| [[Яремче]]&lt;ref name=Yaremche&gt;До [[14 грудня]] [[2006]] року&amp;nbsp;— Яремча&lt;/ref&gt;
+| [[Івано-Франківська область|Івано-Франківська]]
+|  align=right NOWRAP | 8201
+|  align=right NOWRAP | 7850
+|-
+| [[Рогатин]]
+| [[Івано-Франківська область|Івано-Франківська]]
+|  align=right NOWRAP | 8000
+|  align=right NOWRAP | 8607
+|-
+| [[Заставна]]
+| [[Чернівецька область|Чернівецька]]
+|  align=right NOWRAP | 7985
+|  align=right NOWRAP | 8866
+|-
+| [[Південне (місто)|Південне]]
+| [[Харківська область|Харківська]]
+|  align=right NOWRAP | 7856
+|  align=right NOWRAP | 8516
+|-
+| [[Почаїв]]
+| [[Тернопільська область|Тернопільська]]
+|  align=right NOWRAP | 7834
+|  align=right NOWRAP | 8240
+|-
+| [[Новоселиця]]
+| [[Чернівецька область|Чернівецька]]
+|  align=right NOWRAP | 7714
+|  align=right NOWRAP | 8400
+|-
+| [[Вуглегірськ]]
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 7671
+|  align=right NOWRAP | 10 309
+|-
+| [[Новодружеськ]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 7660
+|  align=right NOWRAP | 9025
+|-
+| [[Привілля]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 7643
+|  align=right NOWRAP | 9004
+|-
+| [[Ржищів]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 7545
+|  align=right NOWRAP | 8447
+|-
+| [[Кипуче]]&lt;ref&gt;До 2016 року&amp;nbsp;— Артемівськ&lt;/ref&gt;
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 7465
+|  align=right NOWRAP | 9097
+|-
+| [[Ворожба (місто)|Ворожба]]
+| [[Сумська область|Сумська]]
+|  align=right NOWRAP | 7363
+|  align=right NOWRAP | 8384
+|-
+| [[Корець]]
+| [[Рівненська область|Рівненська]]
+|  align=right NOWRAP | 7304
+|  align=right NOWRAP | 8649
+|-
+| [[Зоринськ]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 7291
+|  align=right NOWRAP | 8838
+|-
+| [[Турка]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 7207
+|  align=right NOWRAP | 7681
+|-
+| [[Середина-Буда]]
+| [[Сумська область|Сумська]]
+|  align=right NOWRAP | 7169
+|  align=right NOWRAP | 7511
+|-
+| [[Хоростків]]
+| [[Тернопільська область|Тернопільська]]
+|  align=right NOWRAP | 7034
+|  align=right NOWRAP | 7306
+|-
+| [[Шаргород]]
+| [[Вінницька область|Вінницька]]
+|  align=right NOWRAP | 6981
+|  align=right NOWRAP | 7161
+|-
+| [[Молочанськ]]
+| [[Запорізька область|Запорізька]]
+|  align=right NOWRAP | 6891
+|  align=right NOWRAP | 7964
+|-
+| [[Перемишляни]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 6885
+|  align=right NOWRAP | 7565
+|-
+| [[Копичинці]]
+| [[Тернопільська область|Тернопільська]]
+|  align=right NOWRAP | 6869
+|  align=right NOWRAP | 7036
+|-
+| [[Зборів]]
+| [[Тернопільська область|Тернопільська]]
+|  align=right NOWRAP | 6816
+|  align=right NOWRAP | 7436
+|-
+| [[Перечин]]&lt;ref name="perechyn"&gt;Смт [[Перечин]] [[Перечинський район|Перечинського району]] [[Закарпатська область|Закарпатської області]] віднесене до категорії міст районного значення постановою [[Верховна Рада України|Верховної Ради України]] №&amp;nbsp;1592-IV від 4.03.2004 року.&lt;/ref&gt;
+| [[Закарпатська область|Закарпатська]]
+|  align=right NOWRAP | 6720
+|  align=right NOWRAP | 7083
+|-
+| [[Кіцмань]]
+| [[Чернівецька область|Чернівецька]]
+|  align=right NOWRAP | 6603
+|  align=right NOWRAP | 7608
+|-
+| [[Старий Самбір]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 6596
+|  align=right NOWRAP | 5706
+|-
+| [[Олександрівськ]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 6596
+|  align=right NOWRAP | 7045
+|-
+| [[Судова Вишня]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 6504
+|  align=right NOWRAP | 6668
+|-
+| [[Сколе]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 6324
+|  align=right NOWRAP | 6742
+|-
+| [[Остер (місто)|Остер]]
+| [[Чернігівська область|Чернігівська]]
+|  align=right NOWRAP | 6295
+|  align=right NOWRAP | 7194
+|-
+| [[Галич]]
+| [[Івано-Франківська область|Івано-Франківська]]
+|  align=right NOWRAP | 6264
+|  align=right NOWRAP | 6495
+|-
+| [[Великі Мости]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 6132
+|  align=right NOWRAP | 5925
+|-
+| [[Благовіщенське]]&lt;ref&gt;До 2016 року — Ульяновка&lt;/ref&gt;
+| [[Кіровоградська область|Кіровоградська]]
+|  align=right NOWRAP | 6092
+|  align=right NOWRAP | 7526
+|-
+| [[Монастириська]]
+| [[Тернопільська область|Тернопільська]]
+|  align=right NOWRAP | 6065
+|  align=right NOWRAP | 6344
+|-
+| [[Моршин]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 6013
+|  align=right NOWRAP | 6482
+|-
+| [[Чуднів]]&lt;ref name="chudniv"&gt;Смт [[Чуднів]] [[Чуднівський район|Чуднівського району]] [[Житомирська область|Житомирської області]] віднесене до категорії міст районного значення постановою [[Верховна Рада України|Верховної Ради України]] №&amp;nbsp;5216-VI від 6.09.2012 року.&lt;/ref&gt;
+| [[Житомирська область|Житомирська]]
+|  align=right nowrap | 5814
+|  align=right nowrap | 6558
+|-
+| [[Залізне]]&lt;ref&gt;До 2016 року — Артемове&lt;/ref&gt;
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 5567
+|  align=right NOWRAP | 6725
+|-
+| [[Шумськ]]
+| [[Тернопільська область|Тернопільська]]
+|  align=right NOWRAP | 5460
+|  align=right NOWRAP | 5161
+|-
+| [[Рудки]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 5447
+|  align=right NOWRAP | 4942
+|-
+| [[Вашківці]]
+| [[Чернівецька область|Чернівецька]]
+|  align=right NOWRAP | 5405
+|  align=right NOWRAP | 5987
+|-
+!  colspan="4" style="background-color:silver;text-align:center;" | &lt;div id=2500&gt;2500&amp;nbsp;— 5000&lt;/div&gt;
+|-
+| [[Дружба (місто)|Дружба]]
+| [[Сумська область|Сумська]]
+|  align=right NOWRAP | 4997
+|  align=right NOWRAP | 5726
+|-
+| [[Міусинськ]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 4732
+|  align=right NOWRAP | 6029
+|-
+| [[Святогірськ]]&lt;ref name=Svyatohirs'k&gt;До 2003 року&amp;nbsp;— Слов'яногірськ&lt;/ref&gt;
+| [[Донецька область|Донецька]]
+|  align=right NOWRAP | 4630
+|  align=right NOWRAP | 5136
+|-
+| [[Добромиль]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 4406
+|  align=right NOWRAP | 4976
+|-
+| [[Алмазна]]
+| [[Луганська область|Луганська]]
+|  align=right NOWRAP | 4299
+|  align=right NOWRAP | 5061
+|-
+| [[Вижниця]]
+| [[Чернівецька область|Чернівецька]]
+|  align=right NOWRAP | 4157
+|  align=right NOWRAP | 5021
+|-
+| [[Новий Калинів]]&lt;ref name="novyi kalyniv"&gt;Смт [[Новий Калинів]] [[Самбірський район|Самбірського району]] [[Львівська область|Львівської області]] віднесене до категорії міст районного значення постановою [[Верховна Рада України|Верховної Ради України]] №&amp;nbsp;2686-IV від 21.06.2005 року.&lt;/ref&gt;
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 4123
+|  align=right NOWRAP | 3582
+|-
+| [[Хирів]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 4056
+|  align=right NOWRAP | 4590
+|-
+| [[Скалат]]
+| [[Тернопільська область|Тернопільська]]
+|  align=right NOWRAP | 4020
+|  align=right NOWRAP | 4036
+|-
+| [[Комарно]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 3841
+|  align=right NOWRAP | 3994
+|-
+| [[Бібрка]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 3816
+|  align=right NOWRAP | 3980
+|-
+| [[Глиняни]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 3165
+|  align=right NOWRAP | 3378
+|-
+| [[Підгайці]]
+| [[Тернопільська область|Тернопільська]]
+|  align=right NOWRAP | 2830
+|  align=right NOWRAP | 3280
+|-
+| [[Батурин]]&lt;ref name="baturyn"&gt;Смт [[Батурин]] [[Бахмацький район|Бахмацького району]] [[Чернігівська область|Чернігівської області]] віднесене до категорії міст районного значення постановою [[Верховна Рада України|Верховної Ради України]] №&amp;nbsp;579-VI від 23.09.2008 року.&lt;/ref&gt;
+| [[Чернігівська область|Чернігівська]]
+|  align=right NOWRAP | 2652
+|  align=right NOWRAP | 3078
+|-
+!  colspan="4" style="background-color:silver;text-align:center;" | &lt;div id=0&gt;Менше 2500&lt;/div&gt;
+|-
+| [[Белз]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 2352
+|  align=right NOWRAP | 2478
+|-
+| [[Устилуг]]
+| [[Волинська область|Волинська]]
+|  align=right NOWRAP | 2218
+|  align=right NOWRAP | 2283
+|-
+| [[Герца]]
+| [[Чернівецька область|Чернівецька]]
+|  align=right NOWRAP | 2113
+|  align=right NOWRAP | 2068
+|-
+| [[Берестечко]]
+| [[Волинська область|Волинська]]
+|  align=right NOWRAP | 1757
+|  align=right NOWRAP | 1904
+|-
+| [[Угнів]]
+| [[Львівська область|Львівська]]
+|  align=right NOWRAP | 1002
+|  align=right NOWRAP | 1021
+|-
+| [[Чорнобиль]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 0
+|  align=right NOWRAP | 0
+|-
+| [[Прип'ять (місто)|Прип'ять]]
+| [[Київська область|Київська]]
+|  align=right NOWRAP | 0
+|  align=right NOWRAP | 0
+
+|}
+'''Примітки.'''
+
+{{reflist}}
+
+== Див. також ==
+{{Вікіпосилання}}
+* [[Міста України (в алфавітному порядку)]]
+* [[Міста України (за областями)]]
+* [[Адміністративний устрій України]]
+* [[КОАТУУ]]
+* [[Список міських голів України]]
+* [[Список областей України за кількістю населення]]
+* [[Найбільші міста Європи за населенням]]
+
+== Джерела ==
+* [http://2001.ukrcensus.gov.ua/results/total_population1/structure_population/ Офіційний сайт Всеукраїнського перепису населення]
+* [http://www.citypopulation.de/Ukraine.html City Population: Ukraine]
+* [http://www.ukrstat.gov.ua/druk/publicat/kat_u/2014/zb/06/zb_nas_13.zip Статистичний збірник «Чисельність наявного населення України на 1 січня 2014 року», &amp;nbsp;— Київ, Державна служба статистики України, 2014]
+
+{{Вибраний список}}
+{{50 найбільших міст України}}
+
+[[Категорія:Міста України|*]]
+[[Категорія:Списки міст|Україна]]
+[[Категорія:Надпопулярні статті]]
+[[Категорія:Списки міст за країною|Україна]]</value>
+  </data>
+</root>
