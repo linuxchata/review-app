@@ -33,7 +33,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Utilities.Tests",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Location.Api", "Services\Location\ReviewApp.Location.Api\ReviewApp.Location.Api.csproj", "{9ADCF7E2-34F4-41AD-8D9D-DD37400510EC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Location.Tests", "Services\Location\ReviewApp.Location.Api.Tests\ReviewApp.Location.Tests.csproj", "{B9DD0CFD-06E1-4CBF-A498-542C33116DBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Location.Tests", "Services\Location\ReviewApp.Location.Tests\ReviewApp.Location.Tests.csproj", "{B9DD0CFD-06E1-4CBF-A498-542C33116DBB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Location.Core", "Services\Location\ReviewApp.Location.Core\ReviewApp.Location.Core.csproj", "{F47353A8-2B42-4EDB-A3DC-A55E912D2F21}"
 EndProject
