@@ -29,6 +29,7 @@ namespace ReviewApp.Web.Api.Controllers
         /// Triggers locations synchronization process
         /// </summary>
         /// <returns>200 status code</returns>
+        /// <response code="200">Synchronization process has been requested</response>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<IActionResult> SyncLocations()

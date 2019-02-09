@@ -33,9 +33,10 @@ namespace ReviewApp.Web.Api.Controllers
         /// </summary>
         /// <returns>List of all subjects</returns>
         /// <response code="204">No subjects were found</response>
+        /// <response code="200">List of all subjects</response>
         [HttpGet]
-        [ProducesResponseType(typeof(List<Subject>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(List<Subject>), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetAll()
         {
             var result = await this.subjectService.GetAllAsync();
@@ -53,10 +54,13 @@ namespace ReviewApp.Web.Api.Controllers
         /// </summary>
         /// <param name="id">The identifier of subject</param>
         /// <returns>Subject for given id</returns>
+        /// <response code="400">Identifier is null or empty</response>
+        /// <response code="204">No subject was found</response>
+        /// <response code="200">Subject for given id</response>
         [HttpGet("{id}", Name = "GetSubject")]
-        [ProducesResponseType(typeof(Subject), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(Subject), StatusCodes.Status200OK)]
         public async Task<IActionResult> Get(string id)
         {
             if (string.IsNullOrEmpty(id))
@@ -80,6 +84,7 @@ namespace ReviewApp.Web.Api.Controllers
         /// <returns>201 status code</returns>
         /// <response code="400">Subject is null or invalid</response>
         /// <response code="209">Subject with the same name has already been created</response>
+        /// <response code="201">Subject has been created</response>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status409Conflict)]
@@ -110,6 +115,7 @@ namespace ReviewApp.Web.Api.Controllers
         /// <returns>204 status code</returns>
         /// <response code="400">Identifier is null or empty</response>
         /// <response code="404">No subject was found</response>
+        /// <response code="204">Subject has been updated</response>
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -139,6 +145,7 @@ namespace ReviewApp.Web.Api.Controllers
         /// <returns>204 status code</returns>
         /// <response code="400">Identifier is null or empty</response>
         /// <response code="404">No subject was found</response>
+        /// <response code="404">Subject has been deleted</response>
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

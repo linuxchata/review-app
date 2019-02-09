@@ -33,9 +33,10 @@ namespace ReviewApp.Web.Api.Controllers
         /// </summary>
         /// <returns>List of all specializations</returns>
         /// <response code="204">No specializations were found</response>
+        /// <response code="200">List of all specializations</response>
         [HttpGet]
-        [ProducesResponseType(typeof(List<Specialization>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(List<Specialization>), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetAll()
         {
             var result = await this.specializationService.GetAllAsync();
@@ -55,10 +56,11 @@ namespace ReviewApp.Web.Api.Controllers
         /// <returns>List of all specializations for given search criteria</returns>
         /// <response code="400">Search criteria is null or empty</response>
         /// <response code="404">No specializations were found</response>
+        /// <response code="200">List of all specializations for given search criteria</response>
         [HttpGet("{searchCriteria}")]
-        [ProducesResponseType(typeof(List<Specialization>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(List<Specialization>), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetBySearchCriteria(string searchCriteria)
         {
             if (string.IsNullOrEmpty(searchCriteria))

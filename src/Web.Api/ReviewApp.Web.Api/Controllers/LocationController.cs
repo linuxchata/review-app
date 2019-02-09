@@ -33,9 +33,10 @@ namespace ReviewApp.Web.Api.Controllers
         /// </summary>
         /// <returns>List of all locations</returns>
         /// <response code="204">No locations were found</response>
+        /// <response code="200">List of all locations</response>
         [HttpGet]
-        [ProducesResponseType(typeof(List<Location>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(List<Location>), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetAll()
         {
             var result = await this.locationService.GetAllAsync();
@@ -55,10 +56,11 @@ namespace ReviewApp.Web.Api.Controllers
         /// <returns>List of all locations for given search criteria</returns>
         /// <response code="400">Search criteria is null or empty</response>
         /// <response code="404">No locations were found</response>
+        /// <response code="200">List of all locations for given search criteria</response>
         [HttpGet("{searchCriteria}")]
-        [ProducesResponseType(typeof(List<Location>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(List<Location>), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetBySearchCriteria(string searchCriteria)
         {
             if (string.IsNullOrEmpty(searchCriteria))

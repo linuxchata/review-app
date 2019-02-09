@@ -12,6 +12,7 @@ namespace ReviewApp.Location.Api.Controllers
         /// Index action
         /// </summary>
         /// <returns>200 status code</returns>
+        /// <response code="200">Service status and runtime</response>
         [HttpGet]
         [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
         public IActionResult Index()
