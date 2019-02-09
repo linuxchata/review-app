@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Web.DataAccess", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Web.Services", "Web.Api\ReviewApp.Web.Services\ReviewApp.Web.Services.csproj", "{8AF6AC25-BEE0-4CE0-91BC-5D9CF23613CF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Web.UnitTests", "Web.Api\ReviewApp.Web.Api.Tests\ReviewApp.Web.UnitTests.csproj", "{1E6FC6B5-A695-43D3-9F62-11715D246A6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Web.UnitTests", "Web.Api\ReviewApp.Web.UnitTests\ReviewApp.Web.UnitTests.csproj", "{1E6FC6B5-A695-43D3-9F62-11715D246A6F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{97AB56D5-8FA3-457C-BEA4-E62D5084C162}"
 EndProject
