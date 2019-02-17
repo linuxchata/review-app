@@ -1,5 +1,5 @@
 # Review application
-A simple review system for different subjects (e.g. doctors, clinics)
+A simple review system for different subjects (e.g. doctors, clinics, companies, services)
 
 ## Build Status
 | Build server | Target       | Platform    | Status      |
