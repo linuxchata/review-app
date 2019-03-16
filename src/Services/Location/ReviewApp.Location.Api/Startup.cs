@@ -35,6 +35,8 @@ namespace ReviewApp.Location.Api
         /// <param name="services">Collection of the services</param>
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddHealthChecks();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -63,6 +65,8 @@ namespace ReviewApp.Location.Api
             app.UseStaticFiles();
 
             app.UseStatusCodePages();
+
+            app.UseHealthChecks("/health");
 
             app.UseMvc(routes =>
             {

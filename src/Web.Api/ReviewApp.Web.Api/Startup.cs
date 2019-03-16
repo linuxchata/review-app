@@ -39,6 +39,8 @@ namespace ReviewApp.Web.Api
         /// <param name="services">Collection of the services</param>
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddHealthChecks();
+
             services.AddCors();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
@@ -97,6 +99,8 @@ namespace ReviewApp.Web.Api
                 .AllowAnyOrigin()
                 .AllowAnyMethod()
                 .AllowAnyHeader());
+
+            app.UseHealthChecks("/health");
 
             app.UseMvc(routes =>
             {
