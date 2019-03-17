@@ -9,7 +9,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 
+using ReviewApp.HealthChecks;
 using ReviewApp.ServiceBusAdapter.Abstractions;
 using ReviewApp.Web.Core.Application;
 
@@ -39,7 +41,10 @@ namespace ReviewApp.Web.Api
         /// <param name="services">Collection of the services</param>
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddHealthChecks();
+            var mongoDbConnectionString = this.configuration.GetSection("Settings:ConnectionString").Value;
+            services
+                .AddHealthChecks()
+                .AddCheck(nameof(MongoDbHealthCheck), new MongoDbHealthCheck(mongoDbConnectionString), HealthStatus.Unhealthy);
 
             services.AddCors();
 
@@ -54,7 +59,7 @@ namespace ReviewApp.Web.Api
 
                 // Set the comments path for the Swagger JSON and UI
                 var basePath = AppContext.BaseDirectory;
-                var xmlPath = Path.Combine(basePath, "LC.RA.Web.Api.xml");
+                var xmlPath = Path.Combine(basePath, "ReviewApp.Web.Api.xml");
                 c.IncludeXmlComments(xmlPath);
             });
         }

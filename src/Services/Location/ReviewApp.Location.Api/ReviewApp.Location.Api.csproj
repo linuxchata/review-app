@@ -9,16 +9,16 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>bin\Debug\netcoreapp2.1\LC.RA.Location.Api.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netcoreapp2.2\ReviewApp.Location.Api.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>bin\Release\netcoreapp2.1\LC.RA.Location.Api.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netcoreapp2.2\ReviewApp.Location.Api.xml</DocumentationFile>
     <Optimize>true</Optimize>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWithoutDocker|AnyCPU'">
-    <DocumentationFile>bin\Release\netcoreapp2.1\LC.RA.Location.Api.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netcoreapp2.2\ReviewApp.Location.Api.xml</DocumentationFile>
     <Optimize>true</Optimize>
   </PropertyGroup>
 
@@ -41,6 +41,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Shared\ReviewApp.HealthChecks\ReviewApp.HealthChecks.csproj" />
     <ProjectReference Include="..\..\..\Shared\ReviewApp.TransferObjects\ReviewApp.TransferObjects.csproj" />
     <ProjectReference Include="..\..\..\Shared\ReviewApp.ServiceBusAdapter.Abstractions\ReviewApp.ServiceBusAdapter.Abstractions.csproj" />
     <ProjectReference Include="..\..\..\Shared\ReviewApp.ServiceBusAdapter\ReviewApp.ServiceBusAdapter.csproj" />

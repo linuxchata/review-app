@@ -8,7 +8,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 
+using ReviewApp.HealthChecks;
 using ReviewApp.ServiceBusAdapter.Abstractions;
 
 namespace ReviewApp.Location.Api
@@ -35,7 +37,10 @@ namespace ReviewApp.Location.Api
         /// <param name="services">Collection of the services</param>
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddHealthChecks();
+            var mongoDbConnectionString = this.configuration.GetSection("Settings:ConnectionString").Value;
+            services
+                .AddHealthChecks()
+                .AddCheck(nameof(MongoDbHealthCheck), new MongoDbHealthCheck(mongoDbConnectionString), HealthStatus.Unhealthy);
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

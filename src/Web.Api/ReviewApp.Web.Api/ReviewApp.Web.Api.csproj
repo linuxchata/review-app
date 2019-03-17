@@ -9,16 +9,16 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>bin\Debug\netcoreapp2.1\LC.RA.Web.Api.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netcoreapp2.2\ReviewApp.Web.Api.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>bin\Release\netcoreapp2.1\LC.RA.Web.Api.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netcoreapp2.2\ReviewApp.Web.Api.xml</DocumentationFile>
     <Optimize>true</Optimize>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWithoutDocker|AnyCPU'">
-    <DocumentationFile>bin\Release\netcoreapp2.1\LC.RA.Web.Api.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netcoreapp2.2\ReviewApp.Web.Api.xml</DocumentationFile>
     <Optimize>true</Optimize>
   </PropertyGroup>
 
@@ -38,6 +38,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Shared\ReviewApp.HealthChecks\ReviewApp.HealthChecks.csproj" />
     <ProjectReference Include="..\..\Shared\ReviewApp.ServiceBusAdapter.Abstractions\ReviewApp.ServiceBusAdapter.Abstractions.csproj" />
     <ProjectReference Include="..\..\Shared\ReviewApp.ServiceBusAdapter\ReviewApp.ServiceBusAdapter.csproj" />
     <ProjectReference Include="..\ReviewApp.Web.Core\ReviewApp.Web.Core.csproj" />
