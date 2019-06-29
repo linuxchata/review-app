@@ -5,10 +5,10 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "5001:80"
+      - "7001:80"
 
   reviewapp.location.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "5002:80"
+      - "7002:80"
