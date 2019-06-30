@@ -6,7 +6,7 @@ services:
       ASPNETCORE_ENVIRONMENT: Development
     ports:
       - '7001:80'
-
+  
   reviewapp.location.api:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
@@ -20,7 +20,18 @@ services:
     environment:
       RABBITMQ_DEFAULT_USER: reviewadmin
       RABBITMQ_DEFAULT_PASS: secret
+      RABBITMQ_SSL_CACERTFILE: /etc/ssl/certs/reviewapp-dev-ca.pem
+      RABBITMQ_SSL_CERTFILE: /etc/ssl/certs/dev.reviewapp.com.pem
+      RABBITMQ_SSL_KEYFILE: /etc/ssl/certs/dev.reviewapp.com.key
+      RABBITMQ_SSL_VERIFY: verify_peer
+      RABBITMQ_SSL_FAIL_IF_NO_PEER_CERT: 'false'
+      RABBITMQ_MANAGEMENT_SSL_CACERTFILE: /etc/ssl/certs/reviewapp-dev-ca.pem
+      RABBITMQ_MANAGEMENT_SSL_CERTFILE: /etc/ssl/certs/dev.reviewapp.com.pem
+      RABBITMQ_MANAGEMENT_SSL_KEYFILE: /etc/ssl/certs/dev.reviewapp.com.key
+      RABBITMQ_MANAGEMENT_SSL_VERIFY: verify_peer
+      RABBITMQ_MANAGEMENT_SSL_FAIL_IF_NO_PEER_CERT: 'false'
     ports:
-      - '7003:15672'
-    #volumes:
-    #  - .\rabbitmq:/etc/rabbitmq
+      - '7003:15671'
+      - '7004:5671'
+    volumes:
+      - .\rabbitmq\ssl:/etc/ssl/certs
