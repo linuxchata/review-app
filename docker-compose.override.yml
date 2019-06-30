@@ -3,12 +3,24 @@ version: '3.7'
 services:
   reviewapp.web.api:
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      ASPNETCORE_ENVIRONMENT: Development
     ports:
-      - "7001:80"
+      - '7001:80'
 
   reviewapp.location.api:
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      ASPNETCORE_ENVIRONMENT: Development
     ports:
-      - "7002:80"
+      - '7002:80'
+
+  rabitmq:
+    image: rabbitmq:3.7-management
+    restart: on-failure
+    hostname: reviewapp-mq
+    environment:
+      RABBITMQ_DEFAULT_USER: reviewadmin
+      RABBITMQ_DEFAULT_PASS: secret
+    ports:
+      - '7003:15672'
+    #volumes:
+    #  - .\rabbitmq:/etc/rabbitmq
