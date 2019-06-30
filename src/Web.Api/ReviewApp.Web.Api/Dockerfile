@@ -5,6 +5,7 @@ EXPOSE 80
 FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /src
 COPY ["src/Web.Api/ReviewApp.Web.Api/ReviewApp.Web.Api.csproj", "src/Web.Api/ReviewApp.Web.Api/"]
+COPY ["src/Shared/ReviewApp.HealthChecks/ReviewApp.HealthChecks.csproj", "src/Shared/ReviewApp.HealthChecks/"]
 COPY ["src/Shared/ReviewApp.ServiceBusAdapter/ReviewApp.ServiceBusAdapter.csproj", "src/Shared/ReviewApp.ServiceBusAdapter/"]
 COPY ["src/Shared/ReviewApp.ServiceBusAdapter.Abstractions/ReviewApp.ServiceBusAdapter.Abstractions.csproj", "src/Shared/ReviewApp.ServiceBusAdapter.Abstractions/"]
 COPY ["src/Web.Api/ReviewApp.Web.DataAccess/ReviewApp.Web.DataAccess.csproj", "src/Web.Api/ReviewApp.Web.DataAccess/"]
