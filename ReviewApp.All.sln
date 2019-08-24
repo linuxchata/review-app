@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2036
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{9664E569-1F21-4160-B2F8-51FB52B16AB8}"
 EndProject
@@ -41,7 +41,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.Location.Infrastr
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{17FD7784-0AB2-4056-A5E0-76CA88152A06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReviewApp.HealthChecks", "src\Shared\ReviewApp.HealthChecks\ReviewApp.HealthChecks.csproj", "{397216A9-2450-4762-AE9E-EEF32C95603F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewApp.HealthChecks", "src\Shared\ReviewApp.HealthChecks\ReviewApp.HealthChecks.csproj", "{397216A9-2450-4762-AE9E-EEF32C95603F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReviewApp.Api.Infrastructure", "src\Shared\ReviewApp.Api.Infrastructure\ReviewApp.Api.Infrastructure.csproj", "{CD0A5FF9-6CC7-452F-A2AA-83DA42E0E586}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -145,6 +147,12 @@ Global
 		{397216A9-2450-4762-AE9E-EEF32C95603F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{397216A9-2450-4762-AE9E-EEF32C95603F}.ReleaseWithoutDocker|Any CPU.ActiveCfg = Release|Any CPU
 		{397216A9-2450-4762-AE9E-EEF32C95603F}.ReleaseWithoutDocker|Any CPU.Build.0 = Release|Any CPU
+		{CD0A5FF9-6CC7-452F-A2AA-83DA42E0E586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD0A5FF9-6CC7-452F-A2AA-83DA42E0E586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD0A5FF9-6CC7-452F-A2AA-83DA42E0E586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD0A5FF9-6CC7-452F-A2AA-83DA42E0E586}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD0A5FF9-6CC7-452F-A2AA-83DA42E0E586}.ReleaseWithoutDocker|Any CPU.ActiveCfg = Release|Any CPU
+		{CD0A5FF9-6CC7-452F-A2AA-83DA42E0E586}.ReleaseWithoutDocker|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -166,6 +174,7 @@ Global
 		{F47353A8-2B42-4EDB-A3DC-A55E912D2F21} = {E83DB7CB-7FE1-4FA1-8A4D-3BAC2FED1066}
 		{A8693257-5605-4126-888C-B252D11B15C6} = {E83DB7CB-7FE1-4FA1-8A4D-3BAC2FED1066}
 		{397216A9-2450-4762-AE9E-EEF32C95603F} = {97AB56D5-8FA3-457C-BEA4-E62D5084C162}
+		{CD0A5FF9-6CC7-452F-A2AA-83DA42E0E586} = {97AB56D5-8FA3-457C-BEA4-E62D5084C162}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9F4AB356-D921-4809-ABFC-BD559C07E13F}

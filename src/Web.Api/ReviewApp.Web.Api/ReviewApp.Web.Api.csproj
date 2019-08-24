@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Shared\ReviewApp.Api.Infrastructure\ReviewApp.Api.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Shared\ReviewApp.HealthChecks\ReviewApp.HealthChecks.csproj" />
     <ProjectReference Include="..\..\Shared\ReviewApp.ServiceBusAdapter.Abstractions\ReviewApp.ServiceBusAdapter.Abstractions.csproj" />
     <ProjectReference Include="..\..\Shared\ReviewApp.ServiceBusAdapter\ReviewApp.ServiceBusAdapter.csproj" />

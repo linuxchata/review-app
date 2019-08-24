@@ -24,11 +24,9 @@ namespace ReviewApp.Location.Api
 
             try
             {
-                logger.Info("Building web host for ReviewApp.Location.Api");
+                logger.Info("Building and running web host for ReviewApp.Location.Api");
 
                 CreateWebHostBuilder(args).Build().Run();
-
-                logger.Info("Web host for ReviewApp.Location.Api has been built");
             }
             catch (Exception e)
             {
