@@ -2,7 +2,6 @@
 
 using Microsoft.Extensions.Configuration;
 
-using ReviewApp.HealthChecks;
 using ReviewApp.ServiceBusAdapter;
 using ReviewApp.Web.Core.Application;
 using ReviewApp.Web.DataAccess;
