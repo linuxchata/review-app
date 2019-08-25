@@ -1,6 +1,9 @@
 FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
 WORKDIR /app
-EXPOSE 80
+EXPOSE 443
+
+WORKDIR /etc/ssl/certs/
+COPY install/https/dev.reviewapp.com.pfx
 
 FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /src

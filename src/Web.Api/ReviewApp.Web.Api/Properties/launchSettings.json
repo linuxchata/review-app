@@ -6,7 +6,8 @@
       "launchUrl": "swagger/ui",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "ASPNETCORE_URLS": "https://dev.reviewapp.com:7001/"
+        "ASPNETCORE_URLS": "https://dev.reviewapp.com:7001/",
+        "ASPNETCORE_PORT": "7001"
       },
       "applicationUrl": "https://dev.reviewapp.com:7001/"
     }

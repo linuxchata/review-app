@@ -1,20 +1,38 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
+
+using Microsoft.Extensions.Configuration;
 
 namespace ReviewApp.Api.Infrastructure
 {
     public static class X509CertificateProvider
     {
+        private const string ServerCertificateSerialNumber = "Security:ServerCertificate:SerialNumber";
+
+        private const string ServerCertificatePath = "Security:ServerCertificate:Path";
+
+        private const string ServerCertificatePassword = "Security:ServerCertificate:Password";
+
         private static readonly StoreName StoreName = StoreName.My;
 
         private static readonly StoreLocation StoreLocation = StoreLocation.LocalMachine;
 
-        public static X509Certificate2 Get(string serialNumber)
+        public static X509Certificate2 Get(IConfiguration configuration)
         {
-            if (string.IsNullOrWhiteSpace(serialNumber))
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
-                throw new ArgumentNullException(nameof(serialNumber), "Serial number cannot be null or empty");
+                return GetWindowsCertificate(configuration);
             }
+            else
+            {
+                return GetLinuxCertificate(configuration);
+            }
+        }
+
+        private static X509Certificate2 GetWindowsCertificate(IConfiguration configuration)
+        {
+            var serialNumber = GetCertificateSerialNumber(configuration);
 
             using (var store = new X509Store(StoreName, StoreLocation))
             {
@@ -31,6 +49,53 @@ namespace ReviewApp.Api.Infrastructure
 
             throw new InvalidOperationException(
                 $"Valid certificate with serial number {serialNumber} cannot be found in store {StoreName} under {StoreLocation} location");
+        }
+
+        private static X509Certificate2 GetLinuxCertificate(IConfiguration configuration)
+        {
+            var path = GetCertificatePath(configuration);
+            var password = GetCertificatePassword(configuration);
+
+            return new X509Certificate2(path, password);
+        }
+
+        private static string GetCertificateSerialNumber(IConfiguration configuration)
+        {
+            var certificateSerialNumber = configuration.GetValue<string>(ServerCertificateSerialNumber);
+            if (string.IsNullOrWhiteSpace(certificateSerialNumber))
+            {
+                throw new ArgumentException(
+                    "Server certificate serial number cannot be null or empty",
+                    nameof(certificateSerialNumber));
+            }
+
+            return certificateSerialNumber;
+        }
+
+        private static string GetCertificatePath(IConfiguration configuration)
+        {
+            var certificatePath = configuration.GetValue<string>(ServerCertificatePath);
+            if (string.IsNullOrWhiteSpace(certificatePath))
+            {
+                throw new ArgumentException(
+                    "Server certificate path cannot be null or empty",
+                    nameof(certificatePath));
+            }
+
+            return certificatePath;
+        }
+
+        private static string GetCertificatePassword(IConfiguration configuration)
+        {
+            var certificatePassword = configuration.GetValue<string>(ServerCertificatePassword);
+            if (string.IsNullOrWhiteSpace(certificatePassword))
+            {
+                throw new ArgumentException(
+                    "Server certificate password cannot be null or empty",
+                    nameof(certificatePassword));
+            }
+
+            return certificatePassword;
         }
     }
 }

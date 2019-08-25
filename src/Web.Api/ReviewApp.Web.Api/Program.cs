@@ -4,8 +4,10 @@ using Autofac.Extensions.DependencyInjection;
 
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 
 using NLog.Web;
+
 using ReviewApp.Api.Infrastructure.Extensions;
 
 namespace ReviewApp.Web.Api
@@ -15,6 +17,8 @@ namespace ReviewApp.Web.Api
     /// </summary>
     public class Program
     {
+        private const string AspnetCoreEnvironment = "ASPNETCORE_ENVIRONMENT";
+
         /// <summary>
         /// Entry point of the application
         /// </summary>
@@ -43,9 +47,21 @@ namespace ReviewApp.Web.Api
         /// <returns>Created web host builder</returns>
         private static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseKestrel(KestrelOptionsExtension.ConfigureHttps)
+                .UseKestrel(a => KestrelOptionsExtension.ConfigureHttps(a, GetConfiguration()))
                 .ConfigureServices(s => s.AddAutofac())
                 .UseNLog()
                 .UseStartup<Startup>();
+
+        private static IConfiguration GetConfiguration()
+        {
+            var environmentName = Environment.GetEnvironmentVariable(AspnetCoreEnvironment);
+
+            var builder = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json")
+                .AddJsonFile($"appsettings.{environmentName}.json", optional: true)
+                .AddEnvironmentVariables();
+
+            return builder.Build();
+        }
     }
 }

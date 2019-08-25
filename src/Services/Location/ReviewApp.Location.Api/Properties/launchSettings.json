@@ -4,9 +4,11 @@
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "https://dev.reviewapp.com:7002/",
+        "ASPNETCORE_PORT": "7002"
       },
-      "applicationUrl": "http://localhost:7002/"
+      "applicationUrl": "https://dev.reviewapp.com:7002/"
     }
   }
 }

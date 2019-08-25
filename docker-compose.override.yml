@@ -4,14 +4,20 @@ services:
   reviewapp.web.api:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_PORT: 7001
+      SECURITY__SERVERCERTIFICATE__PATH: /etc/ssl/certs/dev.reviewapp.com.pfx
+      SECURITY__SERVERCERTIFICATE__PASSWORD: secret
     ports:
-      - '7001:80'
+      - '7001:443'
   
   reviewapp.location.api:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_PORT: 7002
+      SECURITY__SERVERCERTIFICATE__PATH: /etc/ssl/certs/dev.reviewapp.com.pfx
+      SECURITY__SERVERCERTIFICATE__PASSWORD: secret
     ports:
-      - '7002:80'
+      - '7002:443'
 
   rabitmq:
     image: rabbitmq:3.7-management
