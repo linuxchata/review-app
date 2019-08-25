@@ -4,8 +4,11 @@ using Autofac.Extensions.DependencyInjection;
 
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 
 using NLog.Web;
+
+using ReviewApp.Api.Infrastructure.Extensions;
 
 namespace ReviewApp.Location.Api
 {
@@ -14,6 +17,8 @@ namespace ReviewApp.Location.Api
     /// </summary>
     public class Program
     {
+        private const string AspnetCoreEnvironment = "ASPNETCORE_ENVIRONMENT";
+
         /// <summary>
         /// Entry point of the application
         /// </summary>
@@ -24,11 +29,9 @@ namespace ReviewApp.Location.Api
 
             try
             {
-                logger.Info("Building web host for ReviewApp.Location.Api");
+                logger.Info("Building and running web host for ReviewApp.Location.Api");
 
                 CreateWebHostBuilder(args).Build().Run();
-
-                logger.Info("Web host for ReviewApp.Location.Api has been built");
             }
             catch (Exception e)
             {
@@ -44,8 +47,21 @@ namespace ReviewApp.Location.Api
         /// <returns>Created web host builder</returns>
         private static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseKestrel(a => KestrelOptionsExtension.ConfigureHttps(a, GetConfiguration()))
                 .ConfigureServices(s => s.AddAutofac())
                 .UseNLog()
                 .UseStartup<Startup>();
+
+        private static IConfiguration GetConfiguration()
+        {
+            var environmentName = Environment.GetEnvironmentVariable(AspnetCoreEnvironment);
+
+            var builder = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json")
+                .AddJsonFile($"appsettings.{environmentName}.json", optional: true)
+                .AddEnvironmentVariables();
+
+            return builder.Build();
+        }
     }
 }
