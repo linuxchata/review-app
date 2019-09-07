@@ -35,6 +35,6 @@ docker-compose up
 * Merge unit test projects :heavy_check_mark:
 * Docker build on Azure DevOps with pushing images to Docker Hub :heavy_check_mark:
 * Add health check monitoring :heavy_check_mark:
-* HTTPS
+* HTTPS :heavy_check_mark:
 * Implement using RabbitMQ instead of ServiceBus
 * Add Sonar code analysis
