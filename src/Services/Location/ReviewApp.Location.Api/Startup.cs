@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading;
 
 using Autofac;
 
@@ -11,7 +10,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 
 using ReviewApp.HealthChecks;
-using ReviewApp.ServiceBusAdapter.Abstractions;
 
 namespace ReviewApp.Location.Api
 {
@@ -77,9 +75,6 @@ namespace ReviewApp.Location.Api
             {
                 routes.MapRoute("default", "{controller=Home}/{action=Index}");
             });
-
-            var topicReceiverService = serviceProvider.GetService<ITopicReceiverService>();
-            topicReceiverService.ReceiveMessagesAsync("LocationApi", new CancellationToken());
         }
     }
 }

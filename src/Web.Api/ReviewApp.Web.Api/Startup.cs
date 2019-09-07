@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Threading;
 
 using Autofac;
 
@@ -12,7 +11,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 
 using ReviewApp.HealthChecks;
-using ReviewApp.ServiceBusAdapter.Abstractions;
 using ReviewApp.Web.Core.Application;
 
 using Swashbuckle.AspNetCore.Swagger;
@@ -111,9 +109,6 @@ namespace ReviewApp.Web.Api
             {
                 routes.MapRoute("default", "{controller=Home}/{action=Index}");
             });
-
-            var topicReceiverService = serviceProvider.GetService<ITopicReceiverService>();
-            topicReceiverService.ReceiveMessagesAsync("WebApi", new CancellationToken());
         }
     }
 }
