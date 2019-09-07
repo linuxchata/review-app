@@ -28,6 +28,7 @@ A simple review system for different subjects (e.g. doctors, clinics, companies,
 ## Docker support
 Run application on Docker (Linux containers only)
 ```
+docker-compose pull
 docker-compose up
 ```
 
