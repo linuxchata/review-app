@@ -5,6 +5,7 @@
     <IsPackable>false</IsPackable>
     <Configurations>Debug;Release;ReleaseWithoutDocker</Configurations>
     <LangVersion>7.3</LangVersion>
+    <ProjectGuid>{51928206-EE30-4059-A33B-1DB798F46EE6}</ProjectGuid>
   </PropertyGroup>
 
   <ItemGroup>
