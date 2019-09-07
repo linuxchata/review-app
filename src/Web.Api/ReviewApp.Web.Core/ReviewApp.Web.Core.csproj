@@ -4,6 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Configurations>Debug;Release;ReleaseWithoutDocker</Configurations>
     <LangVersion>7.3</LangVersion>
+    <ProjectGuid>{1CBD1651-F17A-43BE-BDF8-5F7AC034FC7A}</ProjectGuid>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
