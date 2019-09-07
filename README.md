@@ -39,4 +39,4 @@ docker-compose up
 * Add health check monitoring :heavy_check_mark:
 * HTTPS :heavy_check_mark:
 * Implement using RabbitMQ instead of ServiceBus
-* Add Sonar code analysis
+* Add Sonar code analysis :heavy_check_mark:
