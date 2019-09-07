@@ -4,7 +4,7 @@ services:
   reviewapp.web.api:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_PORT: 7001
+      ASPNETCORE_PORT: 443
       SECURITY__SERVERCERTIFICATE__PATH: /etc/ssl/certs/dev.reviewapp.com.pfx
       SECURITY__SERVERCERTIFICATE__PASSWORD: secret
     ports:
@@ -13,7 +13,7 @@ services:
   reviewapp.location.api:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_PORT: 7002
+      ASPNETCORE_PORT: 443
       SECURITY__SERVERCERTIFICATE__PATH: /etc/ssl/certs/dev.reviewapp.com.pfx
       SECURITY__SERVERCERTIFICATE__PASSWORD: secret
     ports:
