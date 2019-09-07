@@ -64,9 +64,7 @@ namespace ReviewApp.Api.Infrastructure
             var certificateSerialNumber = configuration.GetValue<string>(ServerCertificateSerialNumber);
             if (string.IsNullOrWhiteSpace(certificateSerialNumber))
             {
-                throw new ArgumentException(
-                    "Server certificate serial number cannot be null or empty",
-                    nameof(certificateSerialNumber));
+                throw new InvalidOperationException("Server certificate serial number cannot be null or empty");
             }
 
             return certificateSerialNumber;
@@ -77,9 +75,7 @@ namespace ReviewApp.Api.Infrastructure
             var certificatePath = configuration.GetValue<string>(ServerCertificatePath);
             if (string.IsNullOrWhiteSpace(certificatePath))
             {
-                throw new ArgumentException(
-                    "Server certificate path cannot be null or empty",
-                    nameof(certificatePath));
+                throw new InvalidOperationException("Server certificate path cannot be null or empty");
             }
 
             return certificatePath;
@@ -90,9 +86,7 @@ namespace ReviewApp.Api.Infrastructure
             var certificatePassword = configuration.GetValue<string>(ServerCertificatePassword);
             if (string.IsNullOrWhiteSpace(certificatePassword))
             {
-                throw new ArgumentException(
-                    "Server certificate password cannot be null or empty",
-                    nameof(certificatePassword));
+                throw new InvalidOperationException("Server certificate password cannot be null or empty");
             }
 
             return certificatePassword;

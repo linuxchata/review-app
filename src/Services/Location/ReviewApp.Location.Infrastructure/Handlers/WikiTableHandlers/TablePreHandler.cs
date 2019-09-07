@@ -8,7 +8,7 @@ namespace ReviewApp.Location.Infrastructure.Handlers.WikiTableHandlers
 {
     public sealed class TablePreHandler : TableBaseHandler
     {
-        protected override void HandlerRequestInternal(ref string content, List<WikiTableRowBase> columns)
+        protected override void HandlerRequestInternal(ref string content, List<WikiTableRowBase> rows)
         {
             RegexExtension.Replace(ref content, RegexPattern.TableRowSpanMatchPattern);
         }
