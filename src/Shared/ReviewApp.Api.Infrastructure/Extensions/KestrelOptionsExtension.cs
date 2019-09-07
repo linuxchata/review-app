@@ -43,7 +43,7 @@ namespace ReviewApp.Api.Infrastructure.Extensions
             var port = configuration.GetValue<int>(AspnetCorePort);
             if (port < 0 || port > ushort.MaxValue)
             {
-                throw new ArgumentOutOfRangeException(nameof(port), $"Port number value must be between 0 and {ushort.MaxValue}");
+                throw new ArgumentException($"Port number value must be between 0 and {ushort.MaxValue}", nameof(port));
             }
 
             return port;

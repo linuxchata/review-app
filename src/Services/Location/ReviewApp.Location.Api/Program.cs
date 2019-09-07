@@ -15,7 +15,7 @@ namespace ReviewApp.Location.Api
     /// <summary>
     /// Program class
     /// </summary>
-    public class Program
+    public static class Program
     {
         private const string AspnetCoreEnvironment = "ASPNETCORE_ENVIRONMENT";
 
