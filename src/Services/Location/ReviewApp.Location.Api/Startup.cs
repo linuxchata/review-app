@@ -1,13 +1,12 @@
-﻿using System;
-
+﻿
 using Autofac;
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
+using Microsoft.Extensions.Hosting;
 
 using ReviewApp.HealthChecks;
 
@@ -40,7 +39,7 @@ namespace ReviewApp.Location.Api
                 .AddHealthChecks()
                 .AddCheck(nameof(MongoDbHealthCheck), new MongoDbHealthCheck(mongoDbConnectionString), HealthStatus.Unhealthy);
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc();
         }
 
         /// <summary>
@@ -56,9 +55,8 @@ namespace ReviewApp.Location.Api
         /// Configure application
         /// </summary>
         /// <param name="app">Application builder</param>
-        /// <param name="env">Hosting environment</param>
-        /// <param name="serviceProvider">Service provider</param>
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
+        /// <param name="env">Web hosting environment</param>
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -71,9 +69,11 @@ namespace ReviewApp.Location.Api
 
             app.UseHealthChecks("/health");
 
-            app.UseMvc(routes =>
+            app.UseRouting();
+
+            app.UseEndpoints(routes =>
             {
-                routes.MapRoute("default", "{controller=Home}/{action=Index}");
+                routes.MapControllerRoute("default", "{controller=Home}/{action=Index}");
             });
         }
     }

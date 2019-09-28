@@ -5,15 +5,14 @@ using Autofac;
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
+using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 
 using ReviewApp.HealthChecks;
 using ReviewApp.Web.Core.Application;
-
-using Swashbuckle.AspNetCore.Swagger;
 
 namespace ReviewApp.Web.Api
 {
@@ -46,14 +45,14 @@ namespace ReviewApp.Web.Api
 
             services.AddCors();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc();
 
             services.Configure<ApplicationSettings>(this.configuration.GetSection("Settings"));
 
             // Register the Swagger generator, defining one or more Swagger documents
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "Review application API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Review application API", Version = "v1" });
 
                 // Set the comments path for the Swagger JSON and UI
                 var basePath = AppContext.BaseDirectory;
@@ -75,9 +74,8 @@ namespace ReviewApp.Web.Api
         /// Configure application
         /// </summary>
         /// <param name="app">Application builder</param>
-        /// <param name="env">Hosting environment</param>
-        /// <param name="serviceProvider">Service provider</param>
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
+        /// <param name="env">Web hosting environment</param>
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -98,6 +96,8 @@ namespace ReviewApp.Web.Api
                 c.RoutePrefix = "swagger/ui";
             });
 
+            app.UseRouting();
+
             app.UseCors(builder => builder
                 .AllowAnyOrigin()
                 .AllowAnyMethod()
@@ -105,9 +105,9 @@ namespace ReviewApp.Web.Api
 
             app.UseHealthChecks("/health");
 
-            app.UseMvc(routes =>
+            app.UseEndpoints(routes =>
             {
-                routes.MapRoute("default", "{controller=Home}/{action=Index}");
+                routes.MapControllerRoute("default", "{controller=Home}/{action=Index}");
             });
         }
     }
