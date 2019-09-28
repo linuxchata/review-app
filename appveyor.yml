@@ -9,8 +9,8 @@ configuration:
   - ReleaseWithoutDocker
 
 install:
-  # https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2.1/2.2.1.md
-  - ps: $urlCurrent = "https://download.visualstudio.microsoft.com/download/pr/c332d70f-6582-4471-96af-4b0c17a616ad/5f3043d4bc506bf91cb89fa90462bb58/dotnet-sdk-2.2.103-win-x64.zip"
+  # https://github.com/dotnet/core/blob/master/release-notes/3.0/releases.json
+  - ps: $urlCurrent = "https://download.visualstudio.microsoft.com/download/pr/f15b7c04-2900-4a14-9c01-ccd66a4323cc/17a6bbd44f0d0a85d219dd9e166a89ca/dotnet-runtime-3.0.0-win-x64.zip"
   - ps: $env:DOTNET_INSTALL_DIR = "$pwd\.dotnetsdk"
   - ps: mkdir $env:DOTNET_INSTALL_DIR -Force | Out-Null
   - ps: $tempFileCurrent = [System.IO.Path]::GetTempFileName()
