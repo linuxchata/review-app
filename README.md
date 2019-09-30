@@ -11,7 +11,7 @@ A simple review system for different subjects (e.g. doctors, clinics, companies,
 | SonarCloud | Code quality | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=review-app&metric=alert_status)](https://sonarcloud.io/dashboard?id=review-app) |
 
 ## Technologies and frameworks
-* ASP.NET Core 2.2
+* ASP.NET Core 3.0
     * Autofac
     * nlog
     * Swagger
