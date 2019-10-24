@@ -12,7 +12,6 @@ install:
 - cmd: >-
     appveyor DownloadFile https://dot.net/v1/dotnet-install.ps1
     powershell -NoLogo -NoProfile -File dotnet-install.ps1 -Version 3.0.100 -InstallDir "%ProgramFiles%\dotnet" -Architecture x64
-    powershell -NoLogo -NoProfile -File dotnet-install.ps1 -Version 3.0.100 -InstallDir "%ProgramFiles(x86)%\dotnet" -Architecture x86
 
 before_build:
   - dotnet restore ReviewApp.All.sln
