@@ -1,12 +1,8 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-buster-slim AS base
+FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 443
 
-WORKDIR /etc/ssl/certs/
-COPY install/https/dev.reviewapp.com.pfx dev.reviewapp.com.pfx
-COPY install/https/reviewapp-dev-ca.pem reviewapp-dev-ca.pem
-
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0-buster AS build
+FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
 COPY ["src/Web.Api/ReviewApp.Web.Api/ReviewApp.Web.Api.csproj", "src/Web.Api/ReviewApp.Web.Api/"]
 COPY ["src/Shared/ReviewApp.HealthChecks/ReviewApp.HealthChecks.csproj", "src/Shared/ReviewApp.HealthChecks/"]
