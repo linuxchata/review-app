@@ -7,7 +7,6 @@ A simple review system for different subjects (e.g. doctors, clinics, companies,
 | AppVeyor     | CI           | Windows     |[![Build status](https://ci.appveyor.com/api/projects/status/84djajia77jann58?svg=true)](https://ci.appveyor.com/project/linuxchata/review-app/branch/master) |
 | Azure DevOps | CI           | Windows     | [![Build status](https://linuxchata.visualstudio.com/review-app/_apis/build/status/ReviewAppLocation%20-%20CI)](https://linuxchata.visualstudio.com/review-app/_build/latest?definitionId=11)
 | Azure DevOps | Docker       | Linux       | [![Build status](https://linuxchata.visualstudio.com/review-app/_apis/build/status/review-app-api-docker)](https://linuxchata.visualstudio.com/review-app/_build/latest?definitionId=10) |
-| Better Code  | Code quality |             | [![BCH compliance](https://bettercodehub.com/edge/badge/linuxchata/review-app?branch=master)](https://bettercodehub.com/) |
 | SonarCloud   | Code quality |             | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=review-app&metric=alert_status)](https://sonarcloud.io/dashboard?id=review-app) |
 
 ## Technologies and frameworks
